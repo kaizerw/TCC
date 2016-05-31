@@ -1,0 +1,36 @@
+% Universidade Estadual do Oeste do Paraná - UNIOESTE
+% Centro de Ciências Exatas e Tecnológicas
+% Curso de Bacharelado em Informática
+% Arquivo: capa.Tex
+% Conteúdo: Modelo de capa para o Arquivo do TCC.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% capa do TCC
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{wrapfigure}[4]{i}{0cm}
+	\centering
+	\includegraphics[width = 3.13cm, height = 2.19cm]{simbolo.jpg}
+\end{wrapfigure}
+\fontsize{13}{13}
+\noindent
+\textbf{Unioeste - Universidade Estadual do Oeste do Paraná}\\
+\fontsize{11}{11}
+CENTRO DE CIÊNCIAS EXATAS E TECNOLÓGICAS\\
+Colegiado de Informática\\
+\textbf{\textit{Curso de Bacharelado em Ciência da Computação}}
+\vspace{9cm}
+\begin{center}
+\fontsize{13}{13}
+\textbf{Título do TCC}\\
+\vspace{0.3cm}
+\textit{Nome do autor}\\
+\vspace{9cm}
+\textbf{CASCAVEL}\\
+\textbf{Ano}
+\end{center}
+
+

@@ -1,0 +1,38 @@
+% Universidade Estadual do Oeste do Paraná - UNIOESTE
+% Centro de Ciências Exatas e Tecnológicas
+% Curso de Bacharelado em Informática
+% Arquivo: Rosto.Tex
+% Conteúdo: Folha de Rosto para o Arquivo do TCC.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Folha de Rosto
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\fontsize{12}{12}
+\begin{center}
+\textbf{NOME DO ALUNO}\\
+\vspace{8cm}
+\fontsize{14}{14}
+\textbf{TÍTULO DO TCC}\\
+\vspace{2cm}
+\end{center}
+\fontsize{12}{12}
+
+\begin{flushright}
+\begin{minipage}[10cm] {8.5cm}
+Monografia apresentada como requisito parcial para obtenção do grau de Bacharel em Informática, do Centro de Ciências Exatas e Tecnológicas da Universidade Estadual do Oeste do Paraná - Campus de Cascavel
+
+\vspace{1.5cm}
+\noindent
+Orientador: Prof. Fulano de Tal
+\end{minipage}
+\end{flushright}
+\vspace{6cm}
+\begin{center}
+CASCAVEL\\ 
+Ano
+\end{center}
+
+

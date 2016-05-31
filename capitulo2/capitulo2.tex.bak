@@ -1,0 +1,269 @@
+\chapter{Estrutura do TCC ou Monografia}
+\label{CapEstrutura}
+
+A monografia deve obedecer a esta estrutura geral, exatamente na ordem mostrada abaixo. Tal estrutura e seus elementos serão detalhados nas próximas seções. Os arquivos ``ModeloTCC.doc'' (para Word) e ``ModeloTCC.odt'' (para Writer) estão formatados segundo as regras constantes neste documento e podem ser usados como modelo para a edição do trabalho para os alunos que forem utilizar estes editores de texto. Os alunos que forem utilizar o \LaTeX podem utilizar como modelo o fonte deste documento (ModeloTCC.tex).
+
+\begin{enumerate}
+	\item Elementos Pré-Textuais:
+		\begin{itemize}
+			\item Capa
+ 			\item Folha de Rosto
+ 			\item Folha de Aprovação
+ 			\item Dedicatória
+ 			\item Agradecimentos
+ 			\item Lista de Figuras
+ 			\item Lista de Tabelas
+ 			\item Lista de Abreviaturas e Siglas
+ 			\item Lista de Símbolos
+ 			\item Sumário
+ 			\item Resumo
+		\end{itemize}
+		
+	\item Corpo do Texto (desenvolvimento do trabalho):
+		\begin{itemize}
+			\item Introdução
+ 			\item Capítulos de desenvolvimento do tema
+ 			\item Conclusões
+		\end{itemize}
+		
+	\item Elementos Pós-Textuais:
+		\begin{itemize}
+			\item Anexos
+ 			\item Glossário
+ 			\item Referências Bibliográficas
+ 			\item Bibliografia
+		\end{itemize}
+\end{enumerate}
+
+Para os alunos que forem utilizar um editor de texto tipo Word ou Writer, os formatos de cada um desses itens podem ser vistos nos arquivos ``ModeloTCC.doc'' (para Word) e ``ModeloTCC.odt'' (para Writer). Para os alunos que forem utilizar o \LaTeX, basta preencher os arquivos que se encontram na pasta ``iniciais'' com seus dados pessoais e os arquivo que se encontram na pasta ``glossário'' para que o seu glossário seja feito.
+
+\section{Elementos Pré-Textuais}
+
+\subsection{Capa}
+
+A capa é a proteção externa do trabalho sobre a qual são impressos, de forma clara, concisa e específica, os elementos que a identificam. Na capa deve constar o nome do autor, título, subtítulo (se houver) local e ano de conclusão do trabalho.
+
+
+\subsection{Folha de Rosto}
+
+A folha de rosto é a folha que contém os elementos essenciais à identificação da obra. Deve conter, além dos elementos já mencionados para a capa, a explicitação da natureza do trabalho, seu objetivo acadêmico e respectivos dados de orientação.
+
+
+\subsection{Folha de Aprovação}
+
+É a folha destinada às assinaturas dos membros da Banca Examinadora e registro aferido pelos examinadores.
+
+
+\subsection{Dedicatória}
+
+Nesta folha o autor dedica a sua obra e/ou faz uma citação. A dedicatória é opcional, colocada em folha distinta após a Folha de Aprovação.
+
+\subsection{Agradecimentos}
+
+Os agradecimentos são opcionais. Se o autor decidir incluir agradecimentos em sua obra estes deverão ser colocados em folha distinta como mostrado nos arquivos ``ModeloTCC.doc'' (para Word) e ``ModeloTCC.odt'' (para Writer).
+
+
+\subsection{Lista de Figuras / Tabelas}
+
+Estas folhas destinam-se, a exemplo do sumário, a relacionar as figuras /tabelas e quadros existentes no texto, na ordem em que aparecem, com a indicação da página em que se encontram.
+
+
+\subsection{Lista de Abreviaturas e Siglas}
+
+Esta folha reúne as abreviaturas e siglas utilizadas no decorrer do texto, com seus respectivos significados, a fim de dar ao leitor condições de melhor entendimento do trabalho. Recomenda-se a inclusão desta lista somente quando houver mais de cinco elementos a serem relacionados.
+
+
+\subsection{Lista de Símbolos}
+
+Esta folha destina-se a relacionar os símbolos, unidades e/ou grandezas mencionadas no texto, juntamente com seus respectivos significados. Recomenda-se a sua inclusão apenas quando houver mais de cinco ítens a serem relacionados.
+
+
+\subsection{Sumário}
+
+Sumário é a enumeração das principais divisões (capítulos, seções e outras partes) de um documento, na mesma ordem, e na mesma forma gráfica em que aparecem no documento, não se confundindo com índices ou listas. O sumário deve figurar imediatamente antes do resumo, objetivando propiciar uma visão geral do conjunto da obra, assim como facilitar a localização das diferentes partes que compõem o texto. Para tanto, devem constar do índice:
+\begin{enumerate}
+	\item[a)] o indicativo numérico de cada capítulo ou seção e subseções, quando houver;
+	\item[b)] os respectivos títulos, interligados por linhas pontilhadas às suas páginas;
+	\item[c)] as folhas do trabalho onde os textos correspondentes se iniciam.
+\end{enumerate}
+
+Quanto a apresentação visual e tipográfica do sumário, deve ser adotada, para o corpo do sumário, fonte Times New Roman tamanho 11 ou 10 (ligeiramente menor que o tamanho adotado no texto. Se estiver utilizando um editor de texto tipo Word ou Writer basta escolher o estilo formal de índice) com os títulos de nível 1 em negrito. A padronização adotada está mostrada no próprio sumário deste documento.
+
+
+\subsection{Resumo}
+
+Resumo é a condensação de texto que delineia e/ou enfatiza os pontos mais relevantes do trabalho. Deve apresentar, de forma clara, concisa e inteligível, os elementos de maior importância do conteúdo tratado, a saber: objetivos, metodologia, resultados e conclusões. Na preparação do resumo deve-se seguir as seguintes orientações:
+
+\begin{enumerate}
+	\item[a)] uso de terceira pessoa do singular e do verbo na voz ativa;
+	\item[b)] composição de uma seqüência coerente de frases concisas, e não uma enumeração de tópicos;
+	\item[c)] não utilização de parágrafos, de frases negativas, símbolos e ilustrações;
+	\item[d)] deve ser evitado o emprego de fórmulas, equações, etc.; porém, se seu uso for inevitável, estas devem ser definidas na primeira vez em que aparecerem;
+	\item[e)] deverá conter, no máximo, entre 200 e 300 palavras.
+\end{enumerate}
+
+O resumo deverá aparecer em folha distinta. O texto do resumo deverá ser escrito em parágrafo único (ver alínea (c) acima), sem recuo na primeira linha. Separado do resumo por duas linhas em branco com espaço 1,5 (um e meio), deverão ser colocadas as palavras-chaves (vide página de resumo neste documento), que são palavras relevantes para a rápida contextualização do seu trabalho.
+
+\section{Elementos Textuais}
+
+O texto compreende o corpo principal do trabalho, contendo: introdução, revisão bibliográfica, material e métodos utilizados, resultados, discussão e conclusões, entre outros elementos. A estruturação do texto (divisão em capítulos e seções) e o seu respectivo conteúdo estão condicionados à natureza teórico-metodológica do assunto tratado, e depende do bom senso do autor. Não há um número máximo nem mínimo de páginas, mas recomenda-se, no entanto, que o total de páginas do texto esteja	 entre 30 e 100 páginas úteis\footnote{Sem contar os elementos pré-textuais e pós-textuais.}. Na sua elaboração e organização, recomenda-se que seja adotada a estrutura mostrada nas próximas subseções, ainda que não de forma obrigatória.
+
+
+\subsection{Introdução}
+
+É a primeira seção do texto. Nela são definidos brevemente os objetivos do trabalho e as razões de sua elaboração (justificativas), bem como a contextualização do trabalho (qual a posição que o trabalho ocupa no cenário da pesquisa do assunto em questão, e como ele se relaciona com outros trabalhos existentes).
+
+Deve ser elaborada de forma clara e concisa, de modo a permitir que o leitor penetre na problemática abordada, familiarizando-se com o vocabulário e conhecendo o escopo da pesquisa (seus limites). A introdução \textit{não deve repetir ou parafrasear o resumo, nem dar os dados sobre a teoria experimental, os métodos ou os resultados, nem antecipar as conclusões e as recomendações contidas e/ou decorrentes do estudo} (norma NBR-10719).
+
+Apesar da introdução figurar no ínício da obra, recomenda-se que seja a última a ser redigida em definitivo, dado o seu caráter de síntese das idéias apresentadas e do assunto tratado.
+
+
+\subsection{Revisão da Literatura}
+
+A revisão da literatura deve reunir, analisar e discutir a informação relevante ao tema já publicada anteriormente, objetivando fundamentar teoricamente o objeto de investigação da monografia com bases sólidas. Na sua preparação recomenda-se:
+
+\begin{enumerate}
+	\item[a)]	fazer uma minuciosa busca na literatura para determinar as pesquisas e/ou estudos realizados sobre o assunto, objetivando uma melhor compreensão das muitas facetas do problema;
+	
+	\item[b)] selecionar os estudos e/ou pesquisas mais diretamente relacionados com o problema investigado;
+	
+	\item[c)] sintetizar idéias e/ou resultados de estudos e/ou pesquisas, de forma a destacar o que for relevante para a compreensão do problema;
+	
+	\item[d)]	examinar cuidadosamente as variações de resultado e/ou de idéias contidas nos estudos, interrelacionando-as umas com as outras, principalmente se forem divergentes e/ou contraditórias;
+	
+	\item[e)]	organizar a revisão em função das variáveis ou dos pontos mais relevantes do problema investigado, sem procurar forçar uma organização cronológica;
+	
+	\item[f)]	ressaltar a importância relativa de idéias e/ou resultados dos estudos e/ou pesquisas analisados, em face do problema investigado;
+	
+	\item[g)]	encerrar a revisão com o agrupamento e resumo dos pontos mais importantes revisados, e não com comentários do ``último'' estudo ou pesquisa selecionada .
+\end{enumerate}
+
+
+A inserção deste capítulo não é obrigatória, dado que, em casos em que a revisão for pouco extensa, pode-se optar por incorporá-la à introdução.
+
+
+\subsection{Desenvolvimento}
+
+É a parte mais importante e a mais extensa do trabalho. Não é possível estabelecer um padrão estrutural rígido para esta parte da monografia, já que o seu desenvolvimento está sempre na dependência da natureza do estudo. A elaboração desta parte deverá basear-se na lógica e no bom senso do seu autor, juntamente com o seu orientador.
+
+O desenvolvimento pode consistir de quantos capítulos forem necessários para o detalhamento da pesquisa	 ou estudo realizado, descrevendo os métodos, as teorias, os procedimentos experimentais, resultados e discussões. As descrições apresentadas nesta parte devem ser suficientes para permitir a compreensão de todas etapas da pesquisa/estudo realizado. Recomenda-se, no entanto, que minúcias e detalhes de provas matemáticas e sobre procedimentos experimentais, caso sejam necessários, sejam colocados em apêndices.
+
+
+\subsection{Conclusão}
+
+Segundo a norma NBR-10719, neste capítulo devem figurar, de maneira clara e ordenada as deduções tiradas dos resultados do estudos/pesquisa, ou levantadas ao longo da discussão do assunto.
+
+A conclusão deve reafirmar, de maneira sintética a idéia principal e os pormenores importantes do estudo/pesquisa, respondendo ao problema inicial, via de regra, lançado na introdução, e considerando as principais contribuições proporcionadas pela pesquisa.
+
+Da mesma forma que a introdução, a conclusão não deve abordar detalhes operacionais dos conceitos utilizados, mas sim apresentar as conclusões parciais do desenvolvimento, interrelacionando-as num todo.
+
+A conclusão também deve apontar os problemas decorrentes do tema investigado, ou mesmo problemas relacionados ou possíveis aplicações para o estudo/pesquisa realizado, de modo que isto sirva de recomendação para futuros trabalhos de pesquisa.
+
+
+\section{Elementos Pós-Textuais}
+
+São matérias complementares acrescentadas à monografia, que tem a finalidade de documentar ou melhor esclarecer o texto, no seu todo ou em parte, sem contudo integrá-lo. Os arquivos ``ModeloTCC.doc'' (para Word) e ``ModeloTCC.odt'' (para Writer) estão formatados segundo as regras constantes neste documento e pode ser usado como modelo para a edição do trabalho para os alunos que forem utilizar estes editores de texto. Os alunos que forem utilizar o \LaTeX podem utilizar como modelo o fonte deste documento (ModeloTCC.tex).
+
+
+\subsection{Apêndices (ou anexos)}
+
+Conforme a norma NBR-10719, \textit{os apêndices são partes extensivas aos textos, destacados deste para evitar descontinuidade na seqüência lógica das seções e capítulos}. Os apêndices têm por finalidade documentar, esclarecer, provar ou confirmar idéias expressas no texto e que sejam necessárias para compreendê-lo de forma mais completa. Recomenda-se colocar em apêndices:
+
+\begin{enumerate}
+	\item[a)]	ilustrações que não sejam diretamente citadas no texto;
+	\item[b)]	descrição de equipamentos, técnicas e processos, ou detalhamento de procedimentos de técnicas específicas, listagens de programas, modelos de formulários/relatórios impressos, telas de execução de programas, etc;
+	\item[c)]	provas matemáticas que não estejam diretamente relacionadas ao assunto investigado;
+	\item[d)]	transcrição de leis, decretos, súmulas, etc.
+\end{enumerate}
+
+Os apêndices deverão ser identificados como identifica-se os capítulos, mas utilizando a palavra Apêndice seguida da letra maiúscula que o identifica, consecutivamente, em ordem alfabética, com a mesma formatação dos capítulos.
+
+
+\subsection{Glossário}
+
+É um elemento opcional, que deve ser usado sempre que for necessário relacionar (em ordem alfabética) palavras de uso restrito empregadas no texto, tais como: termos técnicos, arcaísmos, expressões regionais, etc., devidamente acompanhadas das suas respectivas definições.
+
+
+\subsection{Referências Bibliográficas}
+
+É um conjunto de elementos que permitem a identificação, no todo ou em parte, de documentos impressos ou registrados em diversos tipos de material.
+
+Os elementos de referência devem ser tirados, sempre que possível, da folha de rosto das publicações, e devem ser indicados na ordem mostrada abaixo, especificados, conforme o tipo de documento e de acordo com as regras gerais de apresentação mostradas abaixo. Os elementos devem ser listados em rigorosa ordem alfabética (Prenomes e nomes dos autores).
+
+Quando a referência possuir até três autores, mencionam-se todos, na ordem em que aparecem na publicação. Caso haja mais de três autores, menciona-se somente o primeiro, seguido da expressão \textit{et al}.(abreviatura da expressão latina \textit{et alii} que significa \textit{``e outros''}).
+
+Os modelos abaixo, deverão ser utilizados para compor as referências em editores como o Word e o Writer. Para os alunos que forem utilizar o \LaTeX, veja o Apêndice \ref{ApendiceRef}.
+
+Caso seja feita a opção pelo modelo alfabético, dentro dos colchetes que servem de referência devem constar o último nome dos autores até três autores, seguido do ano da publicação, separados por espaço. Em caso de haver várias publicações no mesmo ano, deve-se diferenciá-las acrescentando uma letra minuscula ao final do ano. Para mais de três autores, utilizar a abreviação et al. (P.Ex.: [Fulano, 2010a], [Fulano, 2010b], [Fulano e Beltrano, 2001], [Fulano et al., 2001]
+
+\begin{description}
+	\item[Artigos em Revistas]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome\footnote{Isto significa que só deve-se colocar a primeira letra do primeiro nome. O mesmo vale para os segundos, terceiros, ..., nomes do mesmo autor.}. Título do artigo. Nome da revista, Local, volume, número, pág.inicial-pág.final, Mês, Ano.
+			
+			\item[Exemplo:] ver referência número \cite{ArtigoRevista}.
+		\end{description}
+	
+	\item[Livros]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. Título do livro. nº edição. Local: Editora, Ano.
+			
+			\item[Exemplo:] ver referência número \cite{Livros}.
+		\end{description}
+		
+	\item[Capítulos de Livros]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. \textbf{Título do Livro}, capítulo\footnote{A palavra ``capítulo'' deverá aparecer neste ponto, seguido de dois pontos. Para quem for usar o \LaTeX, aparecerá ``chapter'', mas os dois pontos devem ser colocados no arquivo de referências, antes do título do capítulo.}: Título do capítulo , pág.inicial-pág.final, Editora, Local, nº edição, Ano.
+			
+			\item[Exemplo:] ver referência número \cite{CapituloLivro}.
+		\end{description}
+		
+	\item[Artigo em Anais]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. Título do artigo. In: TÍTULO DA PUBLICAÇÃO, Ano. \textbf{Proceedings...}, Local: Editora\footnote{Quando não há a editora (caso do nosso exemplo), colocar [s.n.].}, Ano, pág.inicial-pág.final.
+			
+			\item[Exemplo:] ver referência número \cite{ArtigoAnais}.\\
+		\end{description}
+		
+	\item[Manual de SW, procedimentos, etc.]:
+		\begin{description}
+			\item[Formato:] Empresa que organizou o manual, Local. \textbf{Título do Manual/Procedimento}, ano.
+			
+			\item[Exemplo:] ver referência número \cite{Manual}.\\
+		\end{description}
+		
+	\item[Relatório Técnico]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. Título do relatótio. Local: Instituição, Mês, ano. Relatório Técnico número\footnote{Colocar o número do relatório técnico.}.
+			
+			\item[Exemplo:] ver referência número \cite{RelatorioTecnico}.
+		\end{description}
+		
+	\item[Tese de Doutorado]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. \textbf{Título da Tese}. Local: Universidade, Mês, Ano. Tese.
+			
+			\item[Exemplo:] ver referência número \cite{Tese}.
+		\end{description}
+		
+	\item[Dissertação de mestrado ou monografia de curso]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. \textbf{Título da Dissertação/Monografia}. Local: Universidade, Mês, Ano. Dissertação/Monografia\footnote{Indicar qual o tipo.}.
+			
+			\item[Exemplo:] ver referência número \cite{DissertacaoMonografia}.
+		\end{description}
+		
+	\item[Referências que não se encaixam em nada]:
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. \textbf{Título}. Onde foi publicado\footnote{Aqui, pode-se colocar se é uma apostila, ou, se for uma página de Internet, colocar o endereço (ver no apêndice \ref{ApendiceRef}, campo \textit{howpublished} no tipo MISC, como referenciar um endereço de Internet).}. Nota\footnote{Alguma informação adicional sobre a referência.}.
+			
+			\item[Exemplo:] ver referência número \cite{Miscelania}.
+		\end{description}
+		
+	\item[Alguma referência que ainda não foi publicada:] Pode ser também algo que não será publicado, mas que foi apresentado publicamente, por exemplo, um seminário/trabalho de disciplina.
+		\begin{description}
+			\item[Formato:] SOBRENOME, (P)rimeiro Nome. Título. Nota, Mês, Ano.
+			
+			\item[Exemplo:] ver referência número \cite{NaoPublicado}.
+		\end{description}
+\end{description} 

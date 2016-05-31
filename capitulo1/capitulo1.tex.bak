@@ -1,0 +1,186 @@
+\chapter{Aspectos Normativos e Tipográficos}
+\label{CapNormas}
+
+\section{Papel}
+
+A monografia deverá ser apresentada em papel branco, formato A4 (210 x 297 mm) de boa qualidade, com \textbf{gramatura mínima de $75g/m^2$} ou superior. Caso a largura do papel seja insuficiente para a apresentação de ilustrações, pode-se utilizar de papel com largura maior, definindo-se dobras convenientemente dispostas objetivando a sua redução ao tamanho padrão (caso comum em mapas e plantas).
+
+
+\section{Paginação}
+
+Numerar, consecutivamente, com algarismos arábicos, todas as folhas textuais e pós textuais do trabalho, a saber, do início (Capítulo ou seção 1) até o final do mesmo. Os números de identificação das folhas devem ser colocados no fim da página (rodapé) centralizados na linha a 1,5 cm da borda do papel.
+
+As folhas pré-textuais são numeradas com algarismos romanos minúsculos. Os números devem ser colocados no fim da página (rodapé) centralizados na linha a 1,5 cm da borda do papel.
+
+
+\section{Margens}
+
+Margem Superior:	3,5 cm da borda do papel
+
+Margem Inferior..:	2,0 cm da borda do papel
+
+Margem Esquerda:	3,0 cm da borda do papel
+
+Margem Direita...:	2,0 cm da borda do papel
+
+
+\section{Parágrafos e Espaços de Entrelinhas}
+
+Os parágrafos devem iniciar a 0,5 cm a partir da margem esquerda. O espaço entrelinhas deve ser 1,5 (um e meio). As notas de rodapé, o resumo, e as citações textuais longas devem ser impressas com espaço simples de entrelinhas.
+
+\section{Letras}
+\label{SecLetras}
+
+Deve-se utilizar letra \textbf{Times New Roman tamanho 12} para todo o texto. Os títulos de nível 1 deverão utilizar letra \textbf{Times New Roman tamanho 23, negrito}. Os títulos de nível 2 deverão utilizar letra \textbf{Times New Roman tamanho 18, negrito}. Os títulos de nível 3 em diante deverão utilizar fonte \textbf{Times New Roman tamanho 12, negrito}. Os títulos não numerados (Sumário, Resumo, Referências Bibliográficas, etc.) devem seguir a formatação dos títulos de nível 1 (maiores informações sobre a formatação dos títulos veja a seção \ref{SecTitulos}).
+
+
+\section{Títulos}
+\label{SecTitulos}
+
+Um título demarca uma divisão da matéria tratada num documento. Por conseguinte, todos os capítulos ou seções e subseções de teses, dissertações ou monografias devem ter títulos.
+
+Assim, para efeito de identificação das partes, como também de subordinação dos diferentes títulos, a apresentação gráfica dos títulos de um mesmo nível deve ser padronizada. Para uma melhor visão da grafia dos títulos, quem for utilizar um editor de texto tipo Word ou Writer, poderá basear-se no arquivo ``Titulos.doc'' (para Word) e ``Titulos.odt'' (para Writer).
+
+Independentemente, porém, da grafia correspondente aos níveis de subordinação das partes, todos os títulos devem ser destacados em negrito. Todos os capítulos ou seções primárias devem iniciar em folha própria, mesmo que ainda haja espaço útil disponível na folha precedente.
+
+
+\section{Alíneas}
+
+Quando o uso de alíneas (a, b, c, ...) se fizer necessário, deve-se manter o mesmo padrão adotado para os parágrafos (0,5cm).
+
+A disposição gráfica das alíneas, de acordo com a NB-69 deve obedecer às seguintes normas de apresentação\footnote{As alíneas apresentadas aqui já servem como exemplo.}:
+
+\begin{enumerate}
+	\item[a)] o trecho final da seção correspondente, anterior às alíneas, termina por dois pontos;
+	\item[b)] as alíneas são ordenadas por letras minúsculas seguidas de parêntesis;
+	\item[c)] a matéria da alínea começa por letra minúscula e termina por ponto-e-vírgula (;); e a última alínea termina por ponto;
+	\item[d)] a segunda linha e as seguintes da matéria da alínea começam sob a primeira letra de texto da própria alínea.
+		\begin{enumerate}
+			\item[i)] se houver necessidade de detalhar idéias contidas numa ou mais alíneas, estas devem ser identadas a partir da terceira letra de texto da alínea que a contém, e deverá ser numerada com numerais romanos minúsculos.
+		\end{enumerate}
+\end{enumerate}
+
+
+\section{Ilustrações (Figuras, Tabelas e Quadros)}
+
+As ilustrações (figuras, tabelas e quadros) devem aparecer tão perto quanto possível do lugar em que são mencionadas pela primeira vez no texto, obedecendo-se a apresentação tipográfica e o aspecto estético. Nos casos em que, por razões de dimensão, a apresentação texto/ilustração correspondente não couber na mesma página, deve-se dar seqüência ao texto e apresentar a ilustração imediatamente na página seguinte. Quem for utilizar o \LaTeX para editar o seu texto, não precisa preocupar-se com isso: o próprio \LaTeX irá ajustar a figura no melhor lugar.
+
+As ilustrações devem estar separadas do texto, como segue:
+
+\begin{enumerate}
+	\item[a)] uma linha do texto que antecede as ilustrações e o título que os identifica (no caso de tabelas e quadros) ou a própria ilustração (no caso de figuras);
+	
+	\item[b)] uma linha após a ilustração (que inclui título e legenda), antes do texto imediatamente subsequente a cada um.
+\end{enumerate}
+
+\subsection{Figuras}
+
+Figuras compreendem Gráficos, desenhos, mapas, fotografias, lâminas ou quaisquer outras formas pictográficas necessárias à complementação e melhor visualização do texto.
+
+A norma NBR-10719 estabelece que qualquer figura, independentemente do tipo, deve ser identificada no texto por meio da palavra Figura, seguida de: número do capítulo, ponto (.), número de ordem de ocorrência no texto, em algarismos arábicos e da respectiva legenda e texto explicativo (ver a figura \ref{FigExemplo} e sua respectiva legenda como exemplo). A figura deverá estar disposta no texto de maneira centralizada. Como padrão, deve-se utilizar o texto da legenda centralizado e com fonte Times New Roman tamanho 10. \\
+
+\begin{figure}[htb]
+	\begin{center}
+  	% Requires \usepackage{graphicx}
+  	\includegraphics[width = 7.59cm, height = 8.94cm]{Figuras/Exemplo.jpg}\\
+  	\caption{Exemplo de Figura}\label{FigExemplo}
+  \end{center}
+\end{figure}
+
+\subsection{Tabelas}
+
+O título da tabela deve ser o mais completo possível. Deve figurar acima da tabela, precedido da palavra Tabela, seguida de: número do capítulo, ponto (.), número de ordem de ocorrência no texto, em algarismos arábicos e da respectiva legenda e texto explicativo (ver a tabela \ref{tabela_exemplo} e sua respectiva legenda como exemplo). A tabela deverá estar disposta no texto de maneira centralizada. Como padrão, deve-se utilizar o texto da legenda centralizado e com fonte Times New Roman tamanho 10.
+
+\begin{table}[htb]
+	\centering
+	\caption{legenda da tabela}
+	\begin{tabular}{|c|c|}
+		\hline
+		Cabeçalho 1 & Cabeçalho 2 \\ \hline
+ 		item 1 & item 2 \\ \hline
+ 		item 3 & item 4 \\ \hline
+ 		item 2 & item 6\\ \hline
+	\end{tabular}
+	\label{tabela_exemplo}
+\end{table}
+
+\section{Expressões e Fórmulas Matemáticas}
+
+As expressões matemáticas, fórmulas ou equações devem ser numeradas como segue: número do capítulo, ponto (.) e número de ordem de ocorrência no texto, em algarismos arábicos. A numeração deverá estar posicionada à direita da expressão, entre parênteses (ver a equação \ref{ExEquacao} como exemplo).
+
+\begin{equation}
+\label{ExEquacao}
+	x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\end{equation}
+
+\section{Grandezas, Unidades, Símbolos e Abreviaturas}
+
+Quando não for possível evitar o uso de abreviaturas específicas, a primeira vez que aparecem no texto devem ser indicadas entre parênteses, precedidas do respectivo nome por extenso. Por exemplo: United Educational Scientific and Cultural Organization (UNESCO). Todas as abreviaturas e siglas utilizadas no texto devem aparecer na ``Lista de Abreviaturas e Siglas'' e todos os símbolos utilizados devem aparecer na ``Lista de Símbolos''.
+
+\section{Notas Explicativas}
+
+São usadas para apresentar comentários, esclarecimentos, etc, que, embora importantes, não devem ser incluídas no texto específico da matéria\footnote{Exemplo de uma nota explicativa, ou nota de rodapé.}. Quando usadas, devem ser impressas no pé da página, separadas do texto principal por um filete (linha) (o próprio editor de texto, quando utiliza-se ``Inserir nota de rodapé'', ou o próprio \LaTeX, quando utiliza-se \verb|\footnote{}|, coloca esse filete), e diferenciadas tipograficamente do texto principal, utilizando-se fonte \textbf{Times New Roman} de tamanho menor que o utilizado no texto (tamanho 10 ou 9).
+
+Recomenda-se que as notas sejam limitadas ao mínimo necessário e que as remissões para o rodapé sejam numeradas sequencialmente, em todo o texto, ou com reinício de numeração a cada capítulo.
+
+\section{Citações}
+
+As citações são elementos retirados dos documentos dos autores pesquisados durante a leitura da documentação relevante ao tema da monografia e servem para corroborar as idéias desenvolvidas pelo autor, no decorrer de seu raciocínio.
+
+\subsection{Citações Textuais}
+
+A citação textual (literal ou indireta) é a transcrição de parte do texto de outro autor. Este tipo de citação pode ser apresentado de duas formas diferentes:
+
+\begin{enumerate}
+	\item[a)] citações curtas (até três linhas) - são incorporadas ao texto, transcritas entre aspas ou com destaque tipográfico em \textit{itálico}, com indicação das fontes de onde foram retiradas;
+	
+	\item[b)] citações longas (mais de três linhas) - são transcritas entre aspas ou em \textit{itálico}, com espaço simples de entrelinha, em parágrafo próprio, com indicação das fontes de onde foram retiradas.\\
+\end{enumerate}
+
+Em ambos os casos deve-se observar o seguinte:
+
+\begin{enumerate}
+	\item[a)] transcrever sempre as palavras ou frases como aparecem no original, respeitando-se também a pontuação e/ou grifos;
+	
+	\item[b)] as aspas de palavras ou expressões contidas no texto citado devem ser substituídas por apóstrofos, palavras e/ou expressões já grafadas em itálico devem ser transcritas, também, entre apóstrofos;
+	
+	\item[c)] quando usar negrito para enfatizar alguma frase ou palavra da citação, utiliza-se a expressão \textbf{grifo nosso}, entre parênteses, após a indicação da fonte;
+	
+	\item[d)] para omitir trechos e/ou palavras do texto em transcrição, deve-se usar reticências para indicar as supressões. Quando a supressão for no meio do texto, as reticências deverão vir entre barras ou colchetes;
+	
+	\item[e)] se, no momento da transcrição, o citador detectar alguma incorreção ortográfica ou gramatical, ou incoerências no texto, este deverá ser transcrito como se apresenta, sem qualquer correção, mas deverá ser acrescentado logo após o erro detectado, a palavra latina \textbf{(sic)}\footnote{``assim'' em tradução literal do Latim} entre parênteses, de maneira a indicar que no texto original estava assim mesmo.
+\end{enumerate}
+	
+
+\subsection{Citações Conceituais}
+
+A citação conceitual (indireta) reproduz as idéias da fonte consultada sem, no entanto, transcrever o texto. Esse tipo de citação pode ser apresentado de duas formas:
+
+\begin{enumerate}
+	\item[a)] por \textbf{paráfrase}: quando alguém expressa a idéia de um dado autor, ou de uma determinada fonte com palavras próprias. Este tipo de citação deve manter, aproximadamente, o mesmo tamanho que o original. Quando a paráfrase é fiel à fonte,	é, geralmente, preferível	à citações longas;
+	
+	\item[b)] por \textbf{condensação}: é quando se faz uma síntese do texto consultado, sem alterar o pensamento ou as idéias do autor.\\
+\end{enumerate}
+
+Em ambos os casos, o uso de aspas ou itálico é dispensado, devendo-se contudo, indicar sempre a fonte de onde a idéia foi retirada.
+
+
+\subsection{Citação Mista}
+
+A citação mista é a citação em que o autor do trabalho faz inserção de termos ou expressões textuais do autor consultado, precedendo, intercalando ou seguindo suas próprias palavras. Neste tipo de citação apenas o trecho transcrito deverá vir entre aspas ou itálico, com indicação da fonte, como nas citações anteriores.
+
+
+\subsection{Citação de Citação}
+
+Ocorre quando o autor do trabalho transcreve uma citação, citada pelo autor da fonte consultada (citação de ``segunda mão''). Neste caso, o segundo citador deverá acrescentar antes da indicação da fonte consultada, a palavra latina \textbf{apud}\footnote{``junto a'' em tradução literal do Latim}.
+
+
+\section{Indicação das fontes consultadas}
+
+Podem ser usados tanto o sistema alfabético quanto o sistema numérico. Neste documento utilizaremos o sistema numérico, onde a indicação das fontes consultadas segue uma numeração única e consecutiva, remetendo para a lista de referências no final do trabalho (norma da ABNT de 2002). Essas referências são organizadas na ordem em que são citadas, com um número de indicação entre colchetes\footnote{Para exemplificar melhor, observe o item das ``Referências Bibliográficas'' e o apêndice \ref{ApendiceRef}.}. Para quem desejar utilizar o sistema alfabético, em \LaTeX, existe um arquivo de estilo para o sistema alfabético (abnt-alf.bst) e outro para o sistema numérico (abnt-num.bst). Basta escolher o modelo a ser utilizado. Em ambos os casos, a forma correta de indicar as fontes pode ser:
+
+\begin{itemize}
+	\item direta (exemplo: ... segundo fulano [referência]) 
+	\item indireta (exemplo: ... estudos realizados mostram ser esta a melhor opção [referência])
+\end
+

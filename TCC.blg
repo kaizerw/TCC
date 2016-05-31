@@ -1,0 +1,79 @@
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: TCC.aux
+A level-1 auxiliary file: iniciais/capa.aux
+A level-1 auxiliary file: iniciais/rosto.aux
+A level-1 auxiliary file: iniciais/aprova.aux
+A level-1 auxiliary file: iniciais/dedica.aux
+A level-1 auxiliary file: iniciais/agradece.aux
+A level-1 auxiliary file: iniciais/sumario.aux
+A level-1 auxiliary file: iniciais/resumo.aux
+A level-1 auxiliary file: capitulo1/capitulo1.aux
+A level-1 auxiliary file: capitulo2/capitulo2.aux
+A level-1 auxiliary file: capitulo3/capitulo3.aux
+A level-1 auxiliary file: capitulo4/capitulo4.aux
+A level-1 auxiliary file: capitulo5/capitulo5.aux
+A level-1 auxiliary file: glossario/glossario.aux
+The style file: abnt-alf.bst
+I found no \citation commands---while reading file TCC.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Referencias.bib
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
++---------------------------------------------------------+
+| Estilo bibliográfico abnt-alf.bst versão 1.45.2.1           |
+| Em caso de dúvidas ou problemas com este estilo procure |
+| http://abntex.codigolivre.org.br                        |
++---------------------------------------------------------+
+You've used 0 entries,
+            6480 wiz_defined-function locations,
+            1167 strings with 9368 characters,
+and the built_in function-call counts, 693 in all, are:
+= -- 186
+> -- 0
+< -- 0
++ -- 47
+- -- 0
+* -- 28
+:= -- 158
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 1
+format.name$ -- 0
+if$ -- 142
+int.to.chr$ -- 0
+int.to.str$ -- 0
+missing$ -- 0
+newline$ -- 8
+num.names$ -- 0
+pop$ -- 26
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 40
+stack$ -- 1
+substring$ -- 45
+swap$ -- 0
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 2
+width$ -- 0
+write$ -- 8
+(There was 1 error message)

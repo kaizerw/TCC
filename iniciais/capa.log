@@ -1,0 +1,360 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.17)  31 MAY 2016 17:42
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**capa.tex
+(./capa.tex
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+
+! LaTeX Error: Environment wrapfigure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \begin{wrapfigure}
+                       [4]{i}{0cm}
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \begin{wrapfigure}[
+                        4]{i}{0cm}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no 4 in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+! Undefined control sequence.
+l.16 	\includegraphics
+                      [width = 3.13cm, height = 2.19cm]{Simbolo.jpg}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 3 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 9 in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no g in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{wrapfigure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \end{wrapfigure}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <13> not available
+(Font)              size <12> substituted on input line 20.
+
+Missing character: There is no á in font cmbx12!
+Missing character: There is no C in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no R in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no Ê in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no X in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no T in font nullfont!
+Missing character: There is no E in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no N in font nullfont!
+Missing character: There is no O in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no Ó in font nullfont!
+Missing character: There is no G in font nullfont!
+Missing character: There is no I in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no S in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no ê in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no C in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no ç in font nullfont!
+Missing character: There is no ã in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no ê in font cmbxti10!
+Missing character: There is no ç in font cmbxti10!
+Missing character: There is no ã in font cmbxti10!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 14--26
+[]
+ []
+
+
+Overfull \hbox (51.64445pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 Unioeste
+ []
+
+
+Overfull \hbox (4.5pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 -
+ []
+
+
+Overfull \hbox (26.12502pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 Uni-
+ []
+
+
+Overfull \hbox (22.92361pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 ver-
+ []
+
+
+Overfull \hbox (13.57501pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 si-
+ []
+
+
+Overfull \hbox (27.72221pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 dade
+ []
+
+
+Overfull \hbox (18.68613pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 Es-
+ []
+
+
+Overfull \hbox (23.8125pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 tad-
+ []
+
+
+Overfull \hbox (17.8125pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 ual
+ []
+
+
+Overfull \hbox (14.25pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 do
+ []
+
+
+Overfull \hbox (33.03331pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 Oeste
+ []
+
+
+Overfull \hbox (14.25pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 do
+ []
+
+
+Overfull \hbox (34.98613pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/n/12 Paran 
+ []
+
+
+Overfull \hbox (33.14473pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 Curso
+ []
+
+
+Overfull \hbox (12.30037pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 de
+ []
+
+
+Overfull \hbox (49.40225pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 Bachare-
+ []
+
+
+Overfull \hbox (22.66624pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 lado
+ []
+
+
+Overfull \hbox (16.16933pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 em
+ []
+
+
+Overfull \hbox (24.60072pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 Cin-
+ []
+
+
+Overfull \hbox (16.19366pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 cia
+ []
+
+
+Overfull \hbox (12.94519pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 da
+ []
+
+
+Overfull \hbox (30.40416pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 Com-
+ []
+
+
+Overfull \hbox (30.42851pt too wide) in paragraph at lines 14--26
+\OT1/cmr/bx/it/10.95 putao
+ []
+
+Missing character: There is no í in font cmbx12!
+
+Overfull \hbox (32.63887pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/bx/n/12 Ttulo 
+ []
+
+
+Overfull \hbox (14.25pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/bx/n/12 do 
+ []
+
+
+Overfull \hbox (28.88887pt too wide) in paragraph at lines 28--28
+ \OT1/cmr/bx/n/12 TCC 
+ []
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/it' in size <13> not available
+(Font)              size <12> substituted on input line 30.
+
+
+Overfull \hbox (29.7225pt too wide) in paragraph at lines 30--30
+ []\OT1/cmr/m/it/12 Nome 
+ []
+
+
+Overfull \hbox (12.00009pt too wide) in paragraph at lines 30--30
+ \OT1/cmr/m/it/12 do 
+ []
+
+
+Overfull \hbox (16.50014pt too wide) in paragraph at lines 30--30
+ \OT1/cmr/m/it/12 au- 
+ []
+
+
+Overfull \hbox (16.14182pt too wide) in paragraph at lines 30--30
+ \OT1/cmr/m/it/12 tor 
+ []
+
+
+Overfull \hbox (73.05556pt too wide) in paragraph at lines 32--32
+ []\OT1/cmr/bx/n/12 CASCAVEL 
+ []
+
+
+Overfull \hbox (24.44444pt too wide) in paragraph at lines 33--34
+ []\OT1/cmr/bx/n/12 Ano 
+ []
+
+)
+! Emergency stop.
+<*> capa.tex
+            
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 20 strings out of 493029
+ 303 string characters out of 6136234
+ 54236 words of memory out of 5000000
+ 3652 multiletter control sequences out of 15000+600000
+ 4961 words of font info for 18 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 16i,1n,11p,94b,126s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
