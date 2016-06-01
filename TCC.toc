@@ -16,17 +16,16 @@
 \contentsline {section}{\numberline {2.4}Modelagem em operadores e bitstring (compartimental, operadores, bitstring)}{2}
 \contentsline {section}{\numberline {2.5}Refinamento do modelo}{2}
 \contentsline {chapter}{\numberline {3}Metodologias computacionais}{3}
-\contentsline {section}{\numberline {3.1}Introdu\~A\IeC {\S }\~A\IeC {\pounds }o}{3}
+\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{3}
 \contentsline {section}{\numberline {3.2}SIMULA}{3}
 \contentsline {section}{\numberline {3.3}Estruturas de dados, linguagens, etc.}{3}
 \contentsline {section}{\numberline {3.4}CUDA e OpenMP}{3}
-\contentsline {chapter}{\numberline {4}Solucoes}{4}
-\contentsline {section}{\numberline {4.1}Introducao}{4}
+\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{4}
+\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{4}
 \contentsline {section}{\numberline {4.2}Normal com CUDA e OpenMP}{4}
 \contentsline {section}{\numberline {4.3}Bitstring com CUDA e OpenMP}{4}
-\contentsline {section}{\numberline {4.4}Discussoes qualitativas, quantitativas, eficiencia, acuracia}{4}
-\contentsline {chapter}{\numberline {5}Resultados e discussoes}{5}
-\contentsline {section}{\numberline {5.1}Introducao}{5}
-\contentsline {section}{\numberline {5.2}Cases: Discutir simulacoes na 445, 445 + vizinhas e etc.}{5}
+\contentsline {section}{\numberline {4.4}Discuss\~oes qualitativas, quantitativas, efici\^encia, acur\'acia}{4}
+\contentsline {chapter}{\numberline {5}Resultados e discuss\~oes}{5}
+\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{5}
+\contentsline {section}{\numberline {5.2}Cases: Discutir simulac\~oes na 445, 445 + vizinhas e etc.}{5}
 \contentsline {chapter}{Gloss\'ario}{6}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{7}

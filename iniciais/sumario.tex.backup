@@ -16,16 +16,16 @@
 \addcontentsline{toc}{chapter}{Lista de Abreviaturas e Siglas}
 \chapter*{Lista de Abreviaturas e Siglas}
 \begin{tabular}{ll}
-	CUDA & \textit{Compute Unified Device Architecture}\\
-	SEIRS & \textit{Suscetível, Exposto, Infectado, Recuperado e Suscetível}\\
+	UNESCO & United Educational Scientific and Cultural Organization\\
+	ABNT & Associação Brasileira de Normas Técnicas\\
 \end{tabular}
 
 \pagebreak
 \addcontentsline{toc}{chapter}{Lista de Símbolos}
 \chapter*{Lista de Símbolos}
 \begin{tabular}{ll}
-	$\alpha$ & \textit{Alfa}\\
-	$\beta$  & \textit{Beta}\\
+	$\alpha$ & ângulo qualquer\\
+	$\beta$  & Outro ângulo\\
 \end{tabular}
 
 \pagebreak
