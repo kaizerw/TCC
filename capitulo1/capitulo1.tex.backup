@@ -20,8 +20,7 @@ Este trabalho tem as seguintes motivações:
 
 \begin{itemize}
  \item O uso de agentes computacionais em simulações é interessante por permitir a modelagem mais realística das entidades presentes no modelo;
- \item A técnica de \textit{bitstring} é relativamente nova e relevante, pois possibilita a modelagem de agentes computacionais de forma sucinta e eficiente, evitando desperdícios de memória e facilitando operações na plataforma \textit{CUDA}.
- \item O uso da plataforma \textit{CUDA} é atrativo por possibilitar a paralelização massiva da implementação realizada, proporcionando ganhos de desempenho desejáveis nos experimentos que serão realizados.
+ \item A
 \end{itemize}
 
 \section{Organização do Trabalho}
