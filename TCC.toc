@@ -6,10 +6,9 @@
 \contentsline {chapter}{Sum\'ario}{x}
 \contentsline {chapter}{Resumo}{xii}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
-\contentsline {section}{\numberline {1.1}Justificativas}{1}
-\contentsline {section}{\numberline {1.2}Objetivos}{1}
-\contentsline {section}{\numberline {1.3}Motiva\c c\~ao}{2}
-\contentsline {section}{\numberline {1.4}Organiza\c c\~ao do Trabalho}{2}
+\contentsline {section}{\numberline {1.1}Objetivos}{1}
+\contentsline {section}{\numberline {1.2}Motiva\c c\~ao e Justificativas}{2}
+\contentsline {section}{\numberline {1.3}Organiza\c c\~ao do Trabalho}{2}
 \contentsline {chapter}{\numberline {2}Fundamentos}{3}
 \contentsline {section}{\numberline {2.1}Introdu\c c\~ao a Epidemiologia Computacional e Textos Correlatos}{3}
 \contentsline {section}{\numberline {2.2}Tipos de Modelos, Classifica\c c\~ao, entre outros}{3}

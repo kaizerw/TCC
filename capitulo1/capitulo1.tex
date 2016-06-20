@@ -1,27 +1,29 @@
 \chapter{Introdução}
 \label{CapIntroducao}
 
-\section{Justificativas}
-
 \section{Objetivos}
 
 O objetivo principal deste trabalho é desenvolver e implementar um modelo multiagente, com formulação em \textit{bitstring}, para simular computacionalmente a propagação de hipotéticas doenças que possam ser modeladas por modelos compartimentais tipo \textit{SEIRS}. A solução computacional do modelo contemplará uma implementação em \textit{Compute Unified Device Architecture} (\textit{CUDA}) para extrair máxima eficiência computacional. Para alcançar este objetivo é necessária a conclusão de objetivos mais específicos que contemplam:
 
 \begin{enumerate}
- \item Revisão bibliográfica nas temáticas pertinentes ao trabalho, incluindo temas como epidemiologia computacional, modelagem compartimental, sistemas multiagentes, formulação \textit{bitstring} ao modelo, estruturas de dados e plataforma computacional paralela \textit{CUDA}.
+ \item Revisão bibliográfica nas temáticas pertinentes ao trabalho, incluindo temas como epidemiologia computacional, modelagem compartimental, sistemas multiagentes, formulação \textit{bitstring}, estruturas de dados e plataforma computacional paralela \textit{CUDA}.
  \item Desenvolvimento e implementação de um modelo multiagente em \textit{bitstring}, baseado em formulação compartimental.
+ \item Paralelização do sistema multiagente de simulação em \textit{bitstring} utilizando a plataforma computacional paralela \textit{CUDA}.
  \item O emprego e o aperfeiçoamento de uma ferramenta computacional para viabilizar e otimizar as fases de pré-processamento, processamento e pós-processamento da simulação, como as etapas de configuração e visualização dos resultados obtidos.
  \item Realização de experimentos numérico-computacionais visando verificar a acurácia da solução bem como sua eficiência computacional.
 \end{enumerate}
 
-\section{Motivação}
+\section{Motivação e Justificativas}
 
-Este trabalho tem as seguintes motivações:
+Este trabalho tem as seguintes motivações e justificativas:
 
 \begin{itemize}
- \item O uso de agentes computacionais em simulações é interessante por permitir a modelagem mais realística das entidades presentes no modelo;
- \item A técnica de \textit{bitstring} é relativamente nova e relevante, pois possibilita a modelagem de agentes computacionais de forma sucinta e eficiente, evitando desperdícios de memória e facilitando operações na plataforma \textit{CUDA}.
- \item O uso da plataforma \textit{CUDA} é atrativo por possibilitar a paralelização massiva da implementação realizada, proporcionando ganhos de desempenho desejáveis nos experimentos que serão realizados.
+ \item O estudo e aplicação de modelos compartimentais em epidemiologia computacional é interessante pois mostram-se poderosos e flexíveis à modelagem de hipotéticas doenças.
+ \item O uso de agentes computacionais em simulações permite sua modelagem mais realística e facilita sua posterior paralelização.
+ \item A técnica de modelos de agentes em \textit{bitstring} é relativamente nova e relevante, pois possibilita a modelagem de agentes computacionais de forma sucinta e eficiente, evitando desperdícios de memória e facilitando a implementação na plataforma \textit{CUDA}.
+ \item O uso da plataforma \textit{CUDA} é atrativo por possibilitar a paralelização massiva do sistema implementado, proporcionando ganhos de desempenho desejáveis em experimentos computacionais que serão realizados.
 \end{itemize}
 
 \section{Organização do Trabalho}
+
+Este trabalho está organizado da seguinte maneira: no Capítulo 2 é apresentada e discutida a fundamentação teórica utilizada para a realização deste trabalho, envolvendo temáticas como a epidemiologia computacional, modelagem compartimental, sistemas multiagentes e modelagem \textit{bitstring}. No Capítulo 3 são apresentados os métodos utilizados para a modelagem, implementação e teste do sistema multiagente, como estruturas de dados, linguagens, APIs e demais softwares de apoio. No Capítulo 4 são discutidas as implementações realizadas e demais discussões sobre. Por fim o Capítulo 5 discute resultados obtidos por testes executados utilizando a implementação realizada.
