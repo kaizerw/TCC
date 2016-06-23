@@ -6,26 +6,26 @@
 \contentsline {chapter}{Sum\'ario}{x}
 \contentsline {chapter}{Resumo}{xii}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
-\contentsline {section}{\numberline {1.1}Objetivos}{1}
+\contentsline {section}{\numberline {1.1}Objetivos}{2}
 \contentsline {section}{\numberline {1.2}Motiva\c c\~ao e Justificativas}{2}
-\contentsline {section}{\numberline {1.3}Organiza\c c\~ao do Trabalho}{2}
-\contentsline {chapter}{\numberline {2}Fundamentos}{3}
-\contentsline {section}{\numberline {2.1}Introdu\c c\~ao a Epidemiologia Computacional e Textos Correlatos}{3}
-\contentsline {section}{\numberline {2.2}Tipos de Modelos, Classifica\c c\~ao, entre outros}{3}
-\contentsline {section}{\numberline {2.3}Agentes e Multiagentes}{3}
-\contentsline {section}{\numberline {2.4}Modelagem em Operadores e Bitstring (Compartimental, Operadores, Bitstring)}{3}
-\contentsline {section}{\numberline {2.5}Refinamento do Modelo}{3}
-\contentsline {chapter}{\numberline {3}Metodologias Computacionais}{4}
-\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{4}
-\contentsline {section}{\numberline {3.2}SIMULA}{4}
-\contentsline {section}{\numberline {3.3}Estruturas de Dados, Linguagens, etc.}{4}
-\contentsline {section}{\numberline {3.4}CUDA e OpenMP}{4}
-\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{5}
-\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{5}
-\contentsline {section}{\numberline {4.2}Normal com CUDA e OpenMP}{5}
-\contentsline {section}{\numberline {4.3}Bitstring com CUDA e OpenMP}{5}
-\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia, Acur\'acia}{5}
-\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{6}
-\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{6}
-\contentsline {section}{\numberline {5.2}Cases: Discutir Simulac\~oes na 445, 445 + Vizinhas e etc.}{6}
-\contentsline {chapter}{Gloss\'ario}{7}
+\contentsline {section}{\numberline {1.3}Organiza\c c\~ao do Trabalho}{3}
+\contentsline {chapter}{\numberline {2}Fundamentos}{4}
+\contentsline {section}{\numberline {2.1}Introdu\c c\~ao a Epidemiologia Computacional e Textos Correlatos}{4}
+\contentsline {section}{\numberline {2.2}Tipos de Modelos, Classifica\c c\~ao, entre outros}{4}
+\contentsline {section}{\numberline {2.3}Agentes e Multiagentes}{4}
+\contentsline {section}{\numberline {2.4}Modelagem em Operadores e Bitstring (Compartimental, Operadores, Bitstring)}{4}
+\contentsline {section}{\numberline {2.5}Refinamento do Modelo}{4}
+\contentsline {chapter}{\numberline {3}Metodologias Computacionais}{5}
+\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{5}
+\contentsline {section}{\numberline {3.2}SIMULA}{5}
+\contentsline {section}{\numberline {3.3}Estruturas de Dados, Linguagens, etc.}{5}
+\contentsline {section}{\numberline {3.4}CUDA e OpenMP}{5}
+\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{6}
+\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{6}
+\contentsline {section}{\numberline {4.2}Normal com CUDA e OpenMP}{6}
+\contentsline {section}{\numberline {4.3}Bitstring com CUDA e OpenMP}{6}
+\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia, Acur\'acia}{6}
+\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{7}
+\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{7}
+\contentsline {section}{\numberline {5.2}Cases: Discutir Simulac\~oes na 445, 445 + Vizinhas e etc.}{7}
+\contentsline {chapter}{Gloss\'ario}{8}

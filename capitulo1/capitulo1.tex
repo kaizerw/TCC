@@ -1,29 +1,33 @@
 \chapter{Introdução}
 \label{CapIntroducao}
 
+Epidemiologia pode ser definida como o estudo da frequência, da distribuição e dos estados ou eventos relacionados com a distribuição de doenças transmissíveis e não transmissíveis em populações específicas, e a aplicação dos resultados desses estudos na prevenção e controle dos problemas de saúde. Modelos computacionais baseados em indivíduos vêm sendo empregados na epidemiologia para estudar a propagação e transmissão de doenças, que são processos centrais na dinâmica de doenças infecto-contagiosas. O emprego destes modelos permite a modelagem de fenômenos de natureza probabilística e da heterogeneidade das relações entre os indivíduos e o meio, conferindo mais realidade ao modelo estudado. Modelos compartimentais podem ser utilizados para a definição de modelos mais complexos, tendo como base a subdivisão da população em categorias, onde os indíviduos fluem entre as categorias de acordo com determinadas taxas e cenários, eventualmente podendo respeitar as características particulares de um doença de interesse. 
+
+Para a implementação de modelos baseados em indivíduos em uma linguagem computacional pode ser interessante utilizar abordagens mais eficientes para codificação do sistema e ainda definir-se um \textit{lattice} apropriado para a execução de futuros experimentos computacionais. Dependendo da dimensão do \textit{lattice}, da quantidade de indivíduos e da complexidade das dinâmicas modeladas, é desejável otimizar o tempo de execução dos experimentos realizados, utilizando os recursos computacionais de processamento e armazenamento disponíveis da forma mais eficiente possível, buscando extrair máximo desempenho da máquina.
+
 \section{Objetivos}
 
-O objetivo principal deste trabalho é desenvolver e implementar um modelo multiagente, com formulação em \textit{bitstring}, para simular computacionalmente a propagação de hipotéticas doenças que possam ser modeladas por modelos compartimentais tipo \textit{SEIRS}. A solução computacional do modelo contemplará uma implementação em \textit{Compute Unified Device Architecture} (\textit{CUDA}) para extrair máxima eficiência computacional. Para alcançar este objetivo é necessária a conclusão de objetivos mais específicos que contemplam:
+O objetivo principal deste trabalho é propor, desenvolver e implementar um modelo epidemiológico computacional multiagente, com formulação em \textit{bitstring}, para simular computacionalmente a propagação de hipotéticas doenças que possam ser modeladas por modelos compartimentais tipo \textit{SEIRS}, utilizando como \textit{lattice} uma região da cidade de Cascavel. A solução computacional do modelo proposto contemplará uma implementação utilizando \textit{Compute Unified Device Architecture} (\textit{CUDA}) para extrair máxima eficiência computacional através de paralelismo de dados. Para alcançar este objetivo é necessária a conclusão de objetivos mais específicos que contemplam:
 
 \begin{enumerate}
  \item Revisão bibliográfica nas temáticas pertinentes ao trabalho, incluindo temas como epidemiologia computacional, modelagem compartimental, sistemas multiagentes, formulação \textit{bitstring}, estruturas de dados e plataforma computacional paralela \textit{CUDA}.
- \item Desenvolvimento e implementação de um modelo multiagente em \textit{bitstring}, baseado em formulação compartimental.
- \item Paralelização do sistema multiagente de simulação em \textit{bitstring} utilizando a plataforma computacional paralela \textit{CUDA}.
- \item O emprego e o aperfeiçoamento de uma ferramenta computacional para viabilizar e otimizar as fases de pré-processamento, processamento e pós-processamento da simulação, como as etapas de configuração e visualização dos resultados obtidos.
- \item Realização de experimentos numérico-computacionais visando verificar a acurácia da solução bem como sua eficiência computacional.
+ \item Desenvolvimento e implementação de um modelo multiagente em \textit{bitstring}, baseado em formulação compartimental, tendo como \textit{lattice} uma quadra da cidade de Cascavel.
+ \item Paralelização em nível de dados do sistema multiagente de simulação em \textit{bitstring} utilizando a plataforma computacional paralela \textit{CUDA}.
+ \item O emprego e o aperfeiçoamento de uma ferramenta computacional para viabilizar e otimizar as fases de pré-processamento, processamento e pós-processamento da simulação, como as etapas de configuração e visualização dos resultados obtidos, sob o \textit{lattice} escolhido.
+ \item Realização de experimentos numérico-computacionais visando verificar a acurácia da solução implementada bem como sua eficiência computacional e demais aspectos computacionais.
 \end{enumerate}
 
 \section{Motivação e Justificativas}
 
-Este trabalho tem as seguintes motivações e justificativas:
+Em conformidade com os objetivos estabelecidos, este trabalho justifica-se pelos seguintes motivos:
 
 \begin{itemize}
- \item O estudo e aplicação de modelos compartimentais em epidemiologia computacional é interessante pois mostram-se poderosos e flexíveis à modelagem de hipotéticas doenças.
- \item O uso de agentes computacionais em simulações permite sua modelagem mais realística e facilita sua posterior paralelização.
- \item A técnica de modelos de agentes em \textit{bitstring} é relativamente nova e relevante, pois possibilita a modelagem de agentes computacionais de forma sucinta e eficiente, evitando desperdícios de memória e facilitando a implementação na plataforma \textit{CUDA}.
- \item O uso da plataforma \textit{CUDA} é atrativo por possibilitar a paralelização massiva do sistema implementado, proporcionando ganhos de desempenho desejáveis em experimentos computacionais que serão realizados.
+ \item O estudo e aplicação de modelos compartimentais em epidemiologia computacional é interessante pois estes mostram-se poderosos e flexíveis à modelagem de hipotéticas doenças, bem como são amplamente utilizados, como pode-se ver na literatura técnica disponível.
+ \item O uso de agentes computacionais em simulações permite a modelagem mais realística dos fenômenos epidemiológicos de interesse por tratar os indivíduos independentemente uns dos outros e facilitar a posterior paralelização do modelo.
+ \item A técnica de modelos de agentes em \textit{bitstring} é relativamente nova e relevante, pois possibilita a modelagem de agentes computacionais de forma sucinta e eficiente, evitando desperdícios de memória, simplificando o processo de captura e configuração de atributos dos indivíduos e facilitando a implementação na plataforma \textit{CUDA} por reduzir a quantidade de dados nas transferências entre CPU e GPU e ainda diminuir a complexidade das estruturas de dados utilizadas.
+ \item O uso da plataforma \textit{CUDA} é atrativo por possibilitar a paralelização massiva do sistema implementado, esperando-se ganhos de desempenho desejáveis nos experimentos computacionais que serão realizados.
 \end{itemize}
 
 \section{Organização do Trabalho}
 
-Este trabalho está organizado da seguinte maneira: no Capítulo 2 é apresentada e discutida a fundamentação teórica utilizada para a realização deste trabalho, envolvendo temáticas como a epidemiologia computacional, modelagem compartimental, sistemas multiagentes e modelagem \textit{bitstring}. No Capítulo 3 são apresentados os métodos utilizados para a modelagem, implementação e teste do sistema multiagente, como estruturas de dados, linguagens, APIs e demais softwares de apoio. No Capítulo 4 são discutidas as implementações realizadas e demais discussões sobre. Por fim o Capítulo 5 discute resultados obtidos por testes executados utilizando a implementação realizada.
+Este trabalho está organizado da seguinte forma: no Capítulo 2 é apresentada e discutida a fundamentação teórica utilizada para a realização deste trabalho, envolvendo temáticas como a epidemiologia computacional, modelagem compartimental, sistemas multiagentes e modelagem \textit{bitstring}. No Capítulo 3 são apresentados os métodos utilizados para a modelagem, implementação e teste do sistema multiagente, como estruturas de dados, linguagens, APIs e demais softwares de apoio. No Capítulo 4 são discutidas as implementações realizadas, fazendo-se comparações entre elas e discutindo demais pontos pertinentes. Por fim o Capítulo 5 discute resultados obtidos através da execução de testes utilizando as implementações realizadas.
