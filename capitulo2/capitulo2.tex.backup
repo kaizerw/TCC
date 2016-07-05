@@ -1,7 +1,23 @@
 \chapter{Fundamentos}
 \label{CapFundamentos}
 
-\section{Epidemiologia Computacional}
+\section{Epidemiologia Matemática e Computacional}
+
+Conjectura-se que os primeiros estudos epidemiológicos ocorreram na Grécia Antiga, realizados pelo sacerdote Hipócrates (460-377 a.C.). Hipócrates investigou diversas epidemias e suas distribuições ambientais e, após sua morte, seus discípulos deram continuidade aos seus estudos em diferentes frentes de trabalho. Em Roma, os trabalhos epidemiológicos foram iniciados por médicos inspirados em Galeno (201-130 a.C.), um famoso médico grego. Os estudos romanos produziram resultados importantes na área de epidemiologia, destacando-se entre eles a introdução dos censos periódicos e registro compulsório de nascimentos e óbitos. Em 1950, aconteceu na Inglaterra a \textit{London Epidemiological Society}, organizada pela \textit{Royal Medical Society}, onde participaram diversos profissionais proeminentes da área epidemiológica. Entre eles estava John Snow (1813-1858), considerado por muitos o pai da epidemiologia, que conduziu estudos pioneiros sobre a mortalidade por infecção pós-cirúrgica nos hospitais militares na Guerra da Criméia, mecanismos de transmissão hídrica e descobriu o agente microbiano da cólera morbo. \cite{Epidemiologia}. 
+
+No século XIX ocorreu um grande desenvolvimento na área de epidemiologia, destacando-se figuras como Major Greenwood (1888-1949), que introduziu o raciocínio estatístico na pesquisa epidemiológica, contribuindo para a epidemiologia experimental, John Ryle (1889-1950), que propôs a sistematização da História Natural das Doenças e Jerome Cornfield (1921-1979), que desenvolveu os estimadores de risco relativo e introduziu técnicas de regressão logística na epidemiologia. Nas décadas de 1960 e 1970 ocorreram grandes transformações na epidemiologia, com a introdução dos computadores e desenvolvimento de técnicas de coleta e análise de dados epidemiológicos. Atualmente a epidemiologia conta com novas abordagens metodológicas que contribuem para a reavaliação de suas bases de estudo, abrindo possibilidades para a investigação de grandes processos em grupos populacionais. O caráter inovador é bastante incentivado dentro da epidemiologia, seja pela incorporação de novos paradigmas, modelos téoricos, ampliação de objetos de estudos e tecnologias. \cite{Epidemiologia}.
+
+No Brasil ocorreram durante o século XIX diversos movimentos importantes, que contribuiram fortemente para o desenvolvimento da epidemiologia no país. Dentre as mais importantes pode-se destacar os esforços de Oswaldo Cruz e Carlos Chagas. Oswaldo Cruz trabalhou no saneamento da cidade do Rio de Janeiro, na época capital do país, e no combate da febre amarela, peste bubônica e varíola, que contou com forte ajuda militar. Carlos Chagas conduziu estudos sobre a malária, conseguindo controlar um surto epidêmico que ocorria na cidade de Itatinga, interior de São Paulo, sendo seu trabalho considerado referência mundial no combate à doença. Carlos Chagas também descobriu o protozoário causador da tripanossomíase americana e, posteriormente, a doença ficou mundialmente conhecida como \textit{Doença de Chagas} em sua homenagem. \cite{Epidemiologia}.
+
+Em \cite{Epidemiologia} a epidemiologia é definida como o \textit{"estudo da distribuição e dos determinantes dos eventos ou padrões de saúde em populações definidas, e a aplicação deste estudo para controlar problemas de saúde"}, sendo sua principal diferença à medicina clínica o uso de populações em seus estudos. Essa diferença justifica-se pelo objetivo final da epidemiologia, que é a de melhorar o perfil de saúde das populações, e não somente de seus indivíduos em particular e que, inferências sobre a relação de determinados fatores e a ocorrência de doenças, somente podem ser feitas através do estudo de populações. \cite{Epidemiologia}.
+
+Segundo \cite{EpidemiologiaMatematica} a epidemiologia matemática é fundamentada em hipóteses matemáticas que podem descrever aspectos de fenômenos biológicos nas interações entre hospedeiros e parasitas, utilizando-se de conhecimentos biológicos sobre o vírus e também da interação desse vírus com o hospedeiro ou com o meio ambiente. A partir destes conhecimentos desenvolvem-se modelos matemáticos que estão em constante evolução, de acordo com os avanços nos campos das ciências médicas, biológicas e químicas. A epidemiologia matemática tem por finalidade descrever fenômenos que são observados e estudar mecanismos de intervenção externa ao sistema de interação hospedeiro-parasita. Assim, a epidemiologia matemática agrega conhecimentos epidemiológicos e matemáticos no estudo de epidemias.
+
+Os métodos científicos aplicados à epidemiologia matemática permitem estudar tanto as situações de equilíbrio quanto as situações epidêmicas de uma doença ao longo do tempo.  
+
+\cite{MathematicalEpidemiologyOfInfectiousDiseases}.
+
+\cite{EpidemicModelling}.
 
 Epidemiologia pode ser definida como o estudo da frequência, da distribuição e dos determinantes dos estados ou eventos relacionados com a distribuição de doenças transmissíveis e não transmissíveis em populações específicas, e a aplicação dos resultados desses estudos na prevenção e controle dos problemas de saúde. Doenças transmissíveis têm fases definidas à latência, incubação, infecciosidade e recuperação da infecção. Essa caracterização é determinante na construção de um modelo representativo do cenário endêmico ou epidêmico. 
 
@@ -9,11 +25,11 @@ Epidemiologia pode ser definida como o estudo da frequência, da distribuição e d
 
 \section{Modelos compartimentais: Tipos e Classificações}
 
-A abordagem usualmente empregada na modelagem de doenças infecto-contagiosas é a de diagrama de blocos ou em compartimentos. Doenças infecciosas admitem uma modelagem em estrutura compartimental, obtida por meio da subdivisão da população em categorias, entre as quais os indivíduos fluem com taxas que dependem das características da dinâmica espaço-temporal da doença. Supondo que $N(t)$ designa a quantidade total de indivíduos num nível de tempo $t$ e tomando uma modelagem compartimental, os indivíduos que compõem a população podem ser divididos em classes do tipo suscetíveis, $S(t)$; latentes ou expostos, $E(t)$; infectados, $I(t)$, e recuperados ou removidos, $R(t)$, entre outras.
+A abordagem usualmente empregada na modelagem de doenças infecto-contagiosas é a de diagrama de blocos ou em compartimentos. Doenças infecciosas admitem uma modelagem em estrutura compartimental, que é obtida por meio da subdivisão da população em categorias, entre as quais os indivíduos fluem com taxas que dependem das características da dinâmica espaço-temporal da doença. Supondo que $N(t)$ designa a quantidade total de indivíduos num nível de tempo $t$ e tomando uma modelagem compartimental, os indivíduos que compõem a população podem ser divididos em classes do tipo suscetíveis, $S(t)$; latentes ou expostos, $E(t)$; infectados, $I(t)$, e recuperados ou removidos, $R(t)$, de modo que $S(t)+E(t)+I(t)+R(t)=N(t)$, observando-se a conservatividade do número de indivíduos na população.
 
-Cada indivíduo pode estar em somente um desses estados em um dado período de tempo. O estado suscetível indica que o indivíduo ainda não contraiu a doença e está apto a adquiri-la. O estado exposto indica que o indivíduo contraiu a doença, mas não pode transmiti-la. O estado infectante indica que o indivíduo está infectado com a doença, sendo capaz de transmiti-la para outros que estejam no estado suscetível, e o estado removido indica que o indivíduo já foi infectado com a doença e não pode se contaminar novamente nem transmiti-la para outros em um determinado período. 
+Cada indivíduo pode pertencer a somente um dos estados em um dado período de tempo: o estado suscetível, $S$, indica que o indivíduo ainda não contraiu a doença e está apto a adquiri-la. O estado exposto, $E$, indica que o indivíduo contraiu a doença, mas não pode transmiti-la. O estado infectante, $I$, indica que o indivíduo está infectado com a doença, sendo capaz de transmiti-la para outros que estejam no estado suscetível, e o estado recuperado, $R$, indica que o indivíduo já foi infectado com a doença e não pode se contaminar novamente nem transmiti-la para outros em um determinado período. 
 
-Considerando-se os estados relacionados com o processo infeccioso, usuais modelos são o Suscetível-Infectado-Suscetível, $SIS$, empregado em situações em que a doença não confere imunidade, passando o indivíduo de infectado para suscetível novamente, o modelo Suscetível-Infectado-Removido, $SIR$, para casos de doenças em que os indivíduos infecciosos podem recuperar-se e adquirir imunidade permanente, o modelo Suscetível-Exposto-Infectado-Removido O fluxo de transição de estado dos indivíduos no modelo é mostrado na Figura \ref{fig:modelo}.
+Considerando-se os estados relacionados com o processo infeccioso, usuais modelos são o Suscetível-Infectado-Suscetível, SIS, empregado em situações em que a doença não confere imunidade, passando o indivíduo de infectado para suscetível novamente, o modelo Suscetível-Infectado-Recuperado, SIR, para casos de doenças em que os indivíduos infecciosos podem recuperar-se e adquirir imunidade permanente, o modelo Suscetível-Exposto-Infectado-Recuperado, SEIR, para doenças com período de latência e imunidade permanente e o modelo Suscetível-Exposto-Infectado-Recuperado-Suscetível, SEIRS, para doenças com período de latência e sem imunidade permanente. Neste trabalho será adotado particularmente o modelo SEIRS, visto que pode ser usado para modelar uma ampla gama de doenças. O fluxo de transição de estado dos indivíduos para o modelo SEIRS é mostrado na Figura \ref{fig:modelo}.
 
 \begin{figure}[!htb]
   \centering
@@ -22,128 +38,80 @@ Considerando-se os estados relacionados com o processo infeccioso, usuais modelo
   \label{fig:modelo}
 \end{figure} 
 
-Na Figura 1, $\beta$ designa a taxa de transmissão da doença. No encontro de indivíduos saudáveis com infectantes a doença se propaga a tal taxa. O indivíduo fica um período, $\gamma$, no estado exposto. O parâmetro $\alpha$ designa a taxa de recuperação, em que indivíduos doentes se recuperam estando imunes àquela doença por outro período. Este período é caracterizado pelo parâmetro $\delta$ que modelará qual é a taxa de perda de imunidade de indivíduos que estejam recuperados, passando-os novamente para o estado suscetível.
-Considerando-se uma população fixa no tempo, isto é, desprezando por simplicidade as taxas vitais de nascimento e de morte, pode-se descrever matematicamente o fluxo de transição dos possíveis estados dos indivíduos no modelo SEIRS através de um sistema de equações diferenciais ordinárias (EDOs) não lineares. Se $N=S(t)+E(t)+I(t)+R(t)$ designa o tamanho fixo da população humana, onde as quantidades de indivíduos nos diferentes estados variam no tempo, de modo que suas quantidades são funções do tempo, $S=S(t)$, $E=E(t)$, $I=I(t)$ e $R=R(t)$, respectivamente, obtém-se os problemas de valor inicial (PVI) para o caso contínuo e discreto, como apresentados em (1).
-\begin{multicols}{2}
-  \begin{equation*}
-    \begin{cases}
-      \frac{d\big(S(t)\big)}{dt} = - \frac{\beta}{N} \, I(t) \, S(t) + \delta \, R(t) &; S(0) = S_{0} \\ 
-      \frac{d\big(E(t)\big)}{dt} = + \frac{\beta}{N} \, I(t) \, S(t) - \gamma \, E(t) &; E(0) = E_{0} \\ 
-      \frac{d\big(I(t)\big)}{dt} = + \gamma \, E(t) - \alpha \, I(t) &; I(0) = I_{0} \\ 
-      \frac{d\big(R(t)\big)}{dt} = + \alpha \, I(t) - \delta \, R(t) &; R(0) = R_{0} \\ 
-    \end{cases}
-  \end{equation*}
-  
-  \begin{equation}
-    \begin{cases}
-      S^{n} = S^{n - 1} - \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} + \delta \, R^{n - 1} &; S^{0} = S_{0} \\
-      E^{n} = E^{n - 1} + \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} - \gamma \, E(t)^{n - 1} &; E^{0} = E_{0} \\
-      I^{n} = I^{n - 1} + \gamma \, E^{n - 1} - \alpha \, I(t)^{n - 1} &; I^{0} = I_{0} \\
-      R^{n} = R^{n - 1} + \alpha \, I^{n - 1} - \delta \, R^{n - 1} &; R^{0} = R_{0} \\
-    \end{cases}
-  \end{equation}
-\end{multicols}
+Na Figura \ref{fig:modelo}, $\beta$ designa a taxa de transmissão da doença. No encontro de indivíduos saudáveis com infectantes a doença se propaga a tal taxa. O indivíduo fica um período, $\gamma$, no estado exposto. O parâmetro $\alpha$ designa a taxa de recuperação, em que indivíduos doentes se recuperam estando imunes àquela doença por outro período. Este período é caracterizado pelo parâmetro $\delta$ que modelará qual é a taxa de perda de imunidade de indivíduos que estejam recuperados, passando-os novamente para o estado suscetível.
 
-Nas formulações apresentadas em (1) $S_0$, $E_0$, $I_0$ e $R_0$ representam, respectivamente, as distribuições iniciais das populações de suscetíveis, expostos, infectantes e recuperados. A solução analítica do PVI contínuo não é conhecida ou não é possível de ser obtida. Resta, pois, obter numericamente sua solução resolvendo a formulação discreta, em que $n$ e $n-1$ denotam os diferentes níveis de tempo que são avaliados numericamente às quantidades envolvidas no modelo.
+As principais modelagens empregadas na simulação das dinâmicas de doenças infecto-contagiosas são: \\
 
-As principais modelagens empregadas na simulação das dinâmicas de doenças infecto-contagiosas são:
 \begin{itemize}
- \item Modelos do tipo SIR são estabelecidos pela divisão da população em grupos de indivíduos suscetíveis, $S(t)$, infectados, $I(t)$ e removidos, $R(t)$. São empregados para descrever surtos epidêmicos supondo que a população é homogênea, suficientemente grande, e que não ocorrem nascimentos, mortes e migrações no período estudado. À transmissão da doença supõe-se que a taxa de infecção é proporcional à fração de infectados, isto é, $\lambda=\beta I/N$, sendo que $\beta$ é o número médio de contatos adequados, que são aqueles suficientes para que ocorra a transmissão da doença do indivíduo por unidade de tempo. Toma-se como constante a taxa de recuperação, $\delta$, dos indivíduos.
+  \item \textbf{Equações Diferenciais Ordinárias:} Considerando-se uma população fixa no tempo, isto é, desprezando por simplicidade as taxas vitais de nascimento e de morte, pode-se descrever matematicamente o fluxo de transição dos possíveis estados dos indivíduos no modelo SEIRS através de um sistema de equações diferenciais ordinárias não lineares, EDO. Se $N=S(t)+E(t)+I(t)+R(t)$ designa o tamanho fixo da população de indivíduos, onde suas quantidades nos diferentes estados variam no tempo, de modo que suas quantidades são funções do tempo, $S=S(t)$, $E=E(t)$, $I=I(t)$ e $R=R(t)$, respectivamente, obtém-se os problemas de valor inicial, PVI, para o caso contínuo e discreto, como apresentados em \ref{eq:PVI}.
+  
+  \begin{multicols}{2}
+  \scriptsize
+    \begin{equation*}
+      \begin{cases}
+	\frac{d\big(S(t)\big)}{dt} = - \frac{\beta}{N} \, I(t) \, S(t) + \delta \, R(t) &; S(0) = S_{0} \\ 
+	\frac{d\big(E(t)\big)}{dt} = + \frac{\beta}{N} \, I(t) \, S(t) - \gamma \, E(t) &; E(0) = E_{0} \\ 
+	\frac{d\big(I(t)\big)}{dt} = + \gamma \, E(t) - \alpha \, I(t) &; I(0) = I_{0} \\ 
+	\frac{d\big(R(t)\big)}{dt} = + \alpha \, I(t) - \delta \, R(t) &; R(0) = R_{0} \\ 
+      \end{cases}
+    \end{equation*}
+    
+    \begin{equation}
+      \begin{cases}
+	S^{n} = S^{n - 1} - \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} + \delta \, R^{n - 1} &; S^{0} = S_{0} \\
+	E^{n} = E^{n - 1} + \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} - \gamma \, E(t)^{n - 1} &; E^{0} = E_{0} \\
+	I^{n} = I^{n - 1} + \gamma \, E^{n - 1} - \alpha \, I(t)^{n - 1} &; I^{0} = I_{0} \\
+	R^{n} = R^{n - 1} + \alpha \, I^{n - 1} - \delta \, R^{n - 1} &; R^{0} = R_{0} \\
+      \end{cases}
+      \label{eq:PVI}
+    \end{equation}
+  \end{multicols}
+  
+  Nas formulações apresentadas em \ref{eq:PVI}, $S_0$, $E_0$, $I_0$ e $R_0$ representam, respectivamente, as distribuições iniciais das populações de suscetíveis, expostos, infectantes e recuperados. A solução analítica do PVI contínuo não é conhecida ou não é possível de ser obtida. Resta, pois, obter numericamente sua solução resolvendo a formulação discreta, em que $n$ e $n-1$ denotam os diferentes níveis de tempo que são avaliados numericamente às quantidades envolvidas no modelo.
 
-Se o modelo SIR é empregado em situações endêmicas, de período mais longo e durante o qual existe a renovação de indivíduos suscetíveis pelo nascimento ou pelo término de eventuais imunizações temporárias, é conveniente que se modele a ocorrência de nascimentos e mortes, cujas taxas, $\gamma$, são tomadas algumas vezes como sendo iguais para simplificar a modelagem.
+  \item \textbf{Autômatos Celulares:} Autômatos celulares, AC, podem ser classificados como sendo modelos de sistemas dinâmicos discretos no espaço e no tempo, que operam sobre um \textit{lattice} contendo uma quantidade finita ou infinita de células. São caracterizados por iterações locais em que cada célula está associada a um estado ou fase por meio de conjunto discreto de valores. A atualização do estado é realizada a partir dos estados das células vizinhas de acordo com regras locais. Autômatos celulares possuem um domínio especificado pelo ambiente ou espaço celular em que estes são operados; um espaço de estados das células em que cada célula do \textit{lattice} possui determinado estado; a vizinhança de cada célula; e a regra de transição local que atua sobre a célula de modo que seu estado pode variar ao ocorrer uma transição.
 
-Por conveniência na análise e nas discussões, pode-se representar as quantidades envolvidas em termos de proporções. Para uma população é constante de tamanho $N \neq 0$ escreve-se $S(t)+I(t)+R(t)=N$ e então $S(t)/N+I(t)/N+R(t)/N=1$ obtendo $s+i+r=1$, sendo que $s=S(t)/N$, $i=I(t)/N$ e $r=R(t)/N$ denotam as frações de indivíduos suscetíveis, infectados e removidos, respectivamente. Supondo que as variáveis envolvidas no processo sejam diferenciáveis em relação ao tempo, $t$, pode-se escrever o modelo matemático SIR como um problema de valor inicial em equações diferenciais ordinárias não-lineares, EDOs, à variável temporal, $t$, em que $t_{0}=0$, como em \eqref{PVI-SIR-EPID}:
-\begin{equation}
-\label{PVI-SIR-EPID}
-\left\{
-\arraycolsep=1.4pt\def\arraystretch{2}
-\begin{array}{lc}
- \dfrac{dS(t)}{dt}=\gamma N - \gamma S(t) - \frac{\beta I(t)}{N}S(t), & \; S(0)= S_0 \geq 0 \\
- \dfrac{dI(t)}{dt}=\frac{\beta I(t)}{N}S(t) - \delta I(t) - \gamma I(t), & \; I(0)= I_0 \geq 0 \\
- \dfrac{dR(t)}{dt}=\delta I(t) - \gamma R(t), & \; R(0)= R_0 \geq 0
-\end{array}
-\right.
-\end{equation}
+  O autômato celular é especificado sobre um \textit{lattice} finito com adequado tipo de vizinhança, sendo sua discretização determinada pelo conjunto $\mathcal{L}=\left\{(i,j);\ 1 \leq i \leq n, \ 1 \leq j \leq m;\ n,m \in \mathbb{N}^* \right\}$. Para vizinhança tipo Moore cada célula $(i,j)$ tem uma vizinhança de células $\mathcal{V}_{i,j}=\left\{(i+\alpha_k,j+\beta_k);\ 1 \leq k \leq 8 \right\}$. Localmente a vizinhança de Moore é $\mathcal{V}=\left\{(0,0), (-1,0), (-1,1), (0,1), (1,1), (1,0), (1,-1), (0,-1), (-1,-1)\right\}$, sendo a vizinhança sem a célula central indicada por $\mathcal{V}^*=\mathcal{V}-\left\{(0,0)\right\}$.
 
-As interpretações epidemiológicas das expressões matemáticas de \eqref{PVI-SIR-EPID}, são de que o termo $\lambda S$ é a incidência horizontal da doença, isto é, a quantidade de novos casos da doença por unidade de tempo, devido aos indivíduos suscetíveis. O parâmetro $\beta I/N=\beta i$ é uma modelagem simplificada à força de infecção exercida pela doença sobre os suscetíveis, tentando infectá-los, sendo a probabilidade, por unidade de tempo, de que um indivíduo suscetível seja contaminado. As taxas de nascimento e de mortalidade foram tomadas como sendo iguais a $\gamma$. A taxa de recuperação $\delta$ representa o fator de indivíduos que deixam a classe dos infectados, por cura ou morte.
+  A regra de transição local, $\sigma$, é especificada dos estados $e, E \in \mathcal{Q}$, de modo que, dados distintos, discretos e consecutivos níveis de tempo $t$ e $t+1$ têm-se $\sigma (e_{(i+\alpha_k,j+\beta_k)}^{t})=E_{i,j}^{t+1}$, sendo $e_{(i+\alpha_k,j+\beta_k)}^{t}$ a designação para o estado de uma célula vizinha da célula $(i,j)$ no nível de tempo $t$. Para um espaço celular finito deve-se especificar apropriadas condições de contorno, e algumas delas empregadas em autômato celular são a periódica, tipo reflexiva e a tipo Dirichlet, e um caso particular dessa última, a condição homogênea nula. À especificação da condição de contorno periódica faz-se $E_{1,j}=E_{n,j}$ e $E_{i,1}=E_{i,m}$ e à condição de contorno homogênea faz-se $E_{1,j}=E_{n,j}=0$ e $E_{i,1}=E_{i,m}=0$, para tais células em $\partial \mathcal{L}$, o conjunto das células de contorno do domínio.
+  
+  Autômatos celulares são formalmente caracterizados pela especificação da quádrupla $\left\langle \mathcal{L},\mathcal{Q},\mathcal{V},\sigma\right\rangle$ que atenda as características de homogeneidade espaço-temporal na sua dinâmica, e da especificação de regras de transição não ambíguas. Como as simulações de eventos epidemiológicos requerem uma distribuição dos estados no tempo inicial, $t_0$, é necessário especificar tal condição. Escrevendo o AC como um problema de valor inicial e de contorno discreto, PVIC, a regra de transição é definida em $(i,j) \times t \in \mathcal{L} \times (0,T)$, sendo as condições iniciais dadas $(i,j) \in \mathcal{L}$ para $t_{0}=0$ e as condições de contorno especificadas em $(i,j) \times t \in \partial \mathcal{L} \times [0,T]$, sendo que $T$ denota um determinado tempo. Considerando-se as expressões para o domínio e a regra de transição, e tomando a condição de contorno periódica, o AC é especificado como \eqref{eq:AC-SEIRS}:
+  \begin{equation}
+  \label{eq:AC-SEIRS}
+  \left\{
+  \begin{array}{l l l}
+  s_{i,j}^{t+1}=s_{i,j}^t - \beta s_{i,j}^t i_{i,j}^t - s_{i,j}^t \bigg( \sum \limits _{ \substack{(\alpha,\beta) \in \mathcal{V}^*}} \mu_{\alpha, \beta}^{(i,j)}  \frac{N_{i+\alpha, j+\beta}}{N_{i,j}} i_{i+\alpha,j+\beta}^t\bigg) + \delta r_{i,j}^t\\
 
-Embora na modelagem compartimental e determinística se assuma que o contato e o ambiente entre os indivíduos sejam uniformes, atualmente são realizados esforços no sentido de representar os contatos individuais, os efeitos do comportamento individual, a interação entre diferentes tipos de indivíduos e de comunidades, e os aspectos espaço-temporais de tais relações \cite{arino:2005,mccormack:2006a,mccormack:2006b,keeling:2008,mccormack2007}. Algumas abordagens nesse sentido são discutidas a seguir.
+  e_{i,j}^{t+1}=e_{i,j}^t + \beta s_{i,j}^t i_{i,j}^t + s_{i,j}^t \bigg( \sum \limits _{ \substack{(\alpha,\beta) \in \mathcal{V}^*}}  \mu_{\alpha, \beta}^{(i,j)}  \frac{N_{i+\alpha, j+\beta}}{N_{i,j}} i_{i+\alpha,j+\beta}^t \bigg) - \gamma e_{i,j}^t\\
 
- \item Autômatos Celulares, AC, originaram-se nos trabalhos desenvolvidos por John Von Neumann e Stanislaw Ulam nos anos de 1940. Outras importantes e originais contribuições foram dadas por Conway e Wolfram nas décadas de 1970 e 1980, \cite{wolfram1983}, \cite{Ilachinski2001}. Autômatos celulares estão presentes numa variedade de simuladores de sistemas físicos e biológicos, entre outros, visto sua capacidade de simular complexas dinâmicas espaço-temporal.
+  i_{i,j}^{t+1}=i_{i,j}^t + \gamma e_{i,j}^t - \sigma i_{i,j}^t \\
 
-AC podem ser classificados como sendo modelos de sistemas dinâmicos discretos no espaço e no tempo, que operam sobre um \textit{lattice} contendo uma quantidade finita ou infinita de células. São caracterizados por iterações locais em que cada célula está associada a um estado ou fase por meio de conjunto discreto de valores. A atualização do estado é realizada a partir dos estados das células vizinhas de acordo com regras locais. Autômatos celulares possuem um domínio especificado pelo ambiente ou espaço celular em que estes são operados; um espaço de estados das células em que cada célula do \textit{lattice} possui determinado estado; a vizinhança de cada célula; e a regra de transição local que atua sobre a célula de modo que seu estado pode variar ao ocorrer uma transição.
+  r_{i,j}^{t+1}=r_{i,j}^t + \sigma i_{i,j}^t - \delta r_{i,j}^t\\
 
-O modelo aqui discutido inspira-se em \cite{White2007193}, em que os autores introduziram um modelo SIR para simular o espalhamento de epidemias e estratégia de vacinação. No artigo de \cite{Slimi20091072} é apresentado um modelo espaço-temporal para descrever a dinâmica da população de vetores da doença de Chagas, dada a necessidade de estabelecer estratégias de controle, pois não existe vacina à doença. Esses autores também investigaram o espalhamento periódico e espacial de doença em localidade da península de Yucatan, no México. Em \cite{karim2009} é apresentada uma abordagem baseada em AC para analisar e estudar padrões espaço-temporais da infecção hantavirus. Em \cite{Beauchemin2005223} é estudada a influência da heterogeneidade espacial no espalhamento do influenza A.
+  s_{i,j}^0 > 0, \quad e_{i,j}^0 \geq 0, \quad i_{i,j}^0 > 0, \quad r_{i,j}^0 \geq 0,
+  \end{array}
+  \right.
+  \end{equation}
+  
+  A solução de \eqref{eq:AC-SEIRS} é obtida por meio da evolução espaço-temporal dada pela regra de transição que fornece os estados finais a partir do cálculo dos estados iniciais. A transição se dá num nível de tempo $t$ para o consecutivo nível de tempo $t+\Delta t$, sendo $\Delta t$ o passo de tempo.
 
- \item O autômato celular é especificado sobre um \textit{lattice} finito com adequado tipo de vizinhança, sendo sua discretização determinada pelo conjunto $\mathcal{L}=\left\{(i,j);\ 1 \leq i \leq n, \ 1 \leq j \leq m;\ n,m \in \mathbb{N}^* \right\}$. Para vizinhança tipo Moore cada célula $(i,j)$ tem uma vizinhança de células $\mathcal{V}_{i,j}=\left\{(i+\alpha_k,j+\beta_k);\ 1 \leq k \leq 8 \right\}$. Localmente a vizinhança de Moore é $\mathcal{V}=\left\{(0,0), (-1,0), (-1,1), (0,1), (1,1), (1,0), (1,-1), (0,-1), (-1,-1)\right\}$, sendo a vizinhança sem a célula central indicada por $\mathcal{V}^*=\mathcal{V}-\left\{(0,0)\right\}$.
+  \item \textbf{\textit{Lattice Gas Cellular Automata}:} \textit{Lattice Gas Cellular Automata}, LGCA, são um particular tipo de autômato celular que são utilizados principalmente na simulação de fluxos de fluídos. Para a construção de um LGCA deve-se especificar uma quádrupla $\left\langle\mathcal{L},\mathcal{Q},\mathcal{V},\sigma\right\rangle$ que atenda as características de AC. Um modelo LGCA é como apresentado em \eqref{PVIC-LGCA}.
 
-A regra de transição local, $\sigma$, é especificada dos estados $e, E \in \mathcal{Q}$, de modo que, dados distintos, discretos e consecutivos níveis de tempo $t$ e $t+1$ têm-se $\sigma (e_{(i+\alpha_k,j+\beta_k)}^{t})=E_{i,j}^{t+1}$, sendo $e_{(i+\alpha_k,j+\beta_k)}^{t}$ a designação para o estado de uma célula vizinha da célula $(i,j)$ no nível de tempo $t$. Para um espaço celular finito deve-se especificar apropriadas condições de contorno, e algumas delas empregadas em autômato celular são a periódica, tipo reflexiva e a tipo Dirichlet, e um caso particular dessa última, a condição homogênea nula. À especificação da condição de contorno periódica faz-se $E_{1,j}=E_{n,j}$ e $E_{i,1}=E_{i,m}$ e à condição de contorno homogênea faz-se $E_{1,j}=E_{n,j}=0$ e $E_{i,1}=E_{i,m}=0$, para tais células em $\partial \mathcal{L}$, o conjunto das células de contorno do domínio.
+  No modelo \eqref{PVIC-LGCA} $\tau$ indica um estado qualquer, ou seja, $\tau \in \left\{S,I,R\right\}$, e o operador $\tilde{\sigma}$ é um algoritmo do operador $\sigma$. Ou seja, $\tilde{\sigma} = \tilde{P}\circ \tilde{D}\circ (1-(1-p_{i,j}))^{N_I}$, sendo $\tilde{P}$ e $\tilde{D}$ procedimentos ou algoritmos para implementar as fases de propagação e de randomização.
 
-Autômatos celulares são formalmente caracterizados pela especificação da quádrupla $\left\langle \mathcal{L},\mathcal{Q},\mathcal{V},\sigma\right\rangle$ que atenda as características de homogeneidade espaço-temporal na sua dinâmica, e da especificação de regras de transição não ambíguas. Como as simulações de eventos epidemiológicos requerem uma distribuição dos estados no tempo inicial, $t_0$, é necessário especificar tal condição. Escrevendo o AC como um problema de valor inicial e de contorno discreto, a regra de transição é definida em $(i,j) \times t \in \mathcal{L} \times (0,T)$, sendo as condições iniciais dadas $(i,j) \in \mathcal{L}$ para $t_{0}=0$ e as condições de contorno especificadas em $(i,j) \times t \in \partial \mathcal{L} \times [0,T]$, sendo que $T$ denota um determinado tempo. Considerando-se as expressões para o domínio e a regra de transição, e tomando a condição de contorno periódica, o AC é especificado como \eqref{PVIC-D2D}:
-\begin{equation}
-\label{PVIC-D2D}
-\left\{
-\arraycolsep=1.4pt\def\arraystretch{1.5}
-\begin{array}{ll}
-\sigma \left(e_{(i+\alpha_k,j+\beta_k)}^{t}\right)=E_{i,j}^{t+1}; & (i,j) \in \mathcal{V}_{i,j} \subset \mathcal{L}, t>0 \\
-E_{1,j}=E_{n,j}, \ E_{i,1}=E_{i,m}; & (i,j) \times t \in \partial \mathcal{L} \times [0,T] \\
-e_{(i,j)}^{0}=e(0); & (i,j) \in \mathcal{L}\\
-\end{array}
-\right.
-\end{equation}
-
-A solução de \eqref{PVIC-D2D} é obtida por meio da evolução espaço-temporal dada pela regra de transição que fornece os estados finais a partir do cálculo dos estados iniciais. A transição se dá num nível de tempo $t$ para o consecutivo nível de tempo $t+\Delta t$, sendo $\Delta t$ o passo de tempo.
-
- \item Modelos para simular a transmissão de epidemias quase sempre enfatizam a abordagem baseada em equações ordinárias. Essa escolha firmou-se desde os trabalhos originais de \cite{Kermack700} e motivos para os quais eles ainda vêm sendo desenvolvidos e aprimorados são como os já discutidos. Soluções à distribuição heterogênea e baseadas em indivíduos modeladas em AC probabilísticos com concepção de movimento molecular são discutidas em \cite{fuks2001} e \cite{Voroney2000657}.
-
-Esses AC são do tipo \textit{Lattice Gas Cellular Automata}, LGCA, e \textit{Lattice Boltzmann Method}, LBM. Em \cite{fuks2001} é investigada a dinâmica espaço-temporal de modelo SIR sob modelagem LGCA. Além de pesquisarem o efeito da distribuição espacial inicial não homogênea de infectados e discutirem estratégias de vacinação, os autores especificaram uma distribuição de campo médio para comparar o AC com tais resultados. Em \cite{Schneckenreither20081014}, é apresentado um estudo comparativo entre diferentes métodos e abordagens, inclusive à dinâmica SIR, e dentre elas estão o LGCA e \textit{Stochastic Cellular Automata}, SCA. Embora tais abordagens envolvam diferentes técnicas e tipos de interações espaciais, elas mostram resultados que são qualitativamente consistentes. Outros modelos de difusão e de reação em AC são discutidos em \cite{Weimar19971699}.
-
-Na construção do LGCA deve-se especificar uma quádrupla $\left\langle\mathcal{L},\mathcal{Q},\mathcal{V},\sigma\right\rangle$ que atenda as características de AC. Supõe-se que a população é compartimentalizada em indivíduos cujo estado $\tau$ é do tipo suscetível, infectado ou removido, sendo $\tau \in \left\{S,I,R\right\}=\mathcal{Q}$. São desprezados os estados intermediários, como o período de incubação e de latência. O espaço celular em que os autômatos celulares são operados, o \textit{lattice} $\mathcal{L}$, tem topologia hexagonal no artigo de \cite{fuks2001}, mas neste trabalho a escolha recaiu, por conveniência de implementação e para efeitos de comparação heurística com outros, em desenvolver um AC numa topologia de células quadradas.
-
-Escrevendo o LGCA como um problema de valor inicial e de contorno, à condição inicial em $t_0=0$, os indivíduos que representam os estados $S$, $I$ e $R$ são distribuídos aleatória e independentemente entre as células de $\mathcal{L}$. Pela metodologia escolhida à movimentação dos indivíduos tal distribuição deve assegurar que existem no máximo quatro indivíduos por célula, independentemente do tipo. No modelo implementado, as condições de contorno são periódicas, indicando que os indivíduos do tipo $\tau$ que chegam até uma célula de contorno de posição, por exemplo, $(n,j)$ emergem na posição $(1,j)$ satisfazendo a condição $\tau_{1,j}^t=\tau_{n,j}^t$. Não são consideradas as situações de mortes, nascimento e migração de indivíduos da população, e a mistura no LGCA decorre da randomização da direção do movimento dos indivíduos na etapa de randomização $D$ e no movimento dos indivíduos na etapa de propagação $P$. O modelo LGCA é como apresentado em \eqref{PVIC-LGCA}:
-
-No modelo \eqref{PVIC-LGCA} $\tau$ indica um estado qualquer, ou seja, $\tau \in \left\{S,I,R\right\}$, e o operador $\tilde{\sigma}$ é um algoritmo do operador $\sigma$. Ou seja, $\tilde{\sigma} = \tilde{P}\circ \tilde{D}\circ (1-(1-p_{i,j}))^{N_I}$, sendo $\tilde{P}$ e $\tilde{D}$ procedimentos ou algoritmos para implementar as fases de propagação e de randomização.
-
-\begin{equation}
-\label{PVIC-LGCA}
-\left\{
-\arraycolsep=1.4pt\def\arraystretch{1.5}
-\begin{array}{ll}
-\tilde{\sigma}\left(\tau_{(i+\alpha_k,j+\beta_k)}^{t}\right)=\tau_{i,j}^{t+1}; & (i,j) \in \mathcal{V}_{i,j} \subset \mathcal{L}, t>0 \\
-\tau_{1,j}=\tau_{n,j}, \ \tau_{i,1}=\tau_{i,m}; & (i,j) \times t \in \partial \mathcal{L} \times [0,T] \\
-\tau_{(i,j)}^{0}=\tau(0); & (i,j) \in \mathcal{L}\\
-\end{array}
-\right.
-\end{equation}
-
-A evolução espaço-temporal do LGCA \eqref{PVIC-LGCA} é realizada a cada passo de tempo e um operador de evolução é aplicado simultânea e independentemente em todas as células do \textit{lattice}. Esse operador de evolução é a regra de transição local, $\sigma$, que atua sobre as células cujos estados podem ou não variar para outro num nível de tempo discreto. É especificado por uma composição das operações de contato, $C$, randomização, $D$, e propagação, $P$, como $\sigma = P\circ D\circ C$ \cite{fuks2001}.
-
-Na operação de contato supõe-se que os indivíduos residem no interior da célula do \textit{lattice} e se movem somente por meio das suas arestas, e que cada indivíduo suscetível numa célula, independentemente de outros, tem probabilidade de ser infectado dada por $\left(1-(1-p)^{N_I}\right)$, sendo $N_I$ a quantidade de indivíduos infectados numa célula e $p$ a probabilidade de infecção por contato, por indivíduo, sendo que todos têm igual probabilidade de serem infectados. Se a probabilidade de infecção por contato é $p$, a probabilidade de não ser infectado após o contato em cada um dos $N_I$infectados é $(1-p)^{N_I}$.
-
-A operação de randomização é aplicada a cada célula independentemente de outra, e a população de indivíduos residentes numa célula é randomicamente distribuída. O processo de redistribuição de indivíduos na célula é probabilístico. Na operação de propagação, os indivíduos se movem simultaneamente de suas células $(i,j)$ às vizinhas pelas arestas. É por meio das arestas, permitindo-se apenas um indivíduo por aresta por passo de tempo, que os indivíduos se movem nessa fase de propagação da célula, desde que a posição correspondente da célula vizinha esteja desocupada, visto que mimetiza-se a ideia de colisão de partículas.
-
- \item Agentes baseados em modelos são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo, em um ciclo de transição. A especificação formal do agente é realizada por meio de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente, decorre da composição do operador de transição temporal, que realiza a transição do estado do agente de acordo com sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição, considerando sua conectividade e mobilidade.
-
-À dinâmica são consideradas as operações de movimentação, contato e de transição de estados. Na movimentação, os indivíduos transitam no ambiente matricial por meio de suas vizinhanças de Moore às posições escolhidas aleatoriamente, respeitando os limites espaciais do ambiente. Nas operações de contato ocorre, probabilisticamente, a transmissão da doença por meio dos indivíduos infectados para os indivíduos suscetíveis que ocupam mesma posição no ambiente. Nas transições de estados ocorrem a passagem de indivíduos suscetíveis para expostos, e de expostos para infectantes, e de infectantes para removidos, nessa sequência e uma vez a cada ciclo.
-
-Um agente $\chi(t)$ é definido como $\chi(t)=\left(P,C,E\right)$, em que $P$ é a sua posição no ambiente, $E$ designa o seu estado, e $C$ um registro para o contador de ciclos que controla as transições de estados \cite{rizzi2016}. Cada agente implementa a operação de evolução que atualiza seu estado atual quando interagindo com o ambiente, sendo ele definido pela composição entre os operadores $\mu$ e $\sigma$. O operador de conecto-mobilidade, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade, e o operador $\sigma$ realiza a transição do estado do agente por meio de sua interação com outros agentes e o ambiente.
-
-O operador espaço-temporal $\lambda\left(\chi(t)\right)$ realiza as operações do agente $\chi(t)$ movimentando-o da posição $(i,j)$ para uma posição $\left(\xi, \eta\right)$ no ciclo de tempo, $t$, para o ciclo de tempo, $t+\Delta t$. Formalmente o estado do agente $\chi(t)$ é representado como em\eqref{operador-agentes}, por um problema de valor inicial e de contorno:
-
-\begin{equation}
-\label{operador-agentes}
-\left\{
-\arraycolsep=1.4pt\def\arraystretch{1.5}
-\begin{array}{ll}
-\lambda\big(\chi(t)\big) = \sigma\big(\mu\big(\chi(t)\big)\big) \\
-\lambda_{1,j}=\lambda_{n,j}, \ \lambda_{i,1}=\lambda_{i,m}; & (i,j) \times t \in \partial \mathcal{M} \times [0,T] \\
-\lambda_{(i,j)}^{0}=\lambda(0); & (i,j) \in \mathcal{M}\\
-\end{array}
-\right.
-\end{equation}
-sendo que $\partial \mathcal{M}$ designa o contorno do domínio e $\mathcal{M}$ o domínio matricial dos indivíduos, o ambiente em que ocorre a dinâmica multiagente.
-
-Em \cite{Lerman:2004} podem ser encontradas discussões sobre modelagens e análise matemática de sistemas multiagentes, enfocando modelos que sejam simples, mas com baixo custo computacional e pouca demanda por comunicação, sendo, além disso, robustos, podendo se recuperar rapidamente de falhas, e adaptáveis às mudanças no ambiente. Tais tipos de sistemas podem ser analisados matematicamente podendo-se determinar quais estratégias o agente deve considerar, para apresentar o comportamento coletivo desejado.
+  \begin{equation}
+  \label{PVIC-LGCA}
+  \left\{
+  \arraycolsep=1.4pt\def\arraystretch{1.5}
+  \begin{array}{ll}
+  \tilde{\sigma}\left(\tau_{(i+\alpha_k,j+\beta_k)}^{t}\right)=\tau_{i,j}^{t+1}; & (i,j) \in \mathcal{V}_{i,j} \subset \mathcal{L}, t>0 \\
+  \tau_{1,j}=\tau_{n,j}, \ \tau_{i,1}=\tau_{i,m}; & (i,j) \times t \in \partial \mathcal{L} \times [0,T] \\
+  \tau_{(i,j)}^{0}=\tau(0); & (i,j) \in \mathcal{L}\\
+  \end{array}
+  \right.
+  \end{equation}
+  
+  \item \textbf{Sistemas multiagentes:} Agentes baseados em modelos são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo, em um ciclo de transição. A especificação formal do agente é realizada por meio de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente, decorre da composição do operador de transição temporal, que realiza a transição do estado do agente de acordo com sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição, considerando sua conectividade e mobilidade.
 
 \end{itemize}
 
@@ -257,19 +225,6 @@ Observe-se que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo s
   \caption{Representação em palavra de 32 bits ao modelo SEIRS baseado em indivíduos}
   \label{fig:modelo_bitstring}
 \end{figure} 
-
-%\begin{table}[!htb]
-%\scriptsize
- % \begin{tabular}{| c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c | c |}
-  %  \hline
-   % \blue{1} & \blue{2} & \blue{3} & \blue{4} & \blue{5} & \blue{6} & \blue{7} & \blue{8} & \blue{9} & \blue{10} & \blue{11} & \blue{12} & 
-    %\red{1} & \red{2} & \red{3} & \red{4} & \red{5} & \red{6} & \red{7} & \red{8} & \red{9} & \red{10} & \red{11} & \red{12} & 
-    %\magenta{1} & \magenta{2} & \magenta{3} & \magenta{4} & \magenta{5} & \magenta{6} & 
-    %1 & 2 \\
-    %\hline
-    %\end{tabular} 
-  %\caption{Representação em palavra de 32 bits ao modelo SEIRS baseado em indivíduos}
-%\end{table}
 
 Na figura 2, os elementos do identificador do lote estão nas posições $31$ a $26$. Os elementos das coordenadas $x$ e $y$ do lote estão nas posições $25$ a $17$ e $16$ a $8$, respectivamente. Os elementos do contador de controle e do estado estão nas posições $7$ a $2$ e $1$ a $0$, respectivamente. Considerando as escolhas realizadas à sua modelagem, um agente qualquer do modelo pode ser representado em bits como em (3).
 

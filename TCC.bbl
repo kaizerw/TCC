@@ -1,0 +1,28 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{1.42.2.1 }
+
+\bibitem{Epidemiologia}
+\abntrefinfo{Medronho et al.}{MEDRONHO et al.}{2008}
+{MEDRONHO, R.~A. et al. \emph{Epidemiologia}. 2. ed. Reading: Atheneu, 2008.}
+
+\bibitem{EpidemiologiaMatematica}
+\abntrefinfo{Yang}{YANG}{2001}
+{YANG, H.~M. \emph{Epidemiologia Matemática - Estudo dos Efeitos da Vacinação
+  em Doenças de Transmissão Direta}. 1. ed. Reading: Unicamp, 2001.}
+
+\bibitem{MathematicalEpidemiologyOfInfectiousDiseases}
+\abntrefinfo{Diekmann e Heesterbeek}{DIEKMANN; HEESTERBEEK}{2000}
+{DIEKMANN, O.; HEESTERBEEK, J. A.~P. \emph{Mathematical Epidemiology Of
+  Infectious Diseases - Model Building, Analysis and Interpretation}. 1. ed.
+  Reading: Wiley, 2000.}
+
+\bibitem{EpidemicModelling}
+\abntrefinfo{Daley e Gani}{DALEY; GANI}{1999}
+{DALEY, D.~J.; GANI, J. \emph{Epidemic Modelling - An Introduction}. 1. ed.
+  Reading: Cambridge University, 1999.}
+
+\end{thebibliography}
