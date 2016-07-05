@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  5 JUL 2016 14:39
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  5 JUL 2016 18:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -638,7 +638,7 @@ Package epstopdf Info: Source file: <Figuras/modelo.eps>
 (epstopdf)                    size: 6019 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/modelo-eps-convert
 ed-to.pdf Figuras/modelo.eps>
-(epstopdf)             \includegraphics on input line 30.
+(epstopdf)             \includegraphics on input line 32.
 Package epstopdf Info: Output file is already uptodate.
 
 <Figuras/modelo-eps-converted-to.pdf, id=71, 400.49625pt x 95.35625pt>
@@ -646,76 +646,76 @@ File: Figuras/modelo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/modelo-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/modelo-eps-converted-to.pdf used on input line
- 30.
+ 32.
 (pdftex.def)             Requested size: 227.94214pt x 54.27213pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
 
  []
 
-[8 <./Figuras/modelo-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+[8 <./Figuras/modelo-eps-converted-to.pdf>] [9]
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 []\T1/ptm/m/n/12 O autô-mato ce-lu-lar é es-pe-ci-fi-cado so-bre um \T1/ptm/m/i
 t/12 lat-tice \T1/ptm/m/n/12 fi-nito com ade-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 \T1/ptm/m/n/12 quado tipo de vi-zi-nhança, sendo sua dis-cre-ti-za-ção de-ter-m
 i-nada pelo con-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 \T1/ptm/m/n/12 junto $\OMS/cmsy/m/n/12 L \OT1/cmr/m/n/12 = []$\T1/ptm/m/n/12 . 
 Para vi-zi-nhança
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
 \T1/ptm/m/n/12 tipo Mo-ore cada cé-lula $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 i; j
 \OT1/cmr/m/n/12 )$ \T1/ptm/m/n/12 tem uma vi-zi-nhança de cé-lu-las $\OMS/cmsy/
 m/n/12 V[] \OT1/cmr/m/n/12 =
  []
 
 
-Underfull \hbox (badness 4699) in paragraph at lines 68--69
+Underfull \hbox (badness 4699) in paragraph at lines 70--71
 []$\T1/ptm/m/n/12 . Lo-cal-mente a vi-zi-nhança de Mo-ore é $\OMS/cmsy/m/n/12 V
  \OT1/cmr/m/n/12 =
  []
 
 
-Underfull \hbox (badness 5578) in paragraph at lines 68--69
+Underfull \hbox (badness 5578) in paragraph at lines 70--71
 []$\T1/ptm/m/n/12 , sendo a vi-
  []
 
-[9]
+[10]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 92.
- [10]
-Underfull \hbox (badness 3536) in paragraph at lines 108--109
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 94.
+
+Underfull \hbox (badness 3536) in paragraph at lines 110--111
 []\T1/ptm/b/n/12 Sistemas mul-ti-a-gen-tes: \T1/ptm/m/n/12 Agen-tes ba-se-a-dos
  em mo-de-los são de-fi-ni-dos espaço-
  []
 
 [11] [12]
-Underfull \hbox (badness 10000) in paragraph at lines 155--156
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
-[13]
-Overfull \hbox (28.14783pt too wide) in alignment at lines 173--199
+[13] [14]
+Overfull \hbox (28.14783pt too wide) in alignment at lines 175--201
  [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 199
+Underfull \vbox (badness 10000) detected at line 201
  []
 
-[14]
+[15]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 207.
- [15]
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 209.
+ [16]
 Package epstopdf Info: Source file: <Figuras/Tira.eps>
 (epstopdf)                    date: 2016-06-20 17:38:10
 (epstopdf)                    size: 914677 bytes
@@ -724,94 +724,92 @@ Package epstopdf Info: Source file: <Figuras/Tira.eps>
 (epstopdf)                    size: 5934 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/Tira-eps-converted
 -to.pdf Figuras/Tira.eps>
-(epstopdf)             \includegraphics on input line 218.
+(epstopdf)             \includegraphics on input line 220.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figuras/Tira-eps-converted-to.pdf, id=109, 2345.76375pt x 204.765pt>
+<Figuras/Tira-eps-converted-to.pdf, id=112, 2345.76375pt x 204.765pt>
 File: Figuras/Tira-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/Tira-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/Tira-eps-converted-to.pdf used on input line 2
-18.
+20.
 (pdftex.def)             Requested size: 455.8843pt x 39.79309pt.
- [16 <./Figuras/Tira-eps-converted-to.pdf>] [17]
+ [17 <./Figuras/Tira-eps-converted-to.pdf>] [18]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 281.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 283.
 
 
 
-Overfull \hbox (59.41147pt too wide) detected at line 293
+Overfull \hbox (59.41147pt too wide) detected at line 295
 []
  []
 
-[18]
-LaTeX Font Info:    Calculating math sizes for size <> on input line 293.
-
+LaTeX Font Info:    Calculating math sizes for size <> on input line 295.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 293.
+(Font)              size <5> substituted on input line 295.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 299.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 301.
 
 
 
-Overfull \hbox (41.337pt too wide) detected at line 311
+Overfull \hbox (41.337pt too wide) detected at line 313
 []
  []
 
-
-Underfull \hbox (badness 1210) in paragraph at lines 315--316
+[19]
+Underfull \hbox (badness 1210) in paragraph at lines 317--318
 []\T1/ptm/m/n/12 Os iden-ti-fi-ca-do-res dos lo-tes têm va-ri-a-ção de $[]\OT1/
 cmr/m/n/12 0[][] = []000 000[][]$ \T1/ptm/m/n/12 até $[]\OT1/cmr/m/n/12 63[][] 
 =
  []
 
-[19]) [20]
+) [20]
 \openout2 = `capitulo3/capitulo3.aux'.
 
  (./capitulo3/capitulo3.tex
@@ -860,13 +858,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4894 strings out of 493054
- 62664 string characters out of 6140586
- 163696 words of memory out of 5000000
- 8127 multiletter control sequences out of 15000+600000
+ 4893 strings out of 493054
+ 62618 string characters out of 6140586
+ 164692 words of memory out of 5000000
+ 8126 multiletter control sequences out of 15000+600000
  60586 words of font info for 89 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
- 38i,13n,43p,1222b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,13n,43p,1218b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
@@ -882,7 +880,7 @@ ublic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/
 utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share
 /texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on TCC.pdf (37 pages, 256614 bytes).
+Output written on TCC.pdf (37 pages, 256980 bytes).
 PDF statistics:
  205 PDF objects out of 1000 (max. 8388607)
  143 compressed objects within 2 object streams

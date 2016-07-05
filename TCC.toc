@@ -12,9 +12,9 @@
 \contentsline {chapter}{\numberline {2}Fundamentos}{5}
 \contentsline {section}{\numberline {2.1}Epidemiologia Matem\'atica e Computacional}{5}
 \contentsline {section}{\numberline {2.2}Modelos compartimentais: Tipos e Classifica\c c\~oes}{7}
-\contentsline {section}{\numberline {2.3}Agentes e Multiagentes}{11}
-\contentsline {section}{\numberline {2.4}Modelagem em Operadores}{12}
-\contentsline {section}{\numberline {2.5}\textit {Bitstring}}{15}
+\contentsline {section}{\numberline {2.3}Agentes e Multiagentes}{12}
+\contentsline {section}{\numberline {2.4}Modelagem em Operadores}{13}
+\contentsline {section}{\numberline {2.5}\textit {Bitstring}}{16}
 \contentsline {section}{\numberline {2.6}Refinamento do Modelo}{20}
 \contentsline {chapter}{\numberline {3}Metodologias Computacionais}{21}
 \contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{21}
