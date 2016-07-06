@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  6 JUL 2016 11:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  6 JUL 2016 15:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -403,8 +403,7 @@ Writing glossary file TCC.glo
 (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux) (./iniciais/aprova.aux)
 (./iniciais/dedica.aux) (./iniciais/agradece.aux) (./iniciais/sumario.aux)
 (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
-(./capitulo3/capitulo3.aux) (./capitulo4/capitulo4.aux)
-(./capitulo5/capitulo5.aux))
+)
 \openout1 = `TCC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
@@ -578,17 +577,17 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 
 ] [9
 
-] (./TCC.toc
-[10
-
-])
+] (./TCC.toc)
 \tf@toc=\write7
 \openout7 = `TCC.toc'.
 
-) [11]
+)
+[10
+
+]
 \openout2 = `iniciais/resumo.aux'.
 
- (./iniciais/resumo.tex) [12
+ (./iniciais/resumo.tex) [11
 
 
 
@@ -637,252 +636,76 @@ Package epstopdf Info: Source file: <Figuras/modelo.eps>
 (epstopdf)                    size: 6019 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/modelo-eps-convert
 ed-to.pdf Figuras/modelo.eps>
-(epstopdf)             \includegraphics on input line 37.
+(epstopdf)             \includegraphics on input line 39.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figuras/modelo-eps-converted-to.pdf, id=70, 400.49625pt x 95.35625pt>
+<Figuras/modelo-eps-converted-to.pdf, id=66, 400.49625pt x 95.35625pt>
 File: Figuras/modelo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/modelo-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/modelo-eps-converted-to.pdf used on input line
- 37.
+ 39.
 (pdftex.def)             Requested size: 227.94214pt x 54.27213pt.
- [8]
-Underfull \hbox (badness 10000) in paragraph at lines 44--45
-
- []
-
-[9 <./Figuras/modelo-eps-converted-to.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-[]\T1/ptm/m/n/12 O autô-mato ce-lu-lar é es-pe-ci-fi-cado so-bre um \T1/ptm/m/i
-t/12 lat-tice \T1/ptm/m/n/12 fi-nito com ade-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-\T1/ptm/m/n/12 quado tipo de vi-zi-nhança, sendo sua dis-cre-ti-za-ção de-ter-m
-i-nada pelo con-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-\T1/ptm/m/n/12 junto $\OMS/cmsy/m/n/12 L \OT1/cmr/m/n/12 = []$\T1/ptm/m/n/12 . 
-Para vi-zi-nhança
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-\T1/ptm/m/n/12 tipo Mo-ore cada cé-lula $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 i; j
-\OT1/cmr/m/n/12 )$ \T1/ptm/m/n/12 tem uma vi-zi-nhança de cé-lu-las $\OMS/cmsy/
-m/n/12 V[] \OT1/cmr/m/n/12 =
- []
-
-
-Underfull \hbox (badness 4699) in paragraph at lines 75--76
-[]$\T1/ptm/m/n/12 . Lo-cal-mente a vi-zi-nhança de Mo-ore é $\OMS/cmsy/m/n/12 V
- \OT1/cmr/m/n/12 =
- []
-
-
-Underfull \hbox (badness 5578) in paragraph at lines 75--76
-[]$\T1/ptm/m/n/12 , sendo a vi-
- []
-
-[10]
+ [8] [9 <./Figuras/modelo-eps-converted-to.pdf>] [10]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 99.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 96.
 
-Underfull \hbox (badness 3536) in paragraph at lines 115--116
+Underfull \hbox (badness 3536) in paragraph at lines 112--113
 []\T1/ptm/b/n/12 Sistemas mul-ti-a-gen-tes: \T1/ptm/m/n/12 Agen-tes ba-se-a-dos
  em mo-de-los são de-fi-ni-dos espaço-
  []
 
 [11] [12] [13] [14] [15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 175--176
+Underfull \hbox (badness 10000) in paragraph at lines 176--177
 
  []
 
 [17]
-Overfull \hbox (28.14783pt too wide) in alignment at lines 193--219
- [] [] [] 
- []
-
-
-Underfull \vbox (badness 10000) detected at line 219
- []
-
-[18]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 227.
- [19]
-Package epstopdf Info: Source file: <Figuras/Tira.eps>
-(epstopdf)                    date: 2016-06-20 17:38:10
-(epstopdf)                    size: 914677 bytes
-(epstopdf)             Output file: <Figuras/Tira-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-07-04 14:24:19
-(epstopdf)                    size: 5934 bytes
-(epstopdf)             Command: <repstopdf --outfile=Figuras/Tira-eps-converted
--to.pdf Figuras/Tira.eps>
-(epstopdf)             \includegraphics on input line 238.
-Package epstopdf Info: Output file is already uptodate.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 190.
+ [18]
 
-<Figuras/Tira-eps-converted-to.pdf, id=122, 2345.76375pt x 204.765pt>
-File: Figuras/Tira-eps-converted-to.pdf Graphic file (type pdf)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<use Figuras/Tira-eps-converted-to.pdf>
-Package pdftex.def Info: Figuras/Tira-eps-converted-to.pdf used on input line 2
-38.
-(pdftex.def)             Requested size: 455.8843pt x 39.79309pt.
- [20 <./Figuras/Tira-eps-converted-to.pdf>] [21]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 301.
-
-
-
-Overfull \hbox (59.41147pt too wide) detected at line 313
-[]
- []
-
-[22]
-LaTeX Font Info:    Calculating math sizes for size <> on input line 313.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `U/lasy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 313.
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 319.
-
-
-
-Overfull \hbox (41.337pt too wide) detected at line 331
-[]
- []
-
-)
-Underfull \hbox (badness 1210) in paragraph at lines 335--165
-[]\T1/ptm/m/n/12 Os iden-ti-fi-ca-do-res dos lo-tes têm va-ri-a-ção de $[]\OT1/
-cmr/m/n/12 0[][] = []000 000[][]$ \T1/ptm/m/n/12 até $[]\OT1/cmr/m/n/12 63[][] 
-=
- []
-
-[23] [24]
-\openout2 = `capitulo3/capitulo3.aux'.
-
- (./capitulo3/capitulo3.tex
-Cap\'{\i }tulo 3.
-) [25
-
-
-
-]
-\openout2 = `capitulo4/capitulo4.aux'.
-
- (./capitulo4/capitulo4.tex
-Cap\'{\i }tulo 4.
-) [26
-
-
-
-]
-\openout2 = `capitulo5/capitulo5.aux'.
-
- (./capitulo5/capitulo5.tex
-Cap\'{\i }tulo 5.
-) [27
-
-
-
-] (./TCC.bbl
+[19]) [20] (./TCC.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 29--32
 []\T1/ptm/m/n/12 WOOLDRIDGE, M. \T1/ptm/m/it/12 In-tel-li-gent Agents\T1/ptm/m/
 n/12 . 2016. Con-sul-tado na IN-TER-NET:
  []
 
-) [28
+) [21
 
 
 ] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
 (./iniciais/aprova.aux) (./iniciais/dedica.aux) (./iniciais/agradece.aux)
 (./iniciais/sumario.aux) (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux)
-(./capitulo2/capitulo2.aux) (./capitulo3/capitulo3.aux)
-(./capitulo4/capitulo4.aux) (./capitulo5/capitulo5.aux))
-
-LaTeX Font Warning: Size substitutions with differences
-(Font)              up to 4.5pt have occurred.
-
- ) 
+(./capitulo2/capitulo2.aux)) ) 
 Here is how much of TeX's memory you used:
- 4886 strings out of 493054
- 62483 string characters out of 6140586
- 163216 words of memory out of 5000000
- 8127 multiletter control sequences out of 15000+600000
- 60586 words of font info for 89 fonts, out of 8000000 for 9000
+ 4835 strings out of 493054
+ 61556 string characters out of 6140586
+ 153796 words of memory out of 5000000
+ 8101 multiletter control sequences out of 15000+600000
+ 57007 words of font info for 79 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
- 38i,13n,43p,1677b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/symbols/msbm10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/
-utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share
-/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1
-/urw/times/utmri8a.pfb>
-Output written on TCC.pdf (40 pages, 263997 bytes).
+ 38i,13n,43p,1230b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.en
+c}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/sh
+are/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/ty
+pe1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.p
+fb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on TCC.pdf (32 pages, 229889 bytes).
 PDF statistics:
- 214 PDF objects out of 1000 (max. 8388607)
- 149 compressed objects within 2 object streams
+ 177 PDF objects out of 1000 (max. 8388607)
+ 123 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

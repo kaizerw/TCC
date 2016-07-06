@@ -10,9 +10,6 @@ A level-1 auxiliary file: iniciais/sumario.aux
 A level-1 auxiliary file: iniciais/resumo.aux
 A level-1 auxiliary file: capitulo1/capitulo1.aux
 A level-1 auxiliary file: capitulo2/capitulo2.aux
-A level-1 auxiliary file: capitulo3/capitulo3.aux
-A level-1 auxiliary file: capitulo4/capitulo4.aux
-A level-1 auxiliary file: capitulo5/capitulo5.aux
 The style file: abnt-num.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -33,44 +30,44 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 6 entries,
+You've used 7 entries,
             6480 wiz_defined-function locations,
-            1205 strings with 10245 characters,
-and the built_in function-call counts, 5056 in all, are:
-= -- 520
-> -- 141
+            1210 strings with 10342 characters,
+and the built_in function-call counts, 5557 in all, are:
+= -- 555
+> -- 153
 < -- 8
-+ -- 99
-- -- 42
-* -- 326
-:= -- 714
-add.period$ -- 23
-call.type$ -- 6
-change.case$ -- 61
-chr.to.int$ -- 21
-cite$ -- 6
-duplicate$ -- 240
-empty$ -- 355
-format.name$ -- 218
-if$ -- 1199
++ -- 103
+- -- 46
+* -- 360
+:= -- 789
+add.period$ -- 26
+call.type$ -- 7
+change.case$ -- 67
+chr.to.int$ -- 22
+cite$ -- 7
+duplicate$ -- 268
+empty$ -- 397
+format.name$ -- 238
+if$ -- 1311
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 117
-newline$ -- 34
-num.names$ -- 24
-pop$ -- 183
+missing$ -- 133
+newline$ -- 40
+num.names$ -- 28
+pop$ -- 197
 preamble$ -- 1
-purify$ -- 23
+purify$ -- 26
 quote$ -- 0
-skip$ -- 276
+skip$ -- 305
 stack$ -- 1
-substring$ -- 182
-swap$ -- 112
+substring$ -- 199
+swap$ -- 125
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 2
 warning$ -- 0
-while$ -- 34
+while$ -- 39
 width$ -- 0
-write$ -- 87
+write$ -- 101

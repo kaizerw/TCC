@@ -4,7 +4,7 @@
 \contentsline {chapter}{Lista de Abreviaturas e Siglas}{viii}
 \contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{ix}
 \contentsline {chapter}{Sum\'ario}{x}
-\contentsline {chapter}{Resumo}{xii}
+\contentsline {chapter}{Resumo}{xi}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
 \contentsline {section}{\numberline {1.1}Objetivos}{2}
 \contentsline {section}{\numberline {1.2}Motiva\c c\~ao e Justificativas}{3}
@@ -14,18 +14,5 @@
 \contentsline {section}{\numberline {2.2}Modelos compartimentais: Tipos e Classifica\c c\~oes}{8}
 \contentsline {section}{\numberline {2.3}Agentes Inteligentes}{12}
 \contentsline {section}{\numberline {2.4}Modelagem em Operadores}{16}
-\contentsline {section}{\numberline {2.5}\textit {Bitstring}}{19}
-\contentsline {chapter}{\numberline {3}Metodologias Computacionais}{25}
-\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{25}
-\contentsline {section}{\numberline {3.2}SIMULA}{25}
-\contentsline {section}{\numberline {3.3}Estruturas de Dados, Linguagens e Estrat\'egias de Implementa\c c\~ao}{25}
-\contentsline {section}{\numberline {3.4}CUDA e OpenMP}{25}
-\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{26}
-\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{26}
-\contentsline {section}{\numberline {4.2}Implementa\c c\~ao Padr\~ao com CUDA e OpenMP}{26}
-\contentsline {section}{\numberline {4.3}Implementa\c c\~ao \textit {Bitstring} com CUDA e OpenMP}{26}
-\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{26}
-\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{27}
-\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{27}
-\contentsline {section}{\numberline {5.2}Cases: Discutir as Simulac\~oes no Espa\c co Geogr\'afico Escolhido.}{27}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{28}
+\contentsline {section}{\numberline {2.5}Metodologia de \textit {Bitstring}}{18}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{21}

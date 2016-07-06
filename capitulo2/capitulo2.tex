@@ -2,8 +2,9 @@
 \label{CapFundamentos}
 
 \section{Epidemiologia Matemática e Computacional}
+\label{sec:epidemiologia}
 
-Considera-se que os primeiros estudos epidemiológicos ocorreram na Grécia Antiga, realizados pelo sacerdote Hipócrates (460-377 a.C.). Hipócrates investigou diversas epidemias e suas distribuições ambientais e, após sua morte, seus discípulos deram continuidade aos seus estudos em diferentes frentes de trabalho. Em Roma, os trabalhos epidemiológicos foram iniciados por médicos inspirados em Galeno (201-130 a.C.), um famoso médico grego. Os estudos romanos produziram resultados importantes na área de epidemiologia, destacando-se a introdução dos censos periódicos e registro compulsório de nascimentos e óbitos. Em 1950 aconteceu na Inglaterra a \textit{London Epidemiological Society} organizada pela \textit{Royal Medical Society}, onde participaram diversos profissionais proeminentes da área epidemiológica. Entre eles estava John Snow (1813-1858), considerado por muitos o pai da epidemiologia, que conduziu estudos pioneiros sobre a mortalidade por infecção pós-cirúrgica nos hospitais militares na Guerra da Criméia, sobre mecanismos de transmissão hídrica e descobriu o agente microbiano da cólera morbo. \cite{Epidemiologia}. 
+Acredita-se que os primeiros estudos epidemiológicos ocorreram na Grécia Antiga, realizados pelo sacerdote Hipócrates (460-377 a.C.). Hipócrates investigou diversas epidemias e suas distribuições ambientais e, após sua morte, seus discípulos deram continuidade aos seus estudos em diferentes frentes de trabalho. Em Roma, os trabalhos epidemiológicos foram iniciados por médicos inspirados em Galeno (201-130 a.C.), um famoso médico grego. Os estudos romanos produziram resultados importantes na área de epidemiologia, destacando-se a introdução dos censos periódicos e registro compulsório de nascimentos e óbitos. Em 1950 aconteceu na Inglaterra a \textit{London Epidemiological Society} organizada pela \textit{Royal Medical Society}, onde participaram diversos profissionais proeminentes da área epidemiológica. Entre eles estava John Snow (1813-1858), considerado por muitos o pai da epidemiologia, que conduziu estudos pioneiros sobre a mortalidade por infecção pós-cirúrgica nos hospitais militares na Guerra da Criméia, sobre mecanismos de transmissão hídrica e descobriu o agente microbiano da cólera morbo. \cite{Epidemiologia}. 
 
 Ocorreu no século XIX um grande desenvolvimento na área de epidemiologia, destacando-se figuras como Major Greenwood (1888-1949), que introduziu o raciocínio estatístico na pesquisa epidemiológica, contribuindo para a epidemiologia experimental, John Ryle (1889-1950), que propôs a sistematização da História Natural das Doenças e Jerome Cornfield (1921-1979), que desenvolveu os estimadores de risco relativo e introduziu técnicas de regressão logística na epidemiologia. Nas décadas de 1960 e 1970 ocorreram grandes transformações na epidemiologia, com a introdução dos computadores e desenvolvimento de técnicas de coleta e análise de dados epidemiológicos. Atualmente a epidemiologia faz uso de abordagens metodológicas modernas que contribuem para a reavaliação de suas bases de estudo, abrindo possibilidades para a investigação de grandes processos em grupos populacionais. O caráter inovador é bastante incentivado dentro da área, seja pela incorporação de novos paradigmas, modelos téoricos, ampliação de objetos de estudos e uso de novas tecnologias. \cite{Epidemiologia}.
 
@@ -25,27 +26,27 @@ Em \cite{EpidemicModelling} são discutidos, entre outros temas, os modelos matem
 \end{itemize}
 
 \section{Modelos compartimentais: Tipos e Classificações}
+\label{sec:modeloscompartimentais}
 
-A abordagem usualmente empregada na modelagem de doenças infecto-contagiosas é a de diagrama de blocos ou em compartimentos. Doenças infecciosas admitem uma modelagem em estrutura compartimental, que é obtida por meio da subdivisão da população em categorias, entre as quais os indivíduos fluem com taxas que dependem das características da dinâmica espaço-temporal da doença. Supondo que $N(t)$ designa a quantidade total de indivíduos num nível de tempo $t$ e tomando uma modelagem compartimental, os indivíduos que compõem a população podem ser divididos em classes do tipo suscetíveis, $S(t)$; latentes ou expostos, $E(t)$; infectados, $I(t)$, e recuperados ou removidos, $R(t)$, de modo que $S(t)+E(t)+I(t)+R(t)=N(t)$, observando-se a conservatividade do número de indivíduos na população.
+A abordagem usualmente empregada na modelagem de doenças infecto-contagiosas é a de diagrama de blocos ou em compartimentos. Doenças infecciosas permitem uma modelagem em estrutura compartimental, que é obtida pela subdivisão da população em categorias, entre as quais os indivíduos fluem com taxas que dependem das características da dinâmica espaço-temporal da doença. Supondo que $N(t)$ designa a quantidade total de indivíduos num nível de tempo $t$ e tomando uma modelagem compartimental, os indivíduos que compõem a população podem ser divididos em classes do tipo suscetíveis, $S(t)$; latentes ou expostos, $E(t)$; infectados, $I(t)$, e recuperados ou removidos, $R(t)$, de modo que $S(t)+E(t)+I(t)+R(t)=N(t)$, observando-se a conservatividade do número de indivíduos na população.
 
 Cada indivíduo pode pertencer a somente um dos estados em um dado período de tempo: o estado suscetível, $S$, indica que o indivíduo ainda não contraiu a doença e está apto a adquiri-la. O estado exposto, $E$, indica que o indivíduo contraiu a doença, mas não pode transmiti-la. O estado infectante, $I$, indica que o indivíduo está infectado com a doença, sendo capaz de transmiti-la para outros que estejam no estado suscetível, e o estado recuperado, $R$, indica que o indivíduo já foi infectado com a doença e não pode se contaminar novamente nem transmiti-la para outros em um determinado período. 
 
-Considerando-se os estados relacionados com o processo infeccioso, usuais modelos são o Suscetível-Infectado-Suscetível, SIS, empregado em situações em que a doença não confere imunidade, passando o indivíduo de infectado para suscetível novamente, o modelo Suscetível-Infectado-Recuperado, SIR, para casos de doenças em que os indivíduos infecciosos podem recuperar-se e adquirir imunidade permanente, o modelo Suscetível-Exposto-Infectado-Recuperado, SEIR, para doenças com período de latência e imunidade permanente e o modelo Suscetível-Exposto-Infectado-Recuperado-Suscetível, SEIRS, para doenças com período de latência e sem imunidade permanente. Neste trabalho será adotado particularmente o modelo SEIRS, visto que pode ser usado para modelar uma ampla gama de doenças. O fluxo de transição de estado dos indivíduos para o modelo SEIRS é mostrado na Figura \ref{fig:modelo}.
+Considerando-se os estados relacionados com o processo infeccioso, usuais modelos são o Suscetível-Infectado-Suscetível, SIS, empregado em situações em que a doença não confere imunidade, passando o indivíduo de infectado para suscetível novamente, o modelo Suscetível-Infectado-Recuperado, SIR, para casos de doenças em que os indivíduos infecciosos podem recuperar-se e adquirir imunidade permanente, o modelo Suscetível-Exposto-Infectado-Recuperado, SEIR, para doenças com período de latência e imunidade permanente e o modelo Suscetível-Exposto-Infectado-Recuperado-Suscetível, SEIRS, para doenças com período de latência e sem imunidade permanente. Neste trabalho será adotado particularmente o modelo SEIRS, visto que é um modelo mais robusto e pode ser utilizado para modelar uma ampla gama de doenças. O fluxo de transição de estado dos indivíduos para o modelo SEIRS é como mostrado na Figura \ref{fig:modelo}.
 
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.50\textwidth]{Figuras/modelo.eps}
-  \caption{Fluxo de transição de estados dos indivíduos no modelo SEIRS}
+  \caption{Fluxo compartimental no modelo SEIRS}
   \label{fig:modelo}
 \end{figure} 
 
-Na Figura \ref{fig:modelo}, $\beta$ designa a taxa de transmissão da doença. No encontro de indivíduos saudáveis com infectantes a doença se propaga a tal taxa. O indivíduo fica um período, $\gamma$, no estado exposto. O parâmetro $\alpha$ designa a taxa de recuperação, em que indivíduos doentes se recuperam estando imunes àquela doença por outro período. Este período é caracterizado pelo parâmetro $\delta$ que modelará qual é a taxa de perda de imunidade de indivíduos que estejam recuperados, passando-os novamente para o estado suscetível.
+Na Figura \ref{fig:modelo}, $\beta$ designa a taxa de transmissão da doença, que é a taxa de propagação da doença no encontro de indivíduos suscetíveis com infectantes. Após ser infectado o indivíduo entra em um estado de latência, permanencendo em estado exposto por um período designado por $\gamma$. O parâmetro $\alpha$ designa a taxa de recuperação, em que indivíduos infectantes se recuperam da doença, ficando imunes à ela. O taxa de perda de imunidade à doença é caracterizado pelo parâmetro $\delta$, que modela a perda de imunidade de indivíduos que estejam recuperados, passando-os novamente para o estado suscetível.
 
-As principais modelagens empregadas na simulação das dinâmicas de doenças infecto-contagiosas são: \\
+Observando-se as definições sobre modelos compartimentais descritas anteriormente, as principais modelagens empregadas na simulação das dinâmicas de doenças infecto-contagiosas são:
 
 \begin{itemize}
-  \item \textbf{Equações Diferenciais Ordinárias:} Considerando-se uma população fixa no tempo, isto é, desprezando por simplicidade as taxas vitais de nascimento e de morte, pode-se descrever matematicamente o fluxo de transição dos possíveis estados dos indivíduos no modelo SEIRS através de um sistema de equações diferenciais ordinárias não lineares, EDO. Se $N=S(t)+E(t)+I(t)+R(t)$ designa o tamanho fixo da população de indivíduos, onde suas quantidades nos diferentes estados variam no tempo, de modo que suas quantidades são funções do tempo, $S=S(t)$, $E=E(t)$, $I=I(t)$ e $R=R(t)$, respectivamente, obtém-se os problemas de valor inicial, PVI, para o caso contínuo e discreto, como apresentados em \ref{eq:PVI}.
-  
+  \item \textbf{Equações Diferenciais Ordinárias:} Considera-se uma população fixa no tempo desprezando taxas vitais de nascimento e de morte. Descreve-se matematicamente o fluxo de transição dos possíveis estados dos indivíduos no modelo SEIRS através de um sistema de equações diferenciais ordinárias não lineares, EDO. Se $N=S(t)+E(t)+I(t)+R(t)$ designa o tamanho fixo da população de indivíduos, onde suas quantidades nos diferentes estados variam no tempo, de modo que suas quantidades são funções do tempo, $S=S(t)$, $E=E(t)$, $I=I(t)$ e $R=R(t)$, respectivamente, obtém-se os problemas de valor inicial, PVI, para o caso contínuo e discreto, como apresentados em \ref{eq:PVI}.
   \begin{multicols}{2}
   \scriptsize
     \begin{equation*}
@@ -72,10 +73,6 @@ As principais modelagens empregadas na simulação das dinâmicas de doenças infect
 
   \item \textbf{Autômatos Celulares:} Autômatos celulares, AC, podem ser classificados como sendo modelos de sistemas dinâmicos discretos no espaço e no tempo, que operam sobre um \textit{lattice} contendo uma quantidade finita ou infinita de células. São caracterizados por iterações locais em que cada célula está associada a um estado ou fase por meio de conjunto discreto de valores. A atualização do estado é realizada a partir dos estados das células vizinhas de acordo com regras locais. Autômatos celulares possuem um domínio especificado pelo ambiente ou espaço celular em que estes são operados; um espaço de estados das células em que cada célula do \textit{lattice} possui determinado estado; a vizinhança de cada célula; e a regra de transição local que atua sobre a célula de modo que seu estado pode variar ao ocorrer uma transição.
 
-  O autômato celular é especificado sobre um \textit{lattice} finito com adequado tipo de vizinhança, sendo sua discretização determinada pelo conjunto $\mathcal{L}=\left\{(i,j);\ 1 \leq i \leq n, \ 1 \leq j \leq m;\ n,m \in \mathbb{N}^* \right\}$. Para vizinhança tipo Moore cada célula $(i,j)$ tem uma vizinhança de células $\mathcal{V}_{i,j}=\left\{(i+\alpha_k,j+\beta_k);\ 1 \leq k \leq 8 \right\}$. Localmente a vizinhança de Moore é $\mathcal{V}=\left\{(0,0), (-1,0), (-1,1), (0,1), (1,1), (1,0), (1,-1), (0,-1), (-1,-1)\right\}$, sendo a vizinhança sem a célula central indicada por $\mathcal{V}^*=\mathcal{V}-\left\{(0,0)\right\}$.
-
-  A regra de transição local, $\sigma$, é especificada dos estados $e, E \in \mathcal{Q}$, de modo que, dados distintos, discretos e consecutivos níveis de tempo $t$ e $t+1$ têm-se $\sigma (e_{(i+\alpha_k,j+\beta_k)}^{t})=E_{i,j}^{t+1}$, sendo $e_{(i+\alpha_k,j+\beta_k)}^{t}$ a designação para o estado de uma célula vizinha da célula $(i,j)$ no nível de tempo $t$. Para um espaço celular finito deve-se especificar apropriadas condições de contorno, e algumas delas empregadas em autômato celular são a periódica, tipo reflexiva e a tipo Dirichlet, e um caso particular dessa última, a condição homogênea nula. À especificação da condição de contorno periódica faz-se $E_{1,j}=E_{n,j}$ e $E_{i,1}=E_{i,m}$ e à condição de contorno homogênea faz-se $E_{1,j}=E_{n,j}=0$ e $E_{i,1}=E_{i,m}=0$, para tais células em $\partial \mathcal{L}$, o conjunto das células de contorno do domínio.
-  
   Autômatos celulares são formalmente caracterizados pela especificação da quádrupla $\left\langle \mathcal{L},\mathcal{Q},\mathcal{V},\sigma\right\rangle$ que atenda as características de homogeneidade espaço-temporal na sua dinâmica, e da especificação de regras de transição não ambíguas. Como as simulações de eventos epidemiológicos requerem uma distribuição dos estados no tempo inicial, $t_0$, é necessário especificar tal condição. Escrevendo o AC como um problema de valor inicial e de contorno discreto, PVIC, a regra de transição é definida em $(i,j) \times t \in \mathcal{L} \times (0,T)$, sendo as condições iniciais dadas $(i,j) \in \mathcal{L}$ para $t_{0}=0$ e as condições de contorno especificadas em $(i,j) \times t \in \partial \mathcal{L} \times [0,T]$, sendo que $T$ denota um determinado tempo. Considerando-se as expressões para o domínio e a regra de transição, e tomando a condição de contorno periódica, o AC é especificado como \eqref{eq:AC-SEIRS}:
   \begin{equation}
   \label{eq:AC-SEIRS}
@@ -96,9 +93,7 @@ As principais modelagens empregadas na simulação das dinâmicas de doenças infect
   
   A solução de \eqref{eq:AC-SEIRS} é obtida por meio da evolução espaço-temporal dada pela regra de transição que fornece os estados finais a partir do cálculo dos estados iniciais. A transição se dá num nível de tempo $t$ para o consecutivo nível de tempo $t+\Delta t$, sendo $\Delta t$ o passo de tempo.
 
-  \item \textbf{\textit{Lattice Gas Cellular Automata}:} \textit{Lattice Gas Cellular Automata}, LGCA, são um particular tipo de autômato celular que são utilizados principalmente na simulação de fluxos de fluídos. Para a construção de um LGCA deve-se especificar uma quádrupla $\left\langle\mathcal{L},\mathcal{Q},\mathcal{V},\sigma\right\rangle$ que atenda as características de AC. Um modelo LGCA é como apresentado em \eqref{PVIC-LGCA}.
-
-  No modelo \eqref{PVIC-LGCA} $\tau$ indica um estado qualquer, ou seja, $\tau \in \left\{S,I,R\right\}$, e o operador $\tilde{\sigma}$ é um algoritmo do operador $\sigma$. Ou seja, $\tilde{\sigma} = \tilde{P}\circ \tilde{D}\circ (1-(1-p_{i,j}))^{N_I}$, sendo $\tilde{P}$ e $\tilde{D}$ procedimentos ou algoritmos para implementar as fases de propagação e de randomização.
+  \item \textbf{\textit{Lattice Gas Cellular Automata}:} \textit{Lattice Gas Cellular Automata}, LGCA, são um particular tipo de autômato celular utilizados principalmente na simulação de fluxos de fluídos. Para a construção de um LGCA deve-se especificar uma quádrupla $\left\langle\mathcal{L},\mathcal{Q},\mathcal{V},\sigma\right\rangle$ que atenda as características de AC. Um modelo LGCA é como apresentado em \eqref{PVIC-LGCA}.
 
   \begin{equation}
   \label{PVIC-LGCA}
@@ -112,13 +107,18 @@ As principais modelagens empregadas na simulação das dinâmicas de doenças infect
   \right.
   \end{equation}
   
-  \item \textbf{Sistemas multiagentes:} Agentes baseados em modelos são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo, em um ciclo de transição. A especificação formal do agente é realizada por meio de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente, decorre da composição do operador de transição temporal, que realiza a transição do estado do agente de acordo com sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição, considerando sua conectividade e mobilidade.
+  No modelo \eqref{PVIC-LGCA} $\tau$ indica um estado qualquer, ou seja, $\tau \in \left\{S,I,R\right\}$, e o operador $\tilde{\sigma}$ é um algoritmo do operador $\sigma$. Ou seja, $\tilde{\sigma} = \tilde{P}\circ \tilde{D}\circ (1-(1-p_{i,j}))^{N_I}$, sendo $\tilde{P}$ e $\tilde{D}$ procedimentos ou algoritmos para implementar as fases de propagação e de randomização.
+  
+  \item \textbf{Sistemas multiagentes:} Agentes baseados em modelos são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo, em um ciclo de transição. A especificação formal do agente é realizada por meio de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente, que decorre da composição do operador de transição temporal, que realiza a transição do estado do agente de acordo com sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição, considerando sua conectividade e mobilidade. Sistemas multiagente são interessantes por permitir a modelagem das classes de indivíduos independentemente umas das outras, de apresentarem comportamentos populacionais, bastante relevante aos estudos epidemiológicos e por apresentarem natureza paralela, permitindo e facilitando o desenvolvimento de sistemas multiagentes paralelos.
 
 \end{itemize}
 
 \section{Agentes Inteligentes}
+\label{sec:agentesinteligentes}
 
-Segundo \cite{ArtificialIntelligence}, um agente é algo que, por meio de sensores, pode perceber o meio ambiente em que está inserido, podendo agir sobre este meio através de atuadores, sendo capaz de perceber suas próprias ações, mas nem sempre seus efeitos. É capaz de agir de forma autônoma no ambiente com o intuito de atingir seus objetivos. A exemplo de um agente humano, os olhos, nariz e ouvidos seriam sensores e os braços, mãos e boca seriam os atuadores. Agentes robóticos podem contar com sensores eletrônicos, como câmeras e infravermelho e como atuadores diversos motores e braços mecânicos. Agentes de \textit{software} podem receber, por exemplo, pacotes de rede e agir enviando pacotes através da rede. A escolha da ação de um agente em um determinado instante de tempo pode depender de todas as percepções realizadas até aquele momento, e não somente da percepção atual. O comportamento de um agente pode ser descrito matematicamente através funções, que mapeiam uma ou várias percepções em uma ação. Um agente e suas funções podem ser implementadas concretamente através de linguagens de programação em programas de agentes. A partir destes conceitos, é importante definir agentes racionais. Agente racionais são agentes que, para cada possível conjunto de percepções, selecionam uma ação que maximize seu desempenho no ambiente, levando em conta seu conhecimento construído ao longo do tempo. Para a avaliação correta do sucesso de um agente, é indispensável uma medida de desempenho objetiva, que possa representar claramente como avaliar o desempenho do agente, quando atuando no ambiente.
+Segundo \cite{ArtificialIntelligence}, um agente é algo que, por meio de sensores, pode perceber o meio ambiente em que está inserido, podendo agir sobre este meio através de atuadores, sendo capaz de perceber suas próprias ações, mas nem sempre seus efeitos. É capaz de agir de forma autônoma no ambiente com o intuito de atingir seus objetivos. A exemplo de um agente humano, os olhos, nariz e ouvidos seriam sensores e os braços, mãos e boca seriam os atuadores. Agentes robóticos podem contar com sensores eletrônicos, como câmeras e infravermelho e como atuadores diversos motores e braços mecânicos. Agentes de \textit{software} podem receber, por exemplo, pacotes de rede e agir enviando pacotes através da rede. A escolha da ação de um agente em um determinado instante de tempo pode depender de todas as percepções realizadas até aquele momento, e não somente da percepção atual. 
+
+O comportamento de um agente pode ser descrito matematicamente através de funções, que mapeiam uma ou várias percepções em uma ação. Um agente e suas funções podem ser implementadas concretamente através de linguagens de programação em programas de agentes. Pode-se ainda definir definir agentes racionais. Agente racionais são agentes que, para cada possível conjunto de percepções, selecionam uma ação que maximize seu desempenho no ambiente, levando em conta seu conhecimento construído ao longo do tempo. Para a avaliação correta do sucesso de um agente, é indispensável uma medida de desempenho objetiva, que possa representar claramente como avaliar o desempenho do agente, quando atuando no ambiente.
 
 Agentes inteligentes são amplamente utilizados na análise e modelagem matemática e computacional, análise e desenvolvimento de robôs, na área de robótica, em sistemas de extração de informações ou monitoramento de comportamentos ou recursos, em redes de aprendizado e decisão, em jogos eletrônicos, em sistemas comerciais de marketing e propaganda, entre diversas outras aplicações.
 
@@ -131,30 +131,31 @@ Um agente, para ser considerado inteligente, deve ser capaz de desempenhar funçõ
  \item \textbf{Sociabilidade:} Agentes inteligentes devem ser capazes de interagir com outros agentes para satisfazer seus objetivos.
 \end{itemize}
 
-Um importante componente interagente com o agente é o ambiente. O ambiente pode ser definido como o meio em que os agentes atuam e interagem entre si, sendo que as ações e interações entre os agentes provocam mudanças no ambiente que são percebidas pelos agentes. Em \cite{ArtificialIntelligence} e \cite{IntelligentAgents} são apresentadas diversas classificações de ambientes, destacando-se:
+Um importante componente que interage com o agente é o ambiente. O ambiente pode ser definido como o meio em que os agentes atuam e interagem entre si, sendo que as ações e interações entre os agentes provocam mudanças no ambiente, que são percebidas por estes. Em \cite{ArtificialIntelligence} e \cite{IntelligentAgents} são apresentadas diversas classificações para ambientes, destacando-se:
 
 \begin{itemize}
  \item \textbf{Ambiente totalmente observável ou parcialmente observável:} Um ambiente é totalmente observável se os sensores dos agentes que estão inseridos neste ambiente são capazes de prover ao agente o estado completo de todo o ambiente, provendo informações relevantes para a escolha de ações. Ambientes totalmente observáveis são interessantes pois os agentes não precisam manter informações internas sobre o estado do ambiente. Um ambiente é parcialmente observável se os sensores dos agentes não são capazes de prover informações do estado do ambiente como um todo, seja por imprecisões ou devido à informações que estão ocultas ou não podem ser obtidas.
  \item \textbf{Determinístico ou estocástico:} Em um ambiente determinístico, seu próximo estado é completamente determinado pelo estado atual e as ações executadas pelos agentes contidos nele. Neste tipo de ambiente, os agentes não precisam se preocupar sobre incertezas, se o ambiente for totalmente observável. Em ambientes estocásticos, o estado futuro do ambiente não depende somente de seu estado atual e das ações de seus agentes, podendo depender de outras informações ou acontecimentos aleatórios. Ambientes parcialmente observáveis geralmente também são ambientes estocásticos.
- \item \textbf{Episódico ou sequencial:} Em um ambiente episódio, as experiências dos agentes são divididas em episódios atômicos, que consistem na percepção do agente e a execução de uma única ação. O episódio futuro não depende de ações ou informações dos episódios passados, sendo que as ações tomadas no episódio atual depende somente dele próprio. Em ambientes sequenciais as decisões atuais podem afetar as decisões que serão tomadas no futuro. Em geral, ambientes episódicos são muito mais simples do que ambientes sequenciais, pois os agentes não precisam planejar ações futuras.
- \item \textbf{Dinâmico ou estático:} Ambientes que podem mudar de estado enquanto os agentes estão tomando suas decisões de ação são chamados de dinâmicos. O ambiente está constantemente perguntando aos agentes que ações iram realizar. Se um agente não decidiu sua ação, o ambiente infere que sua ação é de não realizar nada. Em ambientes estáticos os agentes não precisam se preocupar com o estado atual do meio enquanto decidem qual ação tomar e nem com a passagem do tempo. Ambientes estáticos geralmente são mais fáceis de lidar, sob o ponto de vista dos agentes.
- \item \textbf{Discreto ou contínuo:} A distinção entre ambientes contínuos e discretos pode ser realizada através do estado do meio, da forma como o tempo é tratado ou considerado e das percepções e ações dos agentes. Em ambientes discretos, o tempo e seus estados assumem valores finitos e discretos ou são discretizações de informações contínuas, enquanto em ambientes continuos, essas informações assumem valores infinitos ou contínuos.
- \item \textbf{Agente único ou multiagente:} Diz respeito ao número de agentes interagindo e atuando no ambiente. Em ambientes de agente único, somente um agente está interagindo e agindo sobre o ambiente, enquanto que em ambientes multiagente, há diversos agentes, que tanto interagem entre si, quanto interagem com o ambiente. Ambientes multiagente podem ainda ser classificados em ambiente competitivos, onde os agentes, em grupos ou individualmente, tomam suas decisões levando em conta a maximização de seu desempenho e a minimização do desempenho de outros e em ambientes cooperativos onde os agentes tomam suas decisões tentando maximizar o desempenho de todos os agentes. 
+ \item \textbf{Episódico ou sequencial:} Em um ambiente episódico, as experiências dos agentes são divididas em episódios atômicos, que consistem na percepção do agente e a execução de uma única ação. O episódio futuro não depende de ações ou informações dos episódios passados, sendo que as ações tomadas no episódio atual depende somente dele próprio. Em ambientes sequenciais as decisões atuais podem afetar as decisões que serão tomadas no futuro. Em geral, ambientes episódicos são muito mais simples do que ambientes sequenciais, pois os agentes não precisam planejar ações futuras.
+ \item \textbf{Dinâmico ou estático:} Ambientes que podem mudar de estado enquanto os agentes estão tomando suas decisões de ação são chamados de dinâmicos. O ambiente está constantemente perguntando aos agentes que ações realizarão. Se um agente não decidiu sua ação, o ambiente infere que sua ação é de não realizar nada. Em ambientes estáticos os agentes não precisam se preocupar com o estado atual do meio enquanto decidem qual ação tomar e nem com a passagem do tempo. Ambientes estáticos geralmente são mais fáceis de lidar, sob o ponto de vista dos agentes.
+ \item \textbf{Discreto ou contínuo:} A distinção entre ambientes contínuos e discretos pode ser realizada através do estado do meio, da forma como o tempo é tratado ou considerado e das percepções e ações dos agentes. Em ambientes discretos, o tempo e seus estados assumem valores finitos e discretos ou são discretizações de informações contínuas, enquanto em ambientes contínuos, essas informações assumem valores infinitos ou contínuos.
+ \item \textbf{Agente único ou multiagente:} Diz respeito ao número de agentes interagindo e atuando no ambiente. Em ambientes de agente único, somente um agente está interagindo e agindo sobre o ambiente, enquanto que em ambientes multiagente, há diversos agentes, que tanto interagem entre si, quanto interagem com o ambiente. Ambientes multiagente podem ainda ser classificados em ambientes competitivos, onde os agentes, em grupos ou individualmente, tomam suas decisões levando em conta a maximização de seu desempenho e a minimização do desempenho de outros e em ambientes cooperativos, onde os agentes tomam suas decisões tentando maximizar o desempenho de todos os agentes. 
  \end{itemize}
 
 Quanto aos agentes em particular, pode-se classificá-los em quatro tipos básicos, de acordo com suas aplicações e características: \cite{ArtificialIntelligence}, \cite{IntelligentAgents} e \cite{IntelligentAgentsTheory}.
 \begin{itemize}
- \item \textbf{Agentes reativos simples:} Tipo mais simples de agente com inteligência bastante limitada. São caracterizados pela escolha de ações somente levando em consideração a percepção atual, ignorando seu histórico de percepções. Sua tomada de decisão é baseada em regras do tipo condição-ação, também chamadas de regras de se-então. A condição consiste na percepção atual que o agente recebe de seus sensores e a ação é atuação do agente de acordo com a percepção. São eficazes em ambientes totalmente observáveis onde as decisões corretas podem ser tomadas partindo das percepções atuais do agente. Agentes reativos simples podem randomizar parte de seu processo de decisão afim de reduzir a probabilidade de que este entre em um estado de repetição infita de decisões, que pode ser extremamente prejudicial em aplicações multiagente.
+ \item \textbf{Agentes reativos simples:} Tipo mais simples de agente, com inteligência bastante limitada. São caracterizados pela escolha de ações somente levando em consideração a percepção atual, ignorando seu histórico de percepções. Sua tomada de decisão é baseada em regras do tipo condição-ação, também chamadas de regras de se-então. A condição consiste na percepção atual que o agente recebe de seus sensores e a ação é atuação do agente de acordo com a percepção. São eficazes em ambientes totalmente observáveis onde as decisões corretas podem ser tomadas partindo das percepções atuais do agente. Agentes reativos simples podem randomizar parte de seu processo de decisão afim de reduzir sua probabilidade de entrada em um estado de repetição infinita de decisões, que pode ser extremamente prejudicial em aplicações multiagente.
  \item \textbf{Agentes reativos baseados em modelos:} Agentes especialmente usados em ambientes parcialmente observáveis, que são capazes de manter informações sobre o ambiente, com base em suas percepções, de forma a refletir aspectos atualmente não observáveis do meio. Em geral, esse tipo de agente tem o conhecimento sobre como o ambiente evolui independentemente e como suas ações afetam o meio em que está inserido. 
  \item \textbf{Agentes baseados em objetivos:} Nem sempre conhecer o estado atual do ambiente é o suficiente para o agente tomar a decisão correta sobre suas ações. Algumas vezes é necessário que o agente saiba quais estados ou situações são desejáveis. No geral, agentes baseados em objetivos tomam suas decisões levando em conta suas percepções, o conhecimento que adquirem do meio ambiente e seus objetivos. O objetivo pode ser alcançado por simples ações individuais dos agentes ou este pode ter que planejar uma sequência de ações, e pode até mesmo ter que colaborar com outros agentes. Agentes baseados em objetivos são mais flexíveis pois podem ser reconfigurados a qualquer momento de acordo com suas percepções ou mesmo externamente.
- \item \textbf{Agentes baseados em utilidades:} Na maioria dos ambientes, o incorporação de objetivos no agente não é suficiente para modelar comportamentos de alta qualidade. Muitas vezes é necessário agregar diferentes estados não científicos, como sentimentos ou adjetivos. Agentes baseados em utilidades fazem uso de uma função de utilidade que mapeia estados ou percepções em um número real, que esta associado ao nível de utilidade do agente. Dependendo do nível de utilidade do agente, este pode decidir por diferentes ações estando em um determinado estado, com o objetivo de aumentar seu nível de utilidade de acordo com a realização de ações. 
+ \item \textbf{Agentes baseados em utilidades:} Na maioria dos ambientes, o incorporação de objetivos no agente não é suficiente para modelar comportamentos de alta qualidade. Muitas vezes é necessário agregar diferentes estados não científicos, como sentimentos ou adjetivos. Agentes baseados em utilidades fazem uso de uma função de utilidade que mapeia estados ou percepções em um número real, que está associado ao nível de utilidade do agente. Dependendo do nível de utilidade do agente, este pode decidir por diferentes ações estando em um determinado estado, com o objetivo de aumentar seu nível de utilidade de acordo com a realização de ações. 
 \end{itemize}
 
-Essas classificações podem derivar a uma classe mais abrangente: os agentes cognitivos. Agentes cognitivos podem ser utilizados em ambientes totalmente desconhecidos e tornar-se mais competentes e eficazes através do ganho de conhecimento. São capazes de aprender e melhorar suas decisões, por meio das experiências e ações tomadas em tempos passados. Podem medir seu desempenho afim de melhorá-lo no futuro. Apresentam um componente importante: o gerador de problemas, que sugere ações ao agente que podem conduzir à obtenção de novas informações e experiências. Podem também apresentar mecanismos de recompensa ou penalidade de acordo com seu desempenho e comportamento. Agentes cognitivos são extremamente difíceis de modelar e implementar devido sua natureza fortemente estocástica. \cite{ArtificialIntelligence}.
+Essas classificações podem derivar a uma classe mais abrangente: os agentes cognitivos. Agentes cognitivos podem ser utilizados em ambientes totalmente desconhecidos e tornar-se mais competentes e eficazes através do ganho de conhecimento. São capazes de aprender e melhorar suas decisões, por meio das experiências e ações tomadas em tempos passados. Podem medir seu desempenho afim de melhorá-lo no futuro. Apresentam um componente importante: o gerador de problemas, que sugere ações ao agente que podem conduzir à obtenção de novas informações e experiências. Podem também apresentar mecanismos de recompensa ou penalidade, que atuam de acordo com seu desempenho e comportamento. Agentes cognitivos são extremamente difíceis de modelar e implementar devido sua natureza fortemente estocástica. \cite{ArtificialIntelligence}.
 
 \section{Modelagem em Operadores}
+\label{sec:modelagemoperadores}
 
-Os modelos apresentados em (1) serviram à fundamentação do modelo baseado em agentes, que foi desenvolvido e utilizado nas simulações computacionais. A modelagem empregada para simular o espalhamento de hipotética doença de transmissão direta em indivíduos considera agentes baseados em modelos que são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo. Um passo de tempo é especificado como um ciclo de transição.
+Os modelos apresentados em \ref{sec:modeloscompartimentais} serviram à fundamentação do modelo baseado em agentes, que será desenvolvido e utilizado na implementação e execução de simulações computacionais. A modelagem empregada para simular o espalhamento de hipotética doença de transmissão direta em indivíduos considera agentes baseados em modelos que são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo. Um passo de tempo é especificado como um ciclo de transição.
 
 Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo $t$ e seu movimento no espaço. O estado do agente $\chi(t)$ é especificado através do seguinte conjunto de atributos:
 \begin{equation}
@@ -178,7 +179,7 @@ A especificação formal de um agente é realizada através de um operador de evoluç
 
 À dinâmica populacional são considerados três tipos de operações, as de movimentação, contato e de transição de estados. Nas operações de movimentação, os indivíduos são movimentados dentro de um ambiente virtual com topologia matricial através de suas vizinhanças de Moore às posições escolhidas aleatoriamente, respeitando os limites do ambiente. Nas operações de contato ocorre, probabilisticamente, a transmissão da doença através dos indivíduos infectados para os indivíduos suscetíveis que ocupam uma mesma posição no ambiente. Nas transições de estados, ocorre a passagem de estados dos indivíduos para expostos, e depois de expostos para infectantes e então de infectantes para recuperados. Por fim de recuperados para suscetíveis. Tais operações são realizadas na sequência em que foram apresentadas e uma vez a cada ciclo, que consiste na aplicação dos operadores sobre a população de indivíduos e geração de arquivos de saída. Uma simulação é composta por vários ciclos.
 
-Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big) = \sigma\Big(\mu\big(\chi(t)\big)\Big)$, que decorre da composição entre os operadores $\mu$ e $\sigma$. O operador de conecto-mobilidade, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade, e o operador $\sigma$ realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente.
+Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big) = \sigma\Big(\mu\big(\chi(t)\big)\Big)$, que decorre da composição entre os operadores $\mu$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade, e o operador de transição temporal $\sigma$ realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente.
 
 O operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as operações do agente $\chi(t)$ movimentando-o da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$, para o ciclo de tempo, $t+1$. Formalmente o estado resultante das operações no agente $\chi(t)$ é representado como em (2):
 
@@ -186,150 +187,79 @@ O operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as operações do ag
   \lambda\big(\chi(t)^{(i, j)}\big) \equiv  \sigma\Big(\mu\big(\chi(t + 1)\big)^{(\xi, \eta)}\Big)
 \end{equation}
 
-Para especificar algoritmicamente tal operador é necessário determinar configurações e parâmetros que estabelecem quais as condições do ambiente e do estado interno do agente. O ambiente é composto por diversas estruturas matriciais, que representam lotes heterogêneos com $\#L$ linhas e $\#C$ colunas, onde se considera uma estrutura de vizinhança tipo Moore para efeitos de conecto-mobilidade de um agente que está numa posição $(i,j)$ à uma posição $\big(\xi, \eta\big)$ vizinha. Quando da distribuição inicial dos agentes ou, mesmo, da sua movimentação em qualquer ciclo da simulação, não há restrições à quantidade máxima de agentes que ocupam uma mesma posição.
+\section{Metodologia de \textit{Bitstring}}
+\label{sec:bitstring}
 
-Os parâmetros pertinentes à simulação, como as quantidades iniciais de agentes e as taxas são definidos em faixas, o que significa que cada parâmetro possui um valor mínimo e máximo. Nas operações pertinentes que dependem das taxas, ou na movimentação, é randomizado um valor dentro da sua faixa ou da posição a ser movimentada para estabelecer o caráter probabilístico do modelo. A tabela 1 apresenta os parâmetros utilizados no presente modelo.
+Em \cite{TeseBitstring} utilizou-se um modelo \textit{bitstring} ao estudo e simulação da propagação do vírus da dengue. O modelo \textit{bitstring} baseia-se na manipulação direta de \textit{bits} de uma palavra computacional para representar atributos pertencentes aos elementos modelados. A utilização de um modelo \textit{bitstring} justifica-se principalmente pelo fato de que, nesta metodologia, as informações são agrupadas de maneira otimizada, diminuindo o espaço de memória utilizado e, através de operações binárias e de deslocamentos, permitirem a rápida manipulação dos dados. Ainda pode-se, dependendo da dimensão do problema, carregar o programa inteiro para a memória cache do computador, que é um memória de alta velocidade próxima à CPU, otimizando ainda mais o processo de execução do programa. 
 
-\begin{longtable}{|l|l|l|}
-  \hline
-  P01 & Quantidade de simulações que compõe uma simulação tipo Monte Carlo & $MC = 1$\\
-  \hline
-  P02 & Quantidade de ciclos por simulação & $t_{f} = 1000$\\
-  \hline
-  P03 & Quantidade de linhas do lote & $\#L$\\
-  \hline
-  P04 & Quantidade de colunas do lote & $\#C$\\
-  \hline
-  P05 & Quantidade inicial de agentes suscetíveis & $S_{0} = 990$\\
-  \hline
-  P06 & Quantidade inicial de agentes expostos & $E_{0} = 0$\\
-  \hline
-  P07 & Quantidade inicial de agentes infectados & $I_{0} = 10$\\
-  \hline
-  P08 & Quantidade inicial de agentes recuperados & $R_{0} = 0$\\
-  \hline
-  P09 &	Taxa de infecção & $0.90 \leq \beta \leq 0.95$\\
-  \hline
-  P10 & Quantidade de ciclos de exposição & $15 \leq \gamma \leq 20$\\
-  \hline
-  P11 & Quantidade de ciclos de infecção & $30 \leq \alpha \leq 35$\\
-  \hline
-  P12 & Quantidade de ciclos de recuperação & $40 \leq \delta \leq 45$\\
-  \hline
-\end{longtable}
+Neste trabalho a aplicação da metodologia de \textit{bitstring} justifica-se pelo uso otimizado da memória, que será determinante no ganho de desempenho na posterior paralelização que será realizada utilizando a plataforma CUDA. A redução do uso de memória também é importante por diminuir a quantidade de dados que serão transferidos entre a CPU e a GPU, reduzindo o tempo necessário à realização de cópias de dados entre os componentes.
 
-Observe-se na tabela 1 que os parâmetros da distribuição inicial, da especificação do domínio de simulação e das taxas ou períodos às operações definem as quantidades ou faixas que são empregadas num experimento computacional. Os agentes transitam probabilisticamente nos estados em faixas que variam entre os valores $0.90=\beta_{min}\leq\beta\leq\beta_{max}=0.95$, $15=\gamma_{min}\leq\gamma\leq\gamma_{max}=20$, $30=\alpha_{min}\leq\alpha\leq\alpha_{max}=35$ e $40=\delta_{min}\leq\delta\leq\delta_{max}=45$. Mas a escolha é arbitrária e pode ser modificada para faixas adequadas às doenças em que tais parâmetros sejam conhecidos.
+Para a implementação de modelos \textit{bitstring}, é necessário utilizar uma linguagem de programação que permita operações diretas à \textit{bits}. Em diversas linguagens, a exemplo Fortran e C, é possível manipular seus tipos primitivos, bit a bit, através de operações da álgebra booleana, como a negação, conjunção, disjunção e deslocamentos. Os tipos primitivos mais interessantes ao uso da técnica de \textit{bitstring} são os inteiros, que geralmente contém $32$ \textit{bits} e os reais, que geralmente contém $64$ \textit{bits}. O comportamento das operações binárias, ou seja, a saída que fornecem de acordo com suas entradas, é explícitado a seguir.
 
-Para a manutenção da densidade dos diferentes estados dos agentes no ambiente de simulação, deve-se considerar que sua parametrização, especificada por $\# L \times \# C$, depende das quantidades dos agentes nos estados suscetível, exposto, infectante e recuperados, $\# S$, $\# E$, $\# I$, $\# R$, respectivamente.
+\begin{itemize}
+ \item \textbf{Operação de negação:} A operação de negação, também conhecida como NOT, é uma operação unária, ou seja, que é aplicada a somente um operando, que consiste em tomar o complemento de um dígito binário. Se o operando de entrada for $0$, será retornado $1$ e se for $1$ será retornado $0$. Sua tabela verdade pode ser expressa como em \ref{tab:negacao}:
 
-A metodologia tipo Monte Carlo adotada neste trabalho consiste na execução de determinada quantidade de simulações com mesma configuração inicial às quantidades de agentes e à dimensão do ambiente. Porém, pela natureza probabilística do modelo, as simulações têm, eventualmente, diferentes taxas ou períodos de infecção, recuperação e imunização. O valor médio, $VM$, de cada variável ou estado em cada passo de tempo, em uma simulação Monte Carlo é especificada pela razão $VM/MC$, onde $MC$ designa a quantidade de simulações executadas. Mas esse valor pode ser configurado para explorar a distribuição dos parâmetros e a eficiência computacional, entre outros fatores da simulação.
-
-\section{\textit{Bitstring}}
-
-A modelagem bitstring aqui realizada é baseada na manipulação de bits em uma palavra computacional, que caracteriza sem ambigüidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$. É uma metodologia frequentemente empregada para agrupar informações de modo otimizado em várias aplicações.
-
-Para o emprego de modelo em bitstring é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com bits. A implementação realizada à obtenção dos resultados apresentados e discutidos neste trabalho utilizou a linguagem $C$, que provê suporte aos propósitos de modelagem. O tipo de dado inteiro em $C$, \textit{int}, contém $32$ bits, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de bits. O uso do tipo de dado \textit{unsigned int} descarta a necessidade de preservação de sinal para deslocamentos aritméticos, evitando erros na manipulação dos bits mais significativos quando da modelagem do agente.
-
-À modelagem da posição $X, Y$ de um agente se considera que as quantidades de linhas, $\# L$, e de colunas, $\# C$, do ambiente, são limitadas por $max\big(\# L \times \# C\big)=\big(512 \times 512\big)$, onde $max$ indica o máximo possível de linhas e de colunas que podem ser alocadas à essa escolha. Dimensões maiores demandam outros tipos de dados em $C$. À modelagem do controle, $C$, de um agente se considera que os ciclos em que o agente fica no estado exposto, infectado ou recuperado, ou que outras operações que eventualmente demandem um controle de tempo, não ultrapassem $64$ ciclos de simulação, conforme discutido. À modelagem do estado de um agente se considera que o modelo compartimental é do tipo SEIRS, tendo somente quatro distintos estados. À identificação do lote atual do agente considera-se que o identificador não ultrapasse $64$ valores.
-
-Observe-se que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra de tamanho $32$ bits para armazenar a especificação de $\chi(t)=\big(L, X, Y, C, E\big)$ em bits, como ilustrado na figura 2.
-\begin{figure}[!htb]
+  \begin{table}[h!]
   \centering
-  \includegraphics[width=1.0\textwidth]{Figuras/Tira.eps}
-  \caption{Representação em palavra de 32 bits ao modelo SEIRS baseado em indivíduos}
-  \label{fig:modelo_bitstring}
-\end{figure} 
+  \begin{tabular}{c|c}
+    Entrada & Saída \\ \hline
+    0 & 1 \\
+    1 & 0 \\
+  \end{tabular}
+  \caption{Tabela verdade para a operação unária de negação}
+  \label{tab:negacao}
+  \end{table} 
+ 
+ \item \textbf{Operação de conjunção:} A operação de conjunção, também conhecida como AND, é uma operação binária, ou seja, que é aplicada a dois operandos, que retorna um bit $1$ somente se os dois operandos foram $1$, e $0$ caso contrário. Sua tabela verdade pode ser expressa como em \ref{tab:conjuncao}:
 
-Na figura 2, os elementos do identificador do lote estão nas posições $31$ a $26$. Os elementos das coordenadas $x$ e $y$ do lote estão nas posições $25$ a $17$ e $16$ a $8$, respectivamente. Os elementos do contador de controle e do estado estão nas posições $7$ a $2$ e $1$ a $0$, respectivamente. Considerando as escolhas realizadas à sua modelagem, um agente qualquer do modelo pode ser representado em bits como em (3).
+  \begin{table}[h!]
+  \centering
+  \begin{tabular}{c|c|c}
+    Entrada 1 & Entrada 2 & Saída \\ \hline
+    0 & 0 & 0 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0 \\
+    1 & 1 & 1 \\
+  \end{tabular}
+  \caption{Tabela verdade para a operação binária de conjunção}
+  \label{tab:conjuncao}
+  \end{table} 
+ 
+ \item \textbf{Operação de disjunção inclusiva:} A operação de disjunção inclusiva, também conhecida como OR, é uma operação binária que retorna um bit $1$ se ao menos um dos operandos for $1$, e $0$ caso contrário. Sua tabela verdade pode ser expressa como em \ref{tab:disjuncaoinclusiva}:
+ 
+  \begin{table}[h!]
+  \centering
+  \begin{tabular}{c|c|c}
+    Entrada 1 & Entrada 2 & Saída \\ \hline
+    0 & 0 & 0 \\
+    0 & 1 & 1 \\
+    1 & 0 & 1 \\
+    1 & 1 & 1 \\
+  \end{tabular}
+  \caption{Tabela verdade para a operação binária de disjunção inclusiva}
+  \label{tab:disjuncaoinclusiva}
+  \end{table} 
+ 
+ \item \textbf{Operação de disjunção exclusiva:} A operação de disjunção exclusiva, também conhecida como XOR, é uma operação binária que retorna um bit $1$ se somente um dos operandos for $1$, e $0$ caso contrário. Sua tabela verdade pode ser expressa como em \ref{tab:disjuncaoexclusiva}:
 
-\begin{equation}
- \chi\big(L, X, Y, C, E\big) \equiv \big(\blue{l_{31}, \dotsc, l_{26}}; \red{x_{25}, \dotsc, x_{17}}; \green{y_{16}, \dotsc, y_{8}}; \magenta{c_{7}, \dotsc, c_{2}}; \yellow{e_{1}, \dotsc, e_{0}}\big)
-\end{equation}
+  \begin{table}[h!]
+  \centering
+  \begin{tabular}{c|c|c}
+    Entrada 1 & Entrada 2 & Saída \\ \hline
+    0 & 0 & 0 \\
+    0 & 1 & 1 \\
+    1 & 0 & 1 \\
+    1 & 1 & 0 \\
+  \end{tabular}
+  \caption{Tabela verdade para a operação binária de disjunção exclusiva}
+  \label{tab:disjuncaoexclusiva}
+  \end{table} 
+ 
+ \item \textbf{Operações de deslocamento:} As operações de \textit{shift} ou de deslocamento consistem em rotacionar um conjunto de \textit{bits} em uma palavra computacional em um determinado fator, para a esquerda ou para a direita. As operações de deslocamento podem ser divididas em duas classes:
+  \begin{itemize}
+  \item \textbf{Deslocamentos não circulares:} São deslocamentos onde os \textit{bits} expelidos de uma extremidade são descartados, de modo que novos \textit{bits} com valor $0$ são inseridos na outra extremidade da palavra para manter seu tamanho constante. Tomando como exemplo uma palavra de $5$ bits, $01001_2$, e aplicando um deslocamento de fator $1$ à direita, a palavra resultante do processo é $00100_2$. Note que o \textit{bit} menos significativo foi perdido e um \textit{bit} $0$ foi inserido na posição mais significativa da palavra.
+  \item \textbf{Deslocamentos circulares:} São deslocamentos onde os \textit{bits} expelidos de uma extremidades são inseridos na extremidade oposta, conservando os \textit{bits} deslocados dentro da palavra. Tomando novamente como exemplo a palavra $01001_2$, se aplicado um deslocamento de fator $1$ à direita, a palavra resultante é $10100_2$. Note que o \textit{bit} menos significativo, que foi expelido na extremidade à direita da palavra, foi reinserido na extremidade à esquerda da palavra.
+  \end{itemize}
+\end{itemize}
 
-sendo que os elementos $l_i$, $x_i$, $y_i$, $c_i$ e $e_i$ são ou o bit $0$ ou o bit $1$, onde seus índices subscritos indicam que cada bit pode variar nos respectivos intervalos que estão especificados.
-
-Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y, C, E\big) = \chi(t)$ no ambiente, assim como seu estado interno e o registro de controle de ciclos às transições de estados, essas características são definidas como em (4), para os ciclos $t$ e $t+1$, respectivamente como:
-
-\begin{equation}
-  \begin{cases}
-    L(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Pl\big)\bigg) \gg_{arth} \big(C\#l\big) \\
-    X(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Px\big)\bigg) \gg_{arth} \big(C\#x\big) \\
-    Y(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Py\big)\bigg) \gg_{arth} \big(C\#y\big) \\
-    C(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Pc\big)\bigg) \gg_{arth} \big(C\#c\big) \\
-    E(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Pe\big)\bigg) \gg_{arth} \big(C\#e\big) \\
-  \end{cases}
-\end{equation}
-
-em que $Pl$, $Px$, $Py$, $Pc$ e $Pe$ designam, respectivamente, as quantidades de bits posteriores à cada campo e $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de bits complementares à cada campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamento de modo aritmético \textit{(arithmeric shift)} à esquerda e à direita na palavra, na quantidade de bits indicado.
-
-Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que (4) é então reescrita para os ciclos $t$ e $t+1$ designados como \textit{old} e \textit{new}, respectivamente, como em (5).
-
-\begin{equation}
-  \begin{cases}
-    L_{new} := \Big(\chi\big(L_{old}, X, Y, C, E\big) \ll_{arth}\big(0\big)\Big) \gg_{arth}(26) \\
-    X_{new} := \Big(\chi\big(L, X_{old}, Y, C, E\big) \ll_{arth}\big(6\big)\Big) \gg_{arth}(23) \\
-    Y_{new} := \Big(\chi\big(L, X, Y_{old}, C, E\big) \ll_{arth}\big(15\big)\Big) \gg_{arth}(23) \\
-    C_{new} := \Big(\chi\big(L, X, Y, C_{old}, E\big) \ll_{arth}\big(24\big)\Big) \gg_{arth}(26) \\
-    E_{new} := \Big(\chi\big(L, X, Y, C, E_{old}\big) \ll_{arth}\big(30\big)\Big) \gg_{arth}(30) \\
-  \end{cases}
-\end{equation}
-
-As operações definidas em (5) e (6) capturam informações armazenadas nos agentes, distribuídos e parametrizados consoantes às informações sistematizadas na Tabela 1.
-
-Também são necessárias outras operações para manipular bits, após aquelas definidas em (5). Elas setam no agente as informações necessárias às atualizações de seu lote, posição, estado e contador. São definidas como em (7), sendo que $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamento de modo circular \textit{(circular shift)} à esquerda e à direita na palavra, na quantidade de bits indicado, designando que os bits que são expelidos em um extremo são reinseridos no extremo oposto da palavra.
-
-\begin{equation}
-  \begin{cases}
-    \ll_{circ} := \Big(z\big(t + 1\big) \ll_{arth} \text{shift}\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(N\_BITS - \text{shift}\big)\Big) \\
-    \gg_{circ} := \Big(z\big(t + 1\big) \gg_{arth} \text{shift}\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(N\_BITS - \text{shift}\big)\Big) \\
-  \end{cases}
-\end{equation}
-
-sendo que $z(t + 1)$ denota ou $x(t + 1)$ ou $y(t + 1)$, $N\_BITS$ denota a quantidade de bits totais e $|$ denota a operação lógica "ou inclusivo" que é realizada bit a bit à palavra.
-Assim, a especificação às quantidades adotadas na modelagem, (7) é reescrita como em (8).
-
-\begin{equation}
-  \begin{cases}
-    \ll_{circ} := \Big(z\big(t + 1\big) \ll_{arth} \text{shift}\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(32 - \text{shift}\big)\Big) \\
-    \gg_{circ} := \Big(z\big(t + 1\big) \gg_{arth} \text{shift}\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(32 - \text{shift}\big)\Big) \\
-  \end{cases}
-\end{equation}
-
-Subsequentemente são utilizadas as operações definidas em (3) e em (5), ou concretamente, as definidas em (5) e (7), para implementar o operador espaço-temporal $\lambda\big(\chi(t)\big)$ que movimenta o agente da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$ \textit{(old)}, para o ciclo de tempo, $t+1$ \textit{(new)}. A combinação dessas operações resulta que a identificação do lote, as coordenadas $x$ e $y$ da posição, o controle e estado do agente são atualizadas, respectivamente, para $\lambda\big(\chi(t)\big)$ por (9).
-
-\begin{equation}
-  \scriptsize
-  \begin{cases}
-    \chi\Big(L(t + 1), X(t), T(t), C(t), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Al\Big)\bigg) \gg_{arth} \big(\#l\big)\bigg) \ll_{arth}\big(\#l\big)\Bigg) \, | \, L\big(t + 1\big)\Bigg] \ll_{circ}\big(Al\big) \\
-  
-    \chi\Big(L, X(t + 1), Y(t), C(t), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ax\Big)\bigg) \gg_{arth} \big(\#x\big)\bigg) \ll_{arth}\big(\#x\big)\Bigg) \, | \, X\big(t + 1\big)\Bigg] \ll_{circ}\big(Ax\big) \\
-    
-    \chi\Big(L, X(t), Y(t + 1), C(t), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ay\Big)\bigg) \gg_{arth} \big(\#y\big)\bigg) \ll_{arth}\big(\#y\big)\Bigg) \, | \, Y\big(t + 1\big)\Bigg] \ll_{circ}\big(Ay\big) \\
-    
-    \chi\Big(L, X(t), Y(t), C(t + 1), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ac\Big)\bigg) \gg_{arth} \big(\#c\big)\bigg) \ll_{arth}\big(\#c\big)\Bigg) \, | \, C\big(t + 1\big)\Bigg] \ll_{circ}\big(Ac\big) \\
-    
-    \chi\Big(L, X(t), Y(t), C(t), E(t + 1)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ae\Big)\bigg) \gg_{arth} \big(\#e\big)\bigg) \ll_{arth}\big(\#e\big)\Bigg) \, | \, E\big(t + 1\big)\Bigg] \ll_{circ}\big(Ae\big) \\
-  \end{cases}
-\end{equation}
-em que $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de bits anteriores à cada campo e $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de bits de cada campo.
-
-Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, (9) é reescrita como em (10).
-
-\begin{equation}
-  \scriptsize
-  \begin{cases}
-    \chi\Big(L_{new}, X_{old}, Y_{old}, C_{old}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(26\big)\Big) \gg_{arth} \big(6\big)\bigg) \ll_{arth}\big(6\big)\Bigg) \, | \, L_{new}\Bigg] \ll_{circ}\big(26\big) \\
-  
-    \chi\Big(L_{old}, X_{new}, Y_{old}, C_{old}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(17\big)\Big) \gg_{arth} \big(9\big)\bigg) \ll_{arth}\big(9\big)\Bigg) \, | \, X_{new}\Bigg] \ll_{circ}\big(17\big) \\
-    
-    \chi\Big(L_{old}, X_{old}, Y_{new}, C_{old}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(8\big)\Big) \gg_{arth} \big(9\big)\bigg) \ll_{arth}\big(9\big)\Bigg) \, | \, Y_{new}\Bigg] \ll_{circ}\big(8\big) \\
-    
-    \chi\Big(L_{old}, X_{old}, Y_{old}, C_{new}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(2\big)\Big) \gg_{arth} \big(6\big)\bigg) \ll_{arth}\big(6\big)\Bigg) \, | \, C_{new}\Bigg] \ll_{circ}\big(2\big) \\
-    
-    \chi\Big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{new}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(0\big)\Big) \gg_{arth} \big(2\big)\bigg) \ll_{arth}\big(2\big)\Bigg) \, | \, E_{new}\Bigg] \ll_{circ}\big(0\big) \\
-  \end{cases}
-\end{equation}
-
-Para completar a modelagem é suficiente detalhar e relacionar os identificadores dos lotes e dimensões dos lotes, a faixa de variação do controle, e os possíveis tipos de estados do agente na base $10$, com tais características na base $2$, para determinar sem ambigüidade os elementos de (2).
-
-Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando $64$ possíveis valores. Os lotes têm dimensão máxima de $512_{10} = 2^{9}$ linhas por $512_{10} = 2^{9}$ colunas, sendo possível variarem numa representação matricial da posição $\big(0; 0\big)_{10} = \big(000\ 000\ 000; 000\ 000\ 000\big)_{2}$ até a posição $\big(511; 511\big)_{10} = \big(111\ 111\ 111; 111\ 111\ 111\big)_{2}$, totalizando os $512$ possíveis valores. Semelhantemente, faz-se uma representação matricial ao controle para que sua variação ocorra de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando os $64$ possíveis valores. Os estados do agente são setados como $\big(0, 0\big)_{2}$ para o suscetível, $S$, $\big(0, 1\big)_{2}$ para o exposto, $E$, $\big(1, 0\big)_{2}$ para o infectante, $I$, e $\big(1, 1\big)_{2}$ para o recuperado, $R$.
+Neste trabalho propõe-se o uso da metodologia de \textit{bitstring} para a modelagem dos atributos dos agentes constituintes da população de indivíduos no sistema multiagente. Através das operações citadas anteriormente, serão definidos métodos para a captura e configuração dos atributos dos agentes de forma otimizada, utilizando uma linguagem de programação que seja apropriada às operações aqui descritas.
