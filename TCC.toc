@@ -4,7 +4,7 @@
 \contentsline {chapter}{Lista de Abreviaturas e Siglas}{viii}
 \contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{ix}
 \contentsline {chapter}{Sum\'ario}{x}
-\contentsline {chapter}{Resumo}{xi}
+\contentsline {chapter}{Resumo}{xii}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
 \contentsline {section}{\numberline {1.1}Objetivos}{2}
 \contentsline {section}{\numberline {1.2}Motiva\c c\~ao e Justificativas}{3}
@@ -13,6 +13,19 @@
 \contentsline {section}{\numberline {2.1}Epidemiologia Matem\'atica e Computacional}{5}
 \contentsline {section}{\numberline {2.2}Modelos compartimentais: Tipos e Classifica\c c\~oes}{8}
 \contentsline {section}{\numberline {2.3}Agentes Inteligentes}{12}
-\contentsline {section}{\numberline {2.4}Modelagem em Operadores}{16}
+\contentsline {section}{\numberline {2.4}Modelagem em Operadores}{17}
 \contentsline {section}{\numberline {2.5}Metodologia de \textit {Bitstring}}{18}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{21}
+\contentsline {chapter}{\numberline {3}Metodologias Computacionais}{22}
+\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{22}
+\contentsline {section}{\numberline {3.2}SIMULA}{22}
+\contentsline {section}{\numberline {3.3}Estruturas de Dados, Linguagens e Estrat\'egias de Implementa\c c\~ao}{22}
+\contentsline {section}{\numberline {3.4}CUDA e OpenMP}{22}
+\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{23}
+\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{23}
+\contentsline {section}{\numberline {4.2}Implementa\c c\~ao Padr\~ao com CUDA e OpenMP}{23}
+\contentsline {section}{\numberline {4.3}Implementa\c c\~ao \textit {Bitstring} com CUDA e OpenMP}{23}
+\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{23}
+\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{24}
+\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{24}
+\contentsline {section}{\numberline {5.2}Cases: Discutir as Simulac\~oes no Espa\c co Geogr\'afico Escolhido.}{24}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{25}

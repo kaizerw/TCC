@@ -19,6 +19,18 @@
 {DALEY, D.~J.; GANI, J. \emph{Epidemic Modelling - An Introduction}. 1. ed.
   Reading: Cambridge University, 1999.}
 
+\bibitem{TecnicasModelagem}
+\abntrefinfo{Alves e Gagliardi}{ALVES; GAGLIARDI}{2006}
+{ALVES, D.; GAGLIARDI, H.~F. \emph{Técnicas de Modelagem de Processos
+  Epidêmicos e Evolucionários}. 1. ed. São Paulo: Sociedade Brasileira de
+  Matemática Aplicada e Computacional, 2006.}
+
+\bibitem{LGCA}
+\abntrefinfo{McNamara e Zanetti}{MCNAMARA; ZANETTI}{1988}
+{MCNAMARA, G.~R.; ZANETTI, G. Use of the boltzmann equation to simulate
+  lattice-gas automata.
+\emph{Physical Review Letters}, EUA, v.~61, n.~20, p. 2332--2335, 1988.}
+
 \bibitem{ArtificialIntelligence}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2003}
 {RUSSEL, S.; NORVIG, P. \emph{Artificial Intelligence - A Modern Approach}. 2.
