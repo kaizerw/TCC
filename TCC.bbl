@@ -1,57 +1,57 @@
 \providecommand{\abntreprintinfo}[1]{%
  \citeonline{#1}}
-\begin{thebibliography}{}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
 \providecommand{\abntrefinfo}[3]{}
 \providecommand{\abntbstabout}[1]{}
-\abntbstabout{1.42.2.1 }
+\abntbstabout{1.45.2.1 }
 
-\bibitem{Epidemiologia}
-\abntrefinfo{Medronho et al.}{MEDRONHO et al.}{2008}
-{MEDRONHO, R.~A. et al. \emph{Epidemiologia}. 2. ed. Reading: Atheneu, 2008.}
-
-\bibitem{EpidemiologiaMatematica}
-\abntrefinfo{Yang}{YANG}{2001}
-{YANG, H.~M. \emph{Epidemiologia Matemática - Estudo dos Efeitos da Vacinação
-  em Doenças de Transmissão Direta}. 1. ed. Reading: Unicamp, 2001.}
-
-\bibitem{EpidemicModelling}
-\abntrefinfo{Daley e Gani}{DALEY; GANI}{1999}
-{DALEY, D.~J.; GANI, J. \emph{Epidemic Modelling - An Introduction}. 1. ed.
-  Reading: Cambridge University, 1999.}
-
-\bibitem{TecnicasModelagem}
+\bibitem[Alves e Gagliardi 2006]{TecnicasModelagem}
 \abntrefinfo{Alves e Gagliardi}{ALVES; GAGLIARDI}{2006}
 {ALVES, D.; GAGLIARDI, H.~F. \emph{Técnicas de Modelagem de Processos
   Epidêmicos e Evolucionários}. 1. ed. São Paulo: Sociedade Brasileira de
   Matemática Aplicada e Computacional, 2006.}
 
-\bibitem{LGCA}
+\bibitem[Daley e Gani 1999]{EpidemicModelling}
+\abntrefinfo{Daley e Gani}{DALEY; GANI}{1999}
+{DALEY, D.~J.; GANI, J. \emph{Epidemic Modelling - An Introduction}. 1. ed.
+  Reading: Cambridge University, 1999.}
+
+\bibitem[McNamara e Zanetti 1988]{LGCA}
 \abntrefinfo{McNamara e Zanetti}{MCNAMARA; ZANETTI}{1988}
 {MCNAMARA, G.~R.; ZANETTI, G. Use of the boltzmann equation to simulate
   lattice-gas automata.
 \emph{Physical Review Letters}, EUA, v.~61, n.~20, p. 2332--2335, 1988.}
 
-\bibitem{ArtificialIntelligence}
+\bibitem[Medronho et al. 2008]{Epidemiologia}
+\abntrefinfo{Medronho et al.}{MEDRONHO et al.}{2008}
+{MEDRONHO, R.~A. et al. \emph{Epidemiologia}. 2. ed. Reading: Atheneu, 2008.}
+
+\bibitem[Paixão 2012]{TeseBitstring}
+\abntrefinfo{Paixão}{PAIXãO}{2012}
+{PAIXãO, C.~A.
+\emph{Modelo de Bitstring para Estudo da Propagação da Dengue}.
+Tese (Tese de Doutorado) --- Universidade Federal de Lavras, Lavras, MG, 2012.}
+
+\bibitem[Russel e Norvig 2003]{ArtificialIntelligence}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2003}
 {RUSSEL, S.; NORVIG, P. \emph{Artificial Intelligence - A Modern Approach}. 2.
   ed. Reading: Prentice Hall, 2003.}
 
-\bibitem{IntelligentAgents}
+\bibitem[Wooldridge 2016]{IntelligentAgents}
 \abntrefinfo{Wooldridge}{WOOLDRIDGE}{2016}
 {WOOLDRIDGE, M. \emph{Intelligent Agents}. 2016.
 Consultado na INTERNET:
   http://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/mas99.pdf, 2016.}
 
-\bibitem{IntelligentAgentsTheory}
+\bibitem[Wooldridge e Jennings 1995]{IntelligentAgentsTheory}
 \abntrefinfo{Wooldridge e Jennings}{WOOLDRIDGE; JENNINGS}{1995}
 {WOOLDRIDGE, M.; JENNINGS, N.~R. Intelligent agents - theory and practice.
 \emph{The Knowledge Engineering Review}, England, v.~10, n.~2, p. 115--151,
   1995.}
 
-\bibitem{TeseBitstring}
-\abntrefinfo{Paixão}{PAIXãO}{2012}
-{PAIXãO, C.~A.
-\emph{Modelo de Bitstring para Estudo da Propagação da Dengue}.
-Tese (Tese de Doutorado) --- Universidade Federal de Lavras, Lavras, MG, 2012.}
+\bibitem[Yang 2001]{EpidemiologiaMatematica}
+\abntrefinfo{Yang}{YANG}{2001}
+{YANG, H.~M. \emph{Epidemiologia Matemática - Estudo dos Efeitos da Vacinação
+  em Doenças de Transmissão Direta}. 1. ed. Reading: Unicamp, 2001.}
 
 \end{thebibliography}

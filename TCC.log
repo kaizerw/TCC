@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  7 JUL 2016 15:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  7 JUL 2016 17:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -647,22 +647,22 @@ File: Figuras/modelo-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: Figuras/modelo-eps-converted-to.pdf used on input line
  57.
 (pdftex.def)             Requested size: 227.94214pt x 54.27213pt.
-
-Overfull \vbox (1.40297pt too high) has occurred while \output is active []
-
-
-[10 <./Figuras/modelo-eps-converted-to.pdf>]
+ [10 <./Figuras/modelo-eps-converted-to.pdf>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
 (Font)              Font shape `T1/ptm/b/it' tried instead on input line 111.
- [11] [12] [13] [14] [15] [16]
+ [11] [12] [13] [14] [15] [16] [17]
 Underfull \hbox (badness 10000) in paragraph at lines 177--178
 
  []
 
-[17]
+[18]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 191.
- [18] [19] [20]) [21]
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 198.
+ [19]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[20]) [21]
 \openout2 = `capitulo3/capitulo3.aux'.
 
  (./capitulo3/capitulo3.tex
@@ -689,28 +689,22 @@ Cap\'{\i }tulo 5.
 
 
 
-] (./TCC.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 41--44
-[]\T1/ptm/m/n/12 WOOLDRIDGE, M. \T1/ptm/m/it/12 In-tel-li-gent Agents\T1/ptm/m/
-n/12 . 2016. Con-sul-tado na IN-TER-NET:
- []
-
-) [25
+] (./TCC.bbl) [25
 
 
-] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
-(./iniciais/aprova.aux) (./iniciais/dedica.aux) (./iniciais/agradece.aux)
+] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux) (./iniciais/aprova.au
+x) (./iniciais/dedica.aux) (./iniciais/agradece.aux)
 (./iniciais/sumario.aux) (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux)
 (./capitulo2/capitulo2.aux) (./capitulo3/capitulo3.aux)
 (./capitulo4/capitulo4.aux) (./capitulo5/capitulo5.aux)) ) 
 Here is how much of TeX's memory you used:
  4866 strings out of 493054
  62195 string characters out of 6140586
- 156253 words of memory out of 5000000
+ 153408 words of memory out of 5000000
  8108 multiletter control sequences out of 15000+600000
  57007 words of font info for 79 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
- 38i,13n,43p,1230b,300s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,13n,43p,1230b,298s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dis
 t/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex
@@ -726,7 +720,7 @@ public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
 sr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fo
 nts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utm
 ri8a.pfb>
-Output written on TCC.pdf (37 pages, 228448 bytes).
+Output written on TCC.pdf (37 pages, 229035 bytes).
 PDF statistics:
  195 PDF objects out of 1000 (max. 8388607)
  136 compressed objects within 2 object streams

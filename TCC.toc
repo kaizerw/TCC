@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {2.2}Modelos compartimentais: Tipos e Classifica\c c\~oes}{8}
 \contentsline {section}{\numberline {2.3}Agentes Inteligentes}{12}
 \contentsline {section}{\numberline {2.4}Modelagem em Operadores}{17}
-\contentsline {section}{\numberline {2.5}Metodologia de \textit {Bitstring}}{18}
+\contentsline {section}{\numberline {2.5}Metodologia de \textit {Bitstring}}{19}
 \contentsline {chapter}{\numberline {3}Metodologias Computacionais}{22}
 \contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{22}
 \contentsline {section}{\numberline {3.2}SIMULA}{22}
