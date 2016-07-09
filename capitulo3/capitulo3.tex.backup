@@ -109,7 +109,7 @@ Também são necessárias outras operações para manipular os atributos dos agentes,
   \label{eq:bitstring_set}
 \end{equation}
 
-sendo que $z(t + 1)$ denota ou $x(t + 1)$ ou $y(t + 1)$, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $|$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra.
+sendo que $z(t + 1)$ denota ou $x(t + 1)$ ou $y(t + 1)$, $N\_BITS$ denota a quantidade de bits totais e $|$ denota a operação lógica "ou inclusivo" que é realizada \textit{bit} a \textit{bit} à palavra.
 Assim, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_set} é reescrita como em \ref{eq:bitstring_set_2}.
 \begin{equation}
   \begin{cases}
@@ -135,7 +135,7 @@ Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_get}
   \end{cases}
   \label{operador_bitstring}
 \end{equation}
-em que $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo.
+em que $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo e $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo.
 
 Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, \ref{operador_bitstring} é reescrita como em \ref{operador_bitstring_2}.
 \begin{equation}
@@ -153,66 +153,6 @@ Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $
   \end{cases}
   \label{operador_bitstring_2}
 \end{equation}
-
-Nas Tabelas \ref{tab:tamanhos}, \ref{tab:complementares}, \ref{tab:posteriores} e \ref{tab:anteriores} são apresentados sistematicamente os valores relativos às quantidades de \textit{bits} dos tamanhos, complementos, posteriores e anteriores de cada atributo do agente $\chi$.
-
-\begin{table}[h!]
-\begin{minipage}{.5\textwidth}
-\centering
-\caption{Tabela de tamanhos}
-\begin{tabular}{c|c}
-  \label{tab:tamanhos}
-  Atributo & Valor \\ \hline
-  Identificador do Lote $L$ 	& 6 \\
-  Coordenada $X$ 		& 9 \\
-  Coordenada $Y$ 		& 9 \\
-  Contador de Controle $C$ 	& 6 \\
-  Estado $E$ 			& 2 \\
-\end{tabular}
-\end{minipage} 
-\begin{minipage}{.5\textwidth}
-\centering
-\caption{Tabela de complementares}
-\begin{tabular}{c|c}
-  \label{tab:complementares}
-  Atributo & Valor \\ \hline
-  Identificador do Lote $L$ 	& 26 \\
-  Coordenada $X$ 		& 23 \\
-  Coordenada $Y$ 		& 23 \\
-  Contador de Controle $C$ 	& 26 \\
-  Estado $E$ 			& 30 \\
-\end{tabular}
-\end{minipage}
-\end{table} 
-
-\begin{table}[h!]
-\begin{minipage}{.5\textwidth}
-\centering
-\caption{Tabela de posteriores}
-\begin{tabular}{c|c}
-  \label{tab:posteriores}
-  Atributo & Valor \\ \hline
-  Identificador do Lote $L$ 	& 0 \\
-  Coordenada $X$ 		& 6 \\
-  Coordenada $Y$ 		& 15 \\
-  Contador de Controle $C$ 	& 24 \\
-  Estado $E$ 			& 30 \\
-\end{tabular}
-\end{minipage} 
-\begin{minipage}{.5\textwidth}
-\centering
-\caption{Tabela de anteriores}
-\begin{tabular}{c|c}
-  \label{tab:anteriores}
-  Atributo & Valor \\ \hline
-  Identificador do Lote $L$ 	& 26 \\
-  Coordenada $X$ 		& 17 \\
-  Coordenada $Y$ 		& 8 \\
-  Contador de Controle $C$ 	& 2 \\
-  Estado $E$ 			& 0 \\
-\end{tabular}
-\end{minipage}
-\end{table} 
 
 Para completar a modelagem é suficiente detalhar e relacionar os identificadores dos lotes e dimensões dos lotes, a faixa de variação do controle, e os possíveis tipos de estados do agente na base $10$, com tais características na base $2$, para determinar sem ambigüidade os elementos de \ref{especificacaoAgente}.
 

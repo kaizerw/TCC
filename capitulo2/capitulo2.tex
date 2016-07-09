@@ -65,22 +65,29 @@ Considerando-se estes modelos compartimentais e suas características, os princip
 \begin{itemize}
   \item \textbf{Equações Diferenciais Ordinárias:} Nesta modelagem descreve-se matematicamente o fluxo de transição dos possíveis estados dos indivíduos no modelo SEIRS através de um sistema de equações diferenciais ordinárias não lineares, EDO. Se $N=S(t)+E(t)+I(t)+R(t)$ designa o tamanho fixo da população de indivíduos, onde suas quantidades nos diferentes estados variam no tempo, de modo que suas quantidades são funções do tempo, $S=S(t)$, $E=E(t)$, $I=I(t)$ e $R=R(t)$, respectivamente, obtém-se os problemas de valor inicial, PVI, para o caso contínuo e discreto, como apresentados em \ref{eq:PVI}.
   \begin{multicols}{2}
-  \scriptsize
     \begin{equation*}
       \begin{cases}
-	\frac{d\big(S(t)\big)}{dt} = - \frac{\beta}{N} \, I(t) \, S(t) + \delta \, R(t) &; S(0) = S_{0} \\ 
-	\frac{d\big(E(t)\big)}{dt} = + \frac{\beta}{N} \, I(t) \, S(t) - \gamma \, E(t) &; E(0) = E_{0} \\ 
-	\frac{d\big(I(t)\big)}{dt} = + \gamma \, E(t) - \alpha \, I(t) &; I(0) = I_{0} \\ 
-	\frac{d\big(R(t)\big)}{dt} = + \alpha \, I(t) - \delta \, R(t) &; R(0) = R_{0} \\ 
+	\frac{d\big(S(t)\big)}{dt} = - \frac{\beta}{N} \, I(t) \, S(t) + \delta \, R(t) \\
+	S(0) = S_{0} \\
+	\frac{d\big(E(t)\big)}{dt} = + \frac{\beta}{N} \, I(t) \, S(t) - \gamma \, E(t) \\
+	E(0) = E_{0} \\
+	\frac{d\big(I(t)\big)}{dt} = + \gamma \, E(t) - \alpha \, I(t) \\
+	I(0) = I_{0} \\
+	\frac{d\big(R(t)\big)}{dt} = + \alpha \, I(t) - \delta \, R(t) \\
+	R(0) = R_{0} \\
       \end{cases}
     \end{equation*}
     
     \begin{equation}
       \begin{cases}
-	S^{n} = S^{n - 1} - \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} + \delta \, R^{n - 1} &; S^{0} = S_{0} \\
-	E^{n} = E^{n - 1} + \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} - \gamma \, E(t)^{n - 1} &; E^{0} = E_{0} \\
-	I^{n} = I^{n - 1} + \gamma \, E^{n - 1} - \alpha \, I(t)^{n - 1} &; I^{0} = I_{0} \\
-	R^{n} = R^{n - 1} + \alpha \, I^{n - 1} - \delta \, R^{n - 1} &; R^{0} = R_{0} \\
+	S^{n} = S^{n - 1} - \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} + \delta \, R^{n - 1} \\
+	S^{0} = S_{0} \\
+	E^{n} = E^{n - 1} + \frac{\beta}{N} \, I^{n - 1} \, S^{n - 1} - \gamma \, E(t)^{n - 1} \\
+	E^{0} = E_{0} \\
+	I^{n} = I^{n - 1} + \gamma \, E^{n - 1} - \alpha \, I(t)^{n - 1} \\
+	I^{0} = I_{0} \\
+	R^{n} = R^{n - 1} + \alpha \, I^{n - 1} - \delta \, R^{n - 1} \\
+	R^{0} = R_{0} \\
       \end{cases}
       \label{eq:PVI}
     \end{equation}
@@ -152,48 +159,6 @@ Quanto aos agentes em particular, pode-se classificá-los em quatro tipos básicos
 \end{itemize}
 
 Essas classificações podem derivar a uma classe mais abrangente: os agentes cognitivos. Agentes cognitivos podem ser utilizados em ambientes totalmente desconhecidos e tornar-se mais competentes e eficazes através do ganho de conhecimento. São capazes de aprender e melhorar suas decisões, por meio das experiências e ações tomadas em tempos passados. Podem medir seu desempenho afim de melhorá-lo no futuro. Apresentam um componente importante: o gerador de problemas, que sugere ações ao agente que podem conduzir à obtenção de novas informações e experiências. Podem também apresentar mecanismos de recompensa ou penalidade, que atuam de acordo com seu desempenho e comportamento. Agentes cognitivos são extremamente difíceis de modelar e implementar, por apresentarem comportamentos complexos que mimetizam inteligência, como a de seres humanos ou animais. \cite{ArtificialIntelligence}.
-
-\section{Modelagem em Operadores}
-\label{sec:modelagemoperadores}
-
-Os modelos apresentados em \ref{sec:modeloscompartimentais} serviram à fundamentação do modelo baseado em agentes, que será desenvolvido e utilizado na implementação e execução de simulações computacionais. A modelagem empregada para simular o espalhamento de hipotética doença de transmissão direta em indivíduos considera agentes baseados em modelos que são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo. Um passo de tempo é especificado como um ciclo de transição.
-
-Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo $t$ e seu movimento no espaço. O estado do agente $\chi(t)$ é especificado através do seguinte conjunto de atributos:
-\begin{equation}
-\label{especificacaoAgente}
- \chi(t) \equiv (L, X, Y, C, E)
-\end{equation}
-
-Cujos significados dos identificadores dos atributos do estado interno do agente $\chi(t)$ são como:
-
-\begin{itemize}
- \item Lote ($L$): Identificador do lote que o agente $\chi(t)$ se encontra.
- \item Posição em x ($X$): Coordenada $x$ da posição do agente $\chi(t)$ no lote.
- \item Posição em y ($Y$): Coordenada $y$ da posição do agente $\chi(t)$ no lote.
- \item Contador de ciclos ($C$): Contador de ciclos que controla os períodos de transição entre os estados do agente.
- \item Estado ($E$): Identificador do estado atual do agente $\chi(t)$.
-\end{itemize}
-
-De maneira que um agente é designado por $\chi(t) \equiv $ (\textit{L, X, Y, C, E}). \\
-
-A especificação formal de um agente é realizada através de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente. Esse operador decorre da composição entre os operadores de transição temporal, que realiza uma transição do estado interno do agente considerando-se sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição para outra, considerando-se os atributos de conectividade e mobilidade.
-
-À dinâmica populacional são considerados três tipos de operações:
-\begin{itemize}
- \item \textbf{Movimentação:} Nas operações de movimentação, os indivíduos são movimentados dentro de um ambiente virtual com topologia matricial através de suas vizinhanças de Moore às posições escolhidas aleatoriamente, respeitando os limites do ambiente.
- \item \textbf{Contato:} Nas operações de contato ocorre, probabilisticamente, a transmissão da doença através dos indivíduos infectados para os indivíduos suscetíveis que ocupam uma mesma posição no ambiente.
- \item \textbf{Transição de estados:} Nas transições de estados, ocorre a passagem de estados dos indivíduos de expostos para infectantes, de infectantes para recuperados e de recuperados para suscetíveis.
-\end{itemize}
-
-Tais operações são realizadas na sequência em que foram apresentadas e uma vez a cada ciclo, que consiste na aplicação dos operadores sobre a população de indivíduos e geração de arquivos de saída. Uma simulação é composta por uma determinada quantidade de ciclos.
-
-Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big) = \sigma\Big(\mu\big(\chi(t)\big)\Big)$, que decorre da composição entre os operadores $\mu$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade, e o operador de transição temporal $\sigma$ realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente.
-
-O operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as operações do agente $\chi(t)$ movimentando-o da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$, para o ciclo de tempo, $t+1$. Formalmente o estado resultante das operações no agente $\chi(t)$ é representado como em (2):
-
-\begin{equation}
-  \lambda\big(\chi(t)^{(i, j)}\big) \equiv  \sigma\Big(\mu\big(\chi(t + 1)\big)^{(\xi, \eta)}\Big)
-\end{equation}
 
 \section{Metodologia de \textit{Bitstring}}
 \label{sec:bitstring}
