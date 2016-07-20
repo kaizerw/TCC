@@ -26,6 +26,14 @@
 \abntrefinfo{Medronho et al.}{MEDRONHO et al.}{2008}
 {MEDRONHO, R.~A. et al. \emph{Epidemiologia}. 2. ed. Reading: Atheneu, 2008.}
 
+\bibitem[Oliveira 2001]{DataMiningEpidemiologia}
+\abntrefinfo{Oliveira}{OLIVEIRA}{2001}
+{OLIVEIRA, I.~C. de.
+\emph{Aplicação de Data Mining na Busca de um Modelo de Prevenção da
+  Mortalidade Infantil}.
+Dissertação (Dissertação de Mestrado) --- Universidade Federal de Santa
+  Catarina, Florianópolis - SC, 2001.}
+
 \bibitem[Paixão 2012]{TeseBitstring}
 \abntrefinfo{Paixão}{PAIXãO}{2012}
 {PAIXãO, C.~A.
@@ -36,6 +44,12 @@ Tese (Tese de Doutorado) --- Universidade Federal de Lavras, Lavras, MG, 2012.}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2003}
 {RUSSEL, S.; NORVIG, P. \emph{Artificial Intelligence - A Modern Approach}. 2.
   ed. Reading: Prentice Hall, 2003.}
+
+\bibitem[White, Rey e Sanchez 2007]{White}
+\abntrefinfo{White, Rey e Sanchez}{WHITE; REY; SANCHEZ}{2007}
+{WHITE, S.~H.; REY, A.~M. del; SANCHEZ, G.~R. Modeling epidemics using cellular
+  automata.
+\emph{Applied Mathematics and Computation}, v.~186, n.~1, p. 193--202, 2007.}
 
 \bibitem[Wooldridge 2016]{IntelligentAgents}
 \abntrefinfo{Wooldridge}{WOOLDRIDGE}{2016}

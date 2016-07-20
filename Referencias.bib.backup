@@ -7,6 +7,17 @@
   edition =		  {2},
 }
 
+@MASTERSTHESIS{DataMiningEpidemiologia,
+  AUTHOR =		  {Ivana Corrêa de Oliveira},
+  TITLE =		  {Estudo e Experimentação de uma Linguagem de Modelagem de Sistemas Baseada em Redes de Petri e Orientação a Objetos},
+  SCHOOL =		  {{COPIN} -- Universidade Federal de Campina Grande},
+  YEAR =			  {2002},
+  type =			  {Dissertação de Mestrado},
+  address =		  {Campina Grande - PB},
+  month =		  {Agosto},
+  abstract =	  {A integração da teoria de redes de Petri com os conceitos da Orientação Objetos surgiu como uma solução para a decomposição e estruturação de modelos em Redes de Petri. Neste trabalho é apresentado um estudo e experimentação de uma linguagem de modelagem baseada em redes de Petri e Orientação a Objetos (RPOO). RPOO foi definida integrando esses dois formalismos em uma perspectiva ortogonal, permitindo que o sistema modelado tenha duas visões: uma visão do ponto de vista de redes de Petri e uma visão do ponto de vista da Orientação a Objetos. O estudo e experimentação da notação RPOO é efetuado através da sua aplicação na modelagem de sistemas de software real. Para tanto, foram desenvolvidos alguns experimentos de modelagem. Assim, os experimentos desenvolvidos serão utilizados na validação da linguagem RPOO como alternativa para a estruturação e decomposição de modelos em redes de Petri, quando da modelagem de sistemas de software distribuídos e concorrentes.},
+}
+
 @BOOK{EpidemiologiaMatematica,
   AUTHOR =		  {Hyun Mo Yang},
   TITLE =		  {Epidemiologia Matemática - Estudo dos Efeitos da Vacinação em Doenças de Transmissão Direta},
@@ -34,3 +45,58 @@
   edition =		  {1},
 }
 
+@BOOK{ArtificialIntelligence,
+  AUTHOR =		  {Stuart Russel and Peter Norvig},
+  TITLE =		  {Artificial Intelligence - A Modern Approach},
+  PUBLISHER =	  	  {Prentice Hall},
+  YEAR =		  {2003},
+  address =		  {Reading},
+  edition =		  {2},
+}
+
+@MISC{IntelligentAgents,
+  author =       {Michael Wooldridge},
+  title =        {Intelligent Agents},
+  howpublished = {Consultado na INTERNET: http://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/mas99.pdf, 2016},
+  year =         {2016},
+}
+
+@ARTICLE{IntelligentAgentsTheory,
+  AUTHOR =		  {Michael Wooldridge and Nicholas R. Jennings},
+  TITLE =		  {Intelligent Agents - Theory and Practice},
+  JOURNAL =		  {The Knowledge Engineering Review},
+  YEAR =		  {1995},
+  volume =		  {10},
+  number =		  {2},
+  pages =		  {115-151},
+  address =		  {England},
+}
+
+@PHDTHESIS{TeseBitstring,
+  AUTHOR =		  {Crysttian Arantes Paixão},
+  TITLE =		  {Modelo de Bitstring para Estudo da Propagação da Dengue},
+  SCHOOL =		  {Universidade Federal de Lavras},
+  YEAR =		  {2012},
+  type =		  {Tese de Doutorado},
+  address =		  {Lavras, MG}
+}
+
+@BOOK{TecnicasModelagem,
+  AUTHOR =		  {Domingos Alves and Henrique Fabricio Gagliardi},
+  TITLE =		  {Técnicas de Modelagem de Processos Epidêmicos e Evolucionários},
+  PUBLISHER =	  	  {Sociedade Brasileira de Matemática Aplicada e Computacional},
+  YEAR =		  {2006},
+  address =		  {São Paulo},
+  edition =		  {1},
+}
+
+@ARTICLE{LGCA,
+  AUTHOR =		  {Guy R. McNamara and Gianluigi Zanetti},
+  TITLE =		  {Use of the Boltzmann Equation to Simulate Lattice-Gas Automata},
+  JOURNAL =		  {Physical Review Letters},
+  YEAR =		  {1988},
+  volume =		  {61},
+  number =		  {20},
+  pages =		  {2332-2335},
+  address =		  {EUA},
+}
