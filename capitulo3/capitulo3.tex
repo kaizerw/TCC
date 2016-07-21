@@ -3,14 +3,19 @@
 
 \section{Introdução}
 
-Neste capítulo serão apresentadas as metodologias computacionais utilizadas à realização deste trabalho. Serão discutidas as modelagens realizadas à representação dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas para a apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência serão discutidas questões relativas às API para programação paralela OpenMP e CUDA, discutindo suas principais características e aplicações. Por fim será apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que será utilizado como apoio às operações de configuração de parâmetros e do \textit{lattice} e à visualização de resultados das simulações que serão executadas.
+Neste capítulo serão apresentadas as metodologias computacionais utilizadas à realização deste trabalho. Serão discutidas as modelagens realizadas à representação dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas à apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência serão discutidas questões relativas às API para programação paralela OpenMP e CUDA, discutindo suas principais características e aplicações. Por fim será apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que será utilizado como apoio às operações de configuração de parâmetros e do \textit{lattice} e à visualização de resultados das simulações que serão executadas.
+
+\section{Modelagem do Ambiente de Simulação}
+\label{sec:modelagemAmbiente}
+
+
 
 \section{Modelagem em Operadores aos Agentes}
 \label{sec:modelagemoperadores}
 
-Os modelos apresentados em \ref{sec:modeloscompartimentais} serviram à fundamentação do modelo baseado em agentes, que será desenvolvido e utilizado na implementação e execução de simulações computacionais. A modelagem empregada para simular o espalhamento de hipotética doença de transmissão direta em indivíduos considera agentes baseados em modelos que são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo. Um passo de tempo é especificado como um ciclo de transição.
+Os modelos apresentados na Seção \ref{sec:modeloscompartimentais} serviram à fundamentação do modelo baseado em agentes, que será desenvolvido e utilizado na implementação e execução de simulações computacionais. A modelagem empregada para simular o espalhamento de hipotética doença de transmissão direta em indivíduos considera agentes baseados em modelos que são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo. Um passo de tempo é especificado como um ciclo de transição.
 
-Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo $t$ e seu movimento no espaço. O estado do agente $\chi(t)$ é especificado através do seguinte conjunto de atributos, como em \ref{especificacaoAgente}.
+Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo $t$ e seu movimento no espaço, que é o ambiente computacional em que o agente é especificado. O estado do agente é especificado através do seguinte conjunto de atributos, como em \ref{especificacaoAgente}.
 \begin{equation}
 \label{especificacaoAgente}
  \chi(t) \equiv (L, X, Y, C, E)
@@ -19,60 +24,56 @@ Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre
 Cujos significados dos identificadores dos atributos do estado interno do agente $\chi(t)$ são como:
 
 \begin{itemize}
- \item Lote ($L$): Identificador do lote que o agente $\chi(t)$ se encontra.
- \item Posição em x ($X$): Coordenada $x$ da posição do agente $\chi(t)$ no lote.
- \item Posição em y ($Y$): Coordenada $y$ da posição do agente $\chi(t)$ no lote.
- \item Contador de controle ($C$): Contador de ciclos que controla os períodos de transição entre os estados do agente.
- \item Estado ($E$): Identificador do estado atual do agente $\chi(t)$.
+ \item Lote, $L$: Identificador do lote que o agente $\chi(t)$ se encontra.
+ \item Posição em x, $X$: Coordenada $x$ da posição do agente $\chi(t)$ no lote.
+ \item Posição em y, $Y$: Coordenada $y$ da posição do agente $\chi(t)$ no lote.
+ \item Contador de controle, $C$: Contador de ciclos que controla os períodos de transição entre os estados do agente.
+ \item Estado, $E$: Identificador do estado atual do agente $\chi(t)$.
 \end{itemize}
-
-De maneira que um agente é designado por $\chi(t) \equiv $ (\textit{L, X, Y, C, E}). \\
 
 A especificação formal de um agente é realizada através de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente. Esse operador decorre da composição entre os operadores de transição temporal, que realiza uma transição do estado interno do agente considerando-se sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição para outra, considerando-se os atributos de conectividade e mobilidade.
 
-À dinâmica populacional são considerados três tipos de operações:
+À dinâmica do agente são considerados três tipos de operações:
 \begin{itemize}
- \item \textbf{Movimentação:} Nas operações de movimentação, os indivíduos são movimentados dentro de um ambiente virtual com topologia matricial através de suas vizinhanças de Moore às posições escolhidas aleatoriamente, respeitando os limites do ambiente.
- \item \textbf{Contato:} Nas operações de contato ocorre, probabilisticamente, a transmissão da doença através dos indivíduos infectados para os indivíduos suscetíveis que ocupam uma mesma posição no ambiente.
- \item \textbf{Transição de estados:} Nas transições de estados, ocorre a passagem de estados dos indivíduos de expostos para infectantes, de infectantes para recuperados e de recuperados para suscetíveis.
+ \item \textbf{Movimentação:} Nas operações de movimentação, os agentes são movimentados dentro de um ambiente virtual com topologia matricial através de suas vizinhanças de Moore às posições escolhidas aleatoriamente, respeitando os limites do ambiente.
+ \item \textbf{Contato:} Nas operações de contato ocorre, probabilisticamente, a transmissão da doença através dos agentes infectados para os agentes suscetíveis que ocupam uma mesma posição no ambiente.
+ \item \textbf{Transição de estados:} Nas transições de estados, ocorre a passagem de estados dos agentes de expostos para infectantes, de infectantes para recuperados e de recuperados para suscetíveis.
 \end{itemize}
 
-Tais operações são realizadas na sequência em que foram apresentadas e uma vez a cada ciclo, que consiste na aplicação dos operadores sobre a população de indivíduos e geração de arquivos de saída. Uma simulação é composta por uma determinada quantidade de ciclos.
+Tais operações são realizadas na sequência em que foram apresentadas e uma vez a cada ciclo, que consiste na aplicação dos operadores sobre a população de agentes e geração de arquivos de saída. Uma simulação é composta por uma determinada quantidade de ciclos.
 
-Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big) = \sigma\Big(\mu\big(\chi(t)\big)\Big)$, que decorre da composição entre os operadores $\mu$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade, e o operador de transição temporal $\sigma$ realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente.
-
-O operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as operações do agente $\chi(t)$ movimentando-o da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$, para o ciclo de tempo, $t+1$. Formalmente o estado resultante das operações no agente $\chi(t)$ é representado como em \ref{operador}:
+Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big)$, que decorre da composição entre os operadores $\mu$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade, e o operador de transição temporal $\sigma$ realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente. O operador de evolução $\lambda$ é definido como em \ref{operador}.
 \begin{equation}
   \label{operador}
   \lambda\big(\chi(t)^{(i, j)}\big) \equiv  \sigma\Big(\mu\big(\chi(t + 1)\big)^{(\xi, \eta)}\Big)
 \end{equation}
+
+Assim sendo, o operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as operações do agente $\chi(t)$ movimentando-o da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$, para o ciclo de tempo, $t+1$.
 
 \section{Modelagem em \textit{Bitstring} aos Agentes}
 \label{sec:modelagembitstring}
 
 A modelagem \textit{bitstring} realizada à representação do agente é baseada na manipulação diretas dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambigüidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$.
 
-Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com \textit{bits}. À implementação do sistema multiagente, objetivando alcançar as metas definidas neste trabalho, é proposta a utilização da linguagem de programação $C$, que provê suporte aos propósitos de modelagem. O tipo de dado inteiro em $C$, \textit{int}, contém $32$ \textit{bits}, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de \textit{bits}, sendo $32$ a quantidade total de \textit{bits} na palavra. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erros na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente.
+Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com \textit{bits}. À implementação do sistema multiagente, visando alcançar os objetivos definidos neste trabalho, é proposta a utilização da linguagem de programação $C$, que provê suporte aos propósitos de modelagem e paralelização do sistema. O tipo de dado inteiro em $C$, \textit{int}, contém $32$ \textit{bits}, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de quantidade de \textit{bits}.
 
-À identificação do lote atual, $L$, do agente, considera-se que o identificador não ultrapasse $64$ valores. À modelagem da posição $X, Y$ de um agente, considera-se que as quantidades de linhas, $\# L$, e de colunas, $\# C$, do ambiente, são limitadas por $max\big(\# L \times \# C\big)=\big(512 \times 512\big)$, onde $max$ indica o máximo possível de linhas e de colunas que podem ser alocadas à essa escolha. À modelagem do contador de controle, $C$, de um agente, considera-se que a quantidade de ciclos em que um agente fica no estado exposto, infectado ou recuperado, não ultrapassem $64$ ciclos de simulação. À modelagem do estado $E$ de um agente, considerando a adoção do modelo compartimental tipo SEIRS, existem somente quatro distintos estados.
+À identificação do lote atual, $L$, do agente, considera-se que o identificador não ultrapasse $64$ valores, de modo que se supõe que uma quadra contenha no máximo $64$ lotes. À modelagem da posição $X, Y$ de um agente, considera-se que as quantidades de linhas, $\# L$, e de colunas, $\# C$, do ambiente, são limitadas por $max\big(\# L \times \# C\big)=\big(512 \times 512\big)$, onde $max$ indica o máximo possível de linhas e de colunas que podem ser alocadas à essa escolha, considerando-se que uma aproximação matricial de um lote de uma quadra resulta em uma matriz de no máximo $512 \times 512$ posições. À modelagem do contador de controle, $C$, de um agente, considera-se que a quantidade de ciclos em que um agente fica no estado exposto, infectado ou recuperado, não ultrapassem $64$ ciclos de simulação, pois supõe-se que a doença hipotética modelada não tem períodos de transição superior à esse valor. À modelagem do estado $E$ de um agente, considerando a adoção do modelo compartimental tipo SEIRS, existem somente quatro distintos estados.
 
-Observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra que comporte um quantidade de $32$ \textit{bits} para armazenar a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$ em \textit{bits}. A utilização de faixas maiores à representação dos atributos de um agente demandariam outros tipos de dados em $C$, com maior quantidade de \textit{bits}. A representação da tira proposta à modelagem dos agentes é como ilustrado na Figura \ref{fig:modelo_bitstring}.
+Observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra que comporte um quantidade de $32$ \textit{bits} para armazenar a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$ em \textit{bits}. A utilização de faixas maiores à representação dos atributos de um agente demandariam outros tipos de dados em $C$, com maior quantidade de \textit{bits}. A representação da tira proposta à modelagem dos agentes é como ilustrado na Figura \ref{fig:modelo_bitstring}, sendo que os elementos $l_i$, $x_i$, $y_i$, $c_i$ e $e_i$ possuem o valor $0$ ou $1$ e seus índices subscritos indicam que cada \textit{bit} pode variar nos respectivos intervalos que estão especificados.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=1.0\textwidth]{Figuras/Tira.eps}
-  \caption{Representação da tira do agente $\chi$}
+  \caption{Representação \textit{bitstring} do agente $\chi$}
   \label{fig:modelo_bitstring}
 \end{figure} 
 
-Na Figura \ref{fig:modelo_bitstring}, os elementos do identificador do lote $L$ estão nas posições $31$ a $26$. Os elementos das coordenadas $X$ e $Y$ da posição do agente no lote estão nas posições $25$ a $17$ e $16$ a $8$, respectivamente. Os elementos do contador de controle $C$ e do estado $E$ estão nas posições $7$ a $2$ e $1$ a $0$, respectivamente. Considerando as escolhas realizadas à sua modelagem, um agente qualquer do modelo pode ser representado em \textit{bits} como em \ref{eq:bitstring}.
+Na Figura \ref{fig:modelo_bitstring}, os elementos do identificador do lote $L$ estão nas posições $31$ a $26$. Os elementos das coordenadas $X$ e $Y$ da posição do agente no lote estão nas posições $25$ a $17$ e $16$ a $8$, respectivamente. Os elementos do contador de controle, $C$, e do estado, $E$, estão nas posições $7$ a $2$ e $1$ a $0$, respectivamente. Considerando as escolhas realizadas à sua modelagem, um agente qualquer do modelo pode ser representado em \textit{bits} como em \ref{eq:bitstring}.
 \begin{equation}
- \chi\big(L, X, Y, C, E\big) \equiv \big(\blue{l_{31}, \dotsc, l_{26}}; \red{x_{25}, \dotsc, x_{17}}; \green{y_{16}, \dotsc, y_{8}}; \magenta{c_{7}, \dotsc, c_{2}}; \yellow{e_{1}, \dotsc, e_{0}}\big)
+ \chi\big(L, X, Y, C, E\big) \equiv \big(l_{31}, \dotsc, l_{26}; x_{25}, \dotsc, x_{17}; y_{16}, \dotsc, y_{8}; c_{7}, \dotsc, c_{2}; e_{1}, \dotsc, e_{0}\big)
  \label{eq:bitstring}
 \end{equation}
 
-sendo que os elementos $l_i$, $x_i$, $y_i$, $c_i$ e $e_i$ possuem o valor $0$ ou $1$ e seus índices subscritos indicam que cada \textit{bit} pode variar nos respectivos intervalos que estão especificados.
-
-Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y, C, E\big) = \chi(t)$ no ambiente, assim como seu estado interno e o registro de controle de ciclos às transições de estados, essas características são definidas como em \ref{eq:bitstring_get}, para os ciclos $t$ e $t+1$, respectivamente como:
+Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y, C, E\big) = \chi(t)$ no ambiente, assim como seu estado interno e o registro de controle de ciclos às transições de estados, essas características são definidas como em \ref{eq:bitstring_get}, para os ciclos $t$ e $t+1$, respectivamente como em \ref{eq:bitstring_get}, em que $Pl$, $Px$, $Py$, $Pc$ e $Pe$ designam, respectivamente, as quantidades de \textit{bits} posteriores à cada campo..
 \begin{equation}
   \begin{cases}
     L(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Pl\big)\bigg) \gg_{arth} \big(C\#l\big) \\
@@ -84,7 +85,7 @@ Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y,
   \label{eq:bitstring_get}
 \end{equation}
 
-em que $Pl$, $Px$, $Py$, $Pc$ e $Pe$ designam, respectivamente, as quantidades de \textit{bits} posteriores à cada campo. A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado.
+A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem $C$ para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. Em deslocamentos aritméticos, como aqueles que são definidos na linguagem $C$, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem $C$. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos. O uso do tipo \textit{unsigned int} é justificado por este motivo.
 
 Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que \ref{eq:bitstring_get} é então reescrita para os ciclos $t$ e $t+1$ designados como \textit{old} e \textit{new}, respectivamente, como em \ref{eq:bitstring_get_2}.
 \begin{equation}
@@ -109,7 +110,7 @@ Também são necessárias outras operações para manipular os atributos dos agentes,
   \label{eq:bitstring_set}
 \end{equation}
 
-sendo que $z(t + 1)$ denota ou $x(t + 1)$ ou $y(t + 1)$, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $|$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra.
+Em \ref{eq:bitstring_set} $z(t + 1)$ denota ou $x(t + 1)$ ou $y(t + 1)$, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $|$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra.
 Assim, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_set} é reescrita como em \ref{eq:bitstring_set_2}.
 \begin{equation}
   \begin{cases}
@@ -123,15 +124,11 @@ Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_get}
 \begin{equation}
   \scriptsize
   \begin{cases}
-    \chi\Big(L(t + 1), X(t), T(t), C(t), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Al\Big)\bigg) \gg_{arth} \big(\#l\big)\bigg) \ll_{arth}\big(\#l\big)\Bigg) \, | \, L\big(t + 1\big)\Bigg] \ll_{circ}\big(Al\big) \\
-  
-    \chi\Big(L, X(t + 1), Y(t), C(t), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ax\Big)\bigg) \gg_{arth} \big(\#x\big)\bigg) \ll_{arth}\big(\#x\big)\Bigg) \, | \, X\big(t + 1\big)\Bigg] \ll_{circ}\big(Ax\big) \\
-    
-    \chi\Big(L, X(t), Y(t + 1), C(t), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ay\Big)\bigg) \gg_{arth} \big(\#y\big)\bigg) \ll_{arth}\big(\#y\big)\Bigg) \, | \, Y\big(t + 1\big)\Bigg] \ll_{circ}\big(Ay\big) \\
-    
-    \chi\Big(L, X(t), Y(t), C(t + 1), E(t)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ac\Big)\bigg) \gg_{arth} \big(\#c\big)\bigg) \ll_{arth}\big(\#c\big)\Bigg) \, | \, C\big(t + 1\big)\Bigg] \ll_{circ}\big(Ac\big) \\
-    
-    \chi\Big(L, X(t), Y(t), C(t), E(t + 1)\Big) := \Bigg[\Bigg(\bigg(\Big(\chi(X(t), Y(t), C(t), E(t)\Big) \gg_{circ} \Big(Ae\Big)\bigg) \gg_{arth} \big(\#e\big)\bigg) \ll_{arth}\big(\#e\big)\Bigg) \, | \, E\big(t + 1\big)\Bigg] \ll_{circ}\big(Ae\big) \\
+    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Al) \gg_{arth}(\#l) \ll_{arth} (\#l) \, | \, L(t + 1) \ll_{circ}(Al) \\
+    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ax) \gg_{arth}(\#x) \ll_{arth} (\#x) \, | \, X(t + 1) \ll_{circ}(Ax) \\
+    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ay) \gg_{arth}(\#y) \ll_{arth} (\#y) \, | \, Y(t + 1) \ll_{circ}(Ay) \\
+    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, | \, C(t + 1) \ll_{circ}(Ac) \\
+    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, | \, E(t + 1) \ll_{circ}(Ae) \\
   \end{cases}
   \label{operador_bitstring}
 \end{equation}
@@ -141,15 +138,15 @@ Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $
 \begin{equation}
   \scriptsize
   \begin{cases}
-    \chi\Big(L_{new}, X_{old}, Y_{old}, C_{old}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(26\big)\Big) \gg_{arth} \big(6\big)\bigg) \ll_{arth}\big(6\big)\Bigg) \, | \, L_{new}\Bigg] \ll_{circ}\big(26\big) \\
+    \chi\big(L_{new}, X_{old}, Y_{old}, C_{old}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, | \, L_{new} \ll_{circ}(26) \\
   
-    \chi\Big(L_{old}, X_{new}, Y_{old}, C_{old}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(17\big)\Big) \gg_{arth} \big(9\big)\bigg) \ll_{arth}\big(9\big)\Bigg) \, | \, X_{new}\Bigg] \ll_{circ}\big(17\big) \\
+    \chi\big(L_{old}, X_{new}, Y_{old}, C_{old}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, | \, X_{new} \ll_{circ}(17) \\
     
-    \chi\Big(L_{old}, X_{old}, Y_{new}, C_{old}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(8\big)\Big) \gg_{arth} \big(9\big)\bigg) \ll_{arth}\big(9\big)\Bigg) \, | \, Y_{new}\Bigg] \ll_{circ}\big(8\big) \\
+    \chi\big(L_{old}, X_{old}, Y_{new}, C_{old}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, | \, Y_{new} \ll_{circ}(8) \\
     
-    \chi\Big(L_{old}, X_{old}, Y_{old}, C_{new}, E_{old}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(2\big)\Big) \gg_{arth} \big(6\big)\bigg) \ll_{arth}\big(6\big)\Bigg) \, | \, C_{new}\Bigg] \ll_{circ}\big(2\big) \\
+    \chi\big(L_{old}, X_{old}, Y_{old}, C_{new}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, | \, C_{new} \ll_{circ}(2) \\
     
-    \chi\Big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{new}\Big) := \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(0\big)\Big) \gg_{arth} \big(2\big)\bigg) \ll_{arth}\big(2\big)\Bigg) \, | \, E_{new}\Bigg] \ll_{circ}\big(0\big) \\
+    \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{new}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, | \, E_{new} \ll_{circ}(0) \\
   \end{cases}
   \label{operador_bitstring_2}
 \end{equation}
