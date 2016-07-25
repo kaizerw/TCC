@@ -9,13 +9,11 @@
 
 @MASTERSTHESIS{DataMiningEpidemiologia,
   AUTHOR =		  {Ivana Corrêa de Oliveira},
-  TITLE =		  {Estudo e Experimentação de uma Linguagem de Modelagem de Sistemas Baseada em Redes de Petri e Orientação a Objetos},
-  SCHOOL =		  {{COPIN} -- Universidade Federal de Campina Grande},
-  YEAR =			  {2002},
-  type =			  {Dissertação de Mestrado},
-  address =		  {Campina Grande - PB},
-  month =		  {Agosto},
-  abstract =	  {A integração da teoria de redes de Petri com os conceitos da Orientação Objetos surgiu como uma solução para a decomposição e estruturação de modelos em Redes de Petri. Neste trabalho é apresentado um estudo e experimentação de uma linguagem de modelagem baseada em redes de Petri e Orientação a Objetos (RPOO). RPOO foi definida integrando esses dois formalismos em uma perspectiva ortogonal, permitindo que o sistema modelado tenha duas visões: uma visão do ponto de vista de redes de Petri e uma visão do ponto de vista da Orientação a Objetos. O estudo e experimentação da notação RPOO é efetuado através da sua aplicação na modelagem de sistemas de software real. Para tanto, foram desenvolvidos alguns experimentos de modelagem. Assim, os experimentos desenvolvidos serão utilizados na validação da linguagem RPOO como alternativa para a estruturação e decomposição de modelos em redes de Petri, quando da modelagem de sistemas de software distribuídos e concorrentes.},
+  TITLE =		  {Aplicação de Data Mining na Busca de um Modelo de Prevenção da Mortalidade Infantil},
+  SCHOOL =		  {Universidade Federal de Santa Catarina},
+  YEAR =		  {2001},
+  type =		  {Dissertação de Mestrado},
+  address =		  {Florianópolis - SC}
 }
 
 @BOOK{EpidemiologiaMatematica,
@@ -43,6 +41,42 @@
   YEAR =		  {1999},
   address =		  {Reading},
   edition =		  {1},
+}
+
+@ARTICLE{White,
+  AUTHOR =		  {S. Hoya White and A. Martin del Rey and G. Rodriguez Sanchez},
+  TITLE =		  {Modeling epidemics using cellular automata},
+  JOURNAL =		  {Applied Mathematics and Computation},
+  YEAR =		  {2007},
+  volume =		  {186},
+  number =		  {1},
+  pages =		  {193-202},
+}
+
+@ARTICLE{LGCAEpidemiologia,
+  AUTHOR =		  {Henryk Fuks and Anna T. Lawniczak},
+  TITLE =		  {Individual-based lattice model for spatial spread of epidemics},
+  JOURNAL =		  {Discrete Dynamics in Nature and Society},
+  YEAR =		  {2001},
+  volume =		  {6},
+  pages =		  {181-200},
+}
+
+@ARTICLE{EDOEpidemiologia,
+  AUTHOR =		  {Bruno de Paula O. Paiva and Erivelton Geraldo Nepomuceno},
+  TITLE =		  {Análise de Estabilidade e Controle de Doenças Infecciosas por meio de um Modelo Compartimental},
+  JOURNAL =		  {Sociedade Brasileira de Matemática Aplicada e Computacional},
+  YEAR =		  {2013},
+  volume =		  {1},
+}
+
+@MASTERSTHESIS{EDOsModelos,
+  AUTHOR =		  {Ivana Corrêa de Oliveira},
+  TITLE =		  {Aplicação de Data Mining na Busca de um Modelo de Prevenção da Mortalidade Infantil},
+  SCHOOL =		  {Universidade Federal de Santa Catarina},
+  YEAR =		  {2001},
+  type =		  {Dissertação de Mestrado},
+  address =		  {Florianópolis - SC}
 }
 
 @BOOK{ArtificialIntelligence,

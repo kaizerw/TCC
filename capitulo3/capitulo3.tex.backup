@@ -73,28 +73,28 @@ Na Figura \ref{fig:modelo_bitstring}, os elementos do identificador do lote $L$ 
  \label{eq:bitstring}
 \end{equation}
 
-Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y, C, E\big) = \chi(t)$ no ambiente, assim como seu estado interno e o registro de controle de ciclos às transições de estados, essas características são definidas como em \ref{eq:bitstring_get}, para os ciclos $t$ e $t+1$, respectivamente como em \ref{eq:bitstring_get}, em que $Pl$, $Px$, $Py$, $Pc$ e $Pe$ designam, respectivamente, as quantidades de \textit{bits} posteriores à cada campo..
+Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y, C, E\big) = \chi(t)$ no ambiente, assim como seu estado interno e o registro de controle de ciclos às transições de estados, essas características são definidas como em \ref{eq:bitstring_get}, para o ciclo $t$, respectivamente como em \ref{eq:bitstring_get}, em que $Pl$, $Px$, $Py$, $Pc$ e $Pe$ designam, respectivamente, as quantidades de \textit{bits} posteriores à cada campo.
 \begin{equation}
   \begin{cases}
-    L(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Pl\big)\bigg) \gg_{arth} \big(C\#l\big) \\
-    X(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Px\big)\bigg) \gg_{arth} \big(C\#x\big) \\
-    Y(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Py\big)\bigg) \gg_{arth} \big(C\#y\big) \\
-    C(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Pc\big)\bigg) \gg_{arth} \big(C\#c\big) \\
-    E(t + 1) = \bigg(\Big(\chi\big(L, X, Y, C, E\big)\Big) \ll_{arth}\big(Pe\big)\bigg) \gg_{arth} \big(C\#e\big) \\
+    L(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Pl) \gg_{arth}(C\#l) \\
+    X(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Px) \gg_{arth}(C\#x) \\
+    Y(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Py) \gg_{arth}(C\#y) \\
+    C(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Pc) \gg_{arth}(C\#c) \\
+    E(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Pe) \gg_{arth}(C\#e) \\
   \end{cases}
   \label{eq:bitstring_get}
 \end{equation}
 
 A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem $C$ para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. Em deslocamentos aritméticos, como aqueles que são definidos na linguagem $C$, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem $C$. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos. O uso do tipo \textit{unsigned int} é justificado por este motivo.
 
-Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que \ref{eq:bitstring_get} é então reescrita para os ciclos $t$ e $t+1$ designados como \textit{old} e \textit{new}, respectivamente, como em \ref{eq:bitstring_get_2}.
+Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que \ref{eq:bitstring_get} é então reescrita para o ciclo $t$ designado como \textit{old} e \textit{new}, respectivamente, como em \ref{eq:bitstring_get_2}.
 \begin{equation}
   \begin{cases}
-    L_{new} := \Big(\chi\big(L_{old}, X, Y, C, E\big) \ll_{arth}\big(0\big)\Big) \gg_{arth}(26) \\
-    X_{new} := \Big(\chi\big(L, X_{old}, Y, C, E\big) \ll_{arth}\big(6\big)\Big) \gg_{arth}(23) \\
-    Y_{new} := \Big(\chi\big(L, X, Y_{old}, C, E\big) \ll_{arth}\big(15\big)\Big) \gg_{arth}(23) \\
-    C_{new} := \Big(\chi\big(L, X, Y, C_{old}, E\big) \ll_{arth}\big(24\big)\Big) \gg_{arth}(26) \\
-    E_{new} := \Big(\chi\big(L, X, Y, C, E_{old}\big) \ll_{arth}\big(30\big)\Big) \gg_{arth}(30) \\
+    L(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(0) \gg_{arth}(26) \\
+    X(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(6) \gg_{arth}(23) \\
+    Y(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(15) \gg_{arth}(23) \\
+    C(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(24 \gg_{arth}(26) \\
+    E(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(30) \gg_{arth}(30) \\
   \end{cases}
   \label{eq:bitstring_get_2}
 \end{equation}
@@ -114,7 +114,7 @@ Em \ref{eq:bitstring_set} $z(t + 1)$ denota ou $x(t + 1)$ ou $y(t + 1)$, $N\_BIT
 Assim, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_set} é reescrita como em \ref{eq:bitstring_set_2}.
 \begin{equation}
   \begin{cases}
-    \ll_{circ} := \Big(z\big(t + 1\big) \ll_{arth} \text{shift}\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(32 - \text{shift}\big)\Big) \\
+    \ll_{circ} := \Big(z\big(t + 1\big) \ll_{arth} shift\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(32 - \text{shift}\big)\Big) \\
     \gg_{circ} := \Big(z\big(t + 1\big) \gg_{arth} \text{shift}\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(32 - \text{shift}\big)\Big) \\
   \end{cases}
   \label{eq:bitstring_set_2}
@@ -124,11 +124,11 @@ Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_get}
 \begin{equation}
   \scriptsize
   \begin{cases}
-    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\Big) \gg_{circ}(Al) \gg_{arth}(\#l) \ll_{arth} (\#l) \, | \, L(t + 1) \ll_{circ}(Al) \\
-    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\Big) \gg_{circ}(Ax) \gg_{arth}(\#x) \ll_{arth} (\#x) \, | \, X(t + 1) \ll_{circ}(Ax) \\
-    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\Big) \gg_{circ}(Ay) \gg_{arth}(\#y) \ll_{arth} (\#y) \, | \, Y(t + 1) \ll_{circ}(Ay) \\
-    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\Big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, | \, C(t + 1) \ll_{circ}(Ac) \\
-    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\Big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, | \, E(t + 1) \ll_{circ}(Ae) \\
+    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Al) \gg_{arth}(\#l) \ll_{arth} (\#l) \, | \, L(t + 1) \ll_{circ}(Al) \\
+    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ax) \gg_{arth}(\#x) \ll_{arth} (\#x) \, | \, X(t + 1) \ll_{circ}(Ax) \\
+    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ay) \gg_{arth}(\#y) \ll_{arth} (\#y) \, | \, Y(t + 1) \ll_{circ}(Ay) \\
+    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, | \, C(t + 1) \ll_{circ}(Ac) \\
+    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, | \, E(t + 1) \ll_{circ}(Ae) \\
   \end{cases}
   \label{operador_bitstring}
 \end{equation}
@@ -138,15 +138,15 @@ Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $
 \begin{equation}
   \scriptsize
   \begin{cases}
-    \chi\Big(L_{new}, X_{old}, Y_{old}, C_{old}, E_{old}\Big) = \Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(26\big)\Big) \gg_{arth} \big(6\big)\bigg) \ll_{arth}\big(6\big)\Bigg) \, | \, L_{new}\Bigg] \ll_{circ}\big(26\big) \\
+    \chi\big(L_{new}, X_{old}, Y_{old}, C_{old}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, | \, L_{new} \ll_{circ}(26) \\
   
-    \chi\Big(L_{old}, X_{new}, Y_{old}, C_{old}, E_{old}\Big) = \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(17\big)\Big) \gg_{arth} \big(9\big)\bigg) \ll_{arth}\big(9\big)\Bigg) \, | \, X_{new}\Bigg] \ll_{circ}\big(17\big) \\
+    \chi\big(L_{old}, X_{new}, Y_{old}, C_{old}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, | \, X_{new} \ll_{circ}(17) \\
     
-    \chi\Big(L_{old}, X_{old}, Y_{new}, C_{old}, E_{old}\Big) = \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(8\big)\Big) \gg_{arth} \big(9\big)\bigg) \ll_{arth}\big(9\big)\Bigg) \, | \, Y_{new}\Bigg] \ll_{circ}\big(8\big) \\
+    \chi\big(L_{old}, X_{old}, Y_{new}, C_{old}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, | \, Y_{new} \ll_{circ}(8) \\
     
-    \chi\Big(L_{old}, X_{old}, Y_{old}, C_{new}, E_{old}\Big) = \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(2\big)\Big) \gg_{arth} \big(6\big)\bigg) \ll_{arth}\big(6\big)\Bigg) \, | \, C_{new}\Bigg] \ll_{circ}\big(2\big) \\
+    \chi\big(L_{old}, X_{old}, Y_{old}, C_{new}, E_{old}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, | \, C_{new} \ll_{circ}(2) \\
     
-    \chi\Big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{new}\Big) = \Bigg[\Bigg(\bigg(\Big(\chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ} \big(0\big)\Big) \gg_{arth} \big(2\big)\bigg) \ll_{arth}\big(2\big)\Bigg) \, | \, E_{new}\Bigg] \ll_{circ}\big(0\big) \\
+    \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{new}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, | \, E_{new} \ll_{circ}(0) \\
   \end{cases}
   \label{operador_bitstring_2}
 \end{equation}

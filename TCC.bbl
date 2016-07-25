@@ -16,6 +16,19 @@
 {DALEY, D.~J.; GANI, J. \emph{Epidemic Modelling - An Introduction}. 1. ed.
   Reading: Cambridge University, 1999.}
 
+\bibitem[Fuks e Lawniczak 2001]{LGCAEpidemiologia}
+\abntrefinfo{Fuks e Lawniczak}{FUKS; LAWNICZAK}{2001}
+{FUKS, H.; LAWNICZAK, A.~T. Individual-based lattice model for spatial spread
+  of epidemics.
+\emph{Discrete Dynamics in Nature and Society}, v.~6, p. 181--200, 2001.}
+
+\bibitem[Luiz 2012]{EDOsModelos}
+\abntrefinfo{Luiz}{LUIZ}{2012}
+{LUIZ, M. H.~R.
+\emph{Modelos Matemáticos em Epidemiologia}.
+Dissertação (Dissertação de Mestrado) --- Universidade Estadual Paulista "Júlio
+  de Mesquita Filho", Rio Claro - SP, 2012.}
+
 \bibitem[McNamara e Zanetti 1988]{LGCA}
 \abntrefinfo{McNamara e Zanetti}{MCNAMARA; ZANETTI}{1988}
 {MCNAMARA, G.~R.; ZANETTI, G. Use of the boltzmann equation to simulate
@@ -33,6 +46,13 @@
   Mortalidade Infantil}.
 Dissertação (Dissertação de Mestrado) --- Universidade Federal de Santa
   Catarina, Florianópolis - SC, 2001.}
+
+\bibitem[Paiva e Nepomuceno 2013]{EDOEpidemiologia}
+\abntrefinfo{Paiva e Nepomuceno}{PAIVA; NEPOMUCENO}{2013}
+{PAIVA, B. de P.~O.; NEPOMUCENO, E.~G. Análise de estabilidade e controle de
+  doenças infecciosas por meio de um modelo compartimental.
+\emph{Sociedade Brasileira de Matemática Aplicada e Computacional}, v.~1,
+  2013.}
 
 \bibitem[Paixão 2012]{TeseBitstring}
 \abntrefinfo{Paixão}{PAIXãO}{2012}
