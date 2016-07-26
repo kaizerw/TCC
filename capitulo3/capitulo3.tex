@@ -2,13 +2,36 @@
 \label{CapMetodologiasComputacionais}
 
 \section{Introdução}
+\label{sec:intro3}
 
-Neste capítulo serão apresentadas as metodologias computacionais utilizadas à realização deste trabalho. Serão discutidas as modelagens realizadas à representação dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas à apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência serão discutidas questões relativas às API para programação paralela OpenMP e CUDA, discutindo suas principais características e aplicações. Por fim será apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que será utilizado como apoio às operações de configuração de parâmetros e do \textit{lattice} e à visualização de resultados das simulações que serão executadas.
+Neste capítulo serão apresentadas as metodologias computacionais utilizadas à realização deste trabalho. Serão discutidas as modelagens realizadas à representação do ambiente e dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas à apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência serão discutidas questões relativas às API para programação paralela OpenMP e CUDA, discutindo suas principais características e aplicações. Por fim será apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que será utilizado como apoio às operações de configuração de parâmetros e do \textit{lattice} e à visualização de resultados das simulações que serão executadas.
 
 \section{Modelagem do Ambiente de Simulação}
 \label{sec:modelagemAmbiente}
 
+Para a modelagem do ambiente computacional, que servirá à execução de simulações da dinâmica epidemiológica, será utilizada como base uma região geográfica da cidade de Cascavel/PR, mais especificamente a quadra 445. A quadra 445 está localizada no centro da cidade de Cascavel/PR e é delimitada geograficamente pelas ruas Maranhão, Castro Alves, Curitiba e Visconde de Guarapuava. Esta quadra foi escolhida por apresentar relativa geometria regular em seus lotes com relação às outras quadras da cidade, o que é interessante para seu mapeamento em estruturas de dados na implementação que será realizada. A Figura \ref{fig:q445} ilustra a quadra em questão.
 
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Figuras/Q445.png}
+  \caption{Representação gráfica da quadra 445}
+  \label{fig:q445}
+\end{figure} 
+
+A quadra 445 contém 15 lotes, onde é necessário mapear-se cada um destes para uma estrutura matricial, que permita sua representação e implementação no sistema de simulação. Para tanto, os lotes 0002 e 019B serão divididos em outros dois lotes, pois apresentam geometria irregular, que é de difícil aproximação em estruturas matriciais. Essa divisão será realizada de tal forma em que as matrizes resultantes possam representar mais aproximadamente a geometria original do lote dividido. Aos outros lotes da quadra 445 não serão aplicadas nenhuma operação adicional, por apresentarem geometria regular, que pode ser facilmente aproximada por uma matriz retangular. Com as operações de divisão dos lotes irregulares, a quadra 445, que originalmente contém 15 lotes, será mapeada para um conjunto com 17 estruturas matriciais, que representarão os lotes de forma apropriada à sua implementação computacional.
+
+Como os lotes da quadra 445 serão mapeados para estruturas matriciais que permitam sua implementação em linguagens de programação, à cada lote estará associada, no sistema de simulação, uma matriz de $n$ linhas e $m$ colunas, que descreverá sua geometria. Essa definição é importante pois à modelagem dos agentes é necessária a descrição do ambiente em que se movem e habitam. Cada agente terá uma determinada posição na quadra, que é completamente especificada pelas coordenadas $x$ e $y$ da matriz do lote e por um identificador do lote em que o agente se encontra. As coordenadas $x$ e $y$ representarão, respectivamente, a linha e coluna da matriz do lote em que o agente está localizado. 
+
+À modelagem das vizinhanças de uma determinada posição $(x, y)$ de um lote qualquer, será utilizada a vizinhança de Moore, que é amplamente usada na modelagem de autômatos celulares. A Figura \ref{fig:moore} ilustra gráficamente os incrementos realizados às coordenadas de uma posição $(x, y)$ qualquer para a obtenção de sua vizinhança de Moore.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.3\textwidth]{Figuras/Vizinhanca_Moore.png}
+  \caption{Representação gráfica da vizinhança de Moore}
+  \label{fig:moore}
+\end{figure} 
+
+A vizinhança de Moore de uma posição $(x, y)$ qualquer consiste no conjunto das posições $(x, y + 1)$, $(x, y - 1)$, $(x + 1, y)$, $(x + 1, y + 1)$, $(x + 1, y - 1)$, $(x - 1, y)$, $(x - 1, y + 1)$ e $(x - 1, y - 1)$. A definição das vizinhanças de um determinada posição de um lote é relevante principalmente às operações de movimentação e contato entre os agentes da população. 
 
 \section{Modelagem em Operadores aos Agentes}
 \label{sec:modelagemoperadores}
@@ -101,26 +124,26 @@ Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$,
 
 As operações definidas em \ref{eq:bitstring_get} e \ref{eq:bitstring_get_2} capturam informações armazenadas nos agentes, como especificado em \ref{especificacaoAgente}.
 
-Também são necessárias outras operações para manipular os atributos dos agentes, além aquelas definidas em \ref{eq:bitstring_get_2}. Essas operações têm por finalidade setar no agente as informações necessárias às atualizações do identificador de seu lote, posição, estado e contador. São definidas como em \ref{eq:bitstring_set}, sendo que $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado.
+Também são necessárias outras operações para manipular os atributos dos agentes, além aquelas definidas em \ref{eq:bitstring_get_2}. Como a linguagem de programação $C$ não conta com operador próprio que permita a execução de operações de deslocamentos circulares, faz-se necessário a sua definição com base nos operadores existentes na linguagem, como os deslocamentos aritméticos e operações lógicas. Em \ref{eq:bitstring_circ} $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado, definidos como uma composição dos operadores de deslocamento aritmético e a operação lógica ou.
 \begin{equation}
   \begin{cases}
-    \ll_{circ} = \Big(z\big(t + 1\big) \ll_{arth} shift\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(N\_BITS - shift\big)\Big) \\
-    \gg_{circ} = \Big(z\big(t + 1\big) \gg_{arth} shift\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(N\_BITS - shift\big)\Big) \\
+    \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
+    \gg_{circ} = \big(M \gg_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
   \end{cases}
-  \label{eq:bitstring_set}
+  \label{eq:bitstring_circ}
 \end{equation}
 
-Em \ref{eq:bitstring_set} $z(t + 1)$ denota ou $x(t + 1)$ ou $y(t + 1)$, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $|$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra.
-Assim, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_set} é reescrita como em \ref{eq:bitstring_set_2}.
+Em \ref{eq:bitstring_circ}, $M$ denota a palavra computacional em que está sendo aplicada a operação de deslocamento circular, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $|$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra.
+Assim, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_circ} é reescrita como em \ref{eq:bitstring_circ_2}.
 \begin{equation}
   \begin{cases}
-    \ll_{circ} = \Big(z\big(t + 1\big) \ll_{arth} shift\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(32 - shift\big)\Big) \\
-    \gg_{circ} = \Big(z\big(t + 1\big) \gg_{arth} shift\Big) \, | \, \Big(z\big(t + 1\big) \gg_{arth} \big(32 - shift\big)\Big) \\
+    \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(32 - shift)\big) \\
+    \gg_{circ} = \big(M \gg_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(32 - shift)\big) \\
   \end{cases}
-  \label{eq:bitstring_set_2}
+  \label{eq:bitstring_circ_2}
 \end{equation}
 
-Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_get} e em \ref{eq:bitstring_set}, ou concretamente, as definidas em \ref{eq:bitstring_get_2} e \ref{eq:bitstring_set_2}, para implementar o operador espaço-temporal $\lambda\big(\chi(t)\big)$ que movimenta o agente da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$ \textit{(old)}, para o ciclo de tempo, $t+1$ \textit{(new)}. A combinação dessas operações resulta que a identificação do lote, as coordenadas $x$ e $y$ da posição, o controle e estado do agente são atualizadas, respectivamente, para $\lambda\big(\chi(t)\big)$ por \ref{operador_bitstring}.
+Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_circ_2}, para implementar o operador espaço-temporal $\lambda\big(\chi(t)\big)$ que movimenta o agente da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$ \textit{(old)}, para o ciclo de tempo, $t+1$ \textit{(new)}. As operações definidas em \ref{bitstring_set} resultam na atualização dos atributos de identificação do lote, das coordenadas $x$ e $y$ da posição, do controle e do estado do agente.
 \begin{equation}
   \scriptsize
   \begin{cases}
@@ -130,11 +153,12 @@ Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_get}
     \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, | \, C(t + 1) \ll_{circ}(Ac) \\
     \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, | \, E(t + 1) \ll_{circ}(Ae) \\
   \end{cases}
-  \label{operador_bitstring}
+  \label{bitstring_set}
 \end{equation}
-em que $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo.
 
-Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, \ref{operador_bitstring} é reescrita como em \ref{operador_bitstring_2}.
+Em \ref{bitstring_set}, $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo.
+
+Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, \ref{bitstring_set} é reescrita como em \ref{bitstring_set_2}.
 \begin{equation}
   \scriptsize
   \begin{cases}
@@ -148,7 +172,7 @@ Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $
     
     \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{new}\big) = \chi\big(L_{old}, X_{old}, Y_{old}, C_{old}, E_{old}\big) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, | \, E_{new} \ll_{circ}(0) \\
   \end{cases}
-  \label{operador_bitstring_2}
+  \label{bitstring_set_2}
 \end{equation}
 
 Nas Tabelas \ref{tab:tamanhos}, \ref{tab:complementares}, \ref{tab:posteriores} e \ref{tab:anteriores} são apresentados sistematicamente os valores relativos às quantidades de \textit{bits} dos tamanhos, complementos, posteriores e anteriores de cada atributo do agente $\chi$.

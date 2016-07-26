@@ -13,22 +13,22 @@
 \contentsline {section}{\numberline {2.1}Introdu\c c\~ao}{5}
 \contentsline {section}{\numberline {2.2}Epidemiologia Matem\'atica e Computacional}{5}
 \contentsline {section}{\numberline {2.3}Modelos compartimentais: Tipos e Classifica\c c\~oes}{9}
-\contentsline {section}{\numberline {2.4}Agentes Inteligentes}{15}
-\contentsline {section}{\numberline {2.5}Metodologia de \textit {Bitstring}}{20}
-\contentsline {chapter}{\numberline {3}Metodologias Computacionais}{24}
-\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{24}
-\contentsline {section}{\numberline {3.2}Modelagem do Ambiente de Simula\c c\~ao}{24}
-\contentsline {section}{\numberline {3.3}Modelagem em Operadores aos Agentes}{24}
-\contentsline {section}{\numberline {3.4}Modelagem em \textit {Bitstring} aos Agentes}{26}
-\contentsline {section}{\numberline {3.5}Estruturas de Dados, Linguagens e Estrat\'egias de Implementa\c c\~ao}{31}
-\contentsline {section}{\numberline {3.6}CUDA e OpenMP}{31}
-\contentsline {section}{\numberline {3.7}SIMULA}{31}
-\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{32}
-\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{32}
-\contentsline {section}{\numberline {4.2}Implementa\c c\~ao Padr\~ao com CUDA e OpenMP}{32}
-\contentsline {section}{\numberline {4.3}Implementa\c c\~ao \textit {Bitstring} com CUDA e OpenMP}{32}
-\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{32}
-\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{33}
-\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{33}
-\contentsline {section}{\numberline {5.2}Cases: Discutir as Simulac\~oes no Espa\c co Geogr\'afico Escolhido.}{33}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{34}
+\contentsline {section}{\numberline {2.4}Agentes Inteligentes}{14}
+\contentsline {section}{\numberline {2.5}Metodologia de \textit {Bitstring}}{19}
+\contentsline {chapter}{\numberline {3}Metodologias Computacionais}{23}
+\contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{23}
+\contentsline {section}{\numberline {3.2}Modelagem do Ambiente de Simula\c c\~ao}{23}
+\contentsline {section}{\numberline {3.3}Modelagem em Operadores aos Agentes}{25}
+\contentsline {section}{\numberline {3.4}Modelagem em \textit {Bitstring} aos Agentes}{27}
+\contentsline {section}{\numberline {3.5}Estruturas de Dados, Linguagens e Estrat\'egias de Implementa\c c\~ao}{32}
+\contentsline {section}{\numberline {3.6}CUDA e OpenMP}{32}
+\contentsline {section}{\numberline {3.7}SIMULA}{32}
+\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{33}
+\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{33}
+\contentsline {section}{\numberline {4.2}Implementa\c c\~ao Padr\~ao com CUDA e OpenMP}{33}
+\contentsline {section}{\numberline {4.3}Implementa\c c\~ao \textit {Bitstring} com CUDA e OpenMP}{33}
+\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{33}
+\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{34}
+\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{34}
+\contentsline {section}{\numberline {5.2}Cases: Discutir as Simulac\~oes no Espa\c co Geogr\'afico Escolhido.}{34}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{35}
