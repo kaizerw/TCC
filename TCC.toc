@@ -3,7 +3,6 @@
 \contentsline {chapter}{Lista de Tabelas}{vii}
 \contentsline {chapter}{Lista de Abreviaturas e Siglas}{viii}
 \contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{ix}
-\contentsline {chapter}{Sum\'ario}{x}
 \contentsline {chapter}{Resumo}{xii}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
 \contentsline {section}{\numberline {1.1}Objetivos}{2}
