@@ -78,11 +78,11 @@ Assim sendo, o operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as op
 
 A modelagem \textit{bitstring} realizada à representação do agente é baseada na manipulação diretas dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambigüidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$.
 
-Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com \textit{bits}. À implementação do sistema multiagente, visando alcançar os objetivos definidos neste trabalho, é proposta a utilização da linguagem de programação $C$, que provê suporte aos propósitos de modelagem e paralelização do sistema. O tipo de dado inteiro em $C$, \textit{int}, contém $32$ \textit{bits}, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de quantidade de \textit{bits}.
+Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com \textit{bits}. À implementação do sistema multiagente, visando alcançar os objetivos definidos neste trabalho, é proposta a utilização da linguagem de programação C, que provê suporte aos propósitos de modelagem e paralelização do sistema. O tipo de dado inteiro em C, \textit{int}, contém $32$ \textit{bits}, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de quantidade de \textit{bits}.
 
 À identificação do lote atual, $L$, do agente, considera-se que o identificador não ultrapasse $64$ valores, de modo que se supõe que uma quadra contenha no máximo $64$ lotes. À modelagem da posição $X, Y$ de um agente, considera-se que as quantidades de linhas, $\# L$, e de colunas, $\# C$, do ambiente, são limitadas por $max\big(\# L \times \# C\big)=\big(512 \times 512\big)$, onde $max$ indica o máximo possível de linhas e de colunas que podem ser alocadas à essa escolha, considerando-se que uma aproximação matricial de um lote de uma quadra resulta em uma matriz de no máximo $512 \times 512$ posições. À modelagem do contador de controle, $C$, de um agente, considera-se que a quantidade de ciclos em que um agente fica no estado exposto, infectado ou recuperado, não ultrapassem $64$ ciclos de simulação, pois supõe-se que a doença hipotética modelada não tem períodos de transição superior à esse valor. À modelagem do estado $E$ de um agente, considerando a adoção do modelo compartimental tipo SEIRS, existem somente quatro distintos estados.
 
-Observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra que comporte um quantidade de $32$ \textit{bits} para armazenar a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$ em \textit{bits}. A utilização de faixas maiores à representação dos atributos de um agente demandariam outros tipos de dados em $C$, com maior quantidade de \textit{bits}. A representação da tira proposta à modelagem dos agentes é como ilustrado na Figura \ref{fig:modelo_bitstring}, sendo que os elementos $l_i$, $x_i$, $y_i$, $c_i$ e $e_i$ possuem o valor $0$ ou $1$ e seus índices subscritos indicam que cada \textit{bit} pode variar nos respectivos intervalos que estão especificados.
+Observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra que comporte um quantidade de $32$ \textit{bits} para armazenar a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$ em \textit{bits}. A utilização de faixas maiores à representação dos atributos de um agente demandariam outros tipos de dados em C, com maior quantidade de \textit{bits}. A representação da palavra computacional proposta à modelagem dos agentes é como ilustrado na Figura \ref{fig:modelo_bitstring}, sendo que os elementos $l_i$, $x_i$, $y_i$, $c_i$ e $e_i$ possuem o valor $0$ ou $1$ e seus índices subscritos indicam que cada \textit{bit} pode variar nos respectivos intervalos que estão especificados.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=1.0\textwidth]{Figuras/Tira.eps}
@@ -108,7 +108,7 @@ Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y,
   \label{eq:bitstring_get}
 \end{equation}
 
-A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem $C$ para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. Em deslocamentos aritméticos, como aqueles que são definidos na linguagem $C$, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem $C$. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos. O uso do tipo \textit{unsigned int} é justificado por este motivo.
+A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. Em deslocamentos aritméticos, como aqueles que são definidos na linguagem C, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem C. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos. O uso do tipo \textit{unsigned int} é justificado por este motivo.
 
 Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que \ref{eq:bitstring_get} é então reescrita como em \ref{eq:bitstring_get_2}.
 \begin{equation}
@@ -124,21 +124,64 @@ Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$,
 
 As operações definidas em \ref{eq:bitstring_get} e \ref{eq:bitstring_get_2} capturam informações armazenadas nos agentes, como especificado em \ref{especificacaoAgente}.
 
-Também são necessárias outras operações para manipular os atributos dos agentes, além aquelas definidas em \ref{eq:bitstring_get_2}. Como a linguagem de programação $C$ não conta com operador próprio que permita a execução de operações de deslocamentos circulares, faz-se necessário a sua definição com base nos operadores existentes na linguagem, como os deslocamentos aritméticos e operações lógicas. Em \ref{eq:bitstring_circ} $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado, definidos como uma composição dos operadores de deslocamento aritmético e a operação lógica ou.
+Considere um agente $\chi(t)$ especificado como em \ref{eq:ex_get_agente}, onde o símbolo $|$ designa o separador dos campos do agente.
+
+\begin{equation}
+  \chi(t) = 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \\
+  \label{eq:ex_get_agente}
+\end{equation}
+
+A aplicação do operador de captura do campo de identificador do lote em que o agente $\chi(t)$ se encontra, como definido em \ref{eq:bitstring_get_2}, é exemplificada como ilustrado em \ref{eq:ex_get_l}.
+
+\begin{multline}
+  L(t) = \chi(t) \ll_{arth}(0) \gg_{arth}(26) \\
+  = L(t) = 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0  \ll_{arth}(0) \gg_{arth}(26) \\
+  \label{eq:ex_get_l}
+\end{multline}
+
+A aplicação do operador de captura do campo da coordenada $x$ do lote em que o agente $\chi(t)$ se encontra, como definido em \ref{eq:bitstring_get_2}, é exemplificada como ilustrado em \ref{eq:ex_get_x}.
+
+\begin{equation}
+  X(t) = \chi(t) \ll_{arth}(6) \gg_{arth}(23) \\
+  \label{eq:ex_get_x}
+\end{equation}
+
+A aplicação do operador de captura do campo da coordenada $y$ do lote em que o agente $\chi(t)$ se encontra, como definido em \ref{eq:bitstring_get_2}, é exemplificada como ilustrado em \ref{eq:ex_get_y}.
+
+\begin{equation}
+  Y(t) = \chi(t) \ll_{arth}(15) \gg_{arth}(23) \\
+  \label{eq:ex_get_y}
+\end{equation}
+
+A aplicação do operador de captura do campo do contador de transição de estados do agente $\chi(t)$, como definido em \ref{eq:bitstring_get_2}, é exemplificada como ilustrado em \ref{eq:ex_get_c}.
+
+\begin{equation}
+  C(t) = \chi(t) \ll_{arth}(24 \gg_{arth}(26) \\
+  \label{eq:ex_get_c}
+\end{equation}
+
+A aplicação do operador de captura do campo do estado do agente $\chi(t)$, como definido em \ref{eq:bitstring_get_2}, é exemplificada como ilustrado em \ref{eq:ex_get_e}.
+
+\begin{equation}
+  E(t) = \chi(t) \ll_{arth}(30) \gg_{arth}(30) \\
+  \label{eq:ex_get_e}
+\end{equation}
+
+Também são necessárias outras operações para manipular os atributos dos agentes, além aquelas definidas em \ref{eq:bitstring_get_2}. Como a linguagem de programação C não conta com operador próprio que permita a execução de operações de deslocamentos circulares, faz-se necessário a sua definição com base nos operadores existentes na linguagem, como os deslocamentos aritméticos e operações lógicas. Em \ref{eq:bitstring_circ} $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado, definidos como uma composição dos operadores de deslocamento aritmético e a operação lógica ou.
 \begin{equation}
   \begin{cases}
-    \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
-    \gg_{circ} = \big(M \gg_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
+    \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, \text{v} \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
+    \gg_{circ} = \big(M \gg_{arth}(shift)\big) \, \text{v} \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
   \end{cases}
   \label{eq:bitstring_circ}
 \end{equation}
 
-Em \ref{eq:bitstring_circ}, $M$ denota a palavra computacional em que está sendo aplicada a operação de deslocamento circular, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $|$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra.
+Em \ref{eq:bitstring_circ}, $M$ denota a palavra computacional em que está sendo aplicada a operação de deslocamento circular, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $\text{v}$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra.
 Assim, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_circ} é reescrita como em \ref{eq:bitstring_circ_2}.
 \begin{equation}
   \begin{cases}
-    \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(32 - shift)\big) \\
-    \gg_{circ} = \big(M \gg_{arth}(shift)\big) \, | \, \big(M \gg_{arth}(32 - shift)\big) \\
+    \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, \text{v} \, \big(M \gg_{arth}(32 - shift)\big) \\
+    \gg_{circ} = \big(M \gg_{arth}(shift)\big) \, \text{v} \, \big(M \gg_{arth}(32 - shift)\big) \\
   \end{cases}
   \label{eq:bitstring_circ_2}
 \end{equation}
@@ -147,11 +190,11 @@ Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_circ
 \begin{equation}
   \scriptsize
   \begin{cases}
-    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Al) \gg_{arth}(\#l) \ll_{arth} (\#l) \, | \, L(t + 1) \ll_{circ}(Al) \\
-    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ax) \gg_{arth}(\#x) \ll_{arth} (\#x) \, | \, X(t + 1) \ll_{circ}(Ax) \\
-    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ay) \gg_{arth}(\#y) \ll_{arth} (\#y) \, | \, Y(t + 1) \ll_{circ}(Ay) \\
-    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, | \, C(t + 1) \ll_{circ}(Ac) \\
-    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, | \, E(t + 1) \ll_{circ}(Ae) \\
+    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Al) \gg_{arth}(\#l) \ll_{arth} (\#l) \, \text{v} \, L(t + 1) \ll_{circ}(Al) \\
+    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ax) \gg_{arth}(\#x) \ll_{arth} (\#x) \, \text{v} \, X(t + 1) \ll_{circ}(Ax) \\
+    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ay) \gg_{arth}(\#y) \ll_{arth} (\#y) \, \text{v} \, Y(t + 1) \ll_{circ}(Ay) \\
+    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, \text{v} \, C(t + 1) \ll_{circ}(Ac) \\
+    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, \text{v} \, E(t + 1) \ll_{circ}(Ae) \\
   \end{cases}
   \label{bitstring_set}
 \end{equation}
@@ -162,11 +205,11 @@ Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $
 \begin{equation}
   \scriptsize
   \begin{cases}
-    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, | \, L(t + 1) \ll_{circ}(26) \\
-    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, | \, X(t + 1) \ll_{circ}(17) \\
-    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, | \, Y(t + 1) \ll_{circ}(8) \\
-    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, | \, C(t + 1) \ll_{circ}(2) \\
-    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, | \, E(t + 1) \ll_{circ}(0) \\
+    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, L(t + 1) \ll_{circ}(26) \\
+    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, X(t + 1) \ll_{circ}(17) \\
+    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, Y(t + 1) \ll_{circ}(8) \\
+    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, C(t + 1) \ll_{circ}(2) \\
+    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \text{v} \, E(t + 1) \ll_{circ}(0) \\
   \end{cases}
   \label{bitstring_set_2}
 \end{equation}
@@ -175,9 +218,7 @@ Na Tabela \ref{tab:variaveis} são apresentados sistematicamente os valores relat
 
 \begin{table}[h!]
 \centering
-\caption{Tabela dos tamanhos de cada campo}
 \begin{tabular}{c|c|c|c|c}
-  \label{tab:variaveis}
   Atributo & Tamanho & Complementar & Posteriores & Anteriores \\ \hline
   Identificador do Lote $L$ 	& 6 & 26 & 0 & 26 \\
   Coordenada $X$ 		& 9 & 23 & 6 & 17 \\
@@ -185,11 +226,11 @@ Na Tabela \ref{tab:variaveis} são apresentados sistematicamente os valores relat
   Contador de Controle $C$ 	& 6 & 26 & 24 & 2 \\
   Estado $E$ 			& 2 & 30 & 30 & 0 \\
 \end{tabular}
+\caption{Tabela das variáveis relativas aos campos dos agentes}
+\label{tab:variaveis}
 \end{table}
 
-Para completar a modelagem é suficiente detalhar e relacionar os identificadores dos lotes e dimensões dos lotes, a faixa de variação do controle, e os possíveis tipos de estados do agente na base $10$, com tais características na base $2$, para determinar sem ambigüidade os elementos de \ref{especificacaoAgente}.
-
-Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando $64$ possíveis valores. Os lotes têm dimensão máxima de $512_{10} = 2^{9}$ linhas por $512_{10} = 2^{9}$ colunas, sendo possível variarem numa representação matricial da posição $\big(0; 0\big)_{10} = \big(000\ 000\ 000; 000\ 000\ 000\big)_{2}$ até a posição $\big(511; 511\big)_{10} = \big(111\ 111\ 111; 111\ 111\ 111\big)_{2}$, totalizando os $512$ possíveis valores. Semelhantemente, faz-se uma representação matricial ao controle para que sua variação ocorra de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando os $64$ possíveis valores. Os estados do agente são setados como $\big(0, 0\big)_{2}$ para o suscetível, $S$, $\big(0, 1\big)_{2}$ para o exposto, $E$, $\big(1, 0\big)_{2}$ para o infectante, $I$, e $\big(1, 1\big)_{2}$ para o recuperado, $R$.
+Para completar a modelagem é suficiente detalhar e relacionar os identificadores dos lotes e dimensões dos lotes, a faixa de variação do controle, e os possíveis tipos de estados do agente na base $10$, com tais características na base $2$, para determinar sem ambigüidade os elementos de \ref{especificacaoAgente}. Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando $64$ possíveis valores. Os lotes têm dimensão máxima de $512_{10} = 2^{9}$ linhas por $512_{10} = 2^{9}$ colunas, sendo possível variarem numa representação matricial da posição $\big(0; 0\big)_{10} = \big(000\ 000\ 000; 000\ 000\ 000\big)_{2}$ até a posição $\big(511; 511\big)_{10} = \big(111\ 111\ 111; 111\ 111\ 111\big)_{2}$, totalizando os $512$ possíveis valores. Semelhantemente, faz-se uma representação matricial ao controle para que sua variação ocorra de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando os $64$ possíveis valores. Os estados do agente são setados como $\big(0, 0\big)_{2}$ para o suscetível, $S$, $\big(0, 1\big)_{2}$ para o exposto, $E$, $\big(1, 0\big)_{2}$ para o infectante, $I$, e $\big(1, 1\big)_{2}$ para o recuperado, $R$.
 
 \section{Estruturas de Dados, Linguagens e Estratégias de Implementação}
 

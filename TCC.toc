@@ -19,15 +19,15 @@
 \contentsline {section}{\numberline {3.2}Modelagem do Ambiente de Simula\c c\~ao}{24}
 \contentsline {section}{\numberline {3.3}Modelagem em Operadores aos Agentes}{26}
 \contentsline {section}{\numberline {3.4}Modelagem em \textit {Bitstring} aos Agentes}{28}
-\contentsline {section}{\numberline {3.5}Estruturas de Dados, Linguagens e Estrat\'egias de Implementa\c c\~ao}{33}
-\contentsline {section}{\numberline {3.6}CUDA e OpenMP}{33}
-\contentsline {section}{\numberline {3.7}SIMULA}{33}
-\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{34}
-\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{34}
-\contentsline {section}{\numberline {4.2}Implementa\c c\~ao Padr\~ao com CUDA e OpenMP}{34}
-\contentsline {section}{\numberline {4.3}Implementa\c c\~ao \textit {Bitstring} com CUDA e OpenMP}{34}
-\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{34}
-\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{35}
-\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{35}
-\contentsline {section}{\numberline {5.2}Cases: Discutir as Simulac\~oes no Espa\c co Geogr\'afico Escolhido.}{35}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{36}
+\contentsline {section}{\numberline {3.5}Estruturas de Dados, Linguagens e Estrat\'egias de Implementa\c c\~ao}{35}
+\contentsline {section}{\numberline {3.6}CUDA e OpenMP}{35}
+\contentsline {section}{\numberline {3.7}SIMULA}{35}
+\contentsline {chapter}{\numberline {4}Solu\c c\~oes}{36}
+\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{36}
+\contentsline {section}{\numberline {4.2}Implementa\c c\~ao Padr\~ao com CUDA e OpenMP}{36}
+\contentsline {section}{\numberline {4.3}Implementa\c c\~ao \textit {Bitstring} com CUDA e OpenMP}{36}
+\contentsline {section}{\numberline {4.4}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{36}
+\contentsline {chapter}{\numberline {5}Resultados e Discuss\~oes}{37}
+\contentsline {section}{\numberline {5.1}Introdu\c c\~ao}{37}
+\contentsline {section}{\numberline {5.2}Cases: Discutir as Simulac\~oes no Espa\c co Geogr\'afico Escolhido.}{37}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{38}
