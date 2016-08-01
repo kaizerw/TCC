@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  28 JUL 2016 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  1 AUG 2016 10:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -388,8 +388,7 @@ Writing glossary file TCC.glo
 (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux) (./iniciais/aprova.aux)
 (./iniciais/dedica.aux) (./iniciais/agradece.aux) (./iniciais/sumario.aux)
 (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
-(./capitulo3/capitulo3.aux) (./capitulo4/capitulo4.aux)
-(./capitulo5/capitulo5.aux))
+(./capitulo3/capitulo3.aux))
 \openout1 = `TCC.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
@@ -563,17 +562,17 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 
 ] [9
 
-] (./TCC.toc
-[10
-
-])
+] (./TCC.toc)
 \tf@toc=\write7
 \openout7 = `TCC.toc'.
 
-) [11]
+)
+[10
+
+]
 \openout2 = `iniciais/resumo.aux'.
 
- (./iniciais/resumo.tex) [12
+ (./iniciais/resumo.tex) [11
 
 
 
@@ -625,7 +624,7 @@ ed-to.pdf Figuras/modelo.eps>
 (epstopdf)             \includegraphics on input line 64.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figuras/modelo-eps-converted-to.pdf, id=80, 400.49625pt x 95.35625pt>
+<Figuras/modelo-eps-converted-to.pdf, id=77, 400.49625pt x 95.35625pt>
 File: Figuras/modelo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/modelo-eps-converted-to.pdf>
@@ -649,7 +648,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
 
 (./capitulo3/capitulo3.tex
 Cap\'{\i }tulo 3.
-<Figuras/Q445.png, id=132, 2638.60782pt x 2488.79813pt>
+<Figuras/Q445.png, id=129, 2638.60782pt x 2488.79813pt>
 File: Figuras/Q445.png Graphic file (type png)
  <use Figuras/Q445.png>
 Package pdftex.def Info: Figuras/Q445.png used on input line 16.
@@ -660,7 +659,7 @@ Package pdftex.def Info: Figuras/Q445.png used on input line 16.
 
 
 ] [25 <./Figuras/Q445.png>]
-<Figuras/Vizinhanca_Moore.png, id=140, 158.7531pt x 158.7531pt>
+<Figuras/Vizinhanca_Moore.png, id=136, 158.7531pt x 158.7531pt>
 File: Figuras/Vizinhanca_Moore.png Graphic file (type png)
 
 <use Figuras/Vizinhanca_Moore.png>
@@ -678,142 +677,179 @@ Package epstopdf Info: Source file: <Figuras/Tira.eps>
 -to.pdf Figuras/Tira.eps>
 (epstopdf)             \includegraphics on input line 88.
 Package epstopdf Info: Output file is already uptodate.
- <Figuras/Tira-eps-converted-to.pdf, id=152, 2328.7pt x 163.61125pt>
+ <Figuras/Tira-eps-converted-to.pdf, id=149, 2328.7pt x 163.61125pt>
 File: Figuras/Tira-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/Tira-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/Tira-eps-converted-to.pdf used on input line 8
 8.
 (pdftex.def)             Requested size: 455.8843pt x 32.02763pt.
- [29 <./Figuras/Tira-eps-converted-to.pdf>] [30] [31] [32] [33]
+ [29 <./Figuras/Tira-eps-converted-to.pdf>] [30] [31] [32]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 252.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
+1.
+
+
+Overfull \hbox (33.12515pt too wide) in paragraph at lines 230--230
+[] 
+ []
+
+
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 23
+5.
+
+
+Overfull \hbox (33.12515pt too wide) in paragraph at lines 244--244
+[] 
+ []
+
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 248.
 
 
 
-Overfull \hbox (29.1707pt too wide) detected at line 261
+Overfull \hbox (29.1707pt too wide) detected at line 257
 []
  []
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 261.
+[33]
+LaTeX Font Info:    Calculating math sizes for size <> on input line 257.
+
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 261.
+(Font)              size <5> substituted on input line 257.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 267.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 263.
 
 
 
-Overfull \hbox (8.63158pt too wide) detected at line 276
+Overfull \hbox (8.63158pt too wide) detected at line 272
 []
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[34]) [35]
-\openout2 = `capitulo4/capitulo4.aux'.
-
- (./capitulo4/capitulo4.tex
-Cap\'{\i }tulo 4.
-) [36
+LaTeX Font Warning: Command \small invalid in math mode on input line 279.
 
 
+Overfull \hbox (22.01254pt too wide) in paragraph at lines 290--290
+[] 
+ []
 
-]
-\openout2 = `capitulo5/capitulo5.aux'.
+[34]
 
- (./capitulo5/capitulo5.tex
-Cap\'{\i }tulo 5.
-) [37
-
-
-
-] (./TCC.bbl [38
+LaTeX Font Warning: Command \small invalid in math mode on input line 295.
 
 
-]) [39] (./TCC.aux (./iniciais/capa.aux)
+Overfull \hbox (38.43756pt too wide) in paragraph at lines 306--306
+[] 
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 311.
+
+
+Overfull \hbox (27.48755pt too wide) in paragraph at lines 322--322
+[] 
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 327.
+
+
+Overfull \hbox (11.06253pt too wide) in paragraph at lines 338--338
+[] 
+ []
+
+[35]
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 343.
+
+) [36] (./TCC.bbl [37
+
+
+]) [38] (./TCC.aux (./iniciais/capa.aux)
 (./iniciais/rosto.aux) (./iniciais/aprova.aux) (./iniciais/dedica.aux)
 (./iniciais/agradece.aux) (./iniciais/sumario.aux) (./iniciais/resumo.aux)
 (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
-(./capitulo3/capitulo3.aux) (./capitulo4/capitulo4.aux)
-(./capitulo5/capitulo5.aux))
+(./capitulo3/capitulo3.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4715 strings out of 493054
- 61934 string characters out of 6140586
- 153855 words of memory out of 5000000
- 7956 multiletter control sequences out of 15000+600000
- 62230 words of font info for 90 fonts, out of 8000000 for 9000
+ 4712 strings out of 493054
+ 61766 string characters out of 6140586
+ 146943 words of memory out of 5000000
+ 7967 multiletter control sequences out of 15000+600000
+ 70972 words of font info for 102 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
  38i,19n,44p,1637b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/u
-rw/times/utmb8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></
-usr/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fo
-nts/type1/urw/times/utmri8a.pfb>
-Output written on TCC.pdf (51 pages, 690725 bytes).
+/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
+.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/font
+s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+sy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
+/usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/f
+onts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
+tmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on TCC.pdf (49 pages, 720275 bytes).
 PDF statistics:
- 246 PDF objects out of 1000 (max. 8388607)
- 169 compressed objects within 2 object streams
+ 252 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

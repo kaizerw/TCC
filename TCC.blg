@@ -11,8 +11,6 @@ A level-1 auxiliary file: iniciais/resumo.aux
 A level-1 auxiliary file: capitulo1/capitulo1.aux
 A level-1 auxiliary file: capitulo2/capitulo2.aux
 A level-1 auxiliary file: capitulo3/capitulo3.aux
-A level-1 auxiliary file: capitulo4/capitulo4.aux
-A level-1 auxiliary file: capitulo5/capitulo5.aux
 The style file: abnt-alf.bst
 Reallocated singl_function (elt_size=8) to 100 items from 50.
 Reallocated singl_function (elt_size=8) to 100 items from 50.
@@ -35,7 +33,7 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
 You've used 14 entries,
             6480 wiz_defined-function locations,
-            1262 strings with 11682 characters,
+            1260 strings with 11636 characters,
 and the built_in function-call counts, 11342 in all, are:
 = -- 964
 > -- 401

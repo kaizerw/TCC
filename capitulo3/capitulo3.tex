@@ -116,7 +116,7 @@ Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$,
     L(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(0) \gg_{arth}(26) \\
     X(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(6) \gg_{arth}(23) \\
     Y(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(15) \gg_{arth}(23) \\
-    C(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(24 \gg_{arth}(26) \\
+    C(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(24) \gg_{arth}(26) \\
     E(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(30) \gg_{arth}(30) \\
   \end{cases}
   \label{eq:bitstring_get_2}
@@ -174,7 +174,7 @@ A aplicação do operador de captura do campo do contador de transição de estados 
 
 \begin{equation}
   \begin{split}
-  C(t) = & \chi(t) \ll_{arth}(24 \gg_{arth}(26) \\
+  C(t) = & \chi(t) \ll_{arth}(24) \gg_{arth}(26) \\
        = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0  \ll_{arth}(24) \gg_{arth}(26) \\
        = & 0 0 1 1 1 0 | 1 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 | 0 0 \gg_{arth}(26) \\
        = & 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 1 1 | 1 0 \\
@@ -218,14 +218,12 @@ Assim, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_c
 Em \ref{eq:ex_circ_left} é ilustrado um exemplo da aplicação do operador $\ll_{circ}$ definido em \ref{eq:bitstring_circ_2} em uma palavra computacional $M = 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 $ de 32 \textit{bits}, com $shift = 8$.
 
 \begin{equation}
+  \footnotesize
   \begin{split}
   \ll_{circ} = & \big(M \ll_{arth}(shift)\big) \, \text{v} \, \big(M \gg_{arth}(32 - shift)\big) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \\
-	       & \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(32 - 8) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \\
-	       & \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(24) \\
-	     = & 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 \\
-	       & \text{v} \, 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 \\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \, \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(32 - 8) \\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \, \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(24) \\
+	     = & 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 \, \text{v} \, 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 \\
 	     = & 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 | 1 1 0 1 0 0 0 0 \\
   \label{eq:ex_circ_left}
   \end{split}
@@ -234,20 +232,18 @@ Em \ref{eq:ex_circ_left} é ilustrado um exemplo da aplicação do operador $\ll_{c
 Em \ref{eq:ex_circ_right} é ilustrado um exemplo da aplicação do operador $\gg_{circ}$ definido em \ref{eq:bitstring_circ_2} em uma palavra computacional $M = 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 $ de 32 \textit{bits}, com $shift = 8$.
 
 \begin{equation}
+  \footnotesize
   \begin{split}
   \gg_{circ} = & \big(M \gg_{arth}(shift)\big) \, \text{v} \, \big(M \ll_{arth}(32 - shift)\big) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \\
-	       & \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(32 - 8) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \\
-	       & \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(24) \\  
-	     = & 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 \\
-	       & \text{v} \, 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0\\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \, \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(32 - 8) \\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \, \text{v} \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(24) \\  
+	     = & 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 \, \text{v} \, 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0\\
 	     = & 0 0 1 1 1 0 1 0 | 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 \\
   \label{eq:ex_circ_right}
   \end{split}
 \end{equation}
 
-Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_circ_2}, para implementar o operador espaço-temporal $\lambda\big(\chi(t)\big)$ que movimenta o agente da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual $t$, para o ciclo de tempo $t+1$. As operações definidas em \ref{bitstring_set} resultam na atualização dos atributos de identificação do lote, das coordenadas $x$ e $y$ da posição, do controle e do estado do agente.
+Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_circ_2}, para implementar o operador espaço-temporal $\lambda\big(\chi(t)\big)$ que movimenta o agente da posição $(i,j)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual $t$, para o ciclo de tempo $t+1$. As operações definidas em \ref{eq:bitstring_set} resultam na atualização dos atributos de identificação do lote, das coordenadas $x$ e $y$ da posição, do controle e do estado do agente.
 \begin{equation}
   \scriptsize
   \begin{cases}
@@ -257,12 +253,12 @@ Subsequentemente são utilizadas as operações definidas em \ref{eq:bitstring_circ
     \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, \text{v} \, C(t + 1) \ll_{circ}(Ac) \\
     \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, \text{v} \, E(t + 1) \ll_{circ}(Ae) \\
   \end{cases}
-  \label{bitstring_set}
+  \label{eq:bitstring_set}
 \end{equation}
 
-Em \ref{bitstring_set}, $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo.
+Em \ref{eq:bitstring_set}, $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo.
 
-Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, \ref{bitstring_set} é reescrita como em \ref{bitstring_set_2}.
+Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, \ref{eq:bitstring_set} é reescrita como em \ref{eq:bitstring_set_2}.
 \begin{equation}
   \scriptsize
   \begin{cases}
@@ -272,7 +268,89 @@ Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $
     \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, C(t + 1) \ll_{circ}(2) \\
     \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \text{v} \, E(t + 1) \ll_{circ}(0) \\
   \end{cases}
-  \label{bitstring_set_2}
+  \label{eq:bitstring_set_2}
+\end{equation}
+
+Considere novamente o agente $\chi(t)$ especificado em \ref{eq:ex_get_agente}, onde o símbolo $|$ designa o separador dos campos do agente.
+
+A aplicação do operador definido em \ref{eq:bitstring_set_2} para a configuração do campo do identificador do lote do agente $\chi(t)$ de $L(t)$ para $L(t + 1)$, é exemplificada como ilustrado em \ref{eq:ex_set_l}, considerando $L(t + 1) = 0 0 1 1 1 1$.
+
+\begin{equation}
+  \small
+  \begin{split}
+  \chi(t + 1) = & \chi(t) \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, L(t + 1) \ll_{circ}(26) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, 0 0 1 1 1 1 \ll_{circ}(26) \\
+  = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, 0 0 1 1 1 1 \ll_{circ}(26) \\
+  = & 0 0 0 0 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \ll_{arth}(6) \, \text{v} \, 0 0 1 1 1 1 \ll_{circ}(26) \\
+  = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 0 0 0 0 | 0 0 \, \text{v} \, 0 0 1 1 1 1 \ll_{circ}(26) \\
+  = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 0 0 1 1 | 1 1 \ll_{circ}(26) \\
+  = & 0 0 1 1 1 1 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \\
+  \label{eq:ex_set_l}
+  \end{split}
+\end{equation}
+
+A aplicação do operador definido em \ref{eq:bitstring_set_2} para a configuração do campo da coordenada $x$ do lote do agente $\chi(t)$ de $X(t)$ para $X(t + 1)$, é exemplificada como ilustrado em \ref{eq:ex_set_x}, considerando $X(t + 1) = 1 1 0 0 0 0 1 1 1$.
+
+\begin{equation}
+  \small
+  \begin{split}
+  \chi(t + 1) = & \chi(t) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, X(t + 1) \ll_{circ}(17) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 0 0 0 0 0 | 0 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \ll_{arth}(9) \, \text{v} \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 0 0 0 0 0 | 0 0 \, \text{v} \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 1 | 1 0 0 0 0 1 | 1 1 \ll_{circ}(17) \\
+  = & 1 1 0 1 0 0 | 1 1 0 0 0 0 1 1 1 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \\
+  \label{eq:ex_set_x}
+  \end{split}
+\end{equation}
+
+A aplicação do operador definido em \ref{eq:bitstring_set_2} para a configuração do campo da coordenada $y$ do lote do agente $\chi(t)$ de $Y(t)$ para $Y(t + 1)$, é exemplificada como ilustrado em \ref{eq:ex_set_y}, considerando $Y(t + 1) = 1 1 1 1 0 1 0 0 0$.
+
+\begin{equation}
+  \small
+  \begin{split}
+  \chi(t + 1) = & \chi(t) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, Y(t + 1) \ll_{circ}(8) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \gg_{arth}(9) \ll_{arth}(9) \, \text{v} \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 0 0 0 0 | 0 0 0 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \ll_{arth}(9) \, \text{v} \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 0 0 0 0 0 0 | 0 0 \, \text{v} \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 1 | 1 1 1 0 1 0 | 0 0 \ll_{circ}(8) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 1 1 1 1 0 1 0 0 0 | 0 0 1 1 1 0 | 1 0 \\
+  \label{eq:ex_set_y}
+  \end{split}
+\end{equation}
+
+A aplicação do operador definido em \ref{eq:bitstring_set_2} para a configuração do campo do contador de transição de estados do agente $\chi(t)$ de $C(t)$ para $C(t + 1)$, é exemplificada como ilustrado em \ref{eq:ex_set_c}, considerando $C(t + 1) = 1 0 1 0 1 1$.
+
+\begin{equation}
+  \small
+  \begin{split}
+  \chi(t + 1) = & \chi(t) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, C(t + 1) \ll_{circ}(2) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \gg_{arth}(6) \ll_{arth}(6) \, \text{v} \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 0 0 0 0 0 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \ll_{arth}(6) \, \text{v} \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 0 0 | 0 0 \, \text{v} \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 1 0 1 0 | 1 1 \ll_{circ}(2) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 1 0 1 0 1 1 | 1 0 \\
+  \label{eq:ex_set_c}
+  \end{split}
+\end{equation}
+
+A aplicação do operador definido em \ref{eq:bitstring_set_2} para a configuração do campo do estado do agente $\chi(t)$ de $E(t)$ para $E(t + 1)$, é exemplificada como ilustrado em \ref{eq:ex_set_e}, considerando $E(t + 1) = 0 1$.
+
+\begin{equation}
+  \small
+  \begin{split}
+  \chi(t + 1) = & \chi(t) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \text{v} \, E(t + 1) \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \text{v} \, 0 1 \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{arth}(2) \ll_{arth}(2) \, \text{v} \, 0 1 \ll_{circ}(0) \\
+  = & 0 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \ll_{arth}(2) \, \text{v} \, 0 1 \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 0 \, \text{v} \, 0 1 \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 1 \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 1 \\
+  \label{eq:ex_set_e}
+  \end{split}
 \end{equation}
 
 Na Tabela \ref{tab:variaveis} são apresentados sistematicamente os valores relativos às quantidades de \textit{bits} dos tamanhos, complementos, posteriores e anteriores de cada atributo do agente $\chi$.
@@ -287,14 +365,14 @@ Na Tabela \ref{tab:variaveis} são apresentados sistematicamente os valores relat
   Contador de Controle $C$ 	& 6 & 26 & 24 & 2 \\
   Estado $E$ 			& 2 & 30 & 30 & 0 \\
 \end{tabular}
-\caption{Tabela das variáveis relativas aos campos dos agentes}
+\caption{Tabela das variáveis relacionadas aos campos dos agentes}
 \label{tab:variaveis}
 \end{table}
 
 Para completar a modelagem é suficiente detalhar e relacionar os identificadores dos lotes e dimensões dos lotes, a faixa de variação do controle, e os possíveis tipos de estados do agente na base $10$, com tais características na base $2$, para determinar sem ambigüidade os elementos de \ref{especificacaoAgente}. Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando $64$ possíveis valores. Os lotes têm dimensão máxima de $512_{10} = 2^{9}$ linhas por $512_{10} = 2^{9}$ colunas, sendo possível variarem numa representação matricial da posição $\big(0; 0\big)_{10} = \big(000\ 000\ 000; 000\ 000\ 000\big)_{2}$ até a posição $\big(511; 511\big)_{10} = \big(111\ 111\ 111; 111\ 111\ 111\big)_{2}$, totalizando os $512$ possíveis valores. Semelhantemente, faz-se uma representação matricial ao controle para que sua variação ocorra de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando os $64$ possíveis valores. Os estados do agente são setados como $\big(0, 0\big)_{2}$ para o suscetível, $S$, $\big(0, 1\big)_{2}$ para o exposto, $E$, $\big(1, 0\big)_{2}$ para o infectante, $I$, e $\big(1, 1\big)_{2}$ para o recuperado, $R$.
 
-\section{Estruturas de Dados, Linguagens e Estratégias de Implementação}
+%\section{Estruturas de Dados, Linguagens e Estratégias de Implementação}
 
-\section{CUDA e OpenMP}
+%\section{CUDA e OpenMP}
 
-\section{SIMULA}
+%\section{SIMULA}
