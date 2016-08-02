@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  1 AUG 2016 10:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  2 AUG 2016 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -621,7 +621,7 @@ Package epstopdf Info: Source file: <Figuras/modelo.eps>
 (epstopdf)                    size: 6019 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/modelo-eps-convert
 ed-to.pdf Figuras/modelo.eps>
-(epstopdf)             \includegraphics on input line 64.
+(epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 
 <Figuras/modelo-eps-converted-to.pdf, id=77, 400.49625pt x 95.35625pt>
@@ -629,19 +629,19 @@ File: Figuras/modelo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/modelo-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/modelo-eps-converted-to.pdf used on input line
- 64.
+ 59.
 (pdftex.def)             Requested size: 296.322pt x 70.55669pt.
  [11 <./Figuras/modelo-eps-converted-to.pdf>]
-Overfull \hbox (10.67067pt too wide) detected at line 103
+Overfull \hbox (7.33739pt too wide) detected at line 98
 []
  []
 
 [12]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <12> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 131.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 126.
  [13] [14] [15] [16] [17] [18]
 LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/it' tried instead on input line 180.
+(Font)              Font shape `T1/ptm/b/it' tried instead on input line 177.
  [19] [20] [21] [22]) [23]
 \openout2 = `capitulo3/capitulo3.aux'.
 
@@ -664,7 +664,7 @@ File: Figuras/Vizinhanca_Moore.png Graphic file (type png)
 
 <use Figuras/Vizinhanca_Moore.png>
 Package pdftex.def Info: Figuras/Vizinhanca_Moore.png used on input line 29.
-(pdftex.def)             Requested size: 136.76668pt x 136.76723pt.
+(pdftex.def)             Requested size: 113.97107pt x 113.97269pt.
  [26 <./Figuras/Vizinhanca_Moore.png>]
 [27] [28]
 Package epstopdf Info: Source file: <Figuras/Tira.eps>
@@ -675,144 +675,151 @@ Package epstopdf Info: Source file: <Figuras/Tira.eps>
 (epstopdf)                    size: 21102 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/Tira-eps-converted
 -to.pdf Figuras/Tira.eps>
-(epstopdf)             \includegraphics on input line 88.
+(epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
  <Figuras/Tira-eps-converted-to.pdf, id=149, 2328.7pt x 163.61125pt>
 File: Figuras/Tira-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/Tira-eps-converted-to.pdf>
 Package pdftex.def Info: Figuras/Tira-eps-converted-to.pdf used on input line 8
-8.
+6.
 (pdftex.def)             Requested size: 455.8843pt x 32.02763pt.
  [29 <./Figuras/Tira-eps-converted-to.pdf>] [30] [31] [32]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-1.
+0.
 
 
-Overfull \hbox (33.12515pt too wide) in paragraph at lines 230--230
+Overfull \hbox (39.23618pt too wide) in paragraph at lines 229--229
 [] 
  []
 
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 23
-5.
+4.
 
 
-Overfull \hbox (33.12515pt too wide) in paragraph at lines 244--244
+Overfull \hbox (39.23618pt too wide) in paragraph at lines 243--243
 [] 
  []
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 248.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 247.
 
 
 
-Overfull \hbox (29.1707pt too wide) detected at line 257
+Overfull \hbox (34.61528pt too wide) detected at line 256
 []
  []
 
 [33]
-LaTeX Font Info:    Calculating math sizes for size <> on input line 257.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 256.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 257.
+(Font)              size <5> substituted on input line 256.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 263.
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 260.
 
 
 
-Overfull \hbox (8.63158pt too wide) detected at line 272
+Overfull \hbox (14.07616pt too wide) detected at line 269
 []
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 279.
+LaTeX Font Warning: Command \small invalid in math mode on input line 274.
 
 
-Overfull \hbox (22.01254pt too wide) in paragraph at lines 290--290
+Overfull \hbox (28.70415pt too wide) in paragraph at lines 285--285
+[] 
+ []
+
+
+LaTeX Font Warning: Command \small invalid in math mode on input line 290.
+
+
+Overfull \hbox (45.12917pt too wide) in paragraph at lines 301--301
 [] 
  []
 
 [34]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 295.
+LaTeX Font Warning: Command \small invalid in math mode on input line 306.
 
 
-Overfull \hbox (38.43756pt too wide) in paragraph at lines 306--306
+Overfull \hbox (34.17915pt too wide) in paragraph at lines 317--317
 [] 
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 311.
+LaTeX Font Warning: Command \small invalid in math mode on input line 322.
 
 
-Overfull \hbox (27.48755pt too wide) in paragraph at lines 322--322
-[] 
- []
-
-
-LaTeX Font Warning: Command \small invalid in math mode on input line 327.
-
-
-Overfull \hbox (11.06253pt too wide) in paragraph at lines 338--338
+Overfull \hbox (17.75414pt too wide) in paragraph at lines 333--333
 [] 
  []
 
 [35]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 343.
-
-) [36] (./TCC.bbl [37
+LaTeX Font Warning: Command \small invalid in math mode on input line 338.
 
 
-]) [38] (./TCC.aux (./iniciais/capa.aux)
+Underfull \hbox (badness 1210) in paragraph at lines 369--370
+[]\T1/ptm/m/n/12 Os iden-ti-fi-ca-do-res dos lo-tes têm va-ri-a-ção de $[]\OT1/
+cmr/m/n/12 0[][] = []000 000[][]$ \T1/ptm/m/n/12 até $[]\OT1/cmr/m/n/12 63[][] 
+=
+ []
+
+) [36] [37] (./TCC.bbl [38
+
+
+]) [39] (./TCC.aux (./iniciais/capa.aux)
 (./iniciais/rosto.aux) (./iniciais/aprova.aux) (./iniciais/dedica.aux)
 (./iniciais/agradece.aux) (./iniciais/sumario.aux) (./iniciais/resumo.aux)
 (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
@@ -823,13 +830,13 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4712 strings out of 493054
- 61766 string characters out of 6140586
- 146943 words of memory out of 5000000
- 7967 multiletter control sequences out of 15000+600000
- 70972 words of font info for 102 fonts, out of 8000000 for 9000
+ 4710 strings out of 493054
+ 61742 string characters out of 6140586
+ 149943 words of memory out of 5000000
+ 7965 multiletter control sequences out of 15000+600000
+ 67684 words of font info for 100 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
- 38i,19n,44p,1637b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,19n,43p,1616b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
@@ -846,10 +853,10 @@ sy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/f
 onts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TCC.pdf (49 pages, 720275 bytes).
+Output written on TCC.pdf (50 pages, 721400 bytes).
 PDF statistics:
- 252 PDF objects out of 1000 (max. 8388607)
- 174 compressed objects within 2 object streams
+ 255 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
