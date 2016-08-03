@@ -1,9 +1,9 @@
 \select@language {brazil}
-\contentsline {chapter}{Lista de Figuras}{vi}
-\contentsline {chapter}{Lista de Tabelas}{vii}
-\contentsline {chapter}{Lista de Abreviaturas e Siglas}{viii}
-\contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{ix}
-\contentsline {chapter}{Resumo}{xi}
+\contentsline {chapter}{Lista de Figuras}{v}
+\contentsline {chapter}{Lista de Tabelas}{vi}
+\contentsline {chapter}{Lista de Abreviaturas e Siglas}{vii}
+\contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{viii}
+\contentsline {chapter}{Resumo}{x}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
 \contentsline {section}{\numberline {1.1}Objetivos}{2}
 \contentsline {section}{\numberline {1.2}Motiva\c c\~ao e Justificativas}{3}

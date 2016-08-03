@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  2 AUG 2016 19:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  3 AUG 2016 15:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -386,8 +386,8 @@ Writing index file TCC.idx
 
 Writing glossary file TCC.glo 
 (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux) (./iniciais/aprova.aux)
-(./iniciais/dedica.aux) (./iniciais/agradece.aux) (./iniciais/sumario.aux)
-(./iniciais/resumo.aux) (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
+(./iniciais/dedica.aux) (./iniciais/sumario.aux) (./iniciais/resumo.aux)
+(./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
 (./capitulo3/capitulo3.aux))
 \openout1 = `TCC.aux'.
 
@@ -528,27 +528,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `iniciais/dedica.aux'.
 
- (./iniciais/dedica.tex) [4
+ (./iniciais/dedica.tex
+Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
+ []
 
-]
-\openout2 = `iniciais/agradece.aux'.
-
- (./iniciais/agradece.tex) [5
+) [4
 
 
 ]
 \openout2 = `iniciais/sumario.aux'.
 
-
-(./iniciais/sumario.tex
+ (./iniciais/sumario.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
  (./TCC.lof)
 \tf@lof=\write5
 \openout5 = `TCC.lof'.
 
- [6
+ [5
 
 
 
@@ -556,23 +554,23 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 \tf@lot=\write6
 \openout6 = `TCC.lot'.
 
- [7
+ [6
+
+] [7
 
 ] [8
 
-] [9
-
-] (./TCC.toc)
+]
+(./TCC.toc)
 \tf@toc=\write7
 \openout7 = `TCC.toc'.
 
-)
-[10
+) [9
 
 ]
 \openout2 = `iniciais/resumo.aux'.
 
- (./iniciais/resumo.tex) [11
+ (./iniciais/resumo.tex) [10
 
 
 
@@ -624,7 +622,7 @@ ed-to.pdf Figuras/modelo.eps>
 (epstopdf)             \includegraphics on input line 59.
 Package epstopdf Info: Output file is already uptodate.
 
-<Figuras/modelo-eps-converted-to.pdf, id=77, 400.49625pt x 95.35625pt>
+<Figuras/modelo-eps-converted-to.pdf, id=74, 400.49625pt x 95.35625pt>
 File: Figuras/modelo-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/modelo-eps-converted-to.pdf>
@@ -648,7 +646,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
 
 (./capitulo3/capitulo3.tex
 Cap\'{\i }tulo 3.
-<Figuras/Q445.png, id=129, 2638.60782pt x 2488.79813pt>
+<Figuras/Q445.png, id=126, 2638.60782pt x 2488.79813pt>
 File: Figuras/Q445.png Graphic file (type png)
  <use Figuras/Q445.png>
 Package pdftex.def Info: Figuras/Q445.png used on input line 16.
@@ -659,7 +657,7 @@ Package pdftex.def Info: Figuras/Q445.png used on input line 16.
 
 
 ] [25 <./Figuras/Q445.png>]
-<Figuras/Vizinhanca_Moore.png, id=136, 158.7531pt x 158.7531pt>
+<Figuras/Vizinhanca_Moore.png, id=133, 158.7531pt x 158.7531pt>
 File: Figuras/Vizinhanca_Moore.png Graphic file (type png)
 
 <use Figuras/Vizinhanca_Moore.png>
@@ -677,7 +675,7 @@ Package epstopdf Info: Source file: <Figuras/Tira.eps>
 -to.pdf Figuras/Tira.eps>
 (epstopdf)             \includegraphics on input line 86.
 Package epstopdf Info: Output file is already uptodate.
- <Figuras/Tira-eps-converted-to.pdf, id=149, 2328.7pt x 163.61125pt>
+ <Figuras/Tira-eps-converted-to.pdf, id=146, 2328.7pt x 163.61125pt>
 File: Figuras/Tira-eps-converted-to.pdf Graphic file (type pdf)
 
 <use Figuras/Tira-eps-converted-to.pdf>
@@ -821,19 +819,18 @@ cmr/m/n/12 0[][] = []000 000[][]$ \T1/ptm/m/n/12 até $[]\OT1/cmr/m/n/12 63[][]
 
 ]) [39] (./TCC.aux (./iniciais/capa.aux)
 (./iniciais/rosto.aux) (./iniciais/aprova.aux) (./iniciais/dedica.aux)
-(./iniciais/agradece.aux) (./iniciais/sumario.aux) (./iniciais/resumo.aux)
-(./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
-(./capitulo3/capitulo3.aux))
+(./iniciais/sumario.aux) (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux)
+(./capitulo2/capitulo2.aux) (./capitulo3/capitulo3.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 4710 strings out of 493054
- 61742 string characters out of 6140586
- 149943 words of memory out of 5000000
- 7965 multiletter control sequences out of 15000+600000
+ 4702 strings out of 493054
+ 61582 string characters out of 6140586
+ 149467 words of memory out of 5000000
+ 7964 multiletter control sequences out of 15000+600000
  67684 words of font info for 100 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
  38i,19n,43p,1616b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -853,10 +850,10 @@ sy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/f
 onts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TCC.pdf (50 pages, 721400 bytes).
+Output written on TCC.pdf (49 pages, 721783 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+ 252 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,7 +5,6 @@ A level-1 auxiliary file: iniciais/capa.aux
 A level-1 auxiliary file: iniciais/rosto.aux
 A level-1 auxiliary file: iniciais/aprova.aux
 A level-1 auxiliary file: iniciais/dedica.aux
-A level-1 auxiliary file: iniciais/agradece.aux
 A level-1 auxiliary file: iniciais/sumario.aux
 A level-1 auxiliary file: iniciais/resumo.aux
 A level-1 auxiliary file: capitulo1/capitulo1.aux
@@ -33,7 +32,7 @@ Reallocated glb_str_end (elt_size=8) to 20 items from 10.
 +---------------------------------------------------------+
 You've used 14 entries,
             6480 wiz_defined-function locations,
-            1260 strings with 11636 characters,
+            1259 strings with 11615 characters,
 and the built_in function-call counts, 11342 in all, are:
 = -- 964
 > -- 401
