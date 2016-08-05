@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  4 AUG 2016 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Arch Linux) (preloaded format=pdflatex 2016.5.27)  5 AUG 2016 08:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -528,12 +528,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `iniciais/dedica.aux'.
 
- (./iniciais/dedica.tex
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
-
- []
-
-) [4
+ (./iniciais/dedica.tex) [4
 
 
 ]
@@ -550,7 +545,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 
 
 
-] (./TCC.lot)
+]
+(./TCC.lot)
 \tf@lot=\write6
 \openout6 = `TCC.lot'.
 
@@ -560,8 +556,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 
 ] [8
 
-]
-(./TCC.toc)
+] (./TCC.toc)
 \tf@toc=\write7
 \openout7 = `TCC.toc'.
 
@@ -827,10 +822,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4702 strings out of 493054
- 61582 string characters out of 6140586
+ 4703 strings out of 493054
+ 61597 string characters out of 6140586
  149467 words of memory out of 5000000
- 7964 multiletter control sequences out of 15000+600000
+ 7965 multiletter control sequences out of 15000+600000
  67684 words of font info for 100 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
  38i,19n,43p,1616b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -850,7 +845,7 @@ sy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><
 /usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/f
 onts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/u
 tmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TCC.pdf (49 pages, 721775 bytes).
+Output written on TCC.pdf (49 pages, 721829 bytes).
 PDF statistics:
  252 PDF objects out of 1000 (max. 8388607)
  174 compressed objects within 2 object streams
