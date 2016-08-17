@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Arch Linux)
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: TCC.aux
 A level-1 auxiliary file: iniciais/capa.aux
@@ -11,63 +11,63 @@ A level-1 auxiliary file: capitulo1/capitulo1.aux
 A level-1 auxiliary file: capitulo2/capitulo2.aux
 A level-1 auxiliary file: capitulo3/capitulo3.aux
 The style file: abnt-alf.bst
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated wiz_functions (elt_size=8) to 6000 items from 3000.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Referencias.bib
-Reallocated wiz_functions (elt_size=8) to 9000 items from 6000.
-Reallocated singl_function (elt_size=8) to 100 items from 50.
-Reallocated glb_str_ptr (elt_size=8) to 20 items from 10.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=8) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
 +---------------------------------------------------------+
 | Estilo bibliográfico abnt-alf.bst versão 1.45.2.1           |
 | Em caso de dúvidas ou problemas com este estilo procure |
 | http://abntex.codigolivre.org.br                        |
 +---------------------------------------------------------+
-You've used 14 entries,
+You've used 19 entries,
             6480 wiz_defined-function locations,
-            1259 strings with 11615 characters,
-and the built_in function-call counts, 11342 in all, are:
-= -- 964
-> -- 401
+            1288 strings with 12453 characters,
+and the built_in function-call counts, 14865 in all, are:
+= -- 1184
+> -- 584
 < -- 22
-+ -- 191
-- -- 122
-* -- 808
-:= -- 1586
-add.period$ -- 48
-call.type$ -- 14
-change.case$ -- 138
-chr.to.int$ -- 44
-cite$ -- 14
-duplicate$ -- 545
-empty$ -- 795
-format.name$ -- 575
-if$ -- 2650
++ -- 259
+- -- 177
+* -- 1088
+:= -- 2086
+add.period$ -- 63
+call.type$ -- 19
+change.case$ -- 195
+chr.to.int$ -- 49
+cite$ -- 19
+duplicate$ -- 706
+empty$ -- 1022
+format.name$ -- 831
+if$ -- 3441
 int.to.chr$ -- 0
 int.to.str$ -- 0
-missing$ -- 258
-newline$ -- 76
-num.names$ -- 70
-pop$ -- 341
+missing$ -- 344
+newline$ -- 103
+num.names$ -- 95
+pop$ -- 454
 preamble$ -- 1
-purify$ -- 53
+purify$ -- 74
 quote$ -- 0
-skip$ -- 600
+skip$ -- 778
 stack$ -- 1
-substring$ -- 415
-swap$ -- 267
+substring$ -- 489
+swap$ -- 330
 text.length$ -- 12
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 8
+type$ -- 13
 warning$ -- 0
-while$ -- 94
+while$ -- 123
 width$ -- 0
-write$ -- 229
+write$ -- 303

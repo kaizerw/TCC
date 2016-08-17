@@ -5,6 +5,12 @@
 \providecommand{\abntbstabout}[1]{}
 \abntbstabout{1.45.2.1 }
 
+\bibitem[Aaby, Perumalla e Seal 2010]{EfficientSimulationOf}
+\abntrefinfo{Aaby, Perumalla e Seal}{AABY; PERUMALLA; SEAL}{2010}
+{AABY, B.~G.; PERUMALLA, K.~S.; SEAL, S.~K. Efficient simulation of agent-based
+  models on multi-gpu and multicore clusters.
+Tennessee, EUA, 2010.}
+
 \bibitem[Alves e Gagliardi 2006]{TecnicasModelagem}
 \abntrefinfo{Alves e Gagliardi}{ALVES; GAGLIARDI}{2006}
 {ALVES, D.; GAGLIARDI, H.~F. \emph{Técnicas de Modelagem de Processos
@@ -22,12 +28,31 @@
   of epidemics.
 \emph{Discrete Dynamics in Nature and Society}, v.~6, p. 181--200, 2001.}
 
+\bibitem[Holvenstot 2014]{GPUAccelerated}
+\abntrefinfo{Holvenstot}{HOLVENSTOT}{2014}
+{HOLVENSTOT, P.
+\emph{GPU-Accelerated Influenza Simulations for Operational Modeling}.
+Dissertação (Dissertação de Mestrado) --- Western Michigan University,
+  Michigan, EUA, 2014.}
+
+\bibitem[Holvenstot, Prieto e Doncker]{GPGPUParallelization}
+\abntrefinfo{Holvenstot, Prieto e Doncker}{HOLVENSTOT; PRIETO; DONCKER}{}
+{HOLVENSTOT, P.; PRIETO, D.; DONCKER, E. de. Gpgpu parallelization of
+  self-calibrating agent-based influenza outbreak simulation.
+Michigan, EUA.}
+
 \bibitem[Luiz 2012]{EDOsModelos}
 \abntrefinfo{Luiz}{LUIZ}{2012}
 {LUIZ, M. H.~R.
 \emph{Modelos Matemáticos em Epidemiologia}.
 Dissertação (Dissertação de Mestrado) --- Universidade Estadual Paulista "Júlio
   de Mesquita Filho", Rio Claro - SP, 2012.}
+
+\bibitem[Lysenko, D'Souza e Rahmani 2007]{AFrameworkFor}
+\abntrefinfo{Lysenko, D'Souza e Rahmani}{LYSENKO; D'SOUZA; RAHMANI}{2007}
+{LYSENKO, M.; D'SOUZA, R.; RAHMANI, K. A framework for megascale agent based
+  model simulations on the gpu.
+\emph{Parallel and Distributed Computing}, Michigan, EUA, 2007.}
 
 \bibitem[McNamara e Zanetti 1988]{LGCA}
 \abntrefinfo{McNamara e Zanetti}{MCNAMARA; ZANETTI}{1988}
@@ -70,6 +95,12 @@ Tese (Tese de Doutorado) --- Universidade Federal de Lavras, Lavras, MG, 2012.}
 {WHITE, S.~H.; REY, A.~M. del; SANCHEZ, G.~R. Modeling epidemics using cellular
   automata.
 \emph{Applied Mathematics and Computation}, v.~186, n.~1, p. 193--202, 2007.}
+
+\bibitem[Willem 2015]{AgentBasedModel}
+\abntrefinfo{Willem}{WILLEM}{2015}
+{WILLEM, L.
+\emph{Agent-Based Model For Infectious Disease Transmission}.
+Tese (Tese de Doutorado) --- Antwerpen University, Antwerpen, Belgium, 2015.}
 
 \bibitem[Wooldridge 2016]{IntelligentAgents}
 \abntrefinfo{Wooldridge}{WOOLDRIDGE}{2016}

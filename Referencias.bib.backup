@@ -71,12 +71,12 @@
 }
 
 @MASTERSTHESIS{EDOsModelos,
-  AUTHOR =		  {Ivana Corrêa de Oliveira},
-  TITLE =		  {Aplicação de Data Mining na Busca de um Modelo de Prevenção da Mortalidade Infantil},
-  SCHOOL =		  {Universidade Federal de Santa Catarina},
-  YEAR =		  {2001},
+  AUTHOR =		  {Mônica Helena Ribeiro Luiz},
+  TITLE =		  {Modelos Matemáticos em Epidemiologia},
+  SCHOOL =		  {Universidade Estadual Paulista "Júlio de Mesquita Filho"},
+  YEAR =		  {2012},
   type =		  {Dissertação de Mestrado},
-  address =		  {Florianópolis - SC}
+  address =		  {Rio Claro - SP}
 }
 
 @BOOK{ArtificialIntelligence,
@@ -89,10 +89,10 @@
 }
 
 @MISC{IntelligentAgents,
-  author =       {Michael Wooldridge},
-  title =        {Intelligent Agents},
-  howpublished = {Consultado na INTERNET: http://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/mas99.pdf, 2016},
-  year =         {2016},
+  author =       	  {Michael Wooldridge},
+  title =       	  {Intelligent Agents},
+  howpublished = 	  {Consultado na INTERNET: http://www.cs.ox.ac.uk/people/michael.wooldridge/pubs/mas99.pdf, 2016},
+  year =         	  {2016},
 }
 
 @ARTICLE{IntelligentAgentsTheory,
@@ -133,4 +133,43 @@
   number =		  {20},
   pages =		  {2332-2335},
   address =		  {EUA},
+}
+
+@PHDTHESIS{Agent-Based Model,
+  AUTHOR =		  {Lander Willem},
+  TITLE =		  {Agent-Based Model For Infectious Disease Transmission},
+  SCHOOL =		  {Antwerpen University},
+  YEAR =		  {2015},
+  type =		  {Tese de Doutorado},
+  address =		  {Antwerpen, Belgium}
+}
+
+@ARTICLE{EfficientSimulationOf,
+  AUTHOR =		  {Brandon G. Aaby and Kalyan S. Perumalla and Sudip K. Seal},
+  TITLE =		  {Efficient Simulation Of Agent-Based Models on Multi-GPU and MultiCore Clusters},
+  YEAR =		  {2010},
+  address =		  {Tennessee, EUA},
+}
+
+@ARTICLE{AFrameworkFor,
+  AUTHOR =		  {Mikola Lysenko and Roshan D'Souza and Keyvan Rahmani},
+  TITLE =		  {A Framework for Megascale Agent Based Model Simulations on the GPU},
+  JOURNAL =		  {Parallel and Distributed Computing},
+  YEAR =		  {2007},
+  address =		  {Michigan, EUA},
+}
+
+@ARTICLE{GPGPUParallelization,
+  AUTHOR =		  {Peter Holvenstot and Diana Prieto and Elise de Doncker},
+  TITLE =		  {GPGPU Parallelization of Self-Calibrating Agent-Based Influenza Outbreak Simulation},
+  address =		  {Michigan, EUA},
+}
+
+@MASTERSTHESIS{GPUAccelerated,
+  AUTHOR =		  {Peter Holvenstot},
+  TITLE =		  {GPU Accelerated Influenza Simulations for Operational Modeling},
+  SCHOOL =		  {Western Michigan University},
+  YEAR =		  {2014},
+  type =		  {Dissertação de Mestrado},
+  address =		  {Michigan, EUA}
 }
