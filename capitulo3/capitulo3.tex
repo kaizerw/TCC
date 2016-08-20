@@ -18,11 +18,11 @@ Para a modelagem do ambiente computacional, que servirá à execução de simulações
   \label{fig:q445}
 \end{figure} 
 
-A quadra 445 contém 15 lotes, sendo necessário mapear cada um destes para uma estrutura matricial que viabilize sua representação e implementação no sistema de simulação. Para tanto, os lotes 0002 e 019B são divididos em outros dois lotes, pois apresentam geometria irregular de difícil aproximação em estruturas matriciais. Essa divisão é realizada de tal forma que as matrizes resultantes representam, aproximadamente, a geometria original do lote dividido. Aos outros lotes da quadra 445 não serão aplicadas nenhuma operação adicional, por apresentarem geometria regular, que pode ser facilmente aproximada por matrizes. Com as operações de divisão dos lotes irregulares, a quadra 445 que originalmente contém 15 lotes, é mapeada sobre um conjunto com 17 estruturas matriciais, que representam os lotes de forma apropriada à sua implementação computacional.
+A quadra 445 contém 15 lotes, sendo necessário mapear cada um destes para uma estrutura matricial que viabilize sua representação e implementação no sistema de simulação. Para tanto, os lotes 0002 e 019B são divididos em outros dois lotes, pois apresentam geometria irregular de difícil aproximação em estruturas matriciais. Essa divisão é realizada de tal forma em que as matrizes resultantes representem, aproximadamente, a geometria original do lote dividido. Aos outros lotes da quadra 445 não serão aplicadas nenhuma operação adicional, por apresentarem geometria regular, que pode ser facilmente aproximada por matrizes. Com as operações de divisão dos lotes irregulares, a quadra 445 que originalmente contém 15 lotes, é mapeada sobre um conjunto com 17 estruturas matriciais, que representam os lotes de forma apropriada à sua implementação computacional.
 
 Como os lotes da quadra 445 serão mapeados para estruturas matriciais que viabilizam sua implementação em linguagens de programação, à cada lote estará associada, no sistema de simulação, uma matriz de $n$ linhas e $m$ colunas, que representa sua região física. Essa especificação é importante pois à modelagem dos agentes é necessária a descrição do ambiente em que se movem e habitam. Cada agente terá uma determinada posição na quadra, que é completamente especificada pelas coordenadas $x$ e $y$ da matriz do lote e por um identificador do lote em que o agente se encontra. As coordenadas $x$ e $y$ representarão, respectivamente, a linha e coluna da matriz do lote em que o agente está localizado. 
 
-À modelagem das vizinhanças de uma determinada posição $(x, y)$ de um lote qualquer, será utilizada a vizinhança de Moore, que é amplamente usada na modelagem de autômatos celulares. A Figura \ref{fig:moore} ilustra gráficamente os incrementos locais que são realizados às coordenadas de uma posição qualquer para a obtenção de sua vizinhança de Moore.
+À modelagem das vizinhanças de uma determinada posição $(x, y)$ de um lote qualquer, será utilizada a vizinhança de Moore, que é amplamente aplicada na modelagem de autômatos celulares. A Figura \ref{fig:moore} ilustra graficamente os incrementos locais que são realizados às coordenadas de uma posição qualquer para a obtenção de sua vizinhança de Moore.
 
 \begin{figure}[!htb]
   \centering
@@ -36,7 +36,7 @@ Assim sendo, do ponto de vista posicional, a vizinhança de Moore de uma posição 
 \section{Modelagem em Operadores aos Agentes}
 \label{sec:modelagemoperadores}
 
-Os modelos apresentados na Seção \ref{sec:modeloscompartimentais} serviram à fundamentação do modelo baseado em agentes, que será desenvolvido e utilizado na implementação e execução de simulações computacionais. A modelagem empregada para simular o espalhamento de hipotética doença de transmissão direta em indivíduos considera agentes baseados em modelos que são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo. Um passo de tempo é especificado como um ciclo de transição.
+Os modelos apresentados na Seção \ref{sec:modeloscompartimentais} serviram à fundamentação do modelo baseado em agentes, que será desenvolvido e utilizado na implementação e execução de simulações computacionais. A modelagem empregada para simular o espalhamento de hipotética doença de transmissão direta em indivíduos considera agentes baseados em modelos, que são definidos espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo e seu movimento no ambiente, de uma posição para outra no passo de tempo. Um passo de tempo é especificado como um ciclo de transição.
 
 Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo $t$ e seu movimento no espaço, que é o ambiente computacional em que o agente é especificado. O estado do agente é especificado por meio do conjunto de atributos, como apresentado em (\ref{especificacaoAgente}).
 \begin{equation}
@@ -46,11 +46,11 @@ Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre
 cujos significados dos identificadores dos atributos do estado interno do agente $\chi(t)$ são como:
 
 \begin{itemize}
- \item Lote, $L$: Identificador do lote que o agente $\chi(t)$ se encontra.
- \item Posição em x, $X$: Coordenada $x$ da posição do agente $\chi(t)$ no lote.
- \item Posição em y, $Y$: Coordenada $y$ da posição do agente $\chi(t)$ no lote.
- \item Contador de controle, $C$: Contador de ciclos que controla os períodos de transição entre os estados do agente.
- \item Estado, $E$: Identificador do estado atual do agente $\chi(t)$.
+ \item \textbf{Lote, $L$:} Identificador do lote que o agente $\chi(t)$ se encontra.
+ \item \textbf{Posição em x, $X$:} Coordenada $x$ da posição do agente $\chi(t)$ no lote.
+ \item \textbf{Posição em y, $Y$:} Coordenada $y$ da posição do agente $\chi(t)$ no lote.
+ \item \textbf{Contador de controle, $C$:} Contador de ciclos que controla os períodos de transição entre os estados do agente.
+ \item \textbf{Estado, $E$:} Identificador do estado atual do agente $\chi(t)$.
 \end{itemize}
 
 A especificação formal de um agente é realizada por meio de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente. Esse operador decorre da composição entre os operadores de transição temporal, que realiza uma transição do estado interno do agente considerando-se sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição para outra, considerando-se os atributos de conectividade e mobilidade. À dinâmica do agente são considerados três tipos de operações:
@@ -74,7 +74,7 @@ Assim sendo, o operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as op
 \section{Modelagem em \textit{Bitstring} aos Agentes}
 \label{sec:modelagembitstring}
 
-A modelagem \textit{bitstring} realizada à representação do agente é baseada na manipulação diretas dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambigüidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$.
+A modelagem \textit{bitstring} realizada à representação do agente é baseada na manipulação direta dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambiguidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$.
 
 Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com \textit{bits}. À implementação do sistema multiagente, visando alcançar os objetivos definidos neste trabalho, é proposta a utilização da linguagem de programação C, que provê suporte aos propósitos de modelagem e paralelização do sistema. O tipo de dado inteiro em C, \textit{int}, contém $32$ \textit{bits}, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de quantidade de \textit{bits}, como realizado a seguir.
 
@@ -90,7 +90,7 @@ Assim sendo, observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}
 
 Na Figura \ref{fig:modelo_bitstring}, os elementos do identificador do lote $L$ estão nas posições $31$ a $26$. Os elementos das coordenadas $X$ e $Y$ da posição do agente no lote estão nas posições $25$ a $17$ e $16$ a $8$, respectivamente. Os elementos do contador de controle, $C$, e do estado, $E$, estão nas posições $7$ a $2$ e $1$ a $0$, respectivamente. Considerando as escolhas realizadas à sua modelagem, um agente qualquer do modelo pode ser representado em \textit{bits} como em (\ref{eq:bitstring}).
 \begin{equation}
- \chi\big(L, X, Y, C, E\big) \equiv \big(l_{31}, \dotsc, l_{26}; x_{25}, \dotsc, x_{17}; y_{16}, \dotsc, y_{8}; c_{7}, \dotsc, c_{2}; e_{1}, \dotsc, e_{0}\big)
+ \chi\big(L, X, Y, C, E\big) \equiv \big(l_{31}, \dotsc, l_{26}; x_{25}, \dotsc, x_{17}; y_{16}, \dotsc, y_{8}; c_{7}, \dotsc, c_{2}; e_{1}, e_{0}\big)
  \label{eq:bitstring}
 \end{equation}
 
@@ -106,9 +106,9 @@ Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y,
   \label{eq:bitstring_get}
 \end{equation}
 
-A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. 
+A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos que àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. 
 
-Em deslocamentos aritméticos, como aqueles que são definidos na linguagem C, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem C. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos, sendo o uso do tipo \textit{unsigned int} é justificado por este motivo.
+Em deslocamentos aritméticos, como aqueles que são definidos na linguagem C, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem C. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos, sendo o uso do tipo \textit{unsigned int} em C justificado por este motivo.
 
 Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que (\ref{eq:bitstring_get}) é então reescrita concretamente para a modelagem (\ref{eq:bitstring}) como em (\ref{eq:bitstring_get_2}).
 \begin{equation}
@@ -205,7 +205,7 @@ Também são necessárias outras operações para manipular os atributos dos agentes,
   \label{eq:bitstring_circ}
 \end{equation}
 
-Em (\ref{eq:bitstring_circ}), $M$ denota a palavra computacional em que está sendo aplicada a operação de deslocamento circular, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota a quantidade de \textit{bits} para os deslocamentos e $\vee$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra. Assim, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_circ}) é reescrita como em (\ref{eq:bitstring_circ_2}).
+Em (\ref{eq:bitstring_circ}), $M$ denota a palavra computacional em que está sendo aplicada a operação de deslocamento circular, $N\_BITS$ denota a quantidade de bits totais, \textit{shift} denota o fator de deslocamento e $\vee$ denota a operação lógica OR, "ou inclusivo", que é realizada \textit{bit} a \textit{bit} à palavra. Assim, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_circ}) é reescrita como em (\ref{eq:bitstring_circ_2}).
 \begin{equation}
   \begin{cases}
     \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, \vee \, \big(M \gg_{arth}(32 - shift)\big) \\
@@ -255,7 +255,7 @@ Subsequentemente são utilizadas as operações definidas em (\ref{eq:bitstring_cir
   \label{eq:bitstring_set}
 \end{equation}
 
-Em (\ref{eq:bitstring_set}), $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo. Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_set}) é reescrita como em (\ref{eq:bitstring_set_2}).
+Em (\ref{eq:bitstring_set}), $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos que àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo. Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_set}) é reescrita como em (\ref{eq:bitstring_set_2}).
 \begin{equation}
   \scriptsize
   \begin{cases}
