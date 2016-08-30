@@ -4,7 +4,7 @@
 \section{Introdução}
 \label{sec:intro3}
 
-Neste capítulo serão apresentadas as metodologias computacionais utilizadas à realização deste trabalho. Serão discutidas as modelagens realizadas à representação do ambiente e dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas à apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência serão discutidas questões relativas às APIs para programação paralela OpenMP e CUDA, discutindo suas principais características e aplicações. Por fim será apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que será utilizado como apoio às operações de configuração de parâmetros e do ambiente e à visualização de resultados das simulações que serão executadas.
+Neste capítulo serão apresentadas as metodologias computacionais utilizadas à realização deste trabalho. Serão discutidas as modelagens realizadas à representação do ambiente e dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas à apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência serão discutidas questões relativas às APIs para programação paralela OpenMP e CUDA, apresentando suas principais características e aplicações. Por fim será apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que será utilizado como apoio às operações de configuração de parâmetros e do ambiente e à visualização de resultados das simulações que serão executadas.
 
 \section{Modelagem do Ambiente de Simulação}
 \label{sec:modelagemAmbiente}
@@ -18,7 +18,7 @@ Para a modelagem do ambiente computacional, que servirá à execução de simulações
   \label{fig:q445}
 \end{figure} 
 
-A quadra 445 contém 15 lotes, sendo necessário mapear cada um destes para uma estrutura matricial que viabilize sua representação e implementação no sistema de simulação. Para tanto, os lotes 0002 e 019B são divididos em outros dois lotes, pois apresentam geometria irregular de difícil aproximação em estruturas matriciais. Essa divisão é realizada de tal forma em que as matrizes resultantes representem, aproximadamente, a geometria original do lote dividido. Aos outros lotes da quadra 445 não serão aplicadas nenhuma operação adicional, por apresentarem geometria regular, que pode ser facilmente aproximada por matrizes. Com as operações de divisão dos lotes irregulares, a quadra 445 que originalmente contém 15 lotes, é mapeada sobre um conjunto com 17 estruturas matriciais, que representam os lotes de forma apropriada à sua implementação computacional.
+A quadra 445 contém 15 lotes, sendo necessário mapear cada um destes para uma estrutura matricial que viabilize sua representação e implementação no sistema de simulação. Para tanto, os lotes 0002 e 019B são divididos em outros dois lotes, pois apresentam geometria irregular de difícil aproximação em estruturas matriciais. Essa divisão é realizada de tal forma em que as matrizes resultantes representem, aproximadamente, a geometria original do lote dividido. Aos outros lotes da quadra 445 não será aplicada nenhuma operação adicional, por apresentarem geometria regular, que pode ser facilmente aproximada por matrizes. Com as operações de divisão dos lotes irregulares, a quadra 445 que originalmente contém 15 lotes, é mapeada sobre um conjunto com 17 estruturas matriciais, que representam os lotes de forma apropriada à sua implementação computacional.
 
 Como os lotes da quadra 445 serão mapeados para estruturas matriciais que viabilizam sua implementação em linguagens de programação, à cada lote estará associada, no sistema de simulação, uma matriz de $n$ linhas e $m$ colunas, que representa sua região física. Essa especificação é importante pois à modelagem dos agentes é necessária a descrição do ambiente em que se movem e habitam. Cada agente terá uma determinada posição na quadra, que é completamente especificada pelas coordenadas $x$ e $y$ da matriz do lote e por um identificador do lote em que o agente se encontra. As coordenadas $x$ e $y$ representarão, respectivamente, a linha e coluna da matriz do lote em que o agente está localizado. 
 
@@ -71,10 +71,10 @@ Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado 
 
 Assim sendo, o operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as operações do agente $\chi(t)$ movimentando-o da posição $(x, y)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$, para o ciclo de tempo, $t+1$.
 
-\section{Modelagem em \textit{Bitstring} aos Agentes}
+\section{Modelagem em \textit{Bitstring} dos Agentes}
 \label{sec:modelagembitstring}
 
-A modelagem \textit{bitstring} realizada à representação do agente é baseada na manipulação direta dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambiguidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$.
+A modelagem \textit{bitstring} realizada para a representação do agente é baseada na manipulação direta dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambiguidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$.
 
 Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com \textit{bits}. À implementação do sistema multiagente, visando alcançar os objetivos definidos neste trabalho, é proposta a utilização da linguagem de programação C, que provê suporte aos propósitos de modelagem e paralelização do sistema. O tipo de dado inteiro em C, \textit{int}, contém $32$ \textit{bits}, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de quantidade de \textit{bits}, como realizado a seguir.
 
@@ -106,7 +106,7 @@ Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y,
   \label{eq:bitstring_get}
 \end{equation}
 
-A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos que àqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares à cada campo. A quantidade de \textit{bits} complementares à cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. 
+A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos que aqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares a cada campo. A quantidade de \textit{bits} complementares a cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. 
 
 Em deslocamentos aritméticos, como aqueles que são definidos na linguagem C, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem C. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos, sendo o uso do tipo \textit{unsigned int} em C justificado por este motivo.
 
@@ -124,7 +124,7 @@ Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$,
 
 As operações definidas em (\ref{eq:bitstring_get_2}) capturam informações armazenadas nos agentes, como especificado em (\ref{especificacaoAgente}).
 
-Assim sendo, para o modelo \textit{bitstring} especificado neste trabalho, considere um agente $\chi(t)$ especificado como em (\ref{eq:ex_get_agente}), em que o símbolo $|$ designa o separador dos campos do agente.
+Assim sendo, para o modelo \textit{bitstring} especificado neste trabalho, considera-se um agente $\chi(t)$ especificado como em (\ref{eq:ex_get_agente}), em que o símbolo $|$ designa o separador dos campos do agente.
 
 \begin{equation}
   \chi(t) = 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \\
@@ -196,7 +196,7 @@ A aplicação do operador de captura do campo do estado do agente $\chi(t)$, como 
   \end{split}
 \end{equation}
 
-Também são necessárias outras operações para manipular os atributos dos agentes, além daquelas definidas em (\ref{eq:bitstring_get_2}). Como a linguagem de programação C não conta com operador próprio que viabilize a execução de operações de deslocamentos circulares, faz-se necessário a sua definição com base nos operadores existentes na linguagem, como os deslocamentos aritméticos e operações lógicas. Em (\ref{eq:bitstring_circ}) $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado, definidos como uma composição dos operadores de deslocamento aritmético e a operação lógica ou.
+Também são necessárias outras operações para manipular os atributos dos agentes, além daquelas definidas em (\ref{eq:bitstring_get_2}), como, por exemplo, operadores de deslocamentos circulares. Como a linguagem de programação C não conta com operador próprio que viabilize a execução de operações de deslocamentos circulares, faz-se necessário, a sua definição com base nos operadores existentes na linguagem, como os deslocamentos aritméticos e operações lógicas. Em (\ref{eq:bitstring_circ}) $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado, definidos como uma composição dos operadores de deslocamento aritmético e a operação lógica ou.
 \begin{equation}
   \begin{cases}
     \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, \vee \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
@@ -255,7 +255,7 @@ Subsequentemente são utilizadas as operações definidas em (\ref{eq:bitstring_cir
   \label{eq:bitstring_set}
 \end{equation}
 
-Em (\ref{eq:bitstring_set}), $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores à cada campo. A quantidade de \textit{bits} anteriores à cada campo é a quantidade de \textit{bits} existentes que são menos significativos que àqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo. Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_set}) é reescrita como em (\ref{eq:bitstring_set_2}).
+Em (\ref{eq:bitstring_set}), $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores a cada campo. A quantidade de \textit{bits} anteriores a cada campo é a quantidade de \textit{bits} existentes que são menos significativos que aqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo. Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_set}) é reescrita como em (\ref{eq:bitstring_set_2}).
 \begin{equation}
   \scriptsize
   \begin{cases}

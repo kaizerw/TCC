@@ -19,5 +19,5 @@
 \contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{25}
 \contentsline {section}{\numberline {3.2}Modelagem do Ambiente de Simula\c c\~ao}{25}
 \contentsline {section}{\numberline {3.3}Modelagem em Operadores aos Agentes}{27}
-\contentsline {section}{\numberline {3.4}Modelagem em \textit {Bitstring} aos Agentes}{29}
+\contentsline {section}{\numberline {3.4}Modelagem em \textit {Bitstring} dos Agentes}{29}
 \contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{39}
