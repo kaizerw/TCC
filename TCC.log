@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.18)  30 AUG 2016 07:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.18)  8 SEP 2016 12:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -263,43 +263,60 @@ Package color Info: Driver file: pdftex.def on input line 143.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen119
+\captionmargin@=\dimen120
+\captionwidth=\dimen121
+\caption@tempdima=\dimen122
+\caption@indent=\dimen123
+\caption@parindent=\dimen124
+\caption@hangindent=\dimen125
+)
+\c@ContinuedFloat=\count112
+Package caption Info: float package is loaded.
+)
 (/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip64
 \LTright=\skip65
 \LTpre=\skip66
 \LTpost=\skip67
-\LTchunksize=\count112
-\LTcapwidth=\dimen119
+\LTchunksize=\count113
+\LTcapwidth=\dimen126
 \LT@head=\box31
 \LT@firsthead=\box32
 \LT@foot=\box33
 \LT@lastfoot=\box34
-\LT@cols=\count113
-\LT@rows=\count114
-\c@LT@tables=\count115
-\c@LT@chunks=\count116
+\LT@cols=\count114
+\LT@rows=\count115
+\c@LT@tables=\count116
+\c@LT@chunks=\count117
 \LT@p@ftn=\toks32
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
 Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
-\c@tracingmulticols=\count117
+\c@tracingmulticols=\count118
 \mult@box=\box35
-\multicol@leftmargin=\dimen120
-\c@unbalance=\count118
-\c@collectmore=\count119
-\doublecol@number=\count120
-\multicoltolerance=\count121
-\multicolpretolerance=\count122
-\full@width=\dimen121
-\page@free=\dimen122
-\premulticols=\dimen123
-\postmulticols=\dimen124
+\multicol@leftmargin=\dimen127
+\c@unbalance=\count119
+\c@collectmore=\count120
+\doublecol@number=\count121
+\multicoltolerance=\count122
+\multicolpretolerance=\count123
+\full@width=\dimen128
+\page@free=\dimen129
+\premulticols=\dimen130
+\postmulticols=\dimen131
 \multicolsep=\skip68
 \multicolbaselineskip=\skip69
 \partial@page=\box36
 \last@line=\box37
-\maxbalancingoverflow=\dimen125
+\maxbalancingoverflow=\dimen132
 \mult@rightbox=\box38
 \mult@grightbox=\box39
 \mult@gfirstbox=\box40
@@ -321,27 +338,27 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \@tempa=\box56
 \@tempa=\box57
 \@tempa=\box58
-\c@columnbadness=\count123
-\c@finalcolumnbadness=\count124
-\last@try=\dimen126
-\multicolovershoot=\dimen127
-\multicolundershoot=\dimen128
+\c@columnbadness=\count124
+\c@finalcolumnbadness=\count125
+\last@try=\dimen133
+\multicolovershoot=\dimen134
+\multicolundershoot=\dimen135
 \mult@nat@firstbox=\box59
 \colbreak@box=\box60
-\mc@col@check@num=\count125
+\mc@col@check@num=\count126
 )
 (/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip70
 \subfigcapskip=\skip71
-\subfigcaptopadj=\dimen129
+\subfigcaptopadj=\dimen136
 \subfigbottomskip=\skip72
-\subfigcapmargin=\dimen130
+\subfigcapmargin=\dimen137
 \subfiglabelskip=\skip73
-\c@subfigure=\count126
-\c@lofdepth=\count127
-\c@subtable=\count128
-\c@lotdepth=\count129
+\c@subfigure=\count127
+\c@lofdepth=\count128
+\c@subtable=\count129
+\c@lotdepth=\count130
 
 ****************************************
 * Local config file subfigure.cfg used *
@@ -355,12 +372,12 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \UL@hyphenbox=\box62
 \UL@skip=\skip76
 \UL@hook=\toks33
-\UL@height=\dimen131
-\UL@pe=\count130
-\UL@pixel=\dimen132
+\UL@height=\dimen138
+\UL@pe=\count131
+\UL@pixel=\dimen139
 \ULC@box=\box63
 Package: ulem 2012/05/18
-\ULdepth=\dimen133
+\ULdepth=\dimen140
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
@@ -369,9 +386,9 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read1
 )
 (/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen134
-\WF@size=\dimen135
-\c@WF@wrappedlines=\count131
+\wrapoverhang=\dimen141
+\WF@size=\dimen142
+\c@WF@wrappedlines=\count132
 \WF@box=\box64
 \WF@everypar=\toks36
 Package: wrapfig 2003/01/31  v 3.6
@@ -392,35 +409,35 @@ Writing glossary file TCC.glo
 (./capitulo3/capitulo3.aux))
 \openout1 = `TCC.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 115.
-LaTeX Font Info:    ... okay on input line 115.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 115.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
+LaTeX Font Info:    ... okay on input line 117.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 117.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen136
+\scratchcounter=\count133
+\scratchdimen=\dimen143
 \scratchbox=\box65
-\nofMPsegments=\count133
-\nofMParguments=\count134
+\nofMPsegments=\count134
+\nofMParguments=\count135
 \everyMPshowfont=\toks37
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen137
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
+\MPscratchCnt=\count136
+\MPscratchDim=\dimen144
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
 \everyMPtoPDFconversion=\toks38
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -470,6 +487,15 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: longtable package is loaded.
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
+)
+Package caption Info: subfigure package is loaded.
+Package caption Info: wrapfig package is loaded.
+Package caption Info: End \AtBeginDocument code.
 \openout2 = `iniciais/capa.aux'.
 
 
@@ -574,11 +600,11 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 ]
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 149.
+less on input line 151.
 
 
 Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 150.
+less on input line 152.
 
 \openout2 = `capitulo1/capitulo1.aux'.
 
@@ -607,26 +633,13 @@ Cap\'{\i }tulo 2.
 
 
 
-] [6] [7] [8] [9] [10]
-Package epstopdf Info: Source file: <Figuras/modelo.eps>
-(epstopdf)                    date: 2016-08-17 17:38:02
-(epstopdf)                    size: 126234 bytes
-(epstopdf)             Output file: <Figuras/modelo-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-17 17:38:02
-(epstopdf)                    size: 6019 bytes
-(epstopdf)             Command: <repstopdf --outfile=Figuras/modelo-eps-convert
-ed-to.pdf Figuras/modelo.eps>
-(epstopdf)             \includegraphics on input line 59.
-Package epstopdf Info: Output file is already uptodate.
+] [6] [7] [8] [9] [10] <Figuras/modelo.jpg, id=74, 400.3758pt x 94.4328pt>
+File: Figuras/modelo.jpg Graphic file (type jpg)
 
-<Figuras/modelo-eps-converted-to.pdf, id=74, 400.49625pt x 95.35625pt>
-File: Figuras/modelo-eps-converted-to.pdf Graphic file (type pdf)
-
-<use Figuras/modelo-eps-converted-to.pdf>
-Package pdftex.def Info: Figuras/modelo-eps-converted-to.pdf used on input line
- 59.
-(pdftex.def)             Requested size: 296.322pt x 70.55669pt.
- [11 <./Figuras/modelo-eps-converted-to.pdf>]
+<use Figuras/modelo.jpg>
+Package pdftex.def Info: Figuras/modelo.jpg used on input line 59.
+(pdftex.def)             Requested size: 296.322pt x 69.89502pt.
+ [11 <./Figuras/modelo.jpg>]
 Overfull \hbox (7.33739pt too wide) detected at line 98
 []
  []
@@ -643,168 +656,162 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/it' in size <17.28> not available
 
 (./capitulo3/capitulo3.tex
 Cap\'{\i }tulo 3.
-<Figuras/Q445.png, id=129, 2638.60782pt x 2488.79813pt>
-File: Figuras/Q445.png Graphic file (type png)
- <use Figuras/Q445.png>
-Package pdftex.def Info: Figuras/Q445.png used on input line 16.
-(pdftex.def)             Requested size: 364.70882pt x 343.98618pt.
+<Figuras/Q445-1.png, id=127, 2638.60782pt x 2488.79813pt>
+File: Figuras/Q445-1.png Graphic file (type png)
 
-[25
+<use Figuras/Q445-1.png>
+Package pdftex.def Info: Figuras/Q445-1.png used on input line 18.
+(pdftex.def)             Requested size: 227.94214pt x 214.98186pt.
+ <Figuras/Q445-2.jpg, id=128, 675.4836pt x 676.4472pt>
+File: Figuras/Q445-2.jpg Graphic file (type jpg)
+
+<use Figuras/Q445-2.jpg>
+Package pdftex.def Info: Figuras/Q445-2.jpg used on input line 24.
+(pdftex.def)             Requested size: 227.94214pt x 228.26527pt.
+ [25
 
 
 
-] [26 <./Figuras/Q445.png>]
-<Figuras/Vizinhanca_Moore.png, id=136, 158.7531pt x 158.7531pt>
+] [26 <./Figuras/Q445-1.png> <./Figuras/Q445-2.jpg>] <Figuras/Vizinhanca_Moore.
+png, id=135, 158.7531pt x 158.7531pt>
 File: Figuras/Vizinhanca_Moore.png Graphic file (type png)
 
 <use Figuras/Vizinhanca_Moore.png>
-Package pdftex.def Info: Figuras/Vizinhanca_Moore.png used on input line 29.
+Package pdftex.def Info: Figuras/Vizinhanca_Moore.png used on input line 38.
 (pdftex.def)             Requested size: 113.97107pt x 113.97269pt.
  [27 <./Figuras/Vizinhanca_Moore.png>]
-[28] [29]
-Package epstopdf Info: Source file: <Figuras/Tira.eps>
-(epstopdf)                    date: 2016-08-17 17:38:02
-(epstopdf)                    size: 804993 bytes
-(epstopdf)             Output file: <Figuras/Tira-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-08-17 17:38:02
-(epstopdf)                    size: 21102 bytes
-(epstopdf)             Command: <repstopdf --outfile=Figuras/Tira-eps-converted
--to.pdf Figuras/Tira.eps>
-(epstopdf)             \includegraphics on input line 86.
-Package epstopdf Info: Output file is already uptodate.
- <Figuras/Tira-eps-converted-to.pdf, id=149, 2328.7pt x 163.61125pt>
-File: Figuras/Tira-eps-converted-to.pdf Graphic file (type pdf)
+[28] [29] <Figuras/Tira.jpg, id=148, 1100.31075pt x 79.497pt>
+File: Figuras/Tira.jpg Graphic file (type jpg)
 
-<use Figuras/Tira-eps-converted-to.pdf>
-Package pdftex.def Info: Figuras/Tira-eps-converted-to.pdf used on input line 8
-6.
-(pdftex.def)             Requested size: 455.8843pt x 32.02763pt.
- [30 <./Figuras/Tira-eps-converted-to.pdf>] [31] [32] [33]
+<use Figuras/Tira.jpg>
+Package pdftex.def Info: Figuras/Tira.jpg used on input line 94.
+(pdftex.def)             Requested size: 455.8843pt x 32.93726pt.
+ [30 <./Figuras/Tira.jpg>] [31] [32] [33]
 
 LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 22
-0.
+8.
 
 
-Overfull \hbox (39.23618pt too wide) in paragraph at lines 229--229
+Overfull \hbox (39.23618pt too wide) in paragraph at lines 237--237
 [] 
  []
 
 
-LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 23
-4.
+LaTeX Font Warning: Command \footnotesize invalid in math mode on input line 24
+2.
 
 
-Overfull \hbox (39.23618pt too wide) in paragraph at lines 243--243
+Overfull \hbox (39.23618pt too wide) in paragraph at lines 251--251
 [] 
  []
 
-[34]
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 247.
-
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 255.
 
 
-Overfull \hbox (34.61528pt too wide) detected at line 256
+
+Overfull \hbox (34.61528pt too wide) detected at line 264
 []
  []
 
-LaTeX Font Info:    Calculating math sizes for size <> on input line 256.
+LaTeX Font Info:    Calculating math sizes for size <> on input line 264.
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.7> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <0.5> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.7> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
 
 
 LaTeX Font Warning: Font shape `U/lasy/m/n' in size <0.5> not available
-(Font)              size <5> substituted on input line 256.
+(Font)              size <5> substituted on input line 264.
+
+[34]
+
+LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 268.
 
 
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 260.
 
-
-
-Overfull \hbox (14.07616pt too wide) detected at line 269
+Overfull \hbox (14.07616pt too wide) detected at line 277
 []
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 274.
+LaTeX Font Warning: Command \small invalid in math mode on input line 282.
 
 
-Overfull \hbox (28.70415pt too wide) in paragraph at lines 285--285
+Overfull \hbox (28.70415pt too wide) in paragraph at lines 293--293
 [] 
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 290.
+LaTeX Font Warning: Command \small invalid in math mode on input line 298.
 
 
-Overfull \hbox (45.12917pt too wide) in paragraph at lines 301--301
+Overfull \hbox (45.12917pt too wide) in paragraph at lines 309--309
 [] 
  []
 
 [35]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 306.
+LaTeX Font Warning: Command \small invalid in math mode on input line 314.
 
 
-Overfull \hbox (34.17915pt too wide) in paragraph at lines 317--317
+Overfull \hbox (34.17915pt too wide) in paragraph at lines 325--325
 [] 
  []
 
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 322.
+LaTeX Font Warning: Command \small invalid in math mode on input line 330.
 
 
-Overfull \hbox (17.75414pt too wide) in paragraph at lines 333--333
+Overfull \hbox (17.75414pt too wide) in paragraph at lines 341--341
 [] 
  []
 
 [36]
 
-LaTeX Font Warning: Command \small invalid in math mode on input line 338.
+LaTeX Font Warning: Command \small invalid in math mode on input line 346.
 
 
-Underfull \hbox (badness 1210) in paragraph at lines 369--370
+Underfull \hbox (badness 1210) in paragraph at lines 377--378
 []\T1/ptm/m/n/12 Os iden-ti-fi-ca-do-res dos lo-tes têm va-ri-a-ção de $[]\OT1/
 cmr/m/n/12 0[][] = []000 000[][]$ \T1/ptm/m/n/12 até $[]\OT1/cmr/m/n/12 63[][] 
 =
@@ -823,10 +830,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 4720 strings out of 493029
- 62940 string characters out of 6136234
- 148882 words of memory out of 5000000
- 7995 multiletter control sequences out of 15000+600000
+ 5789 strings out of 493029
+ 82463 string characters out of 6136234
+ 167959 words of memory out of 5000000
+ 9055 multiletter control sequences out of 15000+600000
  67684 words of font info for 100 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
  38i,19n,43p,1615b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -848,10 +855,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TCC.pdf (50 pages, 727931 bytes).
+Output written on TCC.pdf (50 pages, 5327257 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+ 252 PDF objects out of 1000 (max. 8388607)
+ 172 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

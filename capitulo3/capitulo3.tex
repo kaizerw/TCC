@@ -9,14 +9,23 @@ Neste capítulo serão apresentadas as metodologias computacionais utilizadas à re
 \section{Modelagem do Ambiente de Simulação}
 \label{sec:modelagemAmbiente}
 
-Para a modelagem do ambiente computacional, que servirá à execução de simulações da dinâmica epidemiológica, será utilizada como base uma região geográfica da cidade de Cascavel/PR, mais especificamente a quadra 445. A quadra 445 está localizada no centro da cidade de Cascavel/PR e é delimitada geograficamente pelas ruas Maranhão, Castro Alves, Curitiba e Visconde de Guarapuava. Esta quadra foi escolhida por ser um bom modelo geométrico, com relação às outras quadras da cidade, o que é interessante para desenvolver as estruturas de dados utilizadas na implementação do \textit{software}. A Figura \ref{fig:q445} ilustra a quadra em questão.
+Para a modelagem do ambiente computacional, que servirá à execução de simulações da dinâmica epidemiológica, será utilizada como base uma região geográfica da cidade de Cascavel/PR, mais especificamente a quadra 445. A quadra 445 está localizada no centro da cidade de Cascavel/PR e é delimitada geograficamente pelas ruas Maranhão, Castro Alves, Curitiba e Visconde de Guarapuava. Esta quadra foi escolhida por ser um bom modelo geométrico, com relação às outras quadras da cidade, o que é interessante para desenvolver as estruturas de dados utilizadas na implementação do \textit{software}. As Figuras \ref{fig:q445-0} e \ref{fig:q445-1} ilustram a quadra em questão.
 
-\begin{figure}[!htb]
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=0.8\textwidth]{Figuras/Q445.png}
-  \caption{Representação gráfica da quadra 445.}
-  \label{fig:q445}
-\end{figure} 
+  \includegraphics[width=1\linewidth]{Figuras/Q445-1.png}
+  \captionof{figure}{Representação gráfica.}
+  \label{fig:q445-0}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Q445-2.jpg}
+  \captionof{figure}{Aproximação em matrizes.}
+  \label{fig:q445-1}
+\end{minipage}
+\end{figure}
 
 A quadra 445 contém 15 lotes, sendo necessário mapear cada um destes para uma estrutura matricial que viabilize sua representação e implementação no sistema de simulação. Para tanto, os lotes 0002 e 019B são divididos em outros dois lotes, pois apresentam geometria irregular de difícil aproximação em estruturas matriciais. Essa divisão é realizada de tal forma em que as matrizes resultantes representem, aproximadamente, a geometria original do lote dividido. Aos outros lotes da quadra 445 não será aplicada nenhuma operação adicional, por apresentarem geometria regular, que pode ser facilmente aproximada por matrizes. Com as operações de divisão dos lotes irregulares, a quadra 445 que originalmente contém 15 lotes, é mapeada sobre um conjunto com 17 estruturas matriciais, que representam os lotes de forma apropriada à sua implementação computacional.
 
@@ -63,13 +72,12 @@ A especificação formal de um agente é realizada por meio de um operador de evolu
 
 Tais operações são realizadas na sequência em que foram apresentadas e uma vez a cada ciclo, que consiste na aplicação dos operadores sobre a população de agentes e geração de arquivos de saída. Uma simulação é composta por uma determinada quantidade de ciclos.
 
-Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big)$, que decorre da composição entre os operadores $\mu$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade, e o operador de transição temporal $\sigma$ realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente. O operador de evolução $\lambda$ é definido como em (\ref{operador}).
+Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big)$, que decorre da composição entre os operadores $\mu$, $\rho$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade; o operador $\rho$ realiza os contato entre aos agentes que ocorre com certa probabilidade; e o operador de transição temporal, $\sigma$, que realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente. O operador de evolução $\lambda$ é definido como em (\ref{operador}).
 \begin{equation}
   \label{operador}
-  \lambda\big(\chi(t)^{(x, y)}\big) \equiv  \sigma\Big(\mu\big(\chi(t + 1)\big)^{(\xi, \eta)}\Big)
+  \lambda\big(\chi(t)^{(x, y)}\big) \equiv  \sigma\Big(\rho\big(\mu\big(\chi(t + 1)\big)\big)^{(\xi,\eta)}\Big)
 \end{equation}
-
-Assim sendo, o operador espaço-temporal $\lambda\big(\chi(t)\big)$ realiza as operações do agente $\chi(t)$ movimentando-o da posição $(x, y)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual, $t$, para o ciclo de tempo, $t+1$.
+indicando que o agente $\chi$ realizou uma evolução da posição $(x,y)$ do ciclo $t$ à posição $(\xi,\eta)$ do ciclo posterior, $t+1$. Assim sendo, o operador espaço-temporal $\lambda(\chi)$ realiza as operações de movimentação, contato e de transição do agente $\chi$ movimentando-o da posição $(x,y)$ para uma posição $(\xi,\eta)$ do tempo atual, $t$, para tempo posterior, $t+1$.
 
 \section{Modelagem em \textit{Bitstring} dos Agentes}
 \label{sec:modelagembitstring}
@@ -83,7 +91,7 @@ Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguage
 Assim sendo, observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra que comporte um quantidade de $32$ \textit{bits} para armazenar a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$ em \textit{bits}. A utilização de faixas maiores à representação dos atributos de um agente demandaria outros tipos de dados em C, com maior quantidade de \textit{bits}. A representação da palavra computacional proposta à modelagem dos agentes é como ilustrado na Figura \ref{fig:modelo_bitstring}, sendo que os elementos $l_i \in L$, $x_i \in X$, $y_i \in Y$, $c_i \in C$ e $e_i \in E$ possuem o valor $0$ ou $1$ e seus índices subscritos indicam que cada \textit{bit} pode variar nos respectivos intervalos que estão especificados.
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=1.0\textwidth]{Figuras/Tira.eps}
+  \includegraphics[width=1.0\textwidth]{Figuras/Tira.jpg}
   \caption{Representação \textit{bitstring} do agente $\chi$.}
   \label{fig:modelo_bitstring}
 \end{figure} 
@@ -152,7 +160,7 @@ A aplicação do operador de captura do campo da coordenada $x$ do lote em que o a
        = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0  \ll_{arth}(6) \gg_{arth}(23) \\
        = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 0 0 0 0 | 0 0 \gg_{arth}(23) \\
        = & 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 1 0 1 0 1 | 0 0 \\
-       = & 1 0 1 0 1 0 0
+       = & 0 0 1 0 1 0 1 0 0
   \label{eq:ex_get_x}
   \end{split}
 \end{equation}
@@ -165,7 +173,7 @@ A aplicação do operador de captura do campo da coordenada $y$ do lote em que o a
        = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0  \ll_{arth}(15) \gg_{arth}(23) \\
        = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 | 0 0 \gg_{arth}(23) \\
        = & 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 1 1 0 0 1 0 | 1 1 \\
-       = & 1 1 0 0 1 0 1 1
+       = & 0 1 1 0 0 1 0 1 1
   \label{eq:ex_get_y}
   \end{split}
 \end{equation}
@@ -178,7 +186,7 @@ A aplicação do operador de captura do campo do contador de transição de estados 
        = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0  \ll_{arth}(24) \gg_{arth}(26) \\
        = & 0 0 1 1 1 0 | 1 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 | 0 0 \gg_{arth}(26) \\
        = & 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 1 1 | 1 0 \\
-       =  & 1 1 1 0
+       = & 0 0 1 1 1 0
   \label{eq:ex_get_c}
   \end{split}
 \end{equation}
