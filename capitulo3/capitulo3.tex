@@ -376,8 +376,141 @@ Para completar a modelagem é suficiente detalhar e relacionar os identificadores
 
 Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando $64$ possíveis valores. Os lotes têm dimensão máxima de $512_{10} = 2^{9}$ linhas por $512_{10} = 2^{9}$ colunas, sendo possível variarem numa representação matricial da posição $\big(0; 0\big)_{10} = \big(000\ 000\ 000; 000\ 000\ 000\big)_{2}$ até a posição $\big(511; 511\big)_{10} = \big(111\ 111\ 111; 111\ 111\ 111\big)_{2}$, totalizando os $512$ possíveis valores. Semelhantemente, faz-se uma representação matricial ao controle para que sua variação ocorra de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando os $64$ possíveis valores. Os estados do agente são setados como $\big(0, 0\big)_{2}$ para o suscetível, $S$, $\big(0, 1\big)_{2}$ para o exposto, $E$, $\big(1, 0\big)_{2}$ para o infectante, $I$, e $\big(1, 1\big)_{2}$ para o recuperado, $R$.
 
-%\section{Estruturas de Dados, Linguagens e Estratégias de Implementação}
+\section{SIMULA}
+\label{sec:SIMULA}
 
-%\section{CUDA e OpenMP}
+Como apoio às operações específicas relacionadas à manipulação de dados georreferenciados relativos à quadra 445, utilizou-se um \textit{software} especificamente desenvolvido para tal função, denominado SIMULA. O \textit{software} desempenha as funções de aquisição de informações georreferenciadas de um banco de dados, seu tratamento e disponibilização para o programa de que executa as simulações e para um módulo visualizador de saídas, sendo o SIMULA um \textit{software} que integra operações de pré-processamento, como aquisição e tratamento de dados; de processamento, como a execução de simulações; e de pós-processamento, como a visualização de saídas gráficas de arquivos resultantes das simulações executadas. 
 
-%\section{SIMULA}
+Na etapa de aquisição dos dados, o \textit{software} realiza uma consulta em um Sistema Gerenciador de Banco de Dados Objeto Relacional, SGBDOR, utilizando a linguagem de consulta \textit{Structured Query Language}, SQL. Nesta etapa são obtidas informações sobre os pontos georreferenciados que estão nos vértices de cada lote da quadra 445. A informação dos vértices são importantes pois definem a geometria do lote, e são utilizados posteriormente, após diversos processamentos, para a construção das estruturas matriciais que representam os lotes na simulação. Foi utilizado o SGBDOR PostgreSQL com a adição da extensão PostGIS, que permite o armazenamento e processamento de objetos com informações georreferenciadas em bancos de dados. Através da extensão PostGIS, os dados são importados para o banco de dados por meio de um arquivo em formato \textit{shapefile}, que é um formato de arquivos bastante utilizado para o armazenamento de dados geoespaciais. O arquivo \textit{shapefile} foi obtido em parceria com a prefeitura da cidade de Cascavel/PR.
+
+Na etapa posterior à aquisição, ocorre o tratamento dos dados obtidos, que é necessária para a remoção de informações redundantes que venham do banco de dados e adição de informações pertinentes que viabilizem, essencialmente, a aproximação da geometria dos lotes em matrizes bidimensionais. As principais processos executados dentro da etapa de tratamento de dados são:
+\begin{itemize}
+ \item \textbf{Limpeza de pontos:} São removidos os pontos duplicados ou pontos que estejam muito próximos uns dos outros, utilizando como critério de remoção o erro relativo entre as latitudes e longitudes dos pontos. 
+ \item \textbf{Inserção de pontos:} É inserido um ponto adicional ao conjunto de pontos de um lote que contenha exatamente 6 pontos. Essa inserção de um ponto adicional é essencial para a realização correta da etapa de divisão de lotes.
+ \item \textbf{Ordenação de pontos:} Os pontos são ordenados, em sentido horário, com início no ponto com menor latitude e maior longitude. A ordenação dos pontos é importante para a determinação do local de divisão de um lote.
+ \item \textbf{Divisão de lotes:} É realizada a divisão de lotes que contenham 7 pontos, em dois outros sub-lotes. A divisão é executada através do cruzamento das diversas retas formadas por dois pontos quaisquer do conjunto original de pontos, com o intuito de formar dois polígonos regulares, que serão os dois novos lotes.
+ \item \textbf{Cálculo das dimensões dos lotes:} São calculados o comprimento e largura dos lotes, a partir das distâncias euclidianas dos pontos que estão nos vértices dos lotes.
+ \item \textbf{Interpolação de pontos:} Através de interpolação linear, são interpolados os pontos entre os vértices, que formam as arestas dos lotes. Através dos pontos das arestas dos lotes, são interpolados linearmente os pontos internos ao lote. A interpolação é um processo importante no tratamento dos dados pois viabiliza a aproximação de uma malha que represente a geometria do lote, através de seus vértices.
+ \item \textbf{Média de pontos:} São calculadas as médias entre subconjuntos de 4 pontos do conjunto de pontos obtidos da malha gerada pela etapa de interpolação de pontos. O processo realizado assemelha-se à uma convolução com máscaras, utilizando uma máscara de dimensão 2, com todos os coeficientes iguais a 1, e uma constante de normalização igual a $\frac{1}{4}$. Como resultado, obtém-se um conjunto de pontos onde, cada ponto, corresponde ao centro de uma posição na matriz do lote.
+ \item \textbf{Cálculo das dimensões das matrizes:} Através dos pontos obtidos na etapa anterior são calculadas as dimensões das matrizes que representarão os lotes na simulação. Efetivamente, são calculadas a quantidade de linhas e de colunas das matrizes.
+\end{itemize}
+
+\section{Estruturas de Dados e Estratégias de Implementação}
+\label{sec:estruturasdedados}
+
+Para a implementação do sistema de simulação, mais efetivamente das operações de movimentação, contato e transição de estados dos indivíduos, utilizou-se estruturas de dados puramente vetoriais, ou seja, que são armazenadas em espaços de memória contíguos na memória do computador. A motivação do uso de estruturas vetoriais advém do fato de que reduzem a complexidade estrutural no código-fonte e viabilizam a posterior paralelização em CUDA por facilitar a cópia de dados entre a CPU e a GPU. Estruturas dinâmicas complexas, que suportam quantidades variáveis de elementos e garantem maior flexibilidade ao programador, são estruturas de difícil trato para operações de cópia de dados entre dispositivos, pois necessitam de métodos específicos para a serialização e a desserialização de dados, que acarretam em aumento na carga de processamento. A vetorização de todas as estruturas de dados foi possível graças à simplicidade do indivíduo e do ambiente modelado na simulação, em que é possível expressar completamente seu significado através de vetores de tipo homogêneo e com quantidade fixa de elementos. 
+
+Quanto à estrutura matricial utilizada para a representação dos lotes da quadra 445, todos os lotes representados na simulação armazenam, em cada posição de sua matriz, um vetor contendo os índices de todos os indivíduos que ocupam esta posição. Cada indivíduo tem um índice único, que corresponde à sua posição no vetor que armazena todos os indivíduos. Note que, embora as estruturas dos lotes são referidas como matrizes bidimensionais ou tridimensionais, efetivamente, na implementação realizada, estas estruturas são decompostas em vetores unidimensionais, sendo citadas como matrizes somente com o intuito de facilitar a compreensão em alto nível da estrutura da quadra e de seus lotes. Os estudos desenvolvidos durante a escrita de \cite{Meditec} serviram como base para a definição da estrutura dos lotes da quadra 445, sobretudo pois, o armazenamento dos indivíduos que ocupam cada posição do lote na própria estrutura do lote, é um fator importante na otimização do processamento necessário nas operações de movimentação e de contato entre indivíduos. A Figura \ref{fig:ambiente1} ilustra a estrutura aplicada a cada lote modelado neste trabalho.
+
+\newpage
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.65\textwidth]{Figuras/ambiente1.png}
+  \caption{Ilustração da estrutura matricial empregada para implementação dos lotes}
+  \label{fig:ambiente1}
+\end{figure} 
+
+As alterações que precisam ser realizadas, em termos de estruturas de dados, para a aplicação da técnica de \textit{bitstring} são mínimas. Em uma implementação convencional, utilizando o paradigma de programação orientada à objetos, utilizam-se classes para armazenar os atributos dos indivíduos e métodos que manipulam esses atributos. Assim, para armazenar todos os indivíduos em memória, é necessário utilizar um vetor de classes. Quando da aplicação da técnica de \textit{bitstring}, substituem-se essas classes por um tipo de dado primitivo da linguagem de programação em uso. Neste trabalho adotou-se a linguagem de programação C e seu tipo primitivo para números inteiros \textit{int}. Assim, o tipo primitivo é utilizado para armazenar efetivamente os atributos dos indivíduos e funções externas à estrutura do indivíduo são definidas para manipular seus atributos, decorrendo que, para o armazenamento de todos os indivíduos, é necessário apenas um vetor de inteiros ao invés de um vetor de classes. As funções externas necessárias para manipular os atributos dos indivíduos sobre o tipo de dado primitivo são aquelas definidas em \ref{sec:modelagembitstring}. Essa funções ou operações, quando na aplicação da técnica \textit{bitstring}, equivalem-se a definição de métodos \textit{get} e \textit{set} na classe que representa o indivíduo, considerando-se o uso do paradigma de programação orientada à objetos.
+
+Os algoritmos 1, 2 e 3 ilustram os pseudo-códigos em alto-nível para as operações de movimentação de indivíduos, contato entre indivíduos e transição de estados dos indivíduos, que foram efetivamente implementados no sistema de simulação. É importante perceber que, os pseudo-códigos abaixo apresentados, podem ser utilizados tanto para realizar uma implementação convencional, utilizando o paradigma de programação orientada à objetos, quanto para implementar uma versão utilizando a técnica de \textit{bitstring}, pois, quando da definição dos métodos para manipulação dos atributos dos indivíduos, seja ela interna ou externamente à uma classe, as operações realizadas, e mais especificamente, os resultados produzidos, são equivalentes. 
+
+\begin{algorithm}[H]
+   \SetAlgoLined   
+   \Inicio{
+	\Para{cada indivíduo na simulação} {
+	      direção = randomiza\_um\_número\_inteiro\_entre(0, 8) \\
+	      \Se{direção $= 0$} {
+		      subtrai\_um\_posição\_x(indivíduo)
+	      }
+	      \Se{direção $= 1$} {
+		      soma\_um\_posição\_x(indivíduo)
+	      }
+	      \Se{direção $= 2$} {
+		      subtrai\_um\_posição\_y(indivíduo)
+	      }
+	      \Se{direção $= 3$} {
+		      soma\_um\_posição\_y(indivíduo)
+	      }
+	      \Se{direção $= 4$} {
+		      subtrai\_um\_posição\_x(indivíduo) \\
+		      subtrai\_um\_posição\_y(indivíduo)
+	      }
+	      \Se{direção $= 5$} {
+		      subtrai\_um\_posição\_x(indivíduo) \\
+		      soma\_um\_posição\_y(indivíduo)
+	      }
+	      \Se{direção $= 6$} {
+		      soma\_um\_posição\_x(indivíduo) \\
+		      subtrai\_um\_posição\_y(indivíduo)
+	      }
+	      \Se{direção $= 7$} {
+		      soma\_um\_posição\_x(indivíduo) \\
+		      soma\_um\_posição\_y(indivíduo)
+	      }
+	      \Se{direção $= 8$} {
+		      \Se{posição(indivíduo) tem vizinhos em outro lote} {
+			      move\_individuo\_para\_posição\_vizinha\_aleatória()
+		      }
+	      }
+	} 
+   }
+   \label{alg:movimentacao}
+   \caption{\textsc{Movimentação dos indivíduos}}
+\end{algorithm}
+
+\begin{algorithm}
+ \SetAlgoLined  
+ \Inicio{
+    \Para{cada lote $k$ da quadra} {
+	\Para{cada posição $(x, y)$ do lote $k$} {
+	    \Se{posição $(x, y)$ contém indivíduos infectados} {
+	        \Para{cada indivíduo suscetível na posição $(x, y)$} {
+		    \Se{percentual\_randômico $\leq \beta$} {
+		        altera\_estado\_do\_indivíduo\_para\_exposto()
+		    }
+		}
+	    }
+	}
+    }
+ }
+ \label{alg:contato}
+ \caption{\textsc{Contato entre indivíduos}} 
+\end{algorithm}
+
+\begin{algorithm}
+ \SetAlgoLined  
+  \Para{cada indivíduo na simulação} {
+        \Se{indivíduo está em estado exposto} {
+                \eSe{contador de períodos do indivíduo $\geq \gamma$} {
+                        altera\_estado\_do\_indivíduo\_para\_infectado() \\
+                        zera\_contador\_de\_períodos\_do\_indivíduo()
+                } {
+                        soma\_um\_contador\_de\_períodos\_do\_indivíduo()
+                }
+        }
+        \Se{indivíduo está em estado infectado} {
+                \eSe{contador de períodos do indivíduo $\geq \alpha$} {
+                        altera\_estado\_do\_indivíduo\_para\_recuperado() \\
+                        zera\_contador\_de\_períodos\_do\_indivíduo()
+                } {
+                        soma\_um\_contador\_de\_períodos\_do\_indivíduo()
+                }
+        }
+        \Se{indivíduo está em estado recuperado} {
+                \eSe{contador de períodos do indivíduo $\geq \delta$} {
+                        altera\_estado\_do\_indivíduo\_para\_suscetível() \\
+                        zera\_contador\_de\_períodos\_do\_indivíduo()
+                } {
+                        soma\_um\_contador\_de\_períodos\_do\_indivíduo() \\
+                }
+        }
+  }
+ \label{alg:transicao}
+ \caption{\textsc{Transição de estados dos indivíduos}} 
+\end{algorithm}
+
+\newpage
+
+\section{\textit{Compute Unified Device Architecture} - CUDA}
+\label{sec:CUDA}

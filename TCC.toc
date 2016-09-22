@@ -3,7 +3,7 @@
 \contentsline {chapter}{Lista de Tabelas}{vi}
 \contentsline {chapter}{Lista de Abreviaturas e Siglas}{vii}
 \contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{viii}
-\contentsline {chapter}{Resumo}{x}
+\contentsline {chapter}{Resumo}{xi}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
 \contentsline {section}{\numberline {1.1}Objetivos}{2}
 \contentsline {section}{\numberline {1.2}Motiva\c c\~ao e Justificativas}{3}
@@ -20,4 +20,12 @@
 \contentsline {section}{\numberline {3.2}Modelagem do Ambiente de Simula\c c\~ao}{25}
 \contentsline {section}{\numberline {3.3}Modelagem em Operadores aos Agentes}{27}
 \contentsline {section}{\numberline {3.4}Modelagem em \textit {Bitstring} dos Agentes}{29}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{39}
+\contentsline {section}{\numberline {3.5}SIMULA}{38}
+\contentsline {section}{\numberline {3.6}Estruturas de Dados e Estrat\'egias de Implementa\c c\~ao}{40}
+\contentsline {section}{\numberline {3.7}\textit {Compute Unified Device Architecture} - CUDA}{44}
+\contentsline {chapter}{\numberline {4}Solu\c c\~oes: Resultados e Discuss\~oes}{45}
+\contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{45}
+\contentsline {section}{\numberline {4.2}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{45}
+\contentsline {section}{\numberline {4.3}Implementa\c c\~ao Convencional e \textit {Bitstring} com CUDA}{45}
+\contentsline {section}{\numberline {4.4}Cases: Discutir as Simula\c c\~oes no Espa\c co Geogr\'afico Escolhido.}{45}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{46}
