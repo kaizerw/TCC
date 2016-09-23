@@ -17,6 +17,19 @@ Tennessee, EUA, 2010.}
   Epidêmicos e Evolucionários}. 1. ed. São Paulo: Sociedade Brasileira de
   Matemática Aplicada e Computacional, 2006.}
 
+\bibitem[Bortoluzzi 2016]{TCCDaniel}
+\abntrefinfo{Bortoluzzi}{BORTOLUZZI}{2016}
+{BORTOLUZZI, D. V.~D.
+\emph{Desenvolvimento de Ferramenta de Software para Manipulação,
+  Disponibilização e Visualização de Dados Georreferenciados}.
+Dissertação (Monografia) --- Universidade Estadual do Oeste do Paraná -
+  UNIOESTE, Cascavel - PR, Fevereiro 2016.}
+
+\bibitem[Cook 2013]{CudaProgramming}
+\abntrefinfo{Cook}{COOK}{2013}
+{COOK, S. \emph{Cuda Programming - A Developer's Guide to Parallel Computing
+  with GPUs}. 1. ed. EUA: Elsevier, 2013.}
+
 \bibitem[Daley e Gani 1999]{EpidemicModelling}
 \abntrefinfo{Daley e Gani}{DALEY; GANI}{1999}
 {DALEY, D.~J.; GANI, J. \emph{Epidemic Modelling - An Introduction}. 1. ed.
@@ -96,6 +109,17 @@ Tese (Tese de Doutorado) --- Universidade Federal de Lavras, Lavras, MG, 2012.}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2003}
 {RUSSEL, S.; NORVIG, P. \emph{Artificial Intelligence - A Modern Approach}. 2.
   ed. Reading: Prentice Hall, 2003.}
+
+\bibitem[Sanders e Kandrot 2010]{CudaByExample}
+\abntrefinfo{Sanders e Kandrot}{SANDERS; KANDROT}{2010}
+{SANDERS, J.; KANDROT, E. \emph{Cuda By Example - An Introduction to
+  General-Purpose GPU Programming}. 1. ed. EUA: Addison-Wesley, 2010.}
+
+\bibitem[Tesla 2016]{K20}
+\abntrefinfo{Tesla}{TESLA}{2016}
+{TESLA, N. \emph{Nvidia Tesla}. 2016.
+Consultado na INTERNET:
+  http://www.nvidia.com.br/object/workstation-solutions-tesla-br.html, 2016.}
 
 \bibitem[White, Rey e Sanchez 2007]{White}
 \abntrefinfo{White, Rey e Sanchez}{WHITE; REY; SANCHEZ}{2007}

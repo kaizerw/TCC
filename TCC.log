@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.9.2)  22 SEP 2016 16:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.9.2)  23 SEP 2016 15:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,33 +844,65 @@ cmr/m/n/12 0[][] = []000 000[][]$ \T1/ptm/m/n/12 até $[]\OT1/cmr/m/n/12 63[][]
 =
  []
 
-[37] [38] [39] [40] <Figuras/ambiente1.png, id=192, 379.4175pt x 143.03438pt>
+[37] [38] [39] [40] <Figuras/Simula1.PNG, id=192, 1028.34187pt x 545.03625pt>
+File: Figuras/Simula1.PNG Graphic file (type png)
+
+<use Figuras/Simula1.PNG>
+Package pdftex.def Info: Figuras/Simula1.PNG used on input line 408.
+(pdftex.def)             Requested size: 387.50443pt x 205.38608pt.
+
+<Figuras/Simula2.PNG, id=193, 1028.34187pt x 549.55313pt>
+File: Figuras/Simula2.PNG Graphic file (type png)
+
+<use Figuras/Simula2.PNG>
+Package pdftex.def Info: Figuras/Simula2.PNG used on input line 417.
+(pdftex.def)             Requested size: 387.50443pt x 207.08817pt.
+ [41 <./Figuras/Simula1.PNG> <./Figuras/Simula2.PNG>]
+<Figuras/Simula3.PNG, id=199, 1028.34187pt x 548.0475pt>
+File: Figuras/Simula3.PNG Graphic file (type png)
+
+<use Figuras/Simula3.PNG>
+Package pdftex.def Info: Figuras/Simula3.PNG used on input line 426.
+(pdftex.def)             Requested size: 387.50443pt x 206.5208pt.
+ [42 <./Figuras/Simula3.PNG>] [43]
+<Figuras/ambiente1.png, id=207, 379.4175pt x 143.03438pt>
 File: Figuras/ambiente1.png Graphic file (type png)
 
 <use Figuras/ambiente1.png>
-Package pdftex.def Info: Figuras/ambiente1.png used on input line 409.
+Package pdftex.def Info: Figuras/ambiente1.png used on input line 444.
 (pdftex.def)             Requested size: 296.322pt x 111.71039pt.
- [41 <./Figuras/ambiente1.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 458.
- [42] [43]) [44]
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 493.
+ [44 <./Figuras/ambiente1.png>] [45] [46] [47]
+[48] <Figuras/somaVetor.png, id=225, 411.78844pt x 71.51718pt>
+File: Figuras/somaVetor.png Graphic file (type png)
+
+<use Figuras/somaVetor.png>
+Package pdftex.def Info: Figuras/somaVetor.png used on input line 575.
+(pdftex.def)             Requested size: 296.322pt x 51.46394pt.
+) [49 <./Figuras/somaVetor.png>] [50]
 \openout2 = `capitulo4/capitulo4.aux'.
 
 
 (./capitulo4/capitulo4.tex
 Cap\'{\i }tulo 4.
-) [45
+) [51
 
 
 
-] (./TCC.bbl [46
+] (./TCC.bbl [52
 
 
-] [47]) [48] (./TCC.aux (./iniciais/capa.aux)
-(./iniciais/rosto.aux) (./iniciais/aprova.aux) (./iniciais/dedica.aux)
-(./iniciais/sumario.aux) (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux)
-(./capitulo2/capitulo2.aux) (./capitulo3/capitulo3.aux)
-(./capitulo4/capitulo4.aux))
+]
+Underfull \hbox (badness 10000) in paragraph at lines 120--123
+[]\T1/ptm/m/n/12 TESLA, N. \T1/ptm/m/it/12 Nvi-dia Tesla\T1/ptm/m/n/12 . 2016. 
+Con-sul-tado na IN-TER-NET:
+ []
+
+[53]) [54] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
+(./iniciais/aprova.aux) (./iniciais/dedica.aux) (./iniciais/sumario.aux)
+(./iniciais/resumo.aux) (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
+(./capitulo3/capitulo3.aux) (./capitulo4/capitulo4.aux))
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
@@ -881,13 +913,13 @@ LaTeX Font Warning: Size substitutions with differences
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6762 strings out of 493013
- 98143 string characters out of 6139318
- 202845 words of memory out of 5000000
- 10022 multiletter control sequences out of 15000+600000
+ 6791 strings out of 493013
+ 98683 string characters out of 6139318
+ 202957 words of memory out of 5000000
+ 10046 multiletter control sequences out of 15000+600000
  75703 words of font info for 104 fonts, out of 8000000 for 9000
  1150 hyphenation exceptions out of 8191
- 47i,27n,51p,1615b,2807s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,27n,51p,2028b,2807s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -905,10 +937,10 @@ s/msam10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on TCC.pdf (59 pages, 5350143 bytes).
+Output written on TCC.pdf (65 pages, 5570636 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 191 compressed objects within 2 object streams
+ 309 PDF objects out of 1000 (max. 8388607)
+ 204 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

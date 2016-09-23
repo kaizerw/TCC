@@ -4,7 +4,7 @@
 \section{Introdução}
 \label{sec:intro3}
 
-Neste capítulo serão apresentadas as metodologias computacionais utilizadas à realização deste trabalho. Serão discutidas as modelagens realizadas à representação do ambiente e dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas à apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência serão discutidas questões relativas às APIs para programação paralela OpenMP e CUDA, apresentando suas principais características e aplicações. Por fim será apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que será utilizado como apoio às operações de configuração de parâmetros e do ambiente e à visualização de resultados das simulações que serão executadas.
+Neste capítulo são apresentadas as metodologias computacionais utilizadas à realização deste trabalho. São discutidas as modelagens realizadas à representação do ambiente e dos indivíduos no sistema multiagente proposto, expondo-as em termos de operadores e ao uso da metodologia em \textit{bitstring}, as linguagens de programação e as motivações de seus usos, as estruturas de dados desenvolvidas à apropriada aplicação da modelagem \textit{bitstring} e paralelização em CUDA e estratégias de implementação do sistema multiagente. Em sequência é apresentado o \textit{software} especialmente desenvolvido à manipulação de informações georreferenciadas, que é utilizado como apoio às operações de configuração de parâmetros e do ambiente e à visualização de resultados das simulações que são executadas. Por fim são discutidas questões relativas à API para programação paralela CUDA, apresentando suas principais características e aplicações.
 
 \section{Modelagem do Ambiente de Simulação}
 \label{sec:modelagemAmbiente}
@@ -116,7 +116,7 @@ Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y,
 
 A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos que aqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares a cada campo. A quantidade de \textit{bits} complementares a cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. 
 
-Em deslocamentos aritméticos, como aqueles que são definidos na linguagem C, ocorre a prevervação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem C. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos, sendo o uso do tipo \textit{unsigned int} em C justificado por este motivo.
+Em deslocamentos aritméticos, como aqueles que são definidos na linguagem C, ocorre a preservação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem C. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos, sendo o uso do tipo \textit{unsigned int} em C justificado por este motivo.
 
 Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que (\ref{eq:bitstring_get}) é então reescrita concretamente para a modelagem (\ref{eq:bitstring}) como em (\ref{eq:bitstring_get_2}).
 \begin{equation}
@@ -372,7 +372,7 @@ Na Tabela \ref{tab:variaveis} são apresentados sinteticamente os valores relativ
 \label{tab:variaveis}
 \end{table}
 
-Para completar a modelagem é suficiente detalhar e relacionar os identificadores dos lotes e dimensões dos lotes, a faixa de variação do controle, e os possíveis tipos de estados do agente na base $10$, com tais características na base $2$, para determinar sem ambigüidade os elementos de (\ref{especificacaoAgente}). 
+Para completar a modelagem é suficiente detalhar e relacionar os identificadores dos lotes e dimensões dos lotes, a faixa de variação do controle, e os possíveis tipos de estados do agente na base $10$, com tais características na base $2$, para determinar sem ambiguidade os elementos de (\ref{especificacaoAgente}). 
 
 Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando $64$ possíveis valores. Os lotes têm dimensão máxima de $512_{10} = 2^{9}$ linhas por $512_{10} = 2^{9}$ colunas, sendo possível variarem numa representação matricial da posição $\big(0; 0\big)_{10} = \big(000\ 000\ 000; 000\ 000\ 000\big)_{2}$ até a posição $\big(511; 511\big)_{10} = \big(111\ 111\ 111; 111\ 111\ 111\big)_{2}$, totalizando os $512$ possíveis valores. Semelhantemente, faz-se uma representação matricial ao controle para que sua variação ocorra de $\big(0\big)_{10} = \big(000\ 000\big)_{2}$ até $\big(63\big)_{10} = \big(111\ 111\big)_{2}$, totalizando os $64$ possíveis valores. Os estados do agente são setados como $\big(0, 0\big)_{2}$ para o suscetível, $S$, $\big(0, 1\big)_{2}$ para o exposto, $E$, $\big(1, 0\big)_{2}$ para o infectante, $I$, e $\big(1, 1\big)_{2}$ para o recuperado, $R$.
 
@@ -381,19 +381,54 @@ Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\b
 
 Como apoio às operações específicas relacionadas à manipulação de dados georreferenciados relativos à quadra 445, utilizou-se um \textit{software} especificamente desenvolvido para tal função, denominado SIMULA. O \textit{software} desempenha as funções de aquisição de informações georreferenciadas de um banco de dados, seu tratamento e disponibilização para o programa de que executa as simulações e para um módulo visualizador de saídas, sendo o SIMULA um \textit{software} que integra operações de pré-processamento, como aquisição e tratamento de dados; de processamento, como a execução de simulações; e de pós-processamento, como a visualização de saídas gráficas de arquivos resultantes das simulações executadas. 
 
-Na etapa de aquisição dos dados, o \textit{software} realiza uma consulta em um Sistema Gerenciador de Banco de Dados Objeto Relacional, SGBDOR, utilizando a linguagem de consulta \textit{Structured Query Language}, SQL. Nesta etapa são obtidas informações sobre os pontos georreferenciados que estão nos vértices de cada lote da quadra 445. A informação dos vértices são importantes pois definem a geometria do lote, e são utilizados posteriormente, após diversos processamentos, para a construção das estruturas matriciais que representam os lotes na simulação. Foi utilizado o SGBDOR PostgreSQL com a adição da extensão PostGIS, que permite o armazenamento e processamento de objetos com informações georreferenciadas em bancos de dados. Através da extensão PostGIS, os dados são importados para o banco de dados por meio de um arquivo em formato \textit{shapefile}, que é um formato de arquivos bastante utilizado para o armazenamento de dados geoespaciais. O arquivo \textit{shapefile} foi obtido em parceria com a prefeitura da cidade de Cascavel/PR.
+Na etapa de aquisição dos dados, o \textit{software} realiza uma consulta em um Sistema Gerenciador de Banco de Dados Objeto Relacional, SGBDOR, utilizando a linguagem de consulta \textit{Structured Query Language}, SQL. Nesta etapa são obtidas informações sobre os pontos georreferenciados que estão nos vértices de cada lote da quadra 445. As informações sobre os vértices são importantes pois definem a geometria do lote, e são utilizados posteriormente, após diversos processamentos, para a construção das estruturas matriciais que representam os lotes na simulação. Foi utilizado o SGBDOR PostgreSQL com a adição da extensão PostGIS, que permite o armazenamento e processamento de objetos com informações georreferenciadas em bancos de dados. Através da extensão PostGIS, os dados são importados para o banco de dados por meio de um arquivo em formato \textit{shapefile}, que é um formato de arquivos bastante utilizado para o armazenamento de dados geoespaciais. O arquivo \textit{shapefile} foi obtido em parceria com a prefeitura da cidade de Cascavel/PR.
 
-Na etapa posterior à aquisição, ocorre o tratamento dos dados obtidos, que é necessária para a remoção de informações redundantes que venham do banco de dados e adição de informações pertinentes que viabilizem, essencialmente, a aproximação da geometria dos lotes em matrizes bidimensionais. As principais processos executados dentro da etapa de tratamento de dados são:
+Na etapa posterior à aquisição ocorre o tratamento dos dados obtidos, que é necessária para a remoção de informações redundantes que venham do banco de dados e adição de informações pertinentes que viabilizem, essencialmente, a aproximação da geometria dos lotes em matrizes bidimensionais. As principais processos executados dentro da etapa de tratamento de dados são:
 \begin{itemize}
- \item \textbf{Limpeza de pontos:} São removidos os pontos duplicados ou pontos que estejam muito próximos uns dos outros, utilizando como critério de remoção o erro relativo entre as latitudes e longitudes dos pontos. 
+ \item \textbf{Limpeza de pontos:} São removidos os pontos duplicados ou pontos que estejam muito próximos uns dos outros, utilizando como critério de remoção os erros relativos entre as latitudes e longitudes dos pontos. 
  \item \textbf{Inserção de pontos:} É inserido um ponto adicional ao conjunto de pontos de um lote que contenha exatamente 6 pontos. Essa inserção de um ponto adicional é essencial para a realização correta da etapa de divisão de lotes.
- \item \textbf{Ordenação de pontos:} Os pontos são ordenados, em sentido horário, com início no ponto com menor latitude e maior longitude. A ordenação dos pontos é importante para a determinação do local de divisão de um lote.
+ \item \textbf{Ordenação de pontos:} Os pontos são ordenados, em sentido horário, com início no ponto com menor latitude e maior longitude. A ordenação dos pontos é importante para a determinação do local apropriado para a divisão de um lote.
  \item \textbf{Divisão de lotes:} É realizada a divisão de lotes que contenham 7 pontos, em dois outros sub-lotes. A divisão é executada através do cruzamento das diversas retas formadas por dois pontos quaisquer do conjunto original de pontos, com o intuito de formar dois polígonos regulares, que serão os dois novos lotes.
  \item \textbf{Cálculo das dimensões dos lotes:} São calculados o comprimento e largura dos lotes, a partir das distâncias euclidianas dos pontos que estão nos vértices dos lotes.
  \item \textbf{Interpolação de pontos:} Através de interpolação linear, são interpolados os pontos entre os vértices, que formam as arestas dos lotes. Através dos pontos das arestas dos lotes, são interpolados linearmente os pontos internos ao lote. A interpolação é um processo importante no tratamento dos dados pois viabiliza a aproximação de uma malha que represente a geometria do lote, através de seus vértices.
- \item \textbf{Média de pontos:} São calculadas as médias entre subconjuntos de 4 pontos do conjunto de pontos obtidos da malha gerada pela etapa de interpolação de pontos. O processo realizado assemelha-se à uma convolução com máscaras, utilizando uma máscara de dimensão 2, com todos os coeficientes iguais a 1, e uma constante de normalização igual a $\frac{1}{4}$. Como resultado, obtém-se um conjunto de pontos onde, cada ponto, corresponde ao centro de uma posição na matriz do lote.
- \item \textbf{Cálculo das dimensões das matrizes:} Através dos pontos obtidos na etapa anterior são calculadas as dimensões das matrizes que representarão os lotes na simulação. Efetivamente, são calculadas a quantidade de linhas e de colunas das matrizes.
+ \item \textbf{Média de pontos:} São calculadas as médias entre subconjuntos de 4 pontos do conjunto de pontos obtidos da malha gerada pela etapa de interpolação de pontos. O processo realizado assemelha-se à uma convolução com máscaras, utilizando uma máscara de dimensão $2 \times 2$, com todos os coeficientes iguais a 1, e uma constante de normalização igual a $\frac{1}{4}$. Como resultado, obtém-se um conjunto de pontos onde, cada ponto, corresponde ao centro de uma posição na matriz do lote.
+ \item \textbf{Cálculo das dimensões das matrizes:} Através dos pontos obtidos na etapa anterior são calculadas as dimensões das matrizes que representarão os lotes na simulação. Efetivamente, são calculadas as quantidades de linhas e de colunas das matrizes.
 \end{itemize}
+
+Durante o tratamento dos dados ocorre ainda o cálculo das posições vizinhas entre as fronteiras de cada lote. Durante este processo, para cada lote, calculam-se as posições vizinhas em outro lote para cada posição que está em sua fronteira, através de algoritmos especialmente desenvolvidos, o que possibilita que, os indivíduos, durante a operação de movimentação, desloquem-se de um lote para outro, se estiverem em uma posição de fronteira que possua posições vizinhas em um lote adjacente. Neste processo, os algoritmos necessitam apenas das quantidades de linhas e colunas de cada lote e as posições relativas entre os lotes. As informações sobre as posições relativas entre os lotes são lidas pelo SIMULA de um arquivo de configuração à parte. Após o cálculo das vizinhanças, um arquivo texto é gerado e disponibilizado para a sistema de simulação, que irá realizar a leitura dos dados e construir a estrutura de vizinhança que será utilizada durante as simulações. 
+
+Na operação de processamento são executadas efetivamente as simulações. Após a geração de diversos arquivos de configuração, o \textit{software} SIMULA executa o sistema de simulação, que realiza a leitura dos arquivos gerados e executa as simulações solicitadas. Ao final de cada simulação, o sistema de simulação gera arquivos texto de saída, que são utilizados pelo SIMULA para exibição de saídas gráficas na etapa de pós-processamento. É importante notar que, o sistema de simulação é independente ao \textit{software} SIMULA, podendo ser utilizado separadamente, sendo necessário a geração ou cópia manual dos arquivos de entrada e algum meio independente para geração de saídas gráficas. Efetivamente, quando na execução dos experimentos numérico-computacionais, o sistema de simulação será utilizado separadamente ao SIMULA, por questões de simplicidade na execução de uma grande quantidade de simulações com diferentes parâmetros. 
+
+Na operação de pós-processamento, os arquivos saída gerados pelo sistema de simulação são utilizados para a visualização gráfica dos resultados no \textit{software} SIMULA. A Figura \ref{fig:simula1} ilustra a saída espacial obtida através da utilização das informações georreferenciadas da quadra 445, em que os indivíduos em azul representam indivíduos em estado suscetível, em amarelo representam indivíduos em estado latente, em vermelho representam indivíduos em estado infectado e em rosa representam indivíduos em estado recuperado. Esta visualização georreferenciada foi concebida e desenvolvida com base nos trabalhos realizados em \cite{TCCDaniel}.
+
+\newpage
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.85\textwidth]{Figuras/Simula1.PNG}
+  \caption{Ilustração da saída espacial na quadra 445 gerada pelo SIMULA}
+  \label{fig:simula1}
+\end{figure} 
+
+A Figura \ref{fig:simula2} ilustra outro tipo de saída gráfica gerada pelo \textit{software} SIMULA, os gráficos de linha, que representam as quantidades de cada tipo de indivíduo durante o tempo de simulação. A linha em verde indica a quantidade de indivíduos em estado suscetível, em amarelo indica a quantidade de indivíduos em estado latente, em vermelho indica a quantidade de indivíduos em estado infectado e em azul indica a quantidade de indivíduos em estado recuperado. 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.85\textwidth]{Figuras/Simula2.PNG}
+  \caption{Ilustração do gráfico de linha gerado pelo SIMULA}
+  \label{fig:simula2}
+\end{figure} 
+
+A Figura \ref{fig:simula3} ilustra um terceiro tipo de saída gráfica gerada pelo \textit{software} SIMULA, as saídas de espalhamento das populações em determinados lotes. Esta saída apresenta a distribuição espacial das diferentes populações nos lotes de acordo com o tempo. Graficamente, é exibida uma matriz com dimensões idênticas à de determinado lote, em que cada posição é exibida de uma cor, dependendo dos estados dos indivíduos que a ocupam. Uma posição em cor verde indica que nesta posição existem somente indivíduos em estado suscetível, em cor amarela indica que existem indivíduos em estado latente e podem ou não existir indivíduos em estado suscetível, em cor vermelha indica que existem indivíduos em estado infectado e podem ou não existirem indivíduos em estado latente e suscetível, em cor azul indica que existem indivíduos em estado recuperado e podem ou não existirem indivíduos em estado infectado, latente e suscetível e em cor branca indica que não existem indivíduos ocupando tal posição. Cada ciclo da simulação gera uma matriz para cada lote, que é utilizado para compor esta saída. 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.85\textwidth]{Figuras/Simula3.PNG}
+  \caption{Ilustração da saída espalhamento em um lote}
+  \label{fig:simula3}
+\end{figure} 
+
+\newpage
 
 \section{Estruturas de Dados e Estratégias de Implementação}
 \label{sec:estruturasdedados}
@@ -413,7 +448,7 @@ Quanto à estrutura matricial utilizada para a representação dos lotes da quadra 
 
 As alterações que precisam ser realizadas, em termos de estruturas de dados, para a aplicação da técnica de \textit{bitstring} são mínimas. Em uma implementação convencional, utilizando o paradigma de programação orientada à objetos, utilizam-se classes para armazenar os atributos dos indivíduos e métodos que manipulam esses atributos. Assim, para armazenar todos os indivíduos em memória, é necessário utilizar um vetor de classes. Quando da aplicação da técnica de \textit{bitstring}, substituem-se essas classes por um tipo de dado primitivo da linguagem de programação em uso. Neste trabalho adotou-se a linguagem de programação C e seu tipo primitivo para números inteiros \textit{int}. Assim, o tipo primitivo é utilizado para armazenar efetivamente os atributos dos indivíduos e funções externas à estrutura do indivíduo são definidas para manipular seus atributos, decorrendo que, para o armazenamento de todos os indivíduos, é necessário apenas um vetor de inteiros ao invés de um vetor de classes. As funções externas necessárias para manipular os atributos dos indivíduos sobre o tipo de dado primitivo são aquelas definidas em \ref{sec:modelagembitstring}. Essa funções ou operações, quando na aplicação da técnica \textit{bitstring}, equivalem-se a definição de métodos \textit{get} e \textit{set} na classe que representa o indivíduo, considerando-se o uso do paradigma de programação orientada à objetos.
 
-Os algoritmos 1, 2 e 3 ilustram os pseudo-códigos em alto-nível para as operações de movimentação de indivíduos, contato entre indivíduos e transição de estados dos indivíduos, que foram efetivamente implementados no sistema de simulação. É importante perceber que, os pseudo-códigos abaixo apresentados, podem ser utilizados tanto para realizar uma implementação convencional, utilizando o paradigma de programação orientada à objetos, quanto para implementar uma versão utilizando a técnica de \textit{bitstring}, pois, quando da definição dos métodos para manipulação dos atributos dos indivíduos, seja ela interna ou externamente à uma classe, as operações realizadas, e mais especificamente, os resultados produzidos, são equivalentes. 
+Os algoritmos 1, 2 e 3 ilustram os pseudo-códigos em alto nível para as operações de movimentação de indivíduos, contato entre indivíduos e transição de estados dos indivíduos, que foram efetivamente implementados no sistema de simulação. É importante perceber que, os pseudo-códigos abaixo apresentados, podem ser utilizados tanto para realizar uma implementação convencional, utilizando o paradigma de programação orientada à objetos, quanto para implementar uma versão utilizando a técnica de \textit{bitstring}, pois, quando da definição dos métodos para manipulação dos atributos dos indivíduos, seja ela interna ou externamente à uma classe, os resultados produzidos por essas operações, são equivalentes. 
 
 \begin{algorithm}[H]
    \SetAlgoLined   
@@ -421,32 +456,32 @@ Os algoritmos 1, 2 e 3 ilustram os pseudo-códigos em alto-nível para as operaçõe
 	\Para{cada indivíduo na simulação} {
 	      direção = randomiza\_um\_número\_inteiro\_entre(0, 8) \\
 	      \Se{direção $= 0$} {
-		      subtrai\_um\_posição\_x(indivíduo)
+		      subtrai\_um\_coordenada\_x(indivíduo)
 	      }
 	      \Se{direção $= 1$} {
-		      soma\_um\_posição\_x(indivíduo)
+		      soma\_um\_coordenada\_x(indivíduo)
 	      }
 	      \Se{direção $= 2$} {
-		      subtrai\_um\_posição\_y(indivíduo)
+		      subtrai\_um\_coordenada\_y(indivíduo)
 	      }
 	      \Se{direção $= 3$} {
-		      soma\_um\_posição\_y(indivíduo)
+		      soma\_um\_coordenada\_y(indivíduo)
 	      }
 	      \Se{direção $= 4$} {
-		      subtrai\_um\_posição\_x(indivíduo) \\
-		      subtrai\_um\_posição\_y(indivíduo)
+		      subtrai\_um\_coordenada\_x(indivíduo) \\
+		      subtrai\_um\_coordenada\_y(indivíduo)
 	      }
 	      \Se{direção $= 5$} {
-		      subtrai\_um\_posição\_x(indivíduo) \\
-		      soma\_um\_posição\_y(indivíduo)
+		      subtrai\_um\_coordenada\_x(indivíduo) \\
+		      soma\_um\_coordenada\_y(indivíduo)
 	      }
 	      \Se{direção $= 6$} {
-		      soma\_um\_posição\_x(indivíduo) \\
-		      subtrai\_um\_posição\_y(indivíduo)
+		      soma\_um\_coordenada\_x(indivíduo) \\
+		      subtrai\_um\_coordenada\_y(indivíduo)
 	      }
 	      \Se{direção $= 7$} {
-		      soma\_um\_posição\_x(indivíduo) \\
-		      soma\_um\_posição\_y(indivíduo)
+		      soma\_um\_coordenada\_x(indivíduo) \\
+		      soma\_um\_coordenada\_y(indivíduo)
 	      }
 	      \Se{direção $= 8$} {
 		      \Se{posição(indivíduo) tem vizinhos em outro lote} {
@@ -514,3 +549,32 @@ Os algoritmos 1, 2 e 3 ilustram os pseudo-códigos em alto-nível para as operaçõe
 
 \section{\textit{Compute Unified Device Architecture} - CUDA}
 \label{sec:CUDA}
+
+Neste trabalho propõe-se a paralelização do sistema de simulação utilizando a API \textit{Compute Unified Device Architecture}, CUDA. Especificamente, pretende-se utilizar duas placas gráficas Nvidia Tesla K20, que contam com 2496 \textit{cuda cores}, 5 GB de memória e desempenho de $1.17$ Tflops e $3.52$ Tflops para ponto flutuante de precisão dupla e simples, respectivamente, cada uma \cite{K20}. 
+
+Por muito tempo, o método mais utilizado para o aumento de desempenho em processadores era o aumento da velocidade em que o relógio do processador operava. De fato, muitos dos ganhos de desempenho obtidos durante o desenvolvimento dos processadores foram conseguidos desta forma. Porém, mais recentemente, os desenvolvedores de circuitos de processamento foram forçados a procurar alternativas à este método, devido a diversas limitações fundamentais na fabricação de circuitos integrados, como por exemplo, restrições de calor e potência, que estavam se aproximando do limite físico suportado pelos transistores. Assim, a alternativa encontrada foi a de mimetizar o que já ocorria em supercomputadores: extrair desempenho por meio do aumento na quantidade de unidades de processamento por processador, colocando dois, quatro, oito ou mais unidades de processamento em cada processador, movimento que ficou conhecido como a revolução \textit{multicore} \cite{CudaByExample}.
+
+Enquanto os processadores evoluíam através do aumento da quantidade de unidades de processamento por processador, as GPUs também passavam por uma grande revolução. Inicialmente, o objetivo principal do uso de placas gráficas em computadores era a de oferecer ao sistema um \textit{hardware} assistente para processamentos gráficos de imagens. O aumento da demanda das placas gráficas aumentaram devido ao lançamento de jogos eletrônicos altamente imersivos, que necessitavam de alto processamento gráfico para garantir fidelidade de imagem. Assim, diversas tecnologias para desenvolvimento de aplicações gráficas foram lançadas, como por exemplo, as bibliotecas DirectX e OpenGL. Essas APIs eram as únicas formas que os programadores tinham para interagir com as placas gráficas, de forma que, diversos pesquisadores exploravam as APIs gráficas como forma de solucionarem problemas de propósito geral. Embora o desempenho obtido com o uso de APIs gráficas se mostrava interessante e promissor, seu modelo de programação era bastante restritivo e complexo. Com o lançamento de placas gráficas de propósito geral e da biblioteca CUDA, buscava-se incluir componentes especificamente desenvolvidos para a computação em GPU, que poderiam ser facilmente utilizados por programadores para implementar soluções para problemas de propósito geral. A biblioteca CUDA foi desenvolvida inicialmente para o uso conjunto com a linguagem de programação C, que era utilizada como padrão pela indústria. Atualmente a biblioteca CUDA pode ser utilizada em conjunto com outras linguagens de programação como C++, Fortran, Python e C\#. As principais áreas de conhecimento que atualmente fazem uso da API CUDA são as de processamento de imagens médicas, simulação computacional da dinâmica de fluídos e ciência ambiental, sendo a biblioteca bastante utilizada no meio acadêmico \cite{CudaByExample}.
+
+Em \cite{CudaProgramming} são definidas duas classificações para paralelismo: 
+\begin{itemize}
+ \item \textbf{Paralelismo baseado em tarefas:} Está relacionado com a execução de múltiplos processos concorrentemente, que podem não ter relação uns com os outros. Um exemplo clássico de paralelismo baseado em tarefas é um sistema operacional, em que diversos processos estão sendo executados ao mesmo tempo. Cada processo pode ser escalonado para um \textit{core} separado na CPU, por exemplo.
+ \item \textbf{Paralelismo baseado em dados:} O foco não está nas tarefas que devem ser executadas, mas sim nos dados que precisam ser transformados. Neste tipo de paralelismo, os dados são divididos em partes de igual tamanho e são escalonados para cada \textit{core} da CPU, onde é aplicada uma mesma operação sobre todos os dados. 
+\end{itemize}
+
+As GPUs geralmente apresentam uma arquitetura baseada em memória compartilhada, o que significa que todas as \textit{threads} tem acesso a todos os dados de forma igualitária. Por este motivo, o modelo de paralelismo baseado em dados é o modelo efetivamente utilizado em GPUs, com uma abordagem \textit{Single Instruction, Multiple Thread}, SIMT. Neste modelo, o programador define em \textit{kernels} as operações que as \textit{threads} irão executar. Os \textit{kernels} são os métodos ou funções que somente podem ser executadas pela GPU. O \textit{kernel} então lê os dados de forma uniforme, aplicando as operações definidas sobre os dados. 
+
+Como as GPUs apresentam arquitetura baseada em memória compartilhada, para a implementação de aplicações paralelas em CUDA, utiliza-se um padrão baseado em laços de repetição. Neste padrão, cada \textit{thread} indexa um índice de um laço de repetição, que efetivamente indexa uma porção de memória, onde a \textit{thread} executa o \textit{kernel} independentemente. Assim, a execução das iterações de uma laço de repetição são executados paralelamente sobre os dados, observando que esse comportamento somente é possível se não existirem dependências de dados entre as iterações. Desta forma é possível explorar a localidade espacial dos dados, pois \textit{threads} adjacentes irão acessar dados em posições adjacentes na memória, assim como os blocos acessados por cada \textit{thread} estão em posições contíguas na memória. A localidade espacial é considerado um fator de extrema importância para a obtenção de ganho de desempenho em aplicações executadas em GPU \cite{CudaProgramming}.
+
+As unidades de processamento nas GPUs estão organizadas em \textit{grids}, \textit{blocks} e \textit{threads}, sendo um \textit{grid} um conjunto de \textit{blocks} e um \textit{block} um conjunto de \textit{threads}. Devido a esta organização, é possível obter um alto nível de paralelismo de dados, pois os identificadores dos \textit{grids}, \textit{blocks} e \textit{threads} são utilizados para compor um identificador único, que identifica a porção de memória que uma \textit{thread} irá acessar e executar o \textit{kernel} \cite{CudaProgramming}. 
+
+Na Figura \ref{fig:somaVetor} é ilustrado um trecho de um código-fonte em C para um \textit{kernel} CUDA que executa uma soma de vetores. Como um identificador único pode ser calculado para cada \textit{thread}, então cada \textit{thread} usa seu identificador para indexar uma posição dos vetores de entrada e saída, que são designados pelas variáveis \textit{a}, \textit{b} e \textit{c}. O identificador de cada \textit{thread} é identificado no código pela variável \textit{threadID}. Como a quantidade de \textit{threads} disponíveis na placa gráfica pode ser maior do que a quantidade de elementos nos vetores, então é necessário ainda testar se o identificador da \textit{thread} é menor do que a quantidade de elementos dos vetores, que é designado pela variável \textit{n}. Assim, evita-se acesso indevido à posições que memória que não pertencem aos vetores. Note que não existe um laço de repetição que percorre todos os elementos dos vetores. Esse laço é eliminado graças a utilização de paralelismo baseado em dados. 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.65\textwidth]{Figuras/somaVetor.png}
+  \caption{Exemplo de código-fonte em C de um \textit{kernel} CUDA}
+  \label{fig:somaVetor}
+\end{figure} 
+
+Para que seja possível a execução dos \textit{kernels} sobre os dados que estão na memória compartilhada da GPU, é necessário realizar a sua cópia, da memória principal do computador para memória compartilhada da GPU. É importante notar que, a GPU não consegue acessar diretamente dados na memória principal do computador, assim como a CPU não consegue acessar diretamente dados da memória da GPU. Essa etapa de cópia de dados é um importante fator limitante no ganho de desempenho em aplicações GPGPU, pois geralmente operações de transferência e cópia de memória entre dispositivos são extremamente custosas computacionalmente. Assim, é desejável que os programadores que desejam utilizar GPUs para acelerar suas aplicações, projetem suas aplicações de forma a reduzir o número de vezes em que são realizadas as cópias de memória, assim como a quantidade de memória total que precisa ser copiada. Efetivamente, o número de vezes de realização de cópias de memória pode ser reduzido se os dados foram mantidos na GPU pelo máximo de tempo possível, onde a cópia de dados da CPU para a GPU seja realizada uma vez ao início do processamento e a cópia da GPU para CPU seja realizada uma vez ao final do processamento \cite{CudaProgramming}. A redução na quantidade total de memória que precisa ser copiada somente pode ser alcançada se forem reduzidos os tamanhos, em \textit{bytes}, das estruturas que guardam as informações que precisam ser processadas pela GPU. Neste trabalho, objetiva-se utilizar a técnica de \textit{bitstring} como forma de reduzir a quantidade de \textit{bytes} que precisam ser copiadas entre CPU e GPU. Espera-se, com a aplicação da técnica, diminuir o consumo de memória, para o vetor de agentes, em até $80\%$, observando que, para cada agente, uma implementação convencional utilizaria 5 \textit{bytes} para armazenar os cinco atributos do agente, enquanto que, para o modelo \textit{bitstring} proposto, é necessário somente 1 \textit{byte}.
