@@ -395,7 +395,7 @@ Na etapa posterior à aquisição ocorre o tratamento dos dados obtidos, que é nece
  \item \textbf{Cálculo das dimensões das matrizes:} Por meio dos pontos obtidos na etapa anterior são calculadas as dimensões das matrizes que representarão os lotes na simulação. Efetivamente, são calculadas as quantidades de linhas e de colunas das matrizes.
 \end{itemize}
 
-Durante o tratamento dos dados ocorre ainda o cálculo das posições vizinhas entre as fronteiras de cada lote. Durante este processo, para cada lote, calculam-se as posições vizinhas em outro lote para cada posição que está em sua fronteira, por meio de algoritmos especialmente desenvolvidos, o que possibilita que, os indivíduos, durante a operação de movimentação, desloquem-se de um lote para outro, se estiverem em uma posição de fronteira que possua posições vizinhas em um lote adjacente. Neste processo, os algoritmos necessitam apenas das quantidades de linhas e colunas de cada lote e as posições relativas entre os lotes. As informações sobre as posições relativas entre os lotes são lidas pelo SIMULA de um arquivo de configuração à parte. Após o cálculo das vizinhanças, um arquivo texto é gerado e disponibilizado para a sistema de simulação, que irá realizar a leitura dos dados e construir a estrutura de vizinhança que será utilizada durante as simulações. 
+Durante o tratamento dos dados ocorre ainda o cálculo das posições vizinhas entre as fronteiras de cada lote. Durante este processo, para cada lote, calculam-se as posições vizinhas em outro lote para cada posição que está em sua fronteira, por meio de algoritmos especialmente desenvolvidos, o que possibilita que, os indivíduos, durante a operação de movimentação, desloquem-se de um lote para outro, se estiverem em uma posição de fronteira que possua posições vizinhas em um lote adjacente. Neste processo, os algoritmos necessitam apenas das quantidades de linhas e colunas de cada lote e as posições relativas entre os lotes. As informações sobre as posições relativas entre os lotes são lidas pelo SIMULA de um arquivo de configuração à parte, que foi gerado manualmente para a quadra 445. Neste arquivo constam efetivamente as vizinhanças entre os lotes, informando para cada lote, quais lotes estão em sua vizinhança e quais são as posições relativas entre eles. Estes algoritmos que calculam as vizinhanças utilizam as informações de vizinhanças entre lotes para determinar qual método utilizar: método de linhas, método de colunas ou método de canto. O método de linha é utilizado em vizinhanças horizontais, em que um lote está  Após o cálculo das vizinhanças, um arquivo texto é gerado e disponibilizado para a sistema de simulação, que irá realizar a leitura dos dados e construir a estrutura de vizinhança que será utilizada durante as simulações. 
 
 Na operação de processamento são executadas efetivamente as simulações. Após a geração de diversos arquivos de configuração, o \textit{software} SIMULA executa o sistema de simulação, que realiza a leitura dos arquivos gerados e executa as simulações solicitadas. Ao final de cada simulação, o sistema de simulação gera arquivos texto de saída, que são utilizados pelo SIMULA para exibição de saídas gráficas na etapa de pós-processamento. É importante notar que, o sistema de simulação é independente ao \textit{software} SIMULA, podendo ser utilizado separadamente, sendo necessário a geração ou cópia manual dos arquivos de entrada e algum meio independente para geração de saídas gráficas. Efetivamente, quando na execução dos experimentos numérico-computacionais, o sistema de simulação será utilizado separadamente ao SIMULA, por questões de simplicidade na execução de uma grande quantidade de simulações com diferentes parâmetros. 
 
@@ -405,7 +405,7 @@ Na operação de pós-processamento, os arquivos saída gerados pelo sistema de simu
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.85\textwidth]{Figuras/Simula1.PNG}
+  \includegraphics[width=0.7\textwidth]{Figuras/Simula1.PNG}
   \caption{Ilustração da saída espacial na quadra 445 gerada pelo SIMULA}
   \label{fig:simula1}
 \end{figure} 
@@ -414,7 +414,7 @@ A Figura \ref{fig:simula2} ilustra outro tipo de saída gráfica gerada pelo \text
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.85\textwidth]{Figuras/Simula2.PNG}
+  \includegraphics[width=0.7\textwidth]{Figuras/Simula2.PNG}
   \caption{Ilustração do gráfico de linha gerado pelo SIMULA}
   \label{fig:simula2}
 \end{figure} 
@@ -426,6 +426,15 @@ A Figura \ref{fig:simula3} ilustra um terceiro tipo de saída gráfica gerada pelo
   \includegraphics[width=0.85\textwidth]{Figuras/Simula3.PNG}
   \caption{Ilustração da saída espalhamento em um lote}
   \label{fig:simula3}
+\end{figure} 
+
+Na Figura \ref{fig:fluxo_simula} são ilustradas as etapas descritas anteriormente e sua ordem de execução, contemplando o pré-processamento, processamento e pós-processamento.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.7\textwidth]{Figuras/FluxoSIMULA.eps}
+  \caption{Fluxograma da execução completa do SIMULA.}
+  \label{fig:fluxo_simula}
 \end{figure} 
 
 \newpage
@@ -549,6 +558,31 @@ Os algoritmos 1, 2 e 3 ilustram os pseudo-códigos em alto nível às operações de 
 
 \newpage
 
+As Figuras \ref{fig:fluxo_movimentacao}, \ref{fig:fluxo_contato} e \ref{fig:fluxo_transicao} ilustram fluxogramas para as operações de movimentação, contato e transição de estados dos indivíduos, respectivamente.
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.30\textwidth]{Figuras/FluxoMovimentacao.eps}
+  \caption{Fluxograma para a operação de movimentação dos indivíduos.}
+  \label{fig:fluxo_movimentacao}
+\end{figure} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=1\textwidth]{Figuras/FluxoContato.eps}
+  \caption{Fluxograma para a operação de contato entre os indivíduos.}
+  \label{fig:fluxo_contato}
+\end{figure} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.80\textwidth]{Figuras/FluxoTransicao.eps}
+  \caption{Fluxograma para a operação de transição de estados dos indivíduos.}
+  \label{fig:fluxo_transicao}
+\end{figure} 
+
+\newpage
+
 \section{\textit{Compute Unified Device Architecture} - CUDA}
 \label{sec:CUDA}
 
@@ -556,7 +590,7 @@ Por muito tempo, o método mais utilizado para o aumento de desempenho em process
 
 Enquanto os processadores evoluíam por meio do aumento da quantidade de unidades de processamento por processador, as GPUs também passavam por uma revolução. Inicialmente, o objetivo principal do uso de placas gráficas em computadores era a de oferecer ao sistema um \textit{hardware} assistente para processamentos gráficos de imagens. O aumento da demanda das placas gráficas devem-se ao lançamento de jogos eletrônicos, que necessitavam de alto processamento gráfico para garantir fidelidade de imagem. Assim, diversas tecnologias para desenvolvimento de aplicações gráficas foram lançadas, como, por exemplo, as bibliotecas DirectX e OpenGL. Essas APIs eram as únicas formas que os programadores tinham para interagir com as placas gráficas, de forma que, diversos pesquisadores exploravam as APIs gráficas como forma de solucionarem problemas de propósito geral. Embora o desempenho obtido com o uso de APIs gráficas se mostrava interessante e promissor, seu modelo de programação era restritivo e complexo. Com o lançamento de placas gráficas de propósito geral e da biblioteca CUDA, buscava-se incluir componentes especificamente desenvolvidos para a computação em GPU, que poderiam ser facilmente utilizados por programadores para implementar as soluções requeridas. A biblioteca CUDA foi desenvolvida inicialmente para o uso conjunto com a linguagem de programação C, que era utilizada como padrão pela indústria. Atualmente a biblioteca CUDA pode ser utilizada em conjunto com outras linguagens de programação como C++, Fortran, Python e C\#. As principais áreas de conhecimento que atualmente fazem uso da API CUDA são as de processamento de imagens médicas, simulação computacional da dinâmica de fluídos e ciência ambiental, sendo a biblioteca bastante utilizada no meio acadêmico \cite{CudaByExample}.
 
-Neste trabalho propõe-se a paralelização do sistema de simulação utilizando a API \textit{Compute Unified Device Architecture}, CUDA. Especificamente, pretende-se utilizar duas placas gráficas Nvidia Tesla K20, que contam com 2496 \textit{cuda cores}, 5 GB de memória e desempenho de $1.17$ Tflops e $3.52$ Tflops para ponto flutuante de precisão dupla e simples, respectivamente, cada uma \cite{K20}. Assim, é importante definir o conceito de paralelismo, como discutido em \cite{CudaProgramming}: 
+Neste trabalho propõe-se a paralelização do sistema de simulação utilizando a API \textit{Compute Unified Device Architecture}, CUDA. Especificamente, pretende-se utilizar duas placas gráficas Nvidia Tesla K20, que contam com 2496 \textit{cuda cores}, 5 GB de memória e desempenho de $1.17$ Tflops e $3.52$ Tflops para ponto flutuante de precisão dupla e simples, respectivamente, cada uma \cite{K20}. Assim, é importante classificar paralelismo, como discutido em \cite{CudaProgramming}: 
 \begin{itemize}
  \item \textbf{Paralelismo baseado em tarefas:} Está relacionado com a execução de múltiplos processos concorrentemente, que podem não ter relação uns com os outros. Um exemplo clássico de paralelismo baseado em tarefas é um sistema operacional, em que diversos processos estão sendo executados ao mesmo tempo. Cada processo pode ser escalonado para um \textit{core} separado na CPU, por exemplo.
  \item \textbf{Paralelismo baseado em dados:} O foco não está nas tarefas que devem ser executadas, mas sim nos dados que precisam ser transformados. Neste tipo de paralelismo, os dados são divididos, quando possível, em partes de igual tamanho e são escalonados para cada \textit{core} da CPU, onde é aplicada uma mesma operação sobre todos os dados. 

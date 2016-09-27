@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.9.2)  27 SEP 2016 11:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.9.2)  27 SEP 2016 16:31
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -848,50 +848,128 @@ cmr/m/n/12 0[][] = []000 000[][]$ \T1/ptm/m/n/12 até $[]\OT1/cmr/m/n/12 63[][]
 File: Figuras/Simula1.PNG Graphic file (type png)
 
 <use Figuras/Simula1.PNG>
-Package pdftex.def Info: Figuras/Simula1.PNG used on input line 408.
-(pdftex.def)             Requested size: 387.50443pt x 205.38608pt.
-
-<Figuras/Simula2.PNG, id=193, 1028.34187pt x 549.55313pt>
+Package pdftex.def Info: Figuras/Simula1.PNG used on input line 406.
+(pdftex.def)             Requested size: 410.29308pt x 217.46175pt.
+ [41 <./Figuras/Simula1.PNG>]
+<Figuras/Simula2.PNG, id=197, 1028.34187pt x 549.55313pt>
 File: Figuras/Simula2.PNG Graphic file (type png)
 
 <use Figuras/Simula2.PNG>
 Package pdftex.def Info: Figuras/Simula2.PNG used on input line 417.
 (pdftex.def)             Requested size: 387.50443pt x 207.08817pt.
- [41 <./Figuras/Simula1.PNG> <./Figuras/Simula2.PNG>]
-<Figuras/Simula3.PNG, id=199, 1028.34187pt x 548.0475pt>
+ [42 <./Figuras/Simula2.PNG>]
+<Figuras/Simula3.PNG, id=202, 1028.34187pt x 548.0475pt>
 File: Figuras/Simula3.PNG Graphic file (type png)
 
 <use Figuras/Simula3.PNG>
-Package pdftex.def Info: Figuras/Simula3.PNG used on input line 426.
+Package pdftex.def Info: Figuras/Simula3.PNG used on input line 428.
 (pdftex.def)             Requested size: 387.50443pt x 206.5208pt.
- [42 <./Figuras/Simula3.PNG>] [43]
-<Figuras/ambiente1.png, id=207, 379.4175pt x 143.03438pt>
+Package epstopdf Info: Source file: <Figuras/FluxoSIMULA.eps>
+(epstopdf)                    date: 2016-09-27 14:57:05
+(epstopdf)                    size: 1210866 bytes
+(epstopdf)             Output file: <Figuras/FluxoSIMULA-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-09-27 15:46:12
+(epstopdf)                    size: 9475 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoSIMULA-eps-co
+nverted-to.pdf Figuras/FluxoSIMULA.eps>
+(epstopdf)             \includegraphics on input line 437.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figuras/FluxoSIMULA-eps-converted-to.pdf, id=203, 1224.575pt x 521.95pt>
+File: Figuras/FluxoSIMULA-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figuras/FluxoSIMULA-eps-converted-to.pdf>
+Package pdftex.def Info: Figuras/FluxoSIMULA-eps-converted-to.pdf used on input
+ line 437.
+(pdftex.def)             Requested size: 410.29308pt x 174.8802pt.
+ [43 <./Figuras/Simula3.PNG> <./Figuras/FluxoSIMULA-eps-converted-to.pdf>] [44]
+
+<Figuras/ambiente1.png, id=218, 379.4175pt x 143.03438pt>
 File: Figuras/ambiente1.png Graphic file (type png)
 
 <use Figuras/ambiente1.png>
-Package pdftex.def Info: Figuras/ambiente1.png used on input line 444.
+Package pdftex.def Info: Figuras/ambiente1.png used on input line 455.
 (pdftex.def)             Requested size: 296.322pt x 111.71039pt.
- [44 <./Figuras/ambiente1.png>]
+ [45 <./Figuras/ambiente1.png>]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 495.
- [45] [46] [47]
-[48] <Figuras/somaVetor.png, id=225, 411.78844pt x 71.51718pt>
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 506.
+ [46] [47]
+Package epstopdf Info: Source file: <Figuras/FluxoMovimentacao.eps>
+(epstopdf)                    date: 2016-09-27 15:41:13
+(epstopdf)                    size: 821226 bytes
+(epstopdf)             Output file: <Figuras/FluxoMovimentacao-eps-converted-to
+.pdf>
+(epstopdf)                    date: 2016-09-27 15:41:58
+(epstopdf)                    size: 8544 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoMovimentacao-
+eps-converted-to.pdf Figuras/FluxoMovimentacao.eps>
+(epstopdf)             \includegraphics on input line 567.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figuras/FluxoMovimentacao-eps-converted-to.pdf, id=229, 549.05125pt x 772.8875
+pt>
+File: Figuras/FluxoMovimentacao-eps-converted-to.pdf Graphic file (type pdf)
+ <use Figuras/FluxoMovimentacao-eps-converted-to.pdf>
+Package pdftex.def Info: Figuras/FluxoMovimentacao-eps-converted-to.pdf used on
+ input line 567.
+(pdftex.def)             Requested size: 136.76668pt x 192.5138pt.
+Package epstopdf Info: Source file: <Figuras/FluxoContato.eps>
+(epstopdf)                    date: 2016-09-27 15:41:10
+(epstopdf)                    size: 364059 bytes
+(epstopdf)             Output file: <Figuras/FluxoContato-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-09-27 15:41:58
+(epstopdf)                    size: 8273 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoContato-eps-c
+onverted-to.pdf Figuras/FluxoContato.eps>
+(epstopdf)             \includegraphics on input line 574.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figuras/FluxoContato-eps-converted-to.pdf, id=230, 1475.5125pt x 112.42pt>
+File: Figuras/FluxoContato-eps-converted-to.pdf Graphic file (type pdf)
+
+<use Figuras/FluxoContato-eps-converted-to.pdf>
+Package pdftex.def Info: Figuras/FluxoContato-eps-converted-to.pdf used on inpu
+t line 574.
+(pdftex.def)             Requested size: 455.8843pt x 34.73318pt.
+Package epstopdf Info: Source file: <Figuras/FluxoTransicao.eps>
+(epstopdf)                    date: 2016-09-27 15:41:21
+(epstopdf)                    size: 2705836 bytes
+(epstopdf)             Output file: <Figuras/FluxoTransicao-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2016-09-27 15:41:58
+(epstopdf)                    size: 9858 bytes
+(epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoTransicao-eps
+-converted-to.pdf Figuras/FluxoTransicao.eps>
+(epstopdf)             \includegraphics on input line 581.
+Package epstopdf Info: Output file is already uptodate.
+
+<Figuras/FluxoTransicao-eps-converted-to.pdf, id=231, 1481.535pt x 1001.7425pt>
+File: Figuras/FluxoTransicao-eps-converted-to.pdf Graphic file (type pdf)
+<use Figuras/FluxoTransicao-eps-converted-to.pdf>
+Package pdftex.def Info: Figuras/FluxoTransicao-eps-converted-to.pdf used on in
+put line 581.
+(pdftex.def)             Requested size: 364.70882pt x 246.59839pt.
+ [48 <./Figuras/FluxoMovimentacao-eps-converted-to.pdf> <./Figuras/FluxoContato
+-eps-converted-to.pdf> <./Figuras/FluxoTransicao-eps-converted-to.pdf>] [49] [5
+0]
+<Figuras/somaVetor.png, id=257, 411.78844pt x 71.51718pt>
 File: Figuras/somaVetor.png Graphic file (type png)
 
 <use Figuras/somaVetor.png>
-Package pdftex.def Info: Figuras/somaVetor.png used on input line 575.
+Package pdftex.def Info: Figuras/somaVetor.png used on input line 611.
 (pdftex.def)             Requested size: 296.322pt x 51.46394pt.
- [49 <./Figuras/somaVetor.png>]) [50]
+ [51 <./Figuras/somaVetor.png>]) [52]
 \openout2 = `capitulo4/capitulo4.aux'.
 
 
 (./capitulo4/capitulo4.tex
 Cap\'{\i }tulo 4.
-) [51
+) [53
 
 
 
-] (./TCC.bbl [52
+] (./TCC.bbl [54
 
 
 ]
@@ -900,7 +978,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--123
 Con-sul-tado na IN-TER-NET:
  []
 
-[53]) [54] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
+[55]) [56] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
 (./iniciais/aprova.aux) (./iniciais/dedica.aux) (./iniciais/sumario.aux)
 (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
 (./capitulo3/capitulo3.aux) (./capitulo4/capitulo4.aux))
@@ -914,13 +992,13 @@ LaTeX Font Warning: Size substitutions with differences
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 6792 strings out of 493013
- 98701 string characters out of 6139318
- 202962 words of memory out of 5000000
- 10046 multiletter control sequences out of 15000+600000
+ 6817 strings out of 493013
+ 99613 string characters out of 6139318
+ 203011 words of memory out of 5000000
+ 10066 multiletter control sequences out of 15000+600000
  75703 words of font info for 104 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 47i,27n,51p,1872b,2807s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 47i,27n,51p,2098b,2807s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
@@ -938,10 +1016,10 @@ s/msam10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
 e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/typ
 e1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pf
 b>
-Output written on TCC.pdf (65 pages, 5570634 bytes).
+Output written on TCC.pdf (67 pages, 5596923 bytes).
 PDF statistics:
- 309 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
+ 341 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 

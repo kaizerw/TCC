@@ -8,8 +8,12 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Representa\c c\~ao indicial e local da vizinhan\c ca de Moore.\relax }}{27}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Representa\c c\~ao \textit {bitstring} do agente $\chi $.\relax }}{30}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espacial na quadra 445 gerada pelo SIMULA\relax }}{41}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ilustra\c c\~ao do gr\'afico de linha gerado pelo SIMULA\relax }}{41}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espalhamento em um lote\relax }}{42}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustra\c c\~ao da estrutura matricial empregada para a representa\c c\~ao do mapeamento l\'ogico dos lotes\relax }}{44}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Exemplo de c\'odigo-fonte em C de um \textit {kernel} CUDA\relax }}{49}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ilustra\c c\~ao do gr\'afico de linha gerado pelo SIMULA\relax }}{42}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espalhamento em um lote\relax }}{43}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Fluxograma da execu\c c\~ao completa do SIMULA.\relax }}{43}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Ilustra\c c\~ao da estrutura matricial empregada para a representa\c c\~ao do mapeamento l\'ogico dos lotes\relax }}{45}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Fluxograma para a opera\c c\~ao de movimenta\c c\~ao dos indiv\IeC {\'\i }duos.\relax }}{48}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Fluxograma para a opera\c c\~ao de contato entre os indiv\IeC {\'\i }duos.\relax }}{48}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Fluxograma para a opera\c c\~ao de transi\c c\~ao de estados dos indiv\IeC {\'\i }duos.\relax }}{48}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Exemplo de c\'odigo-fonte em C de um \textit {kernel} CUDA\relax }}{51}
 \addvspace {10\p@ }
