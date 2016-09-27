@@ -10,6 +10,6 @@
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espacial na quadra 445 gerada pelo SIMULA\relax }}{41}
 \contentsline {figure}{\numberline {3.6}{\ignorespaces Ilustra\c c\~ao do gr\'afico de linha gerado pelo SIMULA\relax }}{41}
 \contentsline {figure}{\numberline {3.7}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espalhamento em um lote\relax }}{42}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustra\c c\~ao da estrutura matricial empregada para implementa\c c\~ao dos lotes\relax }}{44}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Ilustra\c c\~ao da estrutura matricial empregada para a representa\c c\~ao do mapeamento l\'ogico dos lotes\relax }}{44}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Exemplo de c\'odigo-fonte em C de um \textit {kernel} CUDA\relax }}{49}
 \addvspace {10\p@ }
