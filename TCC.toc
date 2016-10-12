@@ -28,4 +28,4 @@
 \contentsline {section}{\numberline {4.2}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{53}
 \contentsline {section}{\numberline {4.3}Implementa\c c\~ao Convencional e \textit {Bitstring} com CUDA}{53}
 \contentsline {section}{\numberline {4.4}Cases: Discutir as Simula\c c\~oes no Espa\c co Geogr\'afico Escolhido.}{53}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{54}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{58}

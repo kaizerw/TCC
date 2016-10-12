@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/Arch Linux) (preloaded format=pdflatex 2016.9.2)  27 SEP 2016 16:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.10)  12 OCT 2016 11:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **TCC.tex
 (./TCC.tex
-LaTeX2e <2016/03/31> patch level 3
-Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
-(/usr/share/texmf-dist/tex/latex/base/book.cls
+LaTeX2e <2016/02/01>
+Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
-(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
 File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
@@ -24,44 +24,44 @@ File: bk12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(/usr/share/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/04/23 3.9r The Babel package
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2016/02/24 3.9q The Babel package
 
-(/usr/share/texmf-dist/tex/generic/babel-portuges/portuges.ldf
+(/usr/share/texlive/texmf-dist/tex/generic/babel-portuges/portuges.ldf
 Language: portuges 2008/03/18 v1.2q Portuguese support from the babel system
 
-(/usr/share/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2016/04/23 3.9r Babel common definitions
+(/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2016/02/24 3.9q Babel common definitions
 \babel@savecnt=\count88
 \U@D=\dimen103
 )
 \l@brazil = a dialect from \language\l@portuges 
 Package babel Info: Making " an active character on input line 145.
 ))
-(/usr/share/texmf-dist/tex/latex/base/t1enc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1enc.sty
 Package: t1enc 1994/06/01 Standard LaTeX package
 )
-(/usr/share/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 
-(/usr/share/texmf-dist/tex/latex/base/latin1.def
+(/usr/share/texlive/texmf-dist/tex/latex/base/latin1.def
 File: latin1.def 2015/03/17 v1.2c Input encoding file
 ))
-(/usr/share/texmf-dist/tex/latex/psnfss/times.sty
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/times.sty
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-(/usr/share/texmf-dist/tex/latex/base/latexsym.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/latexsym.sty
 Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 \symlasy=\mathgroup4
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-(/usr/share/texmf-dist/tex/latex/base/alltt.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/alltt.sty
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-(/usr/share/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
+(/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 \fancy@headwidth=\skip43
 \f@ncyO@elh=\skip44
 \f@ncyO@erh=\skip45
@@ -72,16 +72,16 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 \f@ncyO@olf=\skip50
 \f@ncyO@orf=\skip51
 )
-(/usr/share/texmf-dist/tex/latex/tools/indentfirst.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/vmargin/vmargin.sty
+(/usr/share/texlive/texmf-dist/tex/latex/vmargin/vmargin.sty
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen104
 \PaperHeight=\dimen105
-) (/usr/share/texmf-dist/tex/latex/bbm-macros/bbm.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/bbm-macros/bbm.sty
 Package: bbm 1999/03/15 V 1.2 provides fonts for set symbols - TH
 LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 (Font)                  U/bbm/m/n --> U/bbm/bx/n on input line 33.
@@ -92,7 +92,7 @@ Package: ams 1996/01/09
 
 Package `ams' <09 Jan 1996 13:53:56 BST>.
 Copyright (C) 1990,1995 Mike Piff, University of Sheffield, England
-(/usr/share/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks16
 \symAMSa=\mathgroup5
@@ -101,42 +101,42 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 Use option defs to define all the AMS symbol names
-) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
-(/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/07/10 v1.0t Standard LaTeX Graphics (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
 
-(/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+Package graphics Info: Driver file: pdftex.def on input line 95.
 
-(/usr/share/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2016/07/10 v0.06j Graphics/color for pdfTeX
+(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(/usr/share/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count89
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-(/usr/share/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-(/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty
 Package: amsthm 2015/03/04 v2.20.2
 \thm@style=\toks18
 \thm@bodyfont=\toks19
@@ -148,25 +148,25 @@ Package: amsthm 2015/03/04 v2.20.2
 \thm@headsep=\skip54
 \dth@everypar=\toks23
 )
-(/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/06/28 v2.15d AMS math features
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/03/03 v2.15a AMS math features
 \@mathmargin=\skip55
 
 For additional information on amsmath, use the `?' option.
-(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2000/06/29 v2.01 AMS text
 
-(/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks24
 \ex@=\dimen108
 ))
-(/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen109
 )
-(/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 2016/03/08 v2.02 operator names
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count90
 LaTeX Info: Redefining \frac on input line 199.
@@ -181,8 +181,8 @@ LaTeX Info: Redefining \cdots on input line 518.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
 \big@size=\dimen110
-LaTeX Font Info:    Redeclaring font encoding OML on input line 634.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
+LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \macc@depth=\count95
 \c@MaxMatrixCols=\count96
 \dotsspace@=\muskip10
@@ -203,8 +203,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 635.
 \multlinegap=\skip56
 \multlinetaggap=\skip57
 \mathdisplay@stack=\toks28
-LaTeX Info: Redefining \[ on input line 2739.
-LaTeX Info: Redefining \] on input line 2740.
+LaTeX Info: Redefining \[ on input line 2735.
+LaTeX Info: Redefining \] on input line 2736.
 ) (./clrscode.sty
 Package: clrscode 
 \c@codelinenumber=\count102
@@ -214,22 +214,22 @@ Package: clrscode
 \codeboxwidth=\skip59
 \c@thisindent=\count104
 )
-(/usr/share/texmf-dist/tex/latex/graphics/color.sty
-Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/01/03 v1.1b Standard LaTeX Color (DPC)
 
-(/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 147.
+Package color Info: Driver file: pdftex.def on input line 143.
 
-(/usr/share/texmf-dist/tex/latex/graphics/dvipsnam.def
-File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2015/12/30 v3.0k Driver-dependent file (DPC,SPQR)
 ))
-(/usr/share/texmf-dist/tex/latex/caption/caption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
-(/usr/share/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen117
 \captionmargin@=\dimen118
@@ -241,7 +241,7 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 )
 \c@ContinuedFloat=\count105
 )
-(/usr/share/texmf-dist/tex/latex/float/float.sty
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count106
 \float@exts=\toks29
@@ -249,7 +249,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks30
 \@floatcapt=\box30
 )
-(/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/longtable.sty
 Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip60
 \LTright=\skip61
@@ -267,8 +267,8 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count111
 \LT@p@ftn=\toks31
 )
-(/usr/share/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \c@tracingmulticols=\count112
 \mult@box=\box35
 \multicol@leftmargin=\dimen125
@@ -316,7 +316,7 @@ Package: multicol 2016/04/07 v1.8p multicolumn formatting (FMi)
 \colbreak@box=\box60
 \mc@col@check@num=\count120
 )
-(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.sty
 Package: subfigure 2002/03/15 v2.1.5 subfigure package
 \subfigtopskip=\skip66
 \subfigcapskip=\skip67
@@ -332,11 +332,11 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 ****************************************
 * Local config file subfigure.cfg used *
 ****************************************
-(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+(/usr/share/texlive/texmf-dist/tex/latex/subfigure/subfigure.cfg)
 \subfig@top=\skip70
 \subfig@bottom=\skip71
 )
-(/usr/share/texmf-dist/tex/generic/ulem/ulem.sty
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
 \UL@box=\box61
 \UL@hyphenbox=\box62
 \UL@skip=\skip72
@@ -348,13 +348,13 @@ Package: subfigure 2002/03/15 v2.1.5 subfigure package
 Package: ulem 2012/05/18
 \ULdepth=\dimen138
 )
-(/usr/share/texmf-dist/tex/latex/tools/verbatim.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks33
 \verbatim@line=\toks34
 \verbatim@in@stream=\read1
 )
-(/usr/share/texmf-dist/tex/latex/wrapfig/wrapfig.sty
+(/usr/share/texlive/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 \wrapoverhang=\dimen139
 \WF@size=\dimen140
 \c@WF@wrappedlines=\count126
@@ -362,19 +362,19 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \WF@everypar=\toks35
 Package: wrapfig 2003/01/31  v 3.6
 )
-(/usr/share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+(/usr/share/texlive/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
 \c@AlgoLine=\count127
 
-(/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 \algocf@hangindent=\skip73
 
-(/usr/share/texmf-dist/tex/latex/tools/xspace.sty
+(/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
+(/usr/share/texlive/texmf-dist/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 )
 ********************************************************
@@ -449,10 +449,10 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
 LaTeX Font Info:    ... okay on input line 119.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 119.
 
-(/usr/share/texmf-dist/tex/latex/psnfss/t1ptm.fd
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
-(/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count131
 \scratchdimen=\dimen147
@@ -465,52 +465,51 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 \MPnumerator=\count135
 \makeMPintoPDFobject=\count136
 \everyMPtoPDFconversion=\toks37
-) (/usr/share/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2016/05/21 v0.22 Utility functions of pdfTeX for LuaTeX (HO
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-(/usr/share/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2016/05/14 v3.1 Provides the ifpdf switch
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(/usr/share/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
+(grfext)             \AppendGraphicsExtensions on input line 452.
 
-(/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
@@ -518,7 +517,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
 
-(/usr/share/texmf-dist/tex/latex/caption/ltcaption.sty
+(/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2013/06/09 v1.4-94 longtable captions (AR)
 )
 Package caption Info: subfigure package is loaded.
@@ -526,10 +525,11 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \openout2 = `iniciais/capa.aux'.
 
- (./iniciais/capa.tex
-<Simbolo.jpg, id=1, 54.9553pt x 38.39343pt>
+
+(./iniciais/capa.tex <Simbolo.jpg, id=1, 54.9553pt x 38.39343pt>
 File: Simbolo.jpg Graphic file (type jpg)
- <use Simbolo.jpg>
+
+<use Simbolo.jpg>
 Package pdftex.def Info: Simbolo.jpg used on input line 16.
 (pdftex.def)             Requested size: 89.05978pt x 62.31592pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <13> not available
@@ -559,17 +559,17 @@ Underfull \hbox (badness 1072) in paragraph at lines 25--26
  []
 
 LaTeX Font Info:    Try loading font information for U+lasy on input line 30.
-(/usr/share/texmf-dist/tex/latex/base/ulasy.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Try loading font information for U+msa on input line 30.
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsa.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 30.
 
-(/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )) [2
 
@@ -577,7 +577,8 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `iniciais/aprova.aux'.
 
- (./iniciais/aprova.tex) [3
+
+(./iniciais/aprova.tex) [3
 
 
 ]
@@ -592,7 +593,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
  (./iniciais/sumario.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
- (./TCC.lof)
+(./TCC.lof)
 \tf@lof=\write5
 \openout5 = `TCC.lof'.
 
@@ -600,8 +601,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 
 
 
-]
-(./TCC.lot)
+] (./TCC.lot)
 \tf@lot=\write6
 \openout6 = `TCC.lot'.
 
@@ -620,7 +620,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 ) [10]
 \openout2 = `iniciais/resumo.aux'.
 
- (./iniciais/resumo.tex) [11
+
+(./iniciais/resumo.tex) [11
 
 
 
@@ -645,16 +646,16 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 
 ] [2]
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 22.
- (/usr/share/texmf-dist/tex/latex/psnfss/omsptm.fd
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 22.
-) [3] [4]
+) [3]
+[4]
 \openout2 = `capitulo2/capitulo2.aux'.
 
-
-(./capitulo2/capitulo2.tex
+ (./capitulo2/capitulo2.tex
 Cap\'{\i }tulo 2.
 [5
 
@@ -865,10 +866,10 @@ File: Figuras/Simula3.PNG Graphic file (type png)
 Package pdftex.def Info: Figuras/Simula3.PNG used on input line 428.
 (pdftex.def)             Requested size: 387.50443pt x 206.5208pt.
 Package epstopdf Info: Source file: <Figuras/FluxoSIMULA.eps>
-(epstopdf)                    date: 2016-09-27 14:57:05
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 1210866 bytes
 (epstopdf)             Output file: <Figuras/FluxoSIMULA-eps-converted-to.pdf>
-(epstopdf)                    date: 2016-09-27 15:46:12
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 9475 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoSIMULA-eps-co
 nverted-to.pdf Figuras/FluxoSIMULA.eps>
@@ -895,11 +896,11 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 506.
  [46] [47]
 Package epstopdf Info: Source file: <Figuras/FluxoMovimentacao.eps>
-(epstopdf)                    date: 2016-09-27 15:41:13
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 821226 bytes
 (epstopdf)             Output file: <Figuras/FluxoMovimentacao-eps-converted-to
 .pdf>
-(epstopdf)                    date: 2016-09-27 15:41:58
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 8544 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoMovimentacao-
 eps-converted-to.pdf Figuras/FluxoMovimentacao.eps>
@@ -914,11 +915,11 @@ Package pdftex.def Info: Figuras/FluxoMovimentacao-eps-converted-to.pdf used on
  input line 567.
 (pdftex.def)             Requested size: 136.76668pt x 192.5138pt.
 Package epstopdf Info: Source file: <Figuras/FluxoContato.eps>
-(epstopdf)                    date: 2016-09-27 15:41:10
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 364059 bytes
 (epstopdf)             Output file: <Figuras/FluxoContato-eps-converted-to.pdf>
 
-(epstopdf)                    date: 2016-09-27 15:41:58
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 8273 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoContato-eps-c
 onverted-to.pdf Figuras/FluxoContato.eps>
@@ -933,11 +934,11 @@ Package pdftex.def Info: Figuras/FluxoContato-eps-converted-to.pdf used on inpu
 t line 574.
 (pdftex.def)             Requested size: 455.8843pt x 34.73318pt.
 Package epstopdf Info: Source file: <Figuras/FluxoTransicao.eps>
-(epstopdf)                    date: 2016-09-27 15:41:21
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 2705836 bytes
 (epstopdf)             Output file: <Figuras/FluxoTransicao-eps-converted-to.pd
 f>
-(epstopdf)                    date: 2016-09-27 15:41:58
+(epstopdf)                    date: 2016-10-08 11:19:55
 (epstopdf)                    size: 9858 bytes
 (epstopdf)             Command: <repstopdf --outfile=Figuras/FluxoTransicao-eps
 -converted-to.pdf Figuras/FluxoTransicao.eps>
@@ -965,11 +966,134 @@ Package pdftex.def Info: Figuras/somaVetor.png used on input line 611.
 
 (./capitulo4/capitulo4.tex
 Cap\'{\i }tulo 4.
+
+Overfull \hbox (21.30452pt too wide) in paragraph at lines 14--19
+ [][] 
+ []
+
+<Figuras/Convencional_CPU.png, id=264, 578.16pt x 433.62pt>
+File: Figuras/Convencional_CPU.png Graphic file (type png)
+
+<use Figuras/Convencional_CPU.png>
+Package pdftex.def Info: Figuras/Convencional_CPU.png used on input line 25.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+
+<Figuras/Convencional_GPU.png, id=265, 578.16pt x 433.62pt>
+File: Figuras/Convencional_GPU.png Graphic file (type png)
+
+<use Figuras/Convencional_GPU.png>
+Package pdftex.def Info: Figuras/Convencional_GPU.png used on input line 32.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+
+<Figuras/Bitstring_CPU.png, id=266, 578.16pt x 433.62pt>
+File: Figuras/Bitstring_CPU.png Graphic file (type png)
+
+<use Figuras/Bitstring_CPU.png>
+Package pdftex.def Info: Figuras/Bitstring_CPU.png used on input line 39.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+
+<Figuras/Bitstring_GPU.png, id=267, 578.16pt x 433.62pt>
+File: Figuras/Bitstring_GPU.png Graphic file (type png)
+
+<use Figuras/Bitstring_GPU.png>
+Package pdftex.def Info: Figuras/Bitstring_GPU.png used on input line 46.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+
+<Figuras/Convencional/0.png, id=268, 435.87843pt x 426.84468pt>
+File: Figuras/Convencional/0.png Graphic file (type png)
+
+<use Figuras/Convencional/0.png>
+Package pdftex.def Info: Figuras/Convencional/0.png used on input line 55.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Convencional/20.png, id=269, 435.87843pt x 426.84468pt>
+File: Figuras/Convencional/20.png Graphic file (type png)
+
+<use Figuras/Convencional/20.png>
+Package pdftex.def Info: Figuras/Convencional/20.png used on input line 61.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Convencional/40.png, id=270, 435.87843pt x 426.84468pt>
+File: Figuras/Convencional/40.png Graphic file (type png)
+
+<use Figuras/Convencional/40.png>
+Package pdftex.def Info: Figuras/Convencional/40.png used on input line 67.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Convencional/60.png, id=271, 435.87843pt x 426.84468pt>
+File: Figuras/Convencional/60.png Graphic file (type png)
+
+<use Figuras/Convencional/60.png>
+Package pdftex.def Info: Figuras/Convencional/60.png used on input line 73.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Convencional/80.png, id=272, 435.87843pt x 426.84468pt>
+File: Figuras/Convencional/80.png Graphic file (type png)
+
+<use Figuras/Convencional/80.png>
+Package pdftex.def Info: Figuras/Convencional/80.png used on input line 79.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Convencional/100.png, id=273, 435.87843pt x 426.84468pt>
+File: Figuras/Convencional/100.png Graphic file (type png)
+
+<use Figuras/Convencional/100.png>
+Package pdftex.def Info: Figuras/Convencional/100.png used on input line 85.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Bitstring/0.png, id=274, 435.87843pt x 426.84468pt>
+File: Figuras/Bitstring/0.png Graphic file (type png)
+
+<use Figuras/Bitstring/0.png>
+Package pdftex.def Info: Figuras/Bitstring/0.png used on input line 96.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Bitstring/20.png, id=275, 435.87843pt x 426.84468pt>
+File: Figuras/Bitstring/20.png Graphic file (type png)
+
+<use Figuras/Bitstring/20.png>
+Package pdftex.def Info: Figuras/Bitstring/20.png used on input line 102.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Bitstring/40.png, id=276, 435.87843pt x 426.84468pt>
+File: Figuras/Bitstring/40.png Graphic file (type png)
+
+<use Figuras/Bitstring/40.png>
+Package pdftex.def Info: Figuras/Bitstring/40.png used on input line 108.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Bitstring/60.png, id=277, 435.87843pt x 426.84468pt>
+File: Figuras/Bitstring/60.png Graphic file (type png)
+
+<use Figuras/Bitstring/60.png>
+Package pdftex.def Info: Figuras/Bitstring/60.png used on input line 114.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Bitstring/80.png, id=278, 435.87843pt x 426.84468pt>
+File: Figuras/Bitstring/80.png Graphic file (type png)
+
+<use Figuras/Bitstring/80.png>
+Package pdftex.def Info: Figuras/Bitstring/80.png used on input line 120.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
+
+<Figuras/Bitstring/100.png, id=279, 435.87843pt x 426.84468pt>
+File: Figuras/Bitstring/100.png Graphic file (type png)
+
+<use Figuras/Bitstring/100.png>
+Package pdftex.def Info: Figuras/Bitstring/100.png used on input line 126.
+(pdftex.def)             Requested size: 136.76668pt x 133.92921pt.
 ) [53
 
 
 
-] (./TCC.bbl [54
+] [54 <./Figuras/Convencional_CPU.png> <./Figuras/Convencional_GPU.png>] [55 <.
+/Figuras/Bitstring_CPU.png> <./Figuras/Bitstring_GPU.png>] [56 <./Figuras/Conve
+ncional/0.png> <./Figuras/Convencional/20.png> <./Figuras/Convencional/40.png> 
+<./Figuras/Convencional/60.png> <./Figuras/Convencional/80.png> <./Figuras/Conv
+encional/100.png>] [57 <./Figuras/Bitstring/0.png> <./Figuras/Bitstring/20.png>
+ <./Figuras/Bitstring/40.png> <./Figuras/Bitstring/60.png> <./Figuras/Bitstring
+/80.png> <./Figuras/Bitstring/100.png>]
+(./TCC.bbl [58
 
 
 ]
@@ -978,7 +1102,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 120--123
 Con-sul-tado na IN-TER-NET:
  []
 
-[55]) [56] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
+[59]) [60] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
 (./iniciais/aprova.aux) (./iniciais/dedica.aux) (./iniciais/sumario.aux)
 (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
 (./capitulo3/capitulo3.aux) (./capitulo4/capitulo4.aux))
@@ -986,40 +1110,37 @@ Con-sul-tado na IN-TER-NET:
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 4.5pt have occurred.
 
- )
-(\end occurred inside a group at level 1)
-
-### simple group (level 1) entered at line 1061 ({)
-### bottom level 
+ ) 
 Here is how much of TeX's memory you used:
- 6817 strings out of 493013
- 99613 string characters out of 6139318
- 203011 words of memory out of 5000000
- 10066 multiletter control sequences out of 15000+600000
+ 6888 strings out of 493029
+ 102792 string characters out of 6136233
+ 200307 words of memory out of 5000000
+ 10118 multiletter control sequences out of 15000+600000
  75703 words of font info for 104 fonts, out of 8000000 for 9000
  1151 hyphenation exceptions out of 8191
- 47i,27n,51p,2098b,2807s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb>
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.p
-fb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbol
-s/msam10.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/shar
-e/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texmf-dist/fonts/typ
-e1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmri8a.pf
-b>
-Output written on TCC.pdf (67 pages, 5596923 bytes).
+ 47i,27n,51p,2098b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
+/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on TCC.pdf (71 pages, 10212697 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
+ 385 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

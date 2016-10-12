@@ -8,3 +8,124 @@
 \section{Implementação Convencional e \textit{Bitstring} com CUDA}
 
 \section{Cases: Discutir as Simulações no Espaço Geográfico Escolhido.}
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{c|c|c|c}
+  Implementação 	& Tempo de Execução em CPU (s) 	& Tempo de Execução em GPU (s) 	& Speedup		\\ \hline
+  Convencional		& $53472$ 			& $6517$ 			& $8.20$ 		\\
+  \textit{Bitstring}	& $54795$	 		& $5187$ 			& $10.56$ 		\\
+\end{tabular}
+\caption{Tempo de execução e \textit{speedups} obtidos para as diferentes implementações realizadas.}
+\label{tab:tempos}
+\end{table} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Figuras/Convencional_CPU.png}
+  \caption{Gráficos de curvas para a implementação convencional em CPU.}
+  \label{fig:convencional_cpu}
+\end{figure} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Figuras/Convencional_GPU.png}
+  \caption{Gráficos de curvas para a implementação convencional em GPU.}
+  \label{fig:convencional_gpu}
+\end{figure} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Figuras/Bitstring_CPU.png}
+  \caption{Gráficos de curvas para a implementação \textit{bitstring} em CPU.}
+  \label{fig:bitstring_cpu}
+\end{figure} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Figuras/Bitstring_GPU.png}
+  \caption{Gráficos de curvas para a implementação \textit{bitstring} em GPU.}
+  \label{fig:bitstring_gpu}
+\end{figure} 
+
+\begin{figure}
+\centering
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Convencional/0.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 0.}
+\end{minipage}%
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Convencional/20.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 20.}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Convencional/40.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 40.}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Convencional/60.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 60.}
+\end{minipage}%
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Convencional/80.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 80.}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Convencional/100.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 100.}
+\end{minipage}
+\caption{Dinâmica espaço-temporal para a implementação convencional.}
+\end{figure}
+
+\begin{figure}
+\centering
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Bitstring/0.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 0.}
+\end{minipage}%
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Bitstring/20.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 20.}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Bitstring/40.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 40.}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Bitstring/60.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 60.}
+\end{minipage}%
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Bitstring/80.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 80.}
+\end{minipage}
+\begin{minipage}{.3\textwidth}
+  \centering
+  \includegraphics[width=1\linewidth]{Figuras/Bitstring/100.png}
+  \captionsetup{labelformat=empty}
+  \caption*{t = 100.}
+\end{minipage}
+\caption{Dinâmica espaço-temporal para a implementação \textit{bitstring}.}
+\end{figure}
