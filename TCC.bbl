@@ -25,6 +25,11 @@ Tennessee, EUA, 2010.}
 Dissertação (Monografia) --- Universidade Estadual do Oeste do Paraná -
   UNIOESTE, Cascavel - PR, Fevereiro 2016.}
 
+\bibitem[Chwif e Medina 2014]{MonteCarlo}
+\abntrefinfo{Chwif e Medina}{CHWIF; MEDINA}{2014}
+{CHWIF, L.; MEDINA, A.~C. \emph{Modelagem e Simulacao de Eventos Discretos:
+  Teoria e Aplicacoes}. [S.l.]: Elsevier Brasil, 2014.}
+
 \bibitem[Cook 2013]{CudaProgramming}
 \abntrefinfo{Cook}{COOK}{2013}
 {COOK, S. \emph{Cuda Programming - A Developer's Guide to Parallel Computing

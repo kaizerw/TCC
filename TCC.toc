@@ -26,6 +26,6 @@
 \contentsline {chapter}{\numberline {4}Solu\c c\~oes: Resultados e Discuss\~oes}{53}
 \contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{53}
 \contentsline {section}{\numberline {4.2}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{53}
-\contentsline {section}{\numberline {4.3}Implementa\c c\~ao Convencional e \textit {Bitstring} com CUDA}{53}
-\contentsline {section}{\numberline {4.4}Cases: Discutir as Simula\c c\~oes no Espa\c co Geogr\'afico Escolhido.}{53}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{58}
+\contentsline {section}{\numberline {4.3}Din\^amicas Espa\c co-Temporais na Quadra 445.}{58}
+\contentsline {section}{\numberline {4.4}Conclus\~oes}{59}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{60}

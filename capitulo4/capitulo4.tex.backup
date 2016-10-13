@@ -30,7 +30,7 @@ Na Tabela \ref{tab:parametros} são apresentados os parâmetros utilizados para a 
 \label{tab:parametros}
 \end{table} 
 
-A Tabela \ref{tab:dimensoes_matrizes} apresenta as dimensões das matrizes utilizadas no sistema de simulação para aproximar as geometrias dos lotes da quadra 445. As dimensões apresentadas foram obtidas com auxílio da ferramenta SIMULA, em processos já apresentados e discutidos na seção \ref{sec:SIMULA}.
+A Tabela \ref{tab:dimensoes_matrizes} ilustra as dimensões das matrizes utilizadas no sistema de simulação para aproximar as geometrias dos lotes da quadra 445. As dimensões apresentadas foram obtidas com auxílio da ferramenta SIMULA, em processos já apresentados e discutidos na seção \ref{sec:SIMULA}.
 
 \begin{table}[h!]
 \centering
@@ -73,35 +73,45 @@ Os tempos de execução e \textit{speedups} obtidos para as implementações convenc
 
 Pode-se observar que, para a implementação convencional, o tempo de processamento foi reduzido em aproximadamente $8$ vezes. Já para a implementação em \textit{bitstring}, o tempo de processamento foi reduzido em aproximadamente $10$ vezes. É interessante notar que, os tempos de execução e \textit{speedups} têm valores aproximados entre as implementações convencionais e \textit{bitstring}. Portanto, pode-se concluir que não houve redução significativa no tempo de execução somente com a aplicação da técnica de \textit{bitstring}.
 
-As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bitstring_cpu} e \ref{fig:bitstring_gpu} ilustram os resultados obtidos para a dinâmica epidemiológica. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que, as implementações executadas em CPU, apresentadas nas Figuras \ref{fig:convencional_cpu} e \ref{fig:bitstring_cpu} possuem dinâmicas idênticas entre si. Analogamente, as implementações executadas em GPU, apresentadas nas Figuras \ref{fig:convencional_gpu} e \ref{fig:bitstring_gpu} também apresentam dinâmicas idênticas entre si. Em geral, as dinâmicas das implementações executadas em CPU e em GPU têm resultados assemelhados, apresentando porém diferenças significativas. Especula-se que estas diferenças estejam relacionadas aos mecanismos utilizados para a geração de números pseudo-aleatórios. Para as implementações em GPU, foi utilizado um gerador disponível na biblioteca padrão CUDA, que gera números seguindo uma distribuição normal, enquanto nas implementações em CPU, foram utilizados geradores que não garantem esse comportamento.
+As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{bitstring_cpu} e \ref{bitstring_gpu} ilustram os resultados obtidos para a dinâmica epidemiológica. . Quanto aos resultados gráficos para a dinâmica.
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.85\textwidth]{Figuras/Convencional_CPU.png}
+  \includegraphics[width=0.8\textwidth]{Figuras/Convencional_CPU.png}
   \caption{Gráficos de curvas para a implementação convencional em CPU.}
   \label{fig:convencional_cpu}
-  \includegraphics[width=0.85\textwidth]{Figuras/Convencional_GPU.png}
+\end{figure} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Figuras/Convencional_GPU.png}
   \caption{Gráficos de curvas para a implementação convencional em GPU.}
   \label{fig:convencional_gpu}
 \end{figure} 
 
-\begin{figure}[!ht]
+\begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.85\textwidth]{Figuras/Bitstring_CPU.png}
+  \includegraphics[width=0.8\textwidth]{Figuras/Bitstring_CPU.png}
   \caption{Gráficos de curvas para a implementação \textit{bitstring} em CPU.}
   \label{fig:bitstring_cpu}
-  \includegraphics[width=0.85\textwidth]{Figuras/Bitstring_GPU.png}
+\end{figure} 
+
+\begin{figure}[!htb]
+  \centering
+  \includegraphics[width=0.8\textwidth]{Figuras/Bitstring_GPU.png}
   \caption{Gráficos de curvas para a implementação \textit{bitstring} em GPU.}
   \label{fig:bitstring_gpu}
 \end{figure} 
 
 \newpage
 
-\section{Dinâmicas Espaço-Temporais na Quadra 445.}
+\section{Implementação Convencional e \textit{Bitstring} com CUDA}
 
-As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostram as saídas espaço-temporais obtidas por meio do \textit{software} SIMULA para a quadra 445. Pode-se observar que as duas implementações, convencional e \textit{bitstring} apresentam resultados assemelhados, salvo a aleatoriedade inerente presente nos processos de movimentação, contato e trasição dos indivíduos. São apresentados, para cada implementação, o estado dos indivíduos na quadra em 6 ciclos de simulação, iniciando-se do ciclo 0, que corresponde à condição inicial, até o ciclo 100, em intervalos de 20 ciclos. Por meio das figuras é possível observar a evolução da dinâmica epidemiológica no domínio modelado, 
+\newpage
 
-\begin{figure}[!htb]
+\section{Cases: Discutir as Simulações no Espaço Geográfico Escolhido.}
+
+\begin{figure}
 \centering
 \begin{minipage}{.3\textwidth}
   \centering
@@ -143,7 +153,7 @@ As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostra
 \label{fig:espacial_convencional}
 \end{figure}
 
-\begin{figure}[!htb]
+\begin{figure}
 \centering
 \begin{minipage}{.3\textwidth}
   \centering
@@ -187,4 +197,4 @@ As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostra
 
 \newpage
 
-\section{Conclusões}
+\section{Resultados e Conclusões}
