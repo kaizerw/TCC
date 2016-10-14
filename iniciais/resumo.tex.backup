@@ -1,0 +1,17 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%
+%%% Resumo
+%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter*{Resumo}
+\addcontentsline{toc}{chapter}{Resumo}
+
+\noindent
+A aplicação de modelagem compartimental na epidemiologia é amplamente estudada, como pode-se observar na extensa literatura disponível. A simulação de dinâmicas epidemiológicas é de particular interesse no estudo, prevenção e controle de doenças transmissíveis. Com base nestas premissas, este trabalho busca abordar o problema de simulação de hipotéticas doenças baseadas em modelagem compartimental tipo Suscetível-Exposto-Infectado-Recuperado-Suscetível, SEIRS, por meio de sistema multiagente. Para obter uma adequada formulação à simulação em \textit{General Purpose Graphics Processing Unit}, GPGPU, na plataforma \textit{Compute Unified Device Architecture}, CUDA, ao modelo é empregada a metodologia de \textit{bitstring}, que consiste na manipulação direta dos \textit{bits} de uma palavra computacional. Ao ambiente computacional são utilizadas técnicas e \textit{software} especificamente desenvolvido para manipular dados georreferenciados à especificação e composição de um ambiente apropriado à simulação computacional. Como resultado apresenta-se uma aplicação funcional e adequada para simular eventos epidemiológicos em uma região da cidade de Cascavel/PR. A avaliação do modelo proposto é executada por meio da realização de experimentos numérico-computacionais, em que os resultados da execução de simulações são comparadas entre si empiricamente, sobretudo nos aspectos quantitativos às implementações realizadas.
+
+\vspace{1cm}
+\noindent
+\textbf{Palavras-chave:} Epidemiologia computacional, Sistema multiagente, Modelos compartimentais, Modelagem \textit{bitstring}, Plataforma Computacional CUDA.
+
+

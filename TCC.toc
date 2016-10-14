@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {2.4}Agentes Inteligentes}{14}
 \contentsline {section}{\numberline {2.5}Metodologia de \textit {Bitstring}}{19}
 \contentsline {section}{\numberline {2.6}Revis\~ao Bibliogr\'afica}{23}
-\contentsline {chapter}{\numberline {3}Metodologias Computacionais}{25}
+\contentsline {chapter}{\numberline {3}Metodologias e Modelagem Computacional}{25}
 \contentsline {section}{\numberline {3.1}Introdu\c c\~ao}{25}
 \contentsline {section}{\numberline {3.2}Modelagem do Ambiente de Simula\c c\~ao}{25}
 \contentsline {section}{\numberline {3.3}Modelagem em Operadores aos Agentes}{27}
@@ -28,4 +28,4 @@
 \contentsline {section}{\numberline {4.2}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{53}
 \contentsline {section}{\numberline {4.3}Din\^amicas Espa\c co-Temporais na Quadra 445.}{58}
 \contentsline {section}{\numberline {4.4}Conclus\~oes}{59}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{60}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{62}
