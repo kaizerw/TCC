@@ -17,9 +17,9 @@
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Fluxograma para a opera\c c\~ao de transi\c c\~ao de estados dos indiv\IeC {\'\i }duos.\relax }}{48}
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Exemplo de c\'odigo-fonte em C de um \textit {kernel} CUDA\relax }}{51}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Gr\'aficos de curvas para a implementa\c c\~ao convencional em CPU.\relax }}{56}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Gr\'aficos de curvas para a implementa\c c\~ao convencional em GPU.\relax }}{56}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Gr\'aficos de curvas para a implementa\c c\~ao \textit {bitstring} em CPU.\relax }}{57}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Gr\'aficos de curvas para a implementa\c c\~ao \textit {bitstring} em GPU.\relax }}{57}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao convencional.\relax }}{58}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao \textit {bitstring}.\relax }}{59}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao para a implementa\c c\~ao convencional em CPU.\relax }}{56}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao para a implementa\c c\~ao convencional em GPU.\relax }}{57}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao para a implementa\c c\~ao \textit {bitstring} em CPU.\relax }}{57}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao para a implementa\c c\~ao \textit {bitstring} em GPU.\relax }}{58}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao convencional.\relax }}{59}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao \textit {bitstring}.\relax }}{60}

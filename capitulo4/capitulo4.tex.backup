@@ -3,11 +3,11 @@
 
 \section{Introdução}
 
-Neste capítulo são apresentados e discutidos os resultados obtidos por meio da execução de simulações utilizando as implementações realizadas. São apresentados os tempos de execução e os \textit{speedups} obtidos com a execução dos testes, bem como os resultados visuais para a dinâmica, por meio das saídas espaço-temporais geradas com auxílio do \textit{software} SIMULA e as curvas de quantidades, que expressam as quantidades de cada tipo de população durante o tempo de simulação. Pretende-se comparar, empiricamente, os resultados obtidos, tanto pela execução das simulações de forma sequencial e paralela, quanto pelas estratégias de implementação empregadas, como a convencional e a \textit{bitstring}. Por fim são apresentadas as conclusões obtidas a partir dos estudos realizados durante o desenvolvimento deste trabalho e sugestões para atividades ou trabalhos futuros.
+Neste capítulo são apresentados e discutidos os resultados obtidos por meio da execução de simulações utilizando as implementações realizadas. São apresentados os tempos de execução e os \textit{speedups} obtidos com a execução dos testes, bem como os resultados visuais para a dinâmica, por meio das saídas espaço-temporais geradas com auxílio do \textit{software} SIMULA e as curvas de quantidades, que expressam as quantidades de estado da população durante o tempo de simulação. São comparados empiricamente os resultados obtidos, tanto pela execução das simulações de forma sequencial e paralela, quanto pelas estratégias de implementação empregadas, como a convencional e a \textit{bitstring}. Por fim são apresentadas as conclusões obtidas a partir dos estudos realizados durante o desenvolvimento deste trabalho e sugestões para atividades ou trabalhos futuros.
 
 \section{Discussões Qualitativas, Quantitativas, Eficiência e Acurácia}
 
-Na Tabela \ref{tab:parametros} são apresentados os parâmetros utilizados para a execução das simulações. À obtenção dos resultados foi empregada a metodologia de Monte Carlo \cite{MonteCarlo}, que consiste na execução de determinada quantidade de simulações, tomando-se ao final a média aritmética, que é utilizada para a análise dos resultados. A distribuição inicial das quantidades de indivíduos foi realizada de forma uniforme entre os lotes, ou seja, em cada lote são inseridos $16830 / 17 = 990$ indivíduos no estado suscetível e $170 / 17 = 10$ no estado infectado.
+Na Tabela \ref{tab:parametros} são apresentados os parâmetros utilizados na execução das simulações. À obtenção dos resultados foi empregada a metodologia de Monte Carlo \cite{MonteCarlo}, que consiste na execução de determinada quantidade de simulações, tomando-se ao final a média aritmética, que é utilizada para a análise dos resultados. A distribuição inicial das quantidades de indivíduos foi realizada de forma uniforme entre os lotes, ou seja, em cada lote são inseridos $16830 / 17 = 990$ indivíduos no estado suscetível e $170 / 17 = 10$ no estado infectado.
 
 \newpage
 
@@ -30,7 +30,7 @@ Na Tabela \ref{tab:parametros} são apresentados os parâmetros utilizados para a 
 \label{tab:parametros}
 \end{table} 
 
-A Tabela \ref{tab:dimensoes_matrizes} apresenta as dimensões das matrizes utilizadas no sistema de simulação para aproximar as geometrias dos lotes da quadra 445. As dimensões apresentadas foram obtidas com auxílio da ferramenta SIMULA, em processos já apresentados e discutidos na seção \ref{sec:SIMULA}.
+A Tabela \ref{tab:dimensoes_matrizes} apresenta as dimensões das matrizes utilizadas no sistema de simulação para aproximar as geometrias dos lotes da quadra 445, ilustrada nas Figuras \ref{fig:q445-0} e \ref{fig:q445-1} da seção \ref{CapMetodologiasComputacionais}. As dimensões apresentadas foram obtidas com auxílio da ferramenta SIMULA, utilizando-se os processos já apresentados e discutidos na seção \ref{sec:SIMULA}.
 
 \begin{table}[h!]
 \centering
@@ -71,27 +71,31 @@ Os tempos de execução e \textit{speedups} obtidos para as implementações convenc
 \label{tab:tempos}
 \end{table} 
 
-Pode-se observar que, para a implementação convencional, o tempo de processamento foi reduzido em aproximadamente $8$ vezes. Já para a implementação em \textit{bitstring}, o tempo de processamento foi reduzido em aproximadamente $10$ vezes. É interessante notar que, os tempos de execução e \textit{speedups} têm valores aproximados entre as implementações convencionais e \textit{bitstring}. Portanto, pode-se concluir que não houve redução significativa no tempo de execução somente com a aplicação da técnica de \textit{bitstring}.
+Os resultados apresentados foram obtidos por meio da execução de simulações, utilizando a API CUDA à paralelização do sistema de simulação. Especificamente, para a execução de simulações na GPU utilizou-se uma placa gráfica Nvidia Tesla K20, que conta com 2496 \textit{cuda cores} com frequência de 706 MHz, 5 GB de memória e desempenho de $1.17$ Tflops e $3.52$ Tflops para ponto flutuante de precisão dupla e simples, respectivamente \cite{K20}. Para a execução de simulações em CPU, utilizou-se uma máquina com processador Intel Xeon E5-2620, que conta com 6 \textit{cores} e 12 \textit{threads} com frequência de 2 GHz, dispondo de 128 GB de memória. O computador onde as simulações foram executadas possui o sistema operacional Ubuntu 16.04. Utilizou-se \textit{scripts} escritos em \textit{shell script} para o controle da execução das simulações e obtenção dos tempos de execução. A máquina utilizada foi reiniciada antes do início da execução dos testes e somente os processos essenciais ao sistema operacional foram mantidos em execução.
 
-As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bitstring_cpu} e \ref{fig:bitstring_gpu} ilustram os resultados obtidos para a dinâmica epidemiológica. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que, as implementações executadas em CPU, apresentadas nas Figuras \ref{fig:convencional_cpu} e \ref{fig:bitstring_cpu} possuem dinâmicas idênticas entre si. Analogamente, as implementações executadas em GPU, apresentadas nas Figuras \ref{fig:convencional_gpu} e \ref{fig:bitstring_gpu} também apresentam resultados idênticos. Em geral, as dinâmicas das implementações executadas em CPU e em GPU têm resultados assemelhados, porém apresentando diferenças significativas. Especula-se que estas diferenças estejam relacionadas aos mecanismos utilizados para a geração de números pseudo-aleatórios. Para as implementações em GPU, utilizou-se um gerador disponível na biblioteca padrão CUDA, que gera números seguindo uma distribuição normal, enquanto nas implementações em CPU, foram utilizados geradores que não garantem tal comportamento.
+Pode-se observar que, para a implementação convencional, o tempo de processamento foi reduzido em aproximadamente $8$ vezes. Já para a implementação em \textit{bitstring}, o tempo de processamento foi reduzido em aproximadamente $10$ vezes. É interessante notar que, os tempos de execução e \textit{speedups} têm valores aproximados entre as implementações convencionais e \textit{bitstring}. Portanto, pode-se concluir que, no caso da implementação realizada, não houve redução significativa no tempo de execução somente com a aplicação da técnica de \textit{bitstring}.
+
+As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bitstring_cpu} e \ref{fig:bitstring_gpu} ilustram os resultados obtidos para a dinâmica epidemiológica. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que, as implementações executadas em CPU, apresentadas nas Figuras \ref{fig:convencional_cpu} e \ref{fig:bitstring_cpu} possuem dinâmicas idênticas entre si. Analogamente, as implementações executadas em GPU, apresentadas nas Figuras \ref{fig:convencional_gpu} e \ref{fig:bitstring_gpu} também apresentam resultados idênticos. Em geral, as dinâmicas das implementações executadas em CPU e em GPU têm resultados qualitativamente assemelhados, porém apresentando algumas diferenças quantitativas. 
+
+Especula-se que estas diferenças estejam relacionadas aos mecanismos utilizados para a geração de números pseudo-aleatórios. Para as implementações em GPU, utilizou-se um gerador disponível na biblioteca padrão CUDA, que gera números seguindo uma distribuição normal, enquanto nas implementações em CPU, foram utilizados geradores que não garantem tal comportamento.
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=0.85\textwidth]{Figuras/Convencional_CPU.png}
-  \caption{Gráficos de curvas para a implementação convencional em CPU.}
+  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação convencional em CPU.}
   \label{fig:convencional_cpu}
   \includegraphics[width=0.85\textwidth]{Figuras/Convencional_GPU.png}
-  \caption{Gráficos de curvas para a implementação convencional em GPU.}
+  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação convencional em GPU.}
   \label{fig:convencional_gpu}
 \end{figure} 
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=0.85\textwidth]{Figuras/Bitstring_CPU.png}
-  \caption{Gráficos de curvas para a implementação \textit{bitstring} em CPU.}
+  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação \textit{bitstring} em CPU.}
   \label{fig:bitstring_cpu}
   \includegraphics[width=0.85\textwidth]{Figuras/Bitstring_GPU.png}
-  \caption{Gráficos de curvas para a implementação \textit{bitstring} em GPU.}
+  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação \textit{bitstring} em GPU.}
   \label{fig:bitstring_gpu}
 \end{figure} 
 
@@ -99,7 +103,7 @@ As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bits
 
 \section{Dinâmicas Espaço-Temporais na Quadra 445.}
 
-As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostram as saídas espaço-temporais obtidas por meio do \textit{software} SIMULA para a quadra 445. Pode-se observar que as duas implementações, convencional e \textit{bitstring} apresentam resultados assemelhados, não sendo idênticos devido a aleatoriedade inerente presente nos processos de movimentação, contato e transição dos indivíduos. São apresentados, para cada implementação, o estado dos indivíduos na quadra em 6 ciclos de simulação, iniciando-se do ciclo 0, que corresponde à condição inicial, até o ciclo 100, em intervalos de 20 ciclos. Por meio das figuras é possível observar a evolução da dinâmica epidemiológica no domínio modelado.
+As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostram as saídas espaço-temporais obtidas por meio do \textit{software} SIMULA para a quadra 445. Pode-se observar que as duas implementações, convencional e \textit{bitstring} apresentam resultados assemelhados, não sendo idênticos devido a natureza estocástica dos processos de movimentação, contato e transição dos indivíduos. São apresentados, para cada implementação, o estado dos indivíduos na quadra, iniciando-se do ciclo 0, que corresponde à condição inicial, até o ciclo 100, em intervalos de 20 ciclos. Por meio das figuras é possível observar a evolução da dinâmica epidemiológica no domínio modelado.
 
 \begin{figure}[!htb]
 \centering
@@ -191,15 +195,21 @@ As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostra
 
 Neste trabalho foi apresentado um modelo computacional multiagente para simular a propagação de hipotéticas doenças baseadas em modelagem compartimental tipo SEIRS. Utilizou-se uma ferramenta computacional especificamente desenvolvida para a geração de um mapeamento georreferenciado da quadra 445 da cidade de Cascavel/PR, que serviu como ambiente para a execução de simulações. Foi proposto um modelo em \textit{bitstring} para os agentes e operações relacionadas, facilitando o posterior emprego da biblioteca CUDA à paralelização do sistema de simulação. Por fim, apresentou-se os resultados obtidos com a execução de testes nas implementações realizadas, comparando-se os resultados obtidos entre as abordagens convencional e \textit{bitstring}, e as execuções sequenciais e paralelas. 
 
-Conclui-se que, 
+Conclui-se que o modelo multiagente implementado apresenta resultados interessantes, sobretudo sob o ponto de vista espaço-temporal, com dinâmica condizente com o esperado e mostrando a viabilidade da aplicação de modelos compartimentais à simulação de doenças hipotéticas sob áreas geográficas. O comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados, que podem ser observadas nos gráficos \ref{fig:convencional_cpu} a \ref{fig:bitstring_gpu}, também foi de acordo com o esperado, conforme observado em trabalhos correlatos disponíveis na literatura.
+
+O emprego da ferramenta SIMULA à geração do ambiente utilizado na simulação foi importante ao desenvolvimento do trabalho, sobretudo nas etapas de pré e pós-processamento, como na geração de arquivos de entrada para a simulação e visualização dos resultados, especialmente em saídas georreferenciadas. Notou-se que há uma grande dificuldade no tratamento e disponibilização de dados georreferenciados, especialmente por exigirem na maioria das vezes, de algoritmos e tecnologias específicas no seu armazenamento e processamento.
+
+A aplicação da técnica de \textit{bitstring} mostrou-se relevante, auxiliando na paralelização do sistema de simulação e diminuindo a quantidade de dados copiada entre CPU e GPU. Tal metodologia viabiliza ainda uma maneira concisa e uniforme de armazenamento e manipulação dos dados, sendo interessante sua aplicação no desenvolvimento de sistemas multiagente ou que modelem comportamentos indivíduais. 
+
+Por fim, a aplicação da biblioteca CUDA para a paralelização das implementações realizadas mostrou-se interessante por reduzir expressivamente o tempo de execução das simulações, o que é desejável na execução de simulações com maior porte, com maior quantidade de indivíduos, em ambientes maiores e com modelagens mais complexas às dinâmicas epidemiológicas, que são situações mais próximas da realidade que deseja-se simular. Destaca-se ainda que a implementação de sistemas em GPU, embora facilitada por bibliotecas específicas como o CUDA, ainda apresenta diversas dificuldades e relativa complexidade, sobretudo quanto à adequação dos dados para viabilizar seu processamento em paralelo e transferência para a GPU, que pode demandar um longo período de planejamento e desenvolvimento. Especificamente neste trabalho foi necessária a vetorização de todas as estruturas de dados para viabilizar sua cópia para a GPU. Este processo pode não ser trivial, especialmente se a implementação que deseja-se paralelizar em GPU fizer uso de algoritmos complexos e estruturas de dados dinâmicas, como aquelas disponíveis em linguagens de programação de alto nível, como a biblioteca \textit{Standard Template Library}, STL, do C++. Adicionalmente foi necessária a adequação das rotinas paralelizadas, exigindo a eliminação de dependências que inviabilizam o processamento em paralelo, como as temporais, e organização da sequência de processamento dos dados de forma a viabilizar a computação por diferentes \textit{threads}, garantindo a consistência dos dados. 
 
 Sugere-se como trabalhos futuros:
 
 \begin{itemize}
- \item Desenvolvimento de modelos mais sofisticados para propagação de doenças, que incluam o agente vetor, viabilizando modelar comportamentos indivíduais como movimentação na busca por acasalamento e alimento, e modele ainda aplicação de controles químicos, biológicos e mecânicos.
- \item Aplicação da metodologia \textit{bitstring} sobre modelagens mais complexas, com agentes que apresentem mais atributos, necessitando-se utilizar palavras computacionais com maior quantidade de \textit{bits}.
+ \item Desenvolvimento de modelos mais sofisticados para propagação de doenças, que incluam o agente vetor, viabilizando modelar comportamentos indivíduais como a movimentação na busca por acasalamento e alimento. Pode-se ainda modelar a aplicação de controles químicos, biológicos e mecânicos sobre a população de vetores.
+ \item Aplicação da metodologia \textit{bitstring} sobre modelagens mais complexas, com agentes que apresentem mais atributos, que necessitem do uso de palavras computacionais com maior quantidade de \textit{bits}.
+ \item Definição de um modelo \textit{bistring} \textit{in place}, que realize as operações de configuração de atributos utilizando uma quantidade mínima de variáveis auxiliares, reduzindo o consumo de memória do computador.
  \item Emprego e comparação de diferentes técnicas para paralelização do sistema de simulação, como por exemplo OpenMP, OpenMPI e outras APIs para programação em GPU.
- \item Estudo mais aprofundado sobre os parâmetros aplicados em 
- \item Utilização de outros mapeamentos georreferenciados como ambiente para a simulação.
+ \item Estudo mais aprofundado sobre os parâmetros utilizados no modelo, sobretudo em suas influências sobre a dinâmica epidemiológica.
+ \item Utilização de outros ambientes georreferenciados como base à simulação.
 \end{itemize}
-

@@ -1,9 +1,9 @@
 \select@language {brazil}
 \contentsline {chapter}{Lista de Figuras}{v}
-\contentsline {chapter}{Lista de Tabelas}{vi}
-\contentsline {chapter}{Lista de Abreviaturas e Siglas}{vii}
-\contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{viii}
-\contentsline {chapter}{Resumo}{xi}
+\contentsline {chapter}{Lista de Tabelas}{vii}
+\contentsline {chapter}{Lista de Abreviaturas e Siglas}{viii}
+\contentsline {chapter}{Lista de S\IeC {\'\i }mbolos}{ix}
+\contentsline {chapter}{Resumo}{xii}
 \contentsline {chapter}{\numberline {1}Introdu\c c\~ao}{1}
 \contentsline {section}{\numberline {1.1}Objetivos}{2}
 \contentsline {section}{\numberline {1.2}Motiva\c c\~ao e Justificativas}{3}
@@ -27,5 +27,5 @@
 \contentsline {section}{\numberline {4.1}Introdu\c c\~ao}{53}
 \contentsline {section}{\numberline {4.2}Discuss\~oes Qualitativas, Quantitativas, Efici\^encia e Acur\'acia}{53}
 \contentsline {section}{\numberline {4.3}Din\^amicas Espa\c co-Temporais na Quadra 445.}{58}
-\contentsline {section}{\numberline {4.4}Conclus\~oes}{59}
-\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{62}
+\contentsline {section}{\numberline {4.4}Conclus\~oes}{60}
+\contentsline {chapter}{Refer\^encias Bibliogr\'aficas}{63}
