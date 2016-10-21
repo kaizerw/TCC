@@ -21,5 +21,9 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao para a implementa\c c\~ao convencional em GPU.\relax }}{57}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao para a implementa\c c\~ao \textit {bitstring} em CPU.\relax }}{57}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao para a implementa\c c\~ao \textit {bitstring} em GPU.\relax }}{58}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao convencional.\relax }}{59}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao \textit {bitstring}.\relax }}{60}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencional e \textit {bitstring} em CPU.\relax }}{59}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencional e \textit {bitstring} em GPU.\relax }}{60}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencionais em CPU e GPU.\relax }}{60}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes \textit {bitstring} em CPU e GPU.\relax }}{61}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao convencional.\relax }}{62}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao \textit {bitstring}.\relax }}{63}

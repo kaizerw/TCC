@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.10)  17 OCT 2016 13:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.10.10)  21 OCT 2016 14:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -971,7 +971,7 @@ Cap\'{\i }tulo 4.
 
 
 ] [54]
-Overfull \hbox (21.30452pt too wide) in paragraph at lines 65--70
+Overfull \hbox (20.6326pt too wide) in paragraph at lines 65--70
  [][] 
  []
 
@@ -979,128 +979,160 @@ Overfull \hbox (21.30452pt too wide) in paragraph at lines 65--70
 File: Figuras/Convencional_CPU.png Graphic file (type png)
 
 <use Figuras/Convencional_CPU.png>
-Package pdftex.def Info: Figuras/Convencional_CPU.png used on input line 84.
+Package pdftex.def Info: Figuras/Convencional_CPU.png used on input line 82.
 (pdftex.def)             Requested size: 387.50443pt x 290.62314pt.
 
 <Figuras/Convencional_GPU.png, id=278, 578.16pt x 433.62pt>
 File: Figuras/Convencional_GPU.png Graphic file (type png)
 
 <use Figuras/Convencional_GPU.png>
-Package pdftex.def Info: Figuras/Convencional_GPU.png used on input line 91.
+Package pdftex.def Info: Figuras/Convencional_GPU.png used on input line 89.
 (pdftex.def)             Requested size: 387.50443pt x 290.62314pt.
 
 <Figuras/Bitstring_CPU.png, id=279, 578.16pt x 433.62pt>
 File: Figuras/Bitstring_CPU.png Graphic file (type png)
 
 <use Figuras/Bitstring_CPU.png>
-Package pdftex.def Info: Figuras/Bitstring_CPU.png used on input line 94.
+Package pdftex.def Info: Figuras/Bitstring_CPU.png used on input line 92.
 (pdftex.def)             Requested size: 387.50443pt x 290.62314pt.
  [56 <./Figuras/Convencional_CPU.png>]
 <Figuras/Bitstring_GPU.png, id=284, 578.16pt x 433.62pt>
 File: Figuras/Bitstring_GPU.png Graphic file (type png)
 
 <use Figuras/Bitstring_GPU.png>
-Package pdftex.def Info: Figuras/Bitstring_GPU.png used on input line 101.
+Package pdftex.def Info: Figuras/Bitstring_GPU.png used on input line 99.
 (pdftex.def)             Requested size: 387.50443pt x 290.62314pt.
- [57 <./Figuras/Convencional_GPU.png> <./Figuras/Bitstring_CPU.png>]
-<Figuras/Convencional/0.png, id=290, 435.87843pt x 426.84468pt>
+ [57 <./Figuras/Convencional_GPU.png> <./Figuras/Bitstring_CPU.png>] [58 <./Fig
+uras/Bitstring_GPU.png>]
+<Figuras/Acuracia/1-erros_relativos_CPU_CPU.png, id=294, 578.16pt x 433.62pt>
+File: Figuras/Acuracia/1-erros_relativos_CPU_CPU.png Graphic file (type png)
+
+<use Figuras/Acuracia/1-erros_relativos_CPU_CPU.png>
+Package pdftex.def Info: Figuras/Acuracia/1-erros_relativos_CPU_CPU.png used on
+ input line 112.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+
+<Figuras/Acuracia/2-erros_relativos_GPU_GPU.png, id=295, 578.16pt x 433.62pt>
+File: Figuras/Acuracia/2-erros_relativos_GPU_GPU.png Graphic file (type png)
+
+<use Figuras/Acuracia/2-erros_relativos_GPU_GPU.png>
+Package pdftex.def Info: Figuras/Acuracia/2-erros_relativos_GPU_GPU.png used on
+ input line 119.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+ [59 <./Figuras/Acuracia/1-erros_relativos_CPU_CPU.png>]
+<Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png, id=300, 578.16pt x 433.62pt>
+File: Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png Graphic file (type png)
+<use Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png>
+Package pdftex.def Info: Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png used 
+on input line 126.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+
+<Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png, id=301, 578.16pt x 433.62pt>
+File: Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png Graphic file (type png)
+<use Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png>
+Package pdftex.def Info: Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png used 
+on input line 133.
+(pdftex.def)             Requested size: 364.70882pt x 273.52611pt.
+ [60 <./Figuras/Acuracia/2-erros_relativos_GPU_GPU.png> <./Figuras/Acuracia/3-e
+rros_relativos_CPU_GPU_C.png>] <Figuras/Convencional/0.png, id=307, 435.87843pt
+ x 426.84468pt>
 File: Figuras/Convencional/0.png Graphic file (type png)
 
 <use Figuras/Convencional/0.png>
-Package pdftex.def Info: Figuras/Convencional/0.png used on input line 114.
+Package pdftex.def Info: Figuras/Convencional/0.png used on input line 146.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Convencional/20.png, id=291, 435.87843pt x 426.84468pt>
+<Figuras/Convencional/20.png, id=308, 435.87843pt x 426.84468pt>
 File: Figuras/Convencional/20.png Graphic file (type png)
 
 <use Figuras/Convencional/20.png>
-Package pdftex.def Info: Figuras/Convencional/20.png used on input line 120.
+Package pdftex.def Info: Figuras/Convencional/20.png used on input line 152.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Convencional/40.png, id=292, 435.87843pt x 426.84468pt>
+<Figuras/Convencional/40.png, id=309, 435.87843pt x 426.84468pt>
 File: Figuras/Convencional/40.png Graphic file (type png)
 
 <use Figuras/Convencional/40.png>
-Package pdftex.def Info: Figuras/Convencional/40.png used on input line 126.
+Package pdftex.def Info: Figuras/Convencional/40.png used on input line 158.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Convencional/60.png, id=293, 435.87843pt x 426.84468pt>
+<Figuras/Convencional/60.png, id=310, 435.87843pt x 426.84468pt>
 File: Figuras/Convencional/60.png Graphic file (type png)
 
 <use Figuras/Convencional/60.png>
-Package pdftex.def Info: Figuras/Convencional/60.png used on input line 132.
+Package pdftex.def Info: Figuras/Convencional/60.png used on input line 164.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Convencional/80.png, id=294, 435.87843pt x 426.84468pt>
+<Figuras/Convencional/80.png, id=311, 435.87843pt x 426.84468pt>
 File: Figuras/Convencional/80.png Graphic file (type png)
 
 <use Figuras/Convencional/80.png>
-Package pdftex.def Info: Figuras/Convencional/80.png used on input line 138.
+Package pdftex.def Info: Figuras/Convencional/80.png used on input line 170.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Convencional/100.png, id=295, 435.87843pt x 426.84468pt>
+<Figuras/Convencional/100.png, id=312, 435.87843pt x 426.84468pt>
 File: Figuras/Convencional/100.png Graphic file (type png)
 
 <use Figuras/Convencional/100.png>
-Package pdftex.def Info: Figuras/Convencional/100.png used on input line 144.
+Package pdftex.def Info: Figuras/Convencional/100.png used on input line 176.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
- [58 <./Figuras/Bitstring_GPU.png>]
-<Figuras/Bitstring/0.png, id=300, 435.87843pt x 426.84468pt>
+ [61 <./Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png>] <Figuras/Bitstring/0
+.png, id=318, 435.87843pt x 426.84468pt>
 File: Figuras/Bitstring/0.png Graphic file (type png)
 
 <use Figuras/Bitstring/0.png>
-Package pdftex.def Info: Figuras/Bitstring/0.png used on input line 156.
+Package pdftex.def Info: Figuras/Bitstring/0.png used on input line 188.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Bitstring/20.png, id=301, 435.87843pt x 426.84468pt>
+<Figuras/Bitstring/20.png, id=319, 435.87843pt x 426.84468pt>
 File: Figuras/Bitstring/20.png Graphic file (type png)
 
 <use Figuras/Bitstring/20.png>
-Package pdftex.def Info: Figuras/Bitstring/20.png used on input line 162.
+Package pdftex.def Info: Figuras/Bitstring/20.png used on input line 194.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Bitstring/40.png, id=302, 435.87843pt x 426.84468pt>
+<Figuras/Bitstring/40.png, id=320, 435.87843pt x 426.84468pt>
 File: Figuras/Bitstring/40.png Graphic file (type png)
 
 <use Figuras/Bitstring/40.png>
-Package pdftex.def Info: Figuras/Bitstring/40.png used on input line 168.
+Package pdftex.def Info: Figuras/Bitstring/40.png used on input line 200.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Bitstring/60.png, id=303, 435.87843pt x 426.84468pt>
+<Figuras/Bitstring/60.png, id=321, 435.87843pt x 426.84468pt>
 File: Figuras/Bitstring/60.png Graphic file (type png)
 
 <use Figuras/Bitstring/60.png>
-Package pdftex.def Info: Figuras/Bitstring/60.png used on input line 174.
+Package pdftex.def Info: Figuras/Bitstring/60.png used on input line 206.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Bitstring/80.png, id=304, 435.87843pt x 426.84468pt>
+<Figuras/Bitstring/80.png, id=322, 435.87843pt x 426.84468pt>
 File: Figuras/Bitstring/80.png Graphic file (type png)
 
 <use Figuras/Bitstring/80.png>
-Package pdftex.def Info: Figuras/Bitstring/80.png used on input line 180.
+Package pdftex.def Info: Figuras/Bitstring/80.png used on input line 212.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
 
-<Figuras/Bitstring/100.png, id=305, 435.87843pt x 426.84468pt>
+<Figuras/Bitstring/100.png, id=323, 435.87843pt x 426.84468pt>
 File: Figuras/Bitstring/100.png Graphic file (type png)
 
 <use Figuras/Bitstring/100.png>
-Package pdftex.def Info: Figuras/Bitstring/100.png used on input line 186.
+Package pdftex.def Info: Figuras/Bitstring/100.png used on input line 218.
 (pdftex.def)             Requested size: 150.44264pt x 147.32019pt.
- [59 <./Figuras/Convencional/0.png> <./Figuras/Convencional/20.png> <./Figuras/
+ [62 <./Figuras/Convencional/0.png> <./Figuras/Convencional/20.png> <./Figuras/
 Convencional/40.png> <./Figuras/Convencional/60.png> <./Figuras/Convencional/80
-.png> <./Figuras/Convencional/100.png>] [60 <./Figuras/Bitstring/0.png> <./Figu
+.png> <./Figuras/Convencional/100.png>] [63 <./Figuras/Bitstring/0.png> <./Figu
 ras/Bitstring/20.png> <./Figuras/Bitstring/40.png> <./Figuras/Bitstring/60.png>
- <./Figuras/Bitstring/80.png> <./Figuras/Bitstring/100.png>] [61]) [62] (./TCC.
-bbl [63
+ <./Figuras/Bitstring/80.png> <./Figuras/Bitstring/100.png>] [64]) [65] (./TCC.
+bbl [66
 
 
-] [64]
+] [67]
 Underfull \hbox (badness 10000) in paragraph at lines 129--132
 []\T1/ptm/m/n/12 TESLA, N. \T1/ptm/m/it/12 Nvi-dia Tesla\T1/ptm/m/n/12 . 2016. 
 Con-sul-tado na IN-TER-NET:
  []
 
-) [65] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
+) [68] (./TCC.aux (./iniciais/capa.aux) (./iniciais/rosto.aux)
 (./iniciais/aprova.aux) (./iniciais/dedica.aux) (./iniciais/sumario.aux)
 (./iniciais/resumo.aux) (./capitulo1/capitulo1.aux) (./capitulo2/capitulo2.aux)
 (./capitulo3/capitulo3.aux) (./capitulo4/capitulo4.aux))
@@ -1110,10 +1142,10 @@ LaTeX Font Warning: Size substitutions with differences
 
  ) 
 Here is how much of TeX's memory you used:
- 6895 strings out of 493029
- 102914 string characters out of 6136233
- 200392 words of memory out of 5000000
- 10124 multiletter control sequences out of 15000+600000
+ 6920 strings out of 493029
+ 103971 string characters out of 6136233
+ 200438 words of memory out of 5000000
+ 10144 multiletter control sequences out of 15000+600000
  75703 words of font info for 104 fonts, out of 8000000 for 9000
  1152 hyphenation exceptions out of 8191
  47i,27n,51p,2095b,699s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1135,10 +1167,10 @@ mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist
 fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
 /times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TCC.pdf (77 pages, 10231241 bytes).
+Output written on TCC.pdf (80 pages, 8721113 bytes).
 PDF statistics:
- 405 PDF objects out of 1000 (max. 8388607)
- 248 compressed objects within 3 object streams
+ 423 PDF objects out of 1000 (max. 8388607)
+ 255 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 156 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 176 words of extra memory for PDF output out of 10000 (max. 10000000)
 
