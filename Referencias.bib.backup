@@ -207,3 +207,28 @@
   address =		  {EUA},
   edition =		  {1},
 }
+
+@BOOK{CudaProgramming,
+  AUTHOR =		  {Shane Cook},
+  TITLE =		  {Cuda Programming - A Developer's Guide to Parallel Computing with GPUs},
+  PUBLISHER =	  	  {Elsevier},
+  YEAR =		  {2013},
+  address =		  {EUA},
+  edition =		  {1},
+}
+
+@BOOK{MonteCarlo,
+  AUTHOR =		  {Chwif, L. and Medina, A. C.},
+  TITLE =		  {Modelagem e Simulacao de Eventos Discretos: Teoria e Aplicacoes},
+  PUBLISHER =	  	  {Elsevier Brasil},
+  YEAR =		  {2014},
+}
+
+@BOOK{logica,
+  AUTHOR =		  {DAGHLIAN, J.},
+  TITLE =		  {Lógica e Álgebra de Boole},
+  PUBLISHER =	  	  {Atlas},
+  YEAR =		  {2008},
+  edition =		  {4},
+}
+

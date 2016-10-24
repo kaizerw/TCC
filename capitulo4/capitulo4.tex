@@ -58,7 +58,7 @@ A Tabela \ref{tab:dimensoes_matrizes} apresenta as dimensões das matrizes utiliz
 \label{tab:dimensoes_matrizes}
 \end{table} 
 
-Os tempos de execução e \textit{speedups} obtidos para as implementações convencionais e \textit{bitstring} são apresentados na Tabela \ref{tab:tempos}. O \textit{speedup}, no contexto deste trabalho, indica o aumento de desempenho entre a execução de simulações de forma sequencial, utilizando a CPU, e de forma paralela, utilizando a GPU. Especificamente, o \textit{speedup} indica então o fator de redução no tempo de execução, quando a execução de uma simulação é realizada em GPU. 
+Os tempos de execução e \textit{speedups} obtidos para as implementações convencionais e \textit{bitstring} são apresentados na Tabela \ref{tab:tempos}. O \textit{speedup}, no contexto deste trabalho, indica o aumento de desempenho entre a execução de simulações de forma sequencial, utilizando a CPU, e de forma paralela, utilizando a GPU. Especificamente, o \textit{speedup} indica o fator de redução no tempo de execução, quando a execução de uma simulação é realizada em GPU. 
 
 \begin{table}[h!]
 \centering
@@ -71,11 +71,11 @@ Os tempos de execução e \textit{speedups} obtidos para as implementações convenc
 \label{tab:tempos}
 \end{table} 
 
-Os resultados apresentados foram obtidos por meio da execução de simulações, utilizando a API CUDA à paralelização do sistema de simulação. Especificamente, para a execução de simulações na GPU utilizou-se uma placa gráfica Nvidia Tesla K20, que conta com 2496 \textit{cuda cores} com frequência de 706 MHz, 5 GB de memória e desempenho de $1.17$ Tflops e $3.52$ Tflops para ponto flutuante de precisão dupla e simples, respectivamente \cite{K20}. Para a execução de simulações em CPU, utilizou-se uma máquina com processador Intel Xeon E5-2620, que conta com 6 \textit{cores} e 12 \textit{threads} com frequência de 2 GHz, dispondo de 128 GB de memória. O computador onde as simulações foram executadas possui o sistema operacional Ubuntu 16.04. Utilizou-se \textit{scripts} escritos em \textit{shell script} para o controle da execução das simulações e obtenção dos tempos de execução. A máquina utilizada foi reiniciada antes do início da execução dos testes e somente os processos essenciais ao sistema operacional foram mantidos em execução.
+Os resultados apresentados foram obtidos por meio da execução de simulações, utilizando a API CUDA à paralelização do sistema de simulação. Especificamente, para a execução de simulações na GPU utilizou-se uma placa gráfica Nvidia Tesla K20, que conta com 2496 \textit{cuda cores} com frequência de 706 MHz, 5 GB de memória e desempenho de $1.17$ Tflops e $3.52$ Tflops para ponto flutuante de precisão dupla e simples, respectivamente \cite{K20}. Para a execução de simulações em CPU, utilizou-se uma máquina com processador Intel Xeon E5-2620, que conta com 6 \textit{cores} e 12 \textit{threads} com frequência de 2 GHz, dispondo de 128 GB de memória. O computador em que as simulações foram executadas possui o sistema operacional Ubuntu 16.04. Utilizou-se \textit{scripts} escritos em \textit{shell script} \cite{ShellScript} para o controle da execução das simulações e obtenção dos tempos de execução. A máquina utilizada foi reiniciada antes do início da execução dos testes e somente os processos essenciais ao sistema operacional foram mantidos em execução.
 
 Pode-se observar que, para a implementação convencional, o tempo de processamento foi reduzido em aproximadamente $9$ vezes. Já para a implementação em \textit{bitstring}, o tempo de processamento foi reduzido em aproximadamente $12$ vezes. É interessante notar que, os tempos de execução e \textit{speedups} têm valores aproximados entre as implementações convencionais e \textit{bitstring}. Portanto, pode-se concluir que, no caso da implementação realizada, não houve redução significativa no tempo de execução somente com a aplicação da técnica de \textit{bitstring}.
 
-As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bitstring_cpu} e \ref{fig:bitstring_gpu} ilustram os resultados obtidos para a dinâmica epidemiológica. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que os resultados das diferentes implementações apresentadas nas figuras possuem dinâmicas assemelhadas entre si. Em geral, as implementações têm resultados qualitativamente assemelhados, apresentando algumas diferenças quantitativas. 
+As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bitstring_cpu} e \ref{fig:bitstring_gpu} ilustram os resultados obtidos para a dinâmica epidemiológica utilizando os parâmetros apresentados na Tabela \ref{tab:parametros}. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python \cite{Python}. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que os resultados das diferentes implementações apresentadas nas figuras possuem dinâmicas assemelhadas entre si. Em geral, as implementações têm resultados qualitativamente assemelhados, apresentando algumas poucas diferenças quantitativas, discutidas em sequência. 
 
 \begin{figure}[H]
   \centering
@@ -101,36 +101,49 @@ As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bits
   \label{fig:bitstring_gpu}
 \end{figure} 
 
-Inicialmente, as implementações CPU e GPU apresentavam resultados qualitativamente destoantes. Após a execução de testes verificou-se que esta diferença qualitativa estava relacionada aos mecanismos utilizados para a geração de números pseudo-aleatórios. Para as implementações em GPU, utiliza-se um gerador disponível na biblioteca padrão CUDA, que gera números seguindo uma distribuição uniforme, enquanto que nas implementações em CPU eram utilizados geradores que não garantem tal comportamento, como a função \textit{rand} da biblioteca \textit{stdlib}. Para garantir a compatibilidade entre as duas implementações foram adotados nas implementações em CPU geradores de números pseudo-aleatórios que seguem uma distribuição uniforme, que estão disponíveis na biblioteca \textit{random} da linguagem C++. 
+Inicialmente, as implementações CPU e GPU apresentavam resultados qualitativamente destoantes. Após a execução de testes verificou-se que esta diferença qualitativa estava relacionada aos mecanismos utilizados para a geração de números pseudo-aleatórios. Para as implementações em GPU, utiliza-se um gerador disponível na biblioteca \textit{Curand} \cite{Curand}, que gera números seguindo uma distribuição uniforme, enquanto que nas implementações em CPU eram utilizados geradores que não garantem tal comportamento, como a função \textit{rand} da biblioteca \textit{stdlib} \cite{Rand}. Para garantir a compatibilidade entre as duas implementações foram adotados nas implementações em CPU geradores de números pseudo-aleatórios que seguem uma distribuição uniforme, que estão disponíveis na biblioteca \textit{random} da linguagem C++ \cite{Random}. 
 
-Após a compatibilização das distribuições utilizadas para a geração de números pseudo-aleatórios foram confeccionados gráficos para visualizar os erros relativos entre as implementações realizadas. Os erros relativos entre duas implementações foram calculados para cada população, ciclo a ciclo, utilizando-se a fórmula $ER_{a, b} = \frac{|a - b|}{a}$. A Figura \ref{fig:acuracia_CPU_CPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em CPU, a Figura \ref{fig:acuracia_GPU_GPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em GPU, a Figura \ref{fig:acuracia_CPU_GPU_C} ilustra os erros relativos entre as implementações convencionais em CPU e GPU e a Figura \ref{fig:acuracia_GPU_GPU_B} ilustra os erros relativos entre as implementações \textit{bitstring} em CPU e GPU. As figuras que ilustram os erros relativos entre as implementações realizadas mostram que os resultados obtidos estão adequadamente próximos, independentemente da abordagem utilizada à representação dos indivíduos, convencional ou \textit{bitstring}, e da execução em CPU ou GPU. 
+Após a compatibilização das distribuições utilizadas para a geração de números pseudo-aleatórios foram confeccionados gráficos para visualizar os erros relativos entre as implementações realizadas. Os erros relativos entre duas implementações foram calculados para cada população, ciclo a ciclo, utilizando-se as expressões \ref{eq:erro_relativo1} e \ref{eq:erro_relativo2}. Na expressão \ref{eq:erro_relativo1}, $CPU(i)$ e $GPU(i)$ designam as soluções em CPU e GPU, no ciclo $i$, respectivamente. Na expressão \ref{eq:erro_relativo2}, $C(i)$ e $B(i)$ designam as soluções convencionais e \textit{bitstring}, no ciclo $i$, respectivamente.
 
-Pode-se observar ainda que existem picos para a população de indivíduos suscetíveis próximos ao ciclo $70$ em todas as figuras. Estes picos acontecem pois as quantidades de indivíduos suscetíveis próximo a este ciclo são muito próximas de zero, o que acarreta em um aumento de sensibilidade no cálculo do erro relativo entre estas quantidades. É possível observar, por meio da análise das Figuras \ref{fig:convencional_cpu} a \ref{fig:acuracia_GPU_GPU_B} que, quando as quantidades de uma determinada população se aproximam de zero em um ciclo de tempo, os erros relativos entre suas implementações aumentam aproximadamente neste mesmo ciclo. 
+\begin{equation}
+  E_R^{CPU, GPU} = \frac{|CPU(i) - GPU(i)|}{CPU(i)}
+\label{eq:erro_relativo1}
+\end{equation}
+
+
+\begin{equation}
+  E_R^{C, B} = \frac{|C(i) - B(i)|}{C(i)}
+\label{eq:erro_relativo2}
+\end{equation}
+
+A Figura \ref{fig:acuracia_CPU_CPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em CPU, a Figura \ref{fig:acuracia_GPU_GPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em GPU, a Figura \ref{fig:acuracia_CPU_GPU_C} ilustra os erros relativos entre as implementações convencionais em CPU e GPU e a Figura \ref{fig:acuracia_GPU_GPU_B} ilustra os erros relativos entre as implementações \textit{bitstring} em CPU e GPU. As figuras que ilustram os erros relativos entre as implementações realizadas mostram que os resultados obtidos estão adequadamente próximos, independentemente da abordagem utilizada à representação dos indivíduos, convencional ou \textit{bitstring}, e da execução em CPU ou GPU, apresentando erros menores do que $0.588\%$.
+
+Pode-se observar ainda que existem picos para a população de indivíduos suscetíveis próximos ao ciclo $70$ em todos os resultados. Eles acontecem pois as quantidades de indivíduos suscetíveis próximo a este ciclo são muito próximas de zero, o que acarreta em um aumento de sensibilidade no cálculo do erro relativo entre as quantidades. É possível observar, por meio da análise das Figuras \ref{fig:convencional_cpu} a \ref{fig:bitstring_gpu} que, quando as quantidades de uma determinada população se aproximam de zero em um ciclo de tempo, os erros relativos entre suas implementações aumentam aproximadamente neste mesmo ciclo. 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.80\textwidth]{Figuras/Acuracia/1-erros_relativos_CPU_CPU.png}
+  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/1-erros_relativos_CPU_CPU.png}
   \caption{Gráficos dos erros relativos entre as implementações convencional e \textit{bitstring} em CPU.}
   \label{fig:acuracia_CPU_CPU}
 \end{figure} 
   
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.80\textwidth]{Figuras/Acuracia/2-erros_relativos_GPU_GPU}
+  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/2-erros_relativos_GPU_GPU}
   \caption{Gráficos dos erros relativos entre as implementações convencional e \textit{bitstring} em GPU.}
   \label{fig:acuracia_GPU_GPU}
 \end{figure} 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.80\textwidth]{Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png}
+  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png}
   \caption{Gráficos dos erros relativos entre as implementações convencionais em CPU e GPU.}
   \label{fig:acuracia_CPU_GPU_C}
 \end{figure} 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.80\textwidth]{Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png}
+  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png}
   \caption{Gráficos dos erros relativos entre as implementações \textit{bitstring} em CPU e GPU.}
   \label{fig:acuracia_GPU_GPU_B}
 \end{figure} 
@@ -141,37 +154,37 @@ As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostra
 
 \begin{figure}[H]
 \centering
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Convencional/0.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 0.}
-\end{minipage}%
-\begin{minipage}{.33\textwidth}
+\end{minipage}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Convencional/20.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 20.}
 \end{minipage}
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Convencional/40.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 40.}
 \end{minipage}
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Convencional/60.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 60.}
-\end{minipage}%
-\begin{minipage}{.33\textwidth}
+\end{minipage}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Convencional/80.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 80.}
 \end{minipage}
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Convencional/100.png}
   \captionsetup{labelformat=empty}
@@ -183,37 +196,37 @@ As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostra
 
 \begin{figure}[H]
 \centering
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Bitstring/0.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 0.}
-\end{minipage}%
-\begin{minipage}{.33\textwidth}
+\end{minipage}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Bitstring/20.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 20.}
 \end{minipage}
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Bitstring/40.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 40.}
 \end{minipage}
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Bitstring/60.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 60.}
-\end{minipage}%
-\begin{minipage}{.33\textwidth}
+\end{minipage}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Bitstring/80.png}
   \captionsetup{labelformat=empty}
   \caption*{t = 80.}
 \end{minipage}
-\begin{minipage}{.33\textwidth}
+\begin{minipage}{.43\textwidth}
   \centering
   \includegraphics[width=1\linewidth]{Figuras/Bitstring/100.png}
   \captionsetup{labelformat=empty}
@@ -231,9 +244,9 @@ Conclui-se que o modelo multiagente implementado apresenta resultados interessan
 
 O emprego da ferramenta SIMULA à geração do ambiente utilizado na simulação foi importante ao desenvolvimento do trabalho, sobretudo nas etapas de pré e pós-processamento, como na geração de arquivos de entrada para a simulação e visualização dos resultados, especialmente em saídas georreferenciadas. Notou-se que há uma grande dificuldade no tratamento e disponibilização de dados georreferenciados, especialmente por exigirem na maioria das vezes, de algoritmos e tecnologias específicas no seu armazenamento e processamento.
 
-A aplicação da técnica de \textit{bitstring} mostrou-se relevante, auxiliando na paralelização do sistema de simulação e diminuindo a quantidade de dados copiada entre CPU e GPU. Tal metodologia viabiliza ainda uma maneira concisa e uniforme de armazenamento e manipulação dos dados, sendo interessante sua aplicação no desenvolvimento de sistemas multiagente ou que modelem comportamentos individuais. 
+A aplicação da técnica de \textit{bitstring} mostrou-se relevante, auxiliando na paralelização do sistema de simulação e diminuindo a quantidade de dados copiada entre CPU e GPU. Tal metodologia viabiliza ainda uma maneira concisa e uniforme de armazenamento e manipulação dos dados, sendo interessante sua aplicação no desenvolvimento de sistemas que modelem comportamentos individuais. 
 
-Por fim, a aplicação da biblioteca CUDA para a paralelização das implementações realizadas mostrou-se interessante por reduzir expressivamente o tempo de execução das simulações, o que é desejável na execução de simulações com maior porte, com maior quantidade de indivíduos, em ambientes maiores e com modelagens mais complexas às dinâmicas epidemiológicas, que são situações mais próximas da realidade que deseja-se simular. Destaca-se ainda que a implementação de sistemas em GPU, embora facilitada por bibliotecas específicas como o CUDA, ainda apresenta diversas dificuldades e relativa complexidade, sobretudo quanto à adequação dos dados para viabilizar seu processamento em paralelo e transferência para a GPU, que pode demandar um longo período de planejamento e desenvolvimento. Especificamente neste trabalho foi necessária a vetorização de todas as estruturas de dados para viabilizar sua cópia para a GPU. Este processo pode não ser trivial, especialmente se a implementação que deseja-se paralelizar em GPU fizer uso de algoritmos complexos e estruturas de dados dinâmicas, como aquelas disponíveis em linguagens de programação de alto nível, como a biblioteca \textit{Standard Template Library}, STL, do C++. Adicionalmente foi necessária a adequação das rotinas paralelizadas, exigindo a eliminação de dependências que inviabilizam o processamento em paralelo, como as temporais, e organização da sequência de processamento dos dados de forma a viabilizar a computação por diferentes \textit{threads}, garantindo a consistência dos dados. 
+Por fim, a aplicação da biblioteca CUDA para a paralelização das implementações realizadas mostrou-se interessante por reduzir expressivamente o tempo de execução das simulações, o que é desejável na execução de simulações com maior porte, com maior quantidade de indivíduos, em ambientes maiores e com modelagens mais complexas às dinâmicas epidemiológicas, que são situações mais próximas da realidade que deseja-se simular. Destaca-se ainda que a implementação de sistemas em GPU, embora facilitada por bibliotecas específicas como o CUDA, ainda apresenta diversas dificuldades e relativa complexidade, sobretudo quanto à adequação dos dados para viabilizar seu processamento em paralelo e transferência para a GPU, que pode demandar um longo período de planejamento e desenvolvimento. Especificamente neste trabalho foi necessária a vetorização de todas as estruturas de dados para viabilizar sua cópia para a GPU. Este processo pode não ser trivial, especialmente se a implementação que deseja-se paralelizar em GPU fizer uso de algoritmos complexos e estruturas de dados dinâmicas, como aquelas disponíveis em linguagens de programação de alto nível, como a biblioteca \textit{Standard Template Library}, STL, do C++ \cite{STL}. Adicionalmente foi necessária a adequação das rotinas paralelizadas, exigindo a eliminação de dependências que inviabilizam o processamento em paralelo, como as temporais, e organização da sequência de processamento dos dados de forma a viabilizar a computação por diferentes \textit{threads}, garantindo a consistência dos dados. 
 
 Sugere-se como trabalhos futuros:
 
@@ -244,5 +257,5 @@ Sugere-se como trabalhos futuros:
  \item Emprego e comparação de diferentes técnicas para paralelização do sistema de simulação, como por exemplo OpenMP, OpenMPI e outras APIs para programação em GPU.
  \item Estudo mais aprofundado sobre os parâmetros utilizados no modelo, sobretudo em suas influências sobre a dinâmica epidemiológica.
  \item Utilização de outros ambientes georreferenciados como base à simulação.
- \item Aprimoramento das estruturas de dados utilizadas, objetivando descartar a necessidade de vetorização. Pode-se estudar como realizar o uso ou mapeamento das estruturas de dados disponíveis na biblioteca STL do C++ com aquelas presentes na biblioteca \textit{Thrust} do CUDA.
+ \item Aprimoramento das estruturas de dados utilizadas, objetivando descartar a necessidade de vetorização. Pode-se estudar como realizar o uso ou mapeamento das estruturas de dados disponíveis na biblioteca STL do C++ com aquelas presentes na biblioteca \textit{Thrust} do CUDA \cite{Thrust}.
 \end{itemize}

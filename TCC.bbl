@@ -35,6 +35,13 @@ Dissertação (Monografia) --- Universidade Estadual do Oeste do Paraná -
 {COOK, S. \emph{Cuda Programming - A Developer's Guide to Parallel Computing
   with GPUs}. 1. ed. EUA: Elsevier, 2013.}
 
+\bibitem[Curand 2016]{Curand}
+\abntrefinfo{Curand}{CURAND}{2016}
+{CURAND. \emph{Curand}. 2016.
+Consultado na INTERNET:
+  http://docs.nvidia.com/cuda/curand/device-api-overview.html\#axzz4O1MAZH5s,
+  2016.}
+
 \bibitem[DAGHLIAN 2008]{logica}
 \abntrefinfo{DAGHLIAN}{DAGHLIAN}{2008}
 {DAGHLIAN, J. \emph{Lógica e Álgebra de Boole}. 4. ed. [S.l.]: Atlas, 2008.}
@@ -43,6 +50,11 @@ Dissertação (Monografia) --- Universidade Estadual do Oeste do Paraná -
 \abntrefinfo{Daley e Gani}{DALEY; GANI}{1999}
 {DALEY, D.~J.; GANI, J. \emph{Epidemic Modelling - An Introduction}. 1. ed.
   Reading: Cambridge University, 1999.}
+
+\bibitem[DirectX 2016]{DirectX}
+\abntrefinfo{DirectX}{DIRECTX}{2016}
+{DIRECTX. \emph{DirectX}. 2016.
+Consultado na INTERNET: https://pt.wikipedia.org/wiki/DirectX, 2016.}
 
 \bibitem[Fuks e Lawniczak 2001]{LGCAEpidemiologia}
 \abntrefinfo{Fuks e Lawniczak}{FUKS; LAWNICZAK}{2001}
@@ -101,6 +113,21 @@ Dissertação (Dissertação de Mestrado) --- Universidade Estadual Paulista "Júlio
 Dissertação (Dissertação de Mestrado) --- Universidade Federal de Santa
   Catarina, Florianópolis - SC, 2001.}
 
+\bibitem[OpenGL 2016]{OpenGL}
+\abntrefinfo{OpenGL}{OPENGL}{2016}
+{OPENGL. \emph{OpenGL}. 2016.
+Consultado na INTERNET: https://www.opengl.org/, 2016.}
+
+\bibitem[OpenMP 2016]{OpenMP}
+\abntrefinfo{OpenMP}{OPENMP}{2016}
+{OPENMP. \emph{OpenMP}. 2016.
+Consultado na INTERNET: http://openmp.org/wp/, 2016.}
+
+\bibitem[OpenMPI 2016]{OpenMPI}
+\abntrefinfo{OpenMPI}{OPENMPI}{2016}
+{OPENMPI. \emph{OpenMPI}. 2016.
+Consultado na INTERNET: https://www.open-mpi.org/, 2016.}
+
 \bibitem[Paiva e Nepomuceno 2013]{EDOEpidemiologia}
 \abntrefinfo{Paiva e Nepomuceno}{PAIVA; NEPOMUCENO}{2013}
 {PAIVA, B. de P.~O.; NEPOMUCENO, E.~G. Análise de estabilidade e controle de
@@ -114,6 +141,33 @@ Dissertação (Dissertação de Mestrado) --- Universidade Federal de Santa
 \emph{Modelo de Bitstring para Estudo da Propagação da Dengue}.
 Tese (Tese de Doutorado) --- Universidade Federal de Lavras, Lavras, MG, 2012.}
 
+\bibitem[PostGIS 2016]{Postgis}
+\abntrefinfo{PostGIS}{POSTGIS}{2016}
+{POSTGIS. \emph{PostGIS}. 2016.
+Consultado na INTERNET: http://postgis.net/, 2016.}
+
+\bibitem[PostgreSQL 2016]{Postgres}
+\abntrefinfo{PostgreSQL}{POSTGRESQL}{2016}
+{POSTGRESQL. \emph{PostgreSQL}. 2016.
+Consultado na INTERNET: https://www.postgresql.org/, 2016.}
+
+\bibitem[Python 2016]{Python}
+\abntrefinfo{Python}{PYTHON}{2016}
+{PYTHON. \emph{Python}. 2016.
+Consultado na INTERNET: https://www.python.org/, 2016.}
+
+\bibitem[Rand 2016]{Rand}
+\abntrefinfo{Rand}{RAND}{2016}
+{RAND. \emph{Rand}. 2016.
+Consultado na INTERNET: http://www.cplusplus.com/reference/cstdlib/rand/,
+  2016.}
+
+\bibitem[Random 2016]{Random}
+\abntrefinfo{Random}{RANDOM}{2016}
+{RANDOM. \emph{Random}. 2016.
+Consultado na INTERNET: http://www.cplusplus.com/reference/random/?kw=random,
+  2016.}
+
 \bibitem[Russel e Norvig 2003]{ArtificialIntelligence}
 \abntrefinfo{Russel e Norvig}{RUSSEL; NORVIG}{2003}
 {RUSSEL, S.; NORVIG, P. \emph{Artificial Intelligence - A Modern Approach}. 2.
@@ -124,11 +178,43 @@ Tese (Tese de Doutorado) --- Universidade Federal de Lavras, Lavras, MG, 2012.}
 {SANDERS, J.; KANDROT, E. \emph{Cuda By Example - An Introduction to
   General-Purpose GPU Programming}. 1. ed. EUA: Addison-Wesley, 2010.}
 
+\bibitem[Script 2016]{ShellScript}
+\abntrefinfo{Script}{SCRIPT}{2016}
+{SCRIPT, S. \emph{Shell Script}. 2016.
+Consultado na INTERNET: https://pt.wikipedia.org/wiki/Shell\_script, 2016.}
+
+\bibitem[Shapefile 2016]{Shapefile}
+\abntrefinfo{Shapefile}{SHAPEFILE}{2016}
+{SHAPEFILE. \emph{Shapefile}. 2016.
+Consultado na INTERNET:
+  https://doc.arcgis.com/en/arcgis-online/reference/shapefiles.htm, 2016.}
+
+\bibitem[Solutions 2016]{CudaLangs}
+\abntrefinfo{Solutions}{SOLUTIONS}{2016}
+{SOLUTIONS, L. \emph{Language Solutions}. 2016.
+Consultado na INTERNET: https://developer.nvidia.com/language-solutions, 2016.}
+
+\bibitem[SQL 2016]{SQL}
+\abntrefinfo{SQL}{SQL}{2016}
+{SQL. \emph{SQL}. 2016.
+Consultado na INTERNET: http://www.w3schools.com/sql/default.asp, 2016.}
+
+\bibitem[STL 2016]{STL}
+\abntrefinfo{STL}{STL}{2016}
+{STL. \emph{STL}. 2016.
+Consultado na INTERNET: http://www.cplusplus.com/reference/stl/?kw=stl, 2016.}
+
 \bibitem[Tesla 2016]{K20}
 \abntrefinfo{Tesla}{TESLA}{2016}
 {TESLA, N. \emph{Nvidia Tesla}. 2016.
 Consultado na INTERNET:
   http://www.nvidia.com.br/object/workstation-solutions-tesla-br.html, 2016.}
+
+\bibitem[Thrust 2016]{Thrust}
+\abntrefinfo{Thrust}{THRUST}{2016}
+{THRUST. \emph{Thrust}. 2016.
+Consultado na INTERNET: http://docs.nvidia.com/cuda/thrust/\#axzz4NWvyVCua,
+  2016.}
 
 \bibitem[White, Rey e Sanchez 2007]{White}
 \abntrefinfo{White, Rey e Sanchez}{WHITE; REY; SANCHEZ}{2007}

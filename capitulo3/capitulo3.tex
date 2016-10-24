@@ -9,19 +9,19 @@ Neste capítulo são apresentadas as metodologias computacionais utilizadas à real
 \section{Modelagem do Ambiente de Simulação}
 \label{sec:modelagemAmbiente}
 
-Para a modelagem do ambiente computacional, que servirá à execução de simulações da dinâmica epidemiológica, é utilizada como base uma região geográfica da cidade de Cascavel/PR, mais especificamente a quadra 445. A quadra 445 está localizada no centro da cidade de Cascavel/PR e é delimitada geograficamente pelas ruas Maranhão, Castro Alves, Curitiba e Visconde de Guarapuava. Esta quadra foi escolhida por ser um bom modelo geométrico, com relação às outras quadras da cidade, o que é interessante para desenvolver as estruturas de dados utilizadas na implementação do \textit{software}. As Figuras \ref{fig:q445-0} e \ref{fig:q445-1} ilustram a quadra em questão.
+Para a modelagem do ambiente computacional, que servirá à execução de simulações da dinâmica epidemiológica, é utilizada como base uma região geográfica da cidade de Cascavel/PR, mais especificamente a quadra 445, que está localizada no centro da cidade de Cascavel/PR e é delimitada geograficamente pelas ruas Maranhão, Castro Alves, Curitiba e Visconde de Guarapuava. Esta quadra foi escolhida por ser um bom modelo geométrico, com relação às outras quadras da cidade, o que é interessante para desenvolver as estruturas de dados utilizadas na implementação do \textit{software}. As Figuras \ref{fig:q445-0} e \ref{fig:q445-1} ilustram a quadra em questão.
 
-\begin{figure}
+\begin{figure}[H]
 \centering
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{Figuras/Q445-1.png}
+  \includegraphics[width=0.95\linewidth]{Figuras/Q445-1.jpg}
   \captionof{figure}{Representação gráfica.}
   \label{fig:q445-0}
 \end{minipage}%
 \begin{minipage}{.5\textwidth}
   \centering
-  \includegraphics[width=1\linewidth]{Figuras/Q445-2.jpg}
+  \includegraphics[width=0.95\linewidth]{Figuras/Q445-2.jpg}
   \captionof{figure}{Aproximação em matrizes.}
   \label{fig:q445-1}
 \end{minipage}
@@ -29,7 +29,7 @@ Para a modelagem do ambiente computacional, que servirá à execução de simulações
 
 A quadra 445 contém 15 lotes, sendo necessário mapear cada um destes para uma estrutura matricial que viabilize sua representação e implementação no sistema de simulação. Para tanto, os lotes 0002 e 019B são divididos em outros dois lotes, pois apresentam geometria irregular de difícil aproximação em estruturas matriciais. Essa divisão é realizada de tal forma em que as matrizes resultantes representem, aproximadamente, a geometria original do lote dividido. Aos outros lotes da quadra 445 não foi aplicada nenhuma operação adicional, por apresentarem geometria regular, que pode ser facilmente aproximada por matrizes. Com as operações de divisão dos lotes irregulares, a quadra 445 que originalmente contém 15 lotes, é mapeada sobre um conjunto com 17 estruturas matriciais, que representam os lotes de forma apropriada à sua implementação computacional.
 
-Como os lotes da quadra 445 são mapeados para estruturas matriciais que viabilizam sua implementação em linguagens de programação, à cada lote estará associada, no sistema de simulação, uma matriz de $n$ linhas e $m$ colunas, que representa sua região física. Essa especificação é importante pois à modelagem dos agentes é necessária a descrição do ambiente em que se movem e habitam. Cada agente terá uma determinada posição na quadra, que é completamente especificada pelas coordenadas $x$ e $y$ da matriz do lote e por um identificador do lote em que o agente se encontra. As coordenadas $x$ e $y$ representarão, respectivamente, a linha e coluna da matriz do lote em que o agente está localizado. 
+Como os lotes da quadra 445 são mapeados para estruturas matriciais que viabilizam sua implementação em linguagens de programação, à cada lote estará associada, no sistema de simulação, uma matriz de $n$ linhas e $m$ colunas, que representa sua região física. Essa especificação é importante pois à modelagem dos agentes é necessária a descrição do ambiente em que se movem e habitam. Cada agente terá uma determinada posição na quadra, que é completamente especificada pelas coordenadas $x$ e $y$ da matriz do lote e por um identificador do lote em que o agente se encontra. As coordenadas $x$ e $y$ representam, respectivamente, a linha e coluna da matriz do lote em que o agente está localizado. 
 
 À modelagem das vizinhanças de uma determinada posição $(x, y)$ de um lote qualquer, é utilizada a vizinhança de Moore, que é amplamente aplicada na modelagem de autômatos celulares. A Figura \ref{fig:moore} ilustra graficamente os incrementos locais que são realizados às coordenadas de uma posição qualquer para a obtenção de sua vizinhança de Moore.
 
@@ -50,7 +50,7 @@ Os modelos apresentados na Seção \ref{sec:modeloscompartimentais} serviram à fun
 Um agente $\chi(t)$ é definido espaço-temporalmente especificando-se como ocorre a transição do seu estado num intervalo de tempo $t$ e seu movimento no espaço, que é o ambiente computacional em que o agente é especificado. O estado do agente é especificado por meio do conjunto de atributos, como apresentado em (\ref{especificacaoAgente}).
 \begin{equation}
 \label{especificacaoAgente}
- \chi(t) \equiv (L, X, Y, C, E)
+ \chi(t) \equiv (L, X, Y, C, Q)
 \end{equation}
 cujos significados dos identificadores dos atributos do estado interno do agente $\chi(t)$ são como:
 
@@ -59,7 +59,7 @@ cujos significados dos identificadores dos atributos do estado interno do agente
  \item \textbf{Posição em x, $X$:} Coordenada $x$ da posição do agente $\chi(t)$ no lote.
  \item \textbf{Posição em y, $Y$:} Coordenada $y$ da posição do agente $\chi(t)$ no lote.
  \item \textbf{Contador de controle, $C$:} Contador de ciclos que controla os períodos de transição entre os estados do agente.
- \item \textbf{Estado, $E$:} Identificador do estado atual do agente $\chi(t)$.
+ \item \textbf{Estado, $Q$:} Identificador do estado atual do agente $\chi(t)$.
 \end{itemize}
 
 A especificação formal de um agente é realizada por meio de um operador de evolução que define o estado atual do agente, quando interagindo com o ambiente. Esse operador decorre da composição entre os operadores de transição temporal, que realiza uma transição do estado interno do agente considerando-se sua interação com outros agentes e com o ambiente, e o operador de transição espacial, que movimenta o agente de sua posição para outra, considerando-se os atributos de conectividade e mobilidade. À dinâmica do agente são considerados três tipos de operações:
@@ -72,7 +72,7 @@ A especificação formal de um agente é realizada por meio de um operador de evolu
 
 Tais operações são realizadas na sequência em que foram apresentadas e uma vez a cada ciclo, que consiste na aplicação dos operadores sobre a população de agentes e geração de arquivos de saída. Uma simulação é composta por uma determinada quantidade de ciclos.
 
-Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big)$, que decorre da composição entre os operadores $\mu$, $\rho$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade; o operador $\rho$ realiza os contato entre aos agentes que ocorre com certa probabilidade; e o operador de transição temporal, $\sigma$, que realiza a transição do estado interno do agente considerando-se sua interação com outros agentes e o ambiente. O operador de evolução $\lambda$ é definido como em (\ref{operador}).
+Cada agente implementa uma operação de evolução $\lambda$ que atualiza o estado atual do agente quando interagindo com o ambiente, definido como $\lambda\big(\chi(t)\big)$, que decorre da composição entre os operadores $\mu$, $\rho$ e $\sigma$. O operador de transição espacial, $\mu$, movimenta o agente de sua posição considerando-se os atributos de conectividade e mobilidade; o operador $\rho$ realiza os contatos entre os agentes, que ocorrem com certa probabilidade; e o operador de transição temporal, $\sigma$, realiza a transição do estado interno do agente considerando sua interação com outros agentes e o ambiente. O operador de evolução $\lambda$ é definido como em (\ref{operador}).
 \begin{equation}
   \label{operador}
   \lambda\big(\chi(t)^{(x, y)}\big) \equiv  \sigma\Big(\rho\big(\mu\big(\chi(t + 1)\big)\big)^{(\xi,\eta)}\Big)
@@ -82,13 +82,13 @@ indicando que o agente $\chi$ realizou uma evolução da posição $(x,y)$ do ciclo 
 \section{Modelagem em \textit{Bitstring} dos Agentes}
 \label{sec:modelagembitstring}
 
-A modelagem \textit{bitstring} realizada para a representação do agente é baseada na manipulação direta dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambiguidade a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $E$.
+A modelagem \textit{bitstring} realizada para a representação do agente é baseada na manipulação direta dos \textit{bits} em uma palavra computacional, que é capaz de caracterizar sem ambiguidade a especificação do agente $\chi(t)=\big(L, X, Y, C, Q\big)$, com identificador do lote, $L$, coordenada $x$ da posição, $X$, coordenada $y$ da posição, $Y$, contador de controle, $C$, e estado, $Q$.
 
 Ao emprego de um modelo em \textit{bitstring} é necessário utilizar uma linguagem de programação que dê suporte apropriado às operações diretas com \textit{bits}. À implementação do sistema multiagente, visando alcançar os objetivos definidos neste trabalho, é proposta a utilização da linguagem de programação C, que provê suporte aos propósitos de modelagem e paralelização do sistema. O tipo de dado inteiro em C, \textit{int}, contém $32$ \textit{bits}, sendo suficiente à especificação da formulação para o agente $\chi(t)$ em termos de quantidade de \textit{bits}, como realizado a seguir.
 
-À identificação do lote atual, $L$, do agente, considera-se que o identificador não ultrapasse $64$ valores, de modo que se supõe que uma quadra contenha no máximo $64$ lotes. À modelagem da posição $X, Y$ de um agente, considera-se que as quantidades de linhas, $\# L$, e de colunas, $\# C$, do ambiente, são limitadas por $max\big(\# L \times \# C\big)=\big(512 \times 512\big)$, em que $max$ indica o máximo possível de linhas e de colunas que podem ser alocadas à essa escolha, considerando-se que uma aproximação matricial de um lote de uma quadra resulta em uma matriz de no máximo $512 \times 512$ posições. À modelagem do contador de controle, $C$, de um agente, considera-se que a quantidade de ciclos em que um agente fica no estado exposto, infectado ou recuperado, não ultrapassem $64$ ciclos de simulação, pois supõe-se que a doença hipotética modelada não tem períodos de transição superior à esse valor. À modelagem do estado $E$ de um agente, considerando a adoção do modelo compartimental tipo SEIRS, existem somente quatro distintos estados.
+À identificação do lote atual, $L$, do agente, considera-se que o identificador não ultrapasse $64$ valores, de modo que se supõe que uma quadra contenha no máximo $64$ lotes. À modelagem da posição $X, Y$ de um agente, considera-se que as quantidades de linhas, $\# L$, e de colunas, $\# C$, do ambiente, são limitadas por $max\big(\# L \times \# C\big)=\big(512 \times 512\big)$, em que $max$ indica o máximo possível de linhas e de colunas que podem ser alocadas à essa escolha, considerando-se que uma aproximação matricial de um lote de uma quadra resulta em uma matriz de no máximo $512 \times 512$ posições. À modelagem do contador de controle, $C$, de um agente, considera-se que a quantidade de ciclos em que um agente fica no estado exposto, infectado ou recuperado, não ultrapassem $64$ ciclos de simulação, pois supõe-se que a doença hipotética modelada não tem períodos de transição superior à esse valor. À modelagem do estado $Q$ de um agente, considerando a adoção do modelo compartimental tipo SEIRS, existem somente quatro distintos estados.
 
-Assim sendo, observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra que comporte um quantidade de $32$ \textit{bits} para armazenar a especificação do agente $\chi(t)=\big(L, X, Y, C, E\big)$ em \textit{bits}. A utilização de faixas maiores à representação dos atributos de um agente demandaria outros tipos de dados em C, com maior quantidade de \textit{bits}. A representação da palavra computacional proposta à modelagem dos agentes é como ilustrado na Figura \ref{fig:modelo_bitstring}, sendo que os elementos $l_i \in L$, $x_i \in X$, $y_i \in Y$, $c_i \in C$ e $e_i \in E$ possuem o valor $0$ ou $1$ e seus índices subscritos indicam que cada \textit{bit} pode variar nos respectivos intervalos que estão especificados.
+Assim sendo, observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}$, sendo suficiente uma palavra que comporte um quantidade de $32$ \textit{bits} para armazenar a especificação do agente $\chi(t)=\big(L, X, Y, C, Q\big)$ em \textit{bits}. A utilização de faixas maiores à representação dos atributos de um agente demandaria outros tipos de dados em C, com maior quantidade de \textit{bits}. A representação da palavra computacional proposta à modelagem dos agentes é como ilustrado na Figura \ref{fig:modelo_bitstring}, sendo que os elementos $l_i \in L$, $x_i \in X$, $y_i \in Y$, $c_i \in C$ e $q_i \in Q$ possuem o valor $0$ ou $1$ e seus índices subscritos indicam que cada \textit{bit} pode variar nos respectivos intervalos que estão especificados.
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=1.0\textwidth]{Figuras/Tira.jpg}
@@ -96,36 +96,36 @@ Assim sendo, observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}
   \label{fig:modelo_bitstring}
 \end{figure} 
 
-Na Figura \ref{fig:modelo_bitstring}, os elementos do identificador do lote $L$ estão nas posições $31$ a $26$. Os elementos das coordenadas $X$ e $Y$ da posição do agente no lote estão nas posições $25$ a $17$ e $16$ a $8$, respectivamente. Os elementos do contador de controle, $C$, e do estado, $E$, estão nas posições $7$ a $2$ e $1$ a $0$, respectivamente. Considerando as escolhas realizadas à sua modelagem, um agente qualquer do modelo pode ser representado em \textit{bits} como em (\ref{eq:bitstring}).
+Na Figura \ref{fig:modelo_bitstring}, os elementos do identificador do lote $L$ estão nas posições $31$ a $26$. Os elementos das coordenadas $X$ e $Y$ da posição do agente no lote estão nas posições $25$ a $17$ e $16$ a $8$, respectivamente. Os elementos do contador de controle, $C$, e do estado, $Q$, estão nas posições $7$ a $2$ e $1$ a $0$, respectivamente. Considerando as escolhas realizadas à sua modelagem, um agente qualquer do modelo pode ser representado em \textit{bits} como em (\ref{eq:bitstring}).
 \begin{equation}
- \chi\big(L, X, Y, C, E\big) \equiv \big(l_{31}, \dotsc, l_{26}; x_{25}, \dotsc, x_{17}; y_{16}, \dotsc, y_{8}; c_{7}, \dotsc, c_{2}; e_{1}, e_{0}\big)
+ \chi\big(L, X, Y, C, Q\big) \equiv \big(l_{31}, \dotsc, l_{26}; x_{25}, \dotsc, x_{17}; y_{16}, \dotsc, y_{8}; c_{7}, \dotsc, c_{2}; q_{1}, q_{0}\big)
  \label{eq:bitstring}
 \end{equation}
 
-Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y, C, E\big) = \chi(t)$ no ambiente, assim como seu estado interno e o registro de controle de ciclos às transições de estados, essas características são definidas como em (\ref{eq:bitstring_get}), para o ciclo $t$, em que $Pl$, $Px$, $Py$, $Pc$ e $Pe$ designam, respectivamente, as quantidades de \textit{bits} posteriores à cada campo.
+Para identificar o lote e as coordenadas da posição do agente $\chi\big(L, X, Y, C, Q\big) = \chi(t)$ no ambiente, assim como seu estado interno e o registro de controle de ciclos às transições de estados, essas características são definidas como em (\ref{eq:bitstring_get}), para o ciclo $t$, em que $Pl$, $Px$, $Py$, $Pc$ e $Pq$ designam, respectivamente, as quantidades de \textit{bits} posteriores à cada campo.
 \begin{equation}
   \begin{cases}
-    L(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Pl) \gg_{arth}(C\#l) \\
-    X(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Px) \gg_{arth}(C\#x) \\
-    Y(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Py) \gg_{arth}(C\#y) \\
-    C(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Pc) \gg_{arth}(C\#c) \\
-    E(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(Pe) \gg_{arth}(C\#e) \\
+    L(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(Pl) \gg_{arth}(C\#l) \\
+    X(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(Px) \gg_{arth}(C\#x) \\
+    Y(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(Py) \gg_{arth}(C\#y) \\
+    C(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(Pc) \gg_{arth}(C\#c) \\
+    Q(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(Pq) \gg_{arth}(C\#q) \\
   \end{cases}
   \label{eq:bitstring_get}
 \end{equation}
 
-A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos que aqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#e$ designam, respectivamente, as quantidades de \textit{bits} complementares a cada campo. A quantidade de \textit{bits} complementares a cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. 
+A quantidade de \textit{bits} posteriores à cada campo é a quantidade de \textit{bits} existentes que são mais significativos que aqueles do campo em questão. Os termos $C\#l$, $C\#x$, $C\#y$, $C\#c$ e $C\#q$ designam, respectivamente, as quantidades de \textit{bits} complementares a cada campo. A quantidade de \textit{bits} complementares a cada campo é a diferença entre a quantidade de \textit{bits} total da palavra e a quantidade de \textit{bits} do campo. As operações $\ll_{arth}$ e $\gg_{arth}$ designam, respectivamente, deslocamentos não circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado. As notações $\ll_{arth}$ e $\gg_{arth}$ advém daquelas nomenclaturas utilizadas na linguagem C para designar as operações de deslocamento ou \textit{shift} como deslocamentos aritméticos. 
 
 Em deslocamentos aritméticos, como aqueles que são definidos na linguagem C, ocorre a preservação do \textit{bit} de sinal, quando da sua execução no sentido esquerda-direita. Deslocamentos que não preservam o \textit{bit} de sinal são chamados deslocamentos lógicos, que não são definidos na linguagem C. O uso do tipo de dado \textit{unsigned int} descarta a preservação de sinal na realização de \textit{shifts} ou deslocamentos, evitando a introdução de erro na manipulação dos \textit{bits} mais significativos em operações de captura e configuração de atributos de um agente, viabilizando o uso de deslocamentos aritméticos com o mesmo resultado prático obtido por deslocamentos lógicos, sendo o uso do tipo \textit{unsigned int} em C justificado por este motivo.
 
-Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pe = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#e = 30$, de modo que (\ref{eq:bitstring_get}) é então reescrita concretamente para a modelagem (\ref{eq:bitstring}) como em (\ref{eq:bitstring_get_2}).
+Na modelagem realizada, as especificações às quantidades são $Pl = 0$, $Px = 6$, $Py = 15$, $Pc = 24$, $Pq = 30$, $C\#l = 26$, $C\#x = 23$, $C\#y = 23$, $C\#c = 26$ e $C\#q = 30$, de modo que (\ref{eq:bitstring_get}) é então reescrita concretamente para a modelagem (\ref{eq:bitstring}) como em (\ref{eq:bitstring_get_2}).
 \begin{equation}
   \begin{cases}
-    L(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(0) \gg_{arth}(26) \\
-    X(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(6) \gg_{arth}(23) \\
-    Y(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(15) \gg_{arth}(23) \\
-    C(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(24) \gg_{arth}(26) \\
-    E(t) = \chi\big(L, X, Y, C, E\big) \ll_{arth}(30) \gg_{arth}(30) \\
+    L(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(0) \gg_{arth}(26) \\
+    X(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(6) \gg_{arth}(23) \\
+    Y(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(15) \gg_{arth}(23) \\
+    C(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(24) \gg_{arth}(26) \\
+    Q(t) = \chi\big(L, X, Y, C, Q\big) \ll_{arth}(30) \gg_{arth}(30) \\
   \end{cases}
   \label{eq:bitstring_get_2}
 \end{equation}
@@ -195,7 +195,7 @@ A aplicação do operador de captura do campo do estado do agente $\chi(t)$, como 
 
 \begin{equation}
   \begin{split}
-  E(t) = & \chi(t) \ll_{arth}(30) \gg_{arth}(30) \\
+  Q(t) = & \chi(t) \ll_{arth}(30) \gg_{arth}(30) \\
        = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0  \ll_{arth}(30) \gg_{arth}(30) \\
        = & 1 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 | 0 0 \gg_{arth}(30) \\
        = & 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 | 1 0 \\
@@ -204,7 +204,7 @@ A aplicação do operador de captura do campo do estado do agente $\chi(t)$, como 
   \end{split}
 \end{equation}
 
-Também são necessárias outras operações para manipular os atributos dos agentes, além daquelas definidas em (\ref{eq:bitstring_get_2}), como, por exemplo, operadores de deslocamentos circulares. Como a linguagem de programação C não conta com operador próprio que viabilize a execução de operações de deslocamentos circulares, faz-se necessário, a sua definição com base nos operadores existentes na linguagem, como os deslocamentos aritméticos e operações lógicas. Em (\ref{eq:bitstring_circ}) $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado, definidos como uma composição dos operadores de deslocamento aritmético e a operação lógica ou.
+Também são necessárias outras operações para manipular os atributos dos agentes, além daquelas definidas em (\ref{eq:bitstring_get_2}), como, por exemplo, operadores de deslocamentos circulares. Como a linguagem de programação C não conta com operador próprio que viabilize a execução de operações de deslocamentos circulares, faz-se necessário a sua definição com base nos operadores existentes na linguagem, como os deslocamentos aritméticos e operações lógicas. Em (\ref{eq:bitstring_circ}) $\ll_{circ}$ e $\gg_{circ}$ designam, respectivamente, deslocamentos circulares à esquerda e à direita na palavra, na quantidade de \textit{bits} indicado, definidos como uma composição dos operadores de deslocamento aritmético e a operação lógica ou.
 \begin{equation}
   \begin{cases}
     \ll_{circ} = \big(M \ll_{arth}(shift)\big) \, \vee \, \big(M \gg_{arth}(N\_BITS - shift)\big) \\
@@ -225,12 +225,14 @@ Em (\ref{eq:bitstring_circ}), $M$ denota a palavra computacional em que está sen
 Em (\ref{eq:ex_circ_left}) é ilustrado um exemplo da aplicação do operador $\ll_{circ}$ definido em (\ref{eq:bitstring_circ_2}) em uma palavra computacional $M = 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 $ de 32 \textit{bits}, com $shift = 8$.
 
 \begin{equation}
-  \footnotesize
   \begin{split}
   \ll_{circ} = & \big(M \ll_{arth}(shift)\big) \, \vee \, \big(M \gg_{arth}(32 - shift)\big) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \, \vee \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(32 - 8) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \, \vee \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(24) \\
-	     = & 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 \, \vee \, 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 \\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \, \vee \, \\
+	     & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(32 - 8) \\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(8) \, \vee \, \\
+	     & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(24) \\
+	     = & 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 \, \vee \, \\
+	     & 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 \\
 	     = & 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 | 1 1 0 1 0 0 0 0 \\
   \label{eq:ex_circ_left}
   \end{split}
@@ -239,12 +241,14 @@ Em (\ref{eq:ex_circ_left}) é ilustrado um exemplo da aplicação do operador $\ll_
 Em (\ref{eq:ex_circ_right}) é ilustrado um exemplo da aplicação do operador $\gg_{circ}$ definido em (\ref{eq:bitstring_circ_2}) em uma palavra computacional $M = 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 $ de 32 \textit{bits}, com $shift = 8$.
 
 \begin{equation}
-  \footnotesize
   \begin{split}
   \gg_{circ} = & \big(M \gg_{arth}(shift)\big) \, \vee \, \big(M \ll_{arth}(32 - shift)\big) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \, \vee \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(32 - 8) \\
-	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \, \vee \, 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(24) \\  
-	     = & 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 \, \vee \, 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0\\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \, \vee \, \\
+	     & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(32 - 8) \\
+	     = & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \gg_{arth}(8) \, \vee \, \\
+	     & 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 1 0 \ll_{arth}(24) \\  
+	     = & 0 0 0 0 0 0 0 0 | 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 \, \vee \, \\
+	     & 0 0 1 1 1 0 1 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0\\
 	     = & 0 0 1 1 1 0 1 0 | 1 1 0 1 0 0 0 0 | 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 1 1 \\
   \label{eq:ex_circ_right}
   \end{split}
@@ -252,26 +256,44 @@ Em (\ref{eq:ex_circ_right}) é ilustrado um exemplo da aplicação do operador $\gg
 
 Subsequentemente são utilizadas as operações definidas em (\ref{eq:bitstring_circ_2}), para implementar o operador espaço-temporal $\lambda\big(\chi(t)\big)$ que movimenta o agente da posição $(x, y)$ para uma posição $\big(\xi, \eta\big)$ no ciclo de tempo atual $t$, para o ciclo de tempo $t+1$. As operações definidas em (\ref{eq:bitstring_set}) resultam na atualização dos atributos de identificação do lote, das coordenadas $x$ e $y$ da posição, do controle e do estado do agente.
 \begin{equation}
-  \scriptsize
   \begin{cases}
-    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Al) \gg_{arth}(\#l) \ll_{arth} (\#l) \, \vee \, L(t + 1) \ll_{circ}(Al) \\
-    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ax) \gg_{arth}(\#x) \ll_{arth} (\#x) \, \vee \, X(t + 1) \ll_{circ}(Ax) \\
-    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ay) \gg_{arth}(\#y) \ll_{arth} (\#y) \, \vee \, Y(t + 1) \ll_{circ}(Ay) \\
-    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \, \vee \, C(t + 1) \ll_{circ}(Ac) \\
-    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(Ae) \gg_{arth}(\#e) \ll_{arth} (\#e) \, \vee \, E(t + 1) \ll_{circ}(Ae) \\
+    \chi\big(L(t + 1), X(t), Y(t), C(t), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(Al) \gg_{arth}(\#l) \ll_{arth} (\#l) \\
+    & \, \vee \, L(t + 1) \ll_{circ}(Al) \\
+    \chi\big(L(t), X(t + 1), Y(t), C(t), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(Ax) \gg_{arth}(\#x) \ll_{arth} (\#x) \\
+    & \, \vee \, X(t + 1) \ll_{circ}(Ax) \\
+    \chi\big(L(t), X(t), Y(t + 1), C(t), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(Ay) \gg_{arth}(\#y) \ll_{arth} (\#y) \\
+    & \, \vee \, Y(t + 1) \ll_{circ}(Ay) \\
+    \chi\big(L(t), X(t), Y(t), C(t + 1), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(Ac) \gg_{arth}(\#c) \ll_{arth} (\#c) \\
+    & \, \vee \, C(t + 1) \ll_{circ}(Ac) \\
+    \chi\big(L(t), X(t), Y(t), C(t), Q(t + 1)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(Aq) \gg_{arth}(\#q) \ll_{arth} (\#q) \\
+    & \, \vee \, Q(t + 1) \ll_{circ}(Aq) \\
   \end{cases}
   \label{eq:bitstring_set}
 \end{equation}
 
-Em (\ref{eq:bitstring_set}), $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivamente, as quantidades de \textit{bits} anteriores a cada campo. A quantidade de \textit{bits} anteriores a cada campo é a quantidade de \textit{bits} existentes que são menos significativos que aqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#e$ designam, respectivamente, as quantidades de \textit{bits} de cada campo. Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Ae = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#e = 2$, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_set}) é reescrita como em (\ref{eq:bitstring_set_2}).
+Em (\ref{eq:bitstring_set}), $Al$, $Ax$, $Ay$, $Ac$ e $Aq$ designam, respectivamente, as quantidades de \textit{bits} anteriores a cada campo. A quantidade de \textit{bits} anteriores a cada campo é a quantidade de \textit{bits} existentes que são menos significativos que aqueles do campo em questão. Os termos $\#l$, $\#x$, $\#y$, $\#c$ e $\#q$ designam, respectivamente, as quantidades de \textit{bits} de cada campo. Como $Al = 26$, $Ax = 17$, $Ay = 8$, $Ac = 2$, $Aq = 0$, $\#l = 6$, $\#x = 9$, $\#y = 9$, $\#c = 6$ e $\#q = 2$, a especificação às quantidades adotadas na modelagem, (\ref{eq:bitstring_set}) é reescrita como em (\ref{eq:bitstring_set_2}).
 \begin{equation}
-  \scriptsize
   \begin{cases}
-    \chi\big(L(t + 1), X(t), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, L(t + 1) \ll_{circ}(26) \\
-    \chi\big(L(t), X(t + 1), Y(t), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, X(t + 1) \ll_{circ}(17) \\
-    \chi\big(L(t), X(t), Y(t + 1), C(t), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, Y(t + 1) \ll_{circ}(8) \\
-    \chi\big(L(t), X(t), Y(t), C(t + 1), E(t)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, C(t + 1) \ll_{circ}(2) \\
-    \chi\big(L(t), X(t), Y(t), C(t), E(t + 1)\big) = \chi\big(L(t), X(t), Y(t), C(t), E(t)\big) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \vee \, E(t + 1) \ll_{circ}(0) \\
+    \chi\big(L(t + 1), X(t), Y(t), C(t), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \\
+    & \, \vee \, L(t + 1) \ll_{circ}(26) \\
+    \chi\big(L(t), X(t + 1), Y(t), C(t), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \\
+    & \, \vee \, X(t + 1) \ll_{circ}(17) \\
+    \chi\big(L(t), X(t), Y(t + 1), C(t), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \\ 
+    & \, \vee \, Y(t + 1) \ll_{circ}(8) \\
+    \chi\big(L(t), X(t), Y(t), C(t + 1), Q(t)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \\ 
+    & \, \vee \, C(t + 1) \ll_{circ}(2) \\
+    \chi\big(L(t), X(t), Y(t), C(t), Q(t + 1)\big) = & \chi\big(L(t), X(t), Y(t), C(t), Q(t)\big) \\
+    & \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \\
+    & \, \vee \,Q(t + 1) \ll_{circ}(0) \\
   \end{cases}
   \label{eq:bitstring_set_2}
 \end{equation}
@@ -279,12 +301,14 @@ Em (\ref{eq:bitstring_set}), $Al$, $Ax$, $Ay$, $Ac$ e $Ae$ designam, respectivam
 Considere novamente o agente $\chi(t)$ especificado em (\ref{eq:ex_get_agente}), em que o símbolo $|$ designa o separador dos campos do agente. A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuração do campo do identificador do lote do agente $\chi(t)$ de $L(t)$ para $L(t + 1)$, é exemplificada como ilustrado em (\ref{eq:ex_set_l}), considerando $L(t + 1) = 0 0 1 1 1 1$.
 
 \begin{equation}
-  \small
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, L(t + 1) \ll_{circ}(26) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(26) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, 0 0 1 1 1 1 \ll_{circ}(26) \\
-  = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \gg_{arth}(6) \ll_{arth}(6) \, \vee \, 0 0 1 1 1 1 \ll_{circ}(26) \\
-  = & 0 0 0 0 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \ll_{arth}(6) \, \vee \, 0 0 1 1 1 1 \ll_{circ}(26) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(26) \\
+    & \gg_{arth}(6) \ll_{arth}(6) \, \vee \, 0 0 1 1 1 1 \ll_{circ}(26) \\
+  = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \gg_{arth}(6) \\
+    & \ll_{arth}(6) \, \vee \, 0 0 1 1 1 1 \ll_{circ}(26) \\
+  = & 0 0 0 0 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \ll_{arth}(6)  \\
+    & \, \vee \, 0 0 1 1 1 1 \ll_{circ}(26) \\
   = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 0 0 0 0 | 0 0 \, \vee \, 0 0 1 1 1 1 \ll_{circ}(26) \\
   = & 0 0 1 0 1 0 | 1 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 0 0 1 1 | 1 1 \ll_{circ}(26) \\
   = & 0 0 1 1 1 1 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \\
@@ -295,12 +319,14 @@ Considere novamente o agente $\chi(t)$ especificado em (\ref{eq:ex_get_agente}),
 A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuração do campo da coordenada $x$ do lote do agente $\chi(t)$ de $X(t)$ para $X(t + 1)$, é exemplificada como ilustrado em (\ref{eq:ex_set_x}), considerando $X(t + 1) = 1 1 0 0 0 0 1 1 1$.
 
 \begin{equation}
-  \small
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, X(t + 1) \ll_{circ}(17) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
-  = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
-  = & 0 0 0 0 0 0 | 0 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(17) \\
+    & \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \gg_{arth}(9) \\
+    & \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 0 0 0 0 0 | 0 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \ll_{arth}(9) \\
+    & \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
   = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 0 0 0 0 0 | 0 0 \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
   = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 1 | 1 0 0 0 0 1 | 1 1 \ll_{circ}(17) \\
   = & 1 1 0 1 0 0 | 1 1 0 0 0 0 1 1 1 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \\
@@ -311,12 +337,14 @@ A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuraç
 A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuração do campo da coordenada $y$ do lote do agente $\chi(t)$ de $Y(t)$ para $Y(t + 1)$, é exemplificada como ilustrado em (\ref{eq:ex_set_y}), considerando $Y(t + 1) = 1 1 1 1 0 1 0 0 0$.
 
 \begin{equation}
-  \small
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, Y(t + 1) \ll_{circ}(8) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
-  = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
-  = & 0 0 0 0 0 0 | 0 0 0 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(8) \\
+    & \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \gg_{arth}(9) \\
+    & \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 0 0 0 0 | 0 0 0 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \ll_{arth}(9) \\
+    & \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
   = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 0 0 0 0 0 0 | 0 0 \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
   = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 1 | 1 1 1 0 1 0 | 0 0 \ll_{circ}(8) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 1 1 1 1 0 1 0 0 0 | 0 0 1 1 1 0 | 1 0 \\
@@ -327,12 +355,14 @@ A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuraç
 A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuração do campo do contador de transição de estados do agente $\chi(t)$ de $C(t)$ para $C(t + 1)$, é exemplificada como ilustrado em (\ref{eq:ex_set_c}), considerando $C(t + 1) = 1 0 1 0 1 1$.
 
 \begin{equation}
-  \small
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, C(t + 1) \ll_{circ}(2) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
-  = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \gg_{arth}(6) \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
-  = & 0 0 0 0 0 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(2) \\
+    & \gg_{arth}(6) \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \gg_{arth}(6) \\
+    & \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 0 0 0 0 0 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \ll_{arth}(6) \\
+    & \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
   = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 0 0 | 0 0 \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
   = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 1 0 1 0 | 1 1 \ll_{circ}(2) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 1 0 1 0 1 1 | 1 0 \\
@@ -340,15 +370,17 @@ A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuraç
   \end{split}
 \end{equation}
 
-A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuração do campo do estado do agente $\chi(t)$ de $E(t)$ para $E(t + 1)$, é exemplificada como ilustrado em (\ref{eq:ex_set_e}), considerando $E(t + 1) = 0 1$.
+A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuração do campo do estado do agente $\chi(t)$ de $Q(t)$ para $Q(t + 1)$, é exemplificada como ilustrado em (\ref{eq:ex_set_e}), considerando $Q(t + 1) = 0 1$.
 
 \begin{equation}
-  \small
   \begin{split}
-  \chi(t + 1) = & \chi(t) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \vee \, E(t + 1) \ll_{circ}(0) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{arth}(2) \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
-  = & 0 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
+  \chi(t + 1) = & \chi(t) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \vee \, Q(t + 1) \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(0) \\
+    & \gg_{arth}(2) \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{arth}(2) \\
+    & \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
+  = & 0 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \ll_{arth}(2) \\
+    & \, \vee \, 0 1 \ll_{circ}(0) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 0 \, \vee \, 0 1 \ll_{circ}(0) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 1 \ll_{circ}(0) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 1 \\
@@ -366,7 +398,7 @@ Na Tabela \ref{tab:variaveis} são apresentados sinteticamente os valores relativ
   Coordenada $X$ 		& 9 & 23 & 6 & 17 \\
   Coordenada $Y$ 		& 9 & 23 & 15 & 8 \\
   Contador de Controle $C$ 	& 6 & 26 & 24 & 2 \\
-  Estado $E$ 			& 2 & 30 & 30 & 0 \\
+  Estado $Q$ 			& 2 & 30 & 30 & 0 \\
 \end{tabular}
 \caption{Tabela das variáveis relacionadas aos campos dos agentes.}
 \label{tab:variaveis}
@@ -379,9 +411,9 @@ Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\b
 \section{SIMULA}
 \label{sec:SIMULA}
 
-Como suporte às operações específicas relacionadas à manipulação de dados georreferenciados relativos à quadra 445, utilizou-se um \textit{software} especificamente desenvolvido para tal função, denominado SIMULA. Ele desempenha as funções de aquisição, tratamento e disponibilização de informações georreferenciadas para o programa que executa as simulações e para um módulo visualizador de saídas, sendo um \textit{software} que integra operações de pré-processamento, como aquisição e tratamento de dados e de pós-processamento, como a visualização de saídas gráficas de arquivos resultantes das simulações executadas. 
+Como suporte às operações específicas relacionadas à manipulação de dados georreferenciados relativos à quadra 445 utilizou-se um \textit{software} especificamente desenvolvido para tal função, denominado SIMULA. Ele desempenha as funções de aquisição, tratamento e disponibilização de informações georreferenciadas para o programa que executa as simulações e para um módulo visualizador de saídas, sendo um \textit{software} que integra operações de pré-processamento, como aquisição e tratamento de dados e de pós-processamento, como a visualização de saídas gráficas de arquivos resultantes das simulações executadas. 
 
-Na etapa de aquisição dos dados, o \textit{software} realiza uma consulta em um Sistema Gerenciador de Banco de Dados Objeto Relacional, SGBDOR, utilizando a linguagem de consulta \textit{Structured Query Language}, SQL. Nesta etapa são obtidas informações sobre os pontos georreferenciados que estão nos vértices de cada lote da quadra 445. As informações sobre os vértices são importantes pois definem a geometria do lote, que é a estrutura geométrica elementar à especificação das soluções, sendo utilizados posteriormente, após processamentos, à construção das estruturas matriciais que representam os lotes na simulação. Foi utilizado o SGBDOR PostgreSQL com a adição da extensão PostGIS, que viabiliza o armazenamento e processamento de objetos com informações georreferenciadas em bancos de dados. Através da extensão PostGIS, os dados são importados para o banco de dados por meio de um arquivo em formato \textit{shapefile}, que é um formato de arquivos utilizado para o armazenamento de dados geoespaciais. O arquivo \textit{shapefile} foi obtido em parceria com a prefeitura da cidade de Cascavel/PR.
+Na etapa de aquisição dos dados, o \textit{software} realiza uma consulta em um Sistema Gerenciador de Banco de Dados Objeto Relacional, SGBDOR, utilizando a linguagem de consulta \textit{Structured Query Language}, SQL \cite{SQL}. Nesta etapa são obtidas informações sobre os pontos georreferenciados que estão nos vértices de cada lote da quadra 445. As informações sobre os vértices são importantes pois definem a geometria do lote, que é a estrutura geométrica elementar à especificação das soluções, sendo utilizados posteriormente, após processamentos, à construção das estruturas matriciais que representam os lotes na simulação. Foi utilizado o SGBDOR PostgreSQL \cite{Postgres} com a adição da extensão PostGIS \cite{Postgis}, que viabiliza o armazenamento e processamento de objetos com informações georreferenciadas em bancos de dados. Por meio da extensão PostGIS, os dados são importados para o banco de dados por meio de um arquivo em formato \textit{shapefile} \cite{Shapefile}, que é um formato de arquivos utilizado para o armazenamento de dados geoespaciais. O arquivo \textit{shapefile} foi obtido em parceria com a prefeitura da cidade de Cascavel/PR.
 
 Na etapa posterior à aquisição ocorre o tratamento dos dados obtidos, que é necessário para a remoção de informações redundantes que vem do banco de dados, e a adição de informações pertinentes que viabilizem, essencialmente, a aproximação da geometria dos lotes em matrizes bidimensionais. As principais processos executados dentro da etapa de tratamento de dados são:
 \begin{itemize}
@@ -391,7 +423,7 @@ Na etapa posterior à aquisição ocorre o tratamento dos dados obtidos, que é nece
  \item \textbf{Divisão de lotes:} É realizada a divisão de lotes que contenham 7 pontos, em dois outros sub-lotes. A divisão é executada por meio do cruzamento das diversas retas formadas por dois pontos quaisquer do conjunto original de pontos, com o intuito de formar dois polígonos regulares, que gerarão os dois novos lotes.
  \item \textbf{Cálculo das dimensões dos lotes:} São calculados o comprimento e largura dos lotes, a partir das distâncias euclidianas dos pontos que estão nos vértices dos lotes.
  \item \textbf{Interpolação de pontos:} Por meio de interpolação linear, são interpolados os pontos entre os vértices, que formam as arestas dos lotes. Por meio dos pontos das arestas dos lotes, são interpolados linearmente os pontos internos ao lote. A interpolação é um processo importante no tratamento dos dados pois viabiliza a aproximação de uma malha que represente a geometria do lote, por meio de seus vértices.
- \item \textbf{Média de pontos:} São calculadas as médias entre subconjuntos de 4 pontos do conjunto de pontos obtidos da malha gerada pela etapa de interpolação de pontos. O processo realizado assemelha-se à uma convolução com máscaras, utilizando uma máscara de dimensão $2 \times 2$, com todos os coeficientes iguais a 1, e uma constante de normalização igual a $\frac{1}{4}$. Como resultado, obtém-se um conjunto de pontos onde, cada ponto, corresponde ao centro de uma posição na matriz do lote.
+ \item \textbf{Média de pontos:} São calculadas as médias entre subconjuntos de 4 pontos do conjunto de pontos obtidos da malha gerada pela etapa de interpolação de pontos. O processo realizado assemelha-se a uma convolução com máscaras, utilizando uma máscara de dimensão $2 \times 2$, com todos os coeficientes iguais a 1, e uma constante de normalização igual a $\frac{1}{4}$. Como resultado, obtém-se um conjunto de pontos em que, cada ponto, corresponde ao centro de uma posição na matriz do lote.
  \item \textbf{Cálculo das dimensões das matrizes:} Por meio dos pontos obtidos na etapa anterior são calculadas as dimensões das matrizes que representarão os lotes na simulação. Efetivamente, são calculadas as quantidades de linhas e de colunas das matrizes.
 \end{itemize}
 
@@ -444,7 +476,7 @@ Na Figura \ref{fig:fluxo_simula} são ilustradas as etapas descritas anteriorment
 \section{Estruturas de Dados e Estratégias de Implementação}
 \label{sec:estruturasdedados}
 
-Para a implementação do sistema de simulação, mais efetivamente às operações de movimentação, contato e transição de estados dos indivíduos, utilizou-se estruturas de dados puramente vetoriais, ou seja, que são armazenadas em espaços de memória contíguos na memória do computador. A motivação do uso de estruturas vetoriais advém do fato de que reduzem a complexidade estrutural no código-fonte e viabilizam a posterior paralelização em CUDA por facilitar a cópia de dados entre a CPU e a GPU. Estruturas dinâmicas complexas, que suportam quantidades variáveis de elementos e garantem maior flexibilidade ao programador, são de difícil trato às operações de cópia de dados entre dispositivos, pois necessitam de métodos específicos para a serialização e a desserialização de dados, que acarretam em aumento na carga de processamento. A vetorização das estruturas de dados foi possível graças à simplicidade do indivíduo e do ambiente modelado na simulação, em que é possível expressar completamente seu significado através de vetores de tipo homogêneo e com quantidade fixa de elementos. 
+Para a implementação do sistema de simulação, mais efetivamente às operações de movimentação, contato e transição de estados dos indivíduos, utilizou-se estruturas de dados puramente vetoriais, ou seja, que são armazenadas em espaços de memória contíguos na memória do computador. A motivação do uso de estruturas vetoriais advém do fato de que reduzem a complexidade estrutural no código-fonte e viabilizam a posterior paralelização em CUDA por facilitar a cópia de dados entre a CPU e a GPU. Estruturas dinâmicas complexas, que suportam quantidades variáveis de elementos e garantem maior flexibilidade ao programador, são de difícil trato às operações de cópia de dados entre dispositivos, pois necessitam de métodos específicos para a serialização e a desserialização de dados, que acarretam em aumento na carga de processamento. A vetorização das estruturas de dados foi possível graças à simplicidade do indivíduo e do ambiente modelado na simulação, em que é possível expressar completamente seu significado por meio de vetores de tipo homogêneo e com quantidade fixa de elementos. 
 
 Quanto à estrutura matricial utilizada à representação dos lotes da quadra 445, todos os lotes representados na simulação armazenam, em cada posição de sua matriz, um vetor contendo os índices de todos os indivíduos que ocupam esta posição. Cada indivíduo tem um índice único, que corresponde à sua posição no vetor que armazena todos os indivíduos. Assim, embora as estruturas dos lotes são referidas como matrizes bidimensionais ou tridimensionais, efetivamente, na implementação realizada, estas estruturas são decompostas em vetores unidimensionais, sendo citadas como matrizes somente com o intuito de facilitar a compreensão em alto nível da estrutura da quadra e de seus lotes, já que o mapeamento geográfico ao lógico assim foi realizado. Os estudos desenvolvidos durante a escrita de \cite{Meditec} serviram como base à definição da estrutura dos lotes da quadra 445, pois o armazenamento dos indivíduos que ocupam cada posição do lote na própria estrutura do lote, é um fator importante na otimização do processamento necessário nas operações de movimentação e de contato entre indivíduos. A Figura \ref{fig:ambiente1} ilustra a estrutura aplicada a cada lote modelado neste trabalho.
 
@@ -459,7 +491,7 @@ Quanto à estrutura matricial utilizada à representação dos lotes da quadra 445, 
 
 As alterações que precisam ser realizadas, em termos de estruturas de dados, de uma implementação convencional à \textit{bitstring} são mínimas. Em uma implementação convencional, utilizando o paradigma de programação orientada à objetos, utilizam-se classes para armazenar os atributos dos indivíduos e métodos que manipulam esses atributos. Assim, para armazenar todos os indivíduos em memória, é necessário utilizar um vetor de classes. Quando da aplicação da técnica de \textit{bitstring}, substituem-se essas classes por um tipo de dado primitivo da linguagem de programação em uso. 
 
-Neste trabalho adotou-se a linguagem de programação C e seu tipo primitivo para números inteiros \textit{int}. Assim, o tipo primitivo é utilizado para armazenar efetivamente os atributos dos indivíduos e funções externas à estrutura do indivíduo são definidas para manipular seus atributos, decorrendo que, para o armazenamento de todos os indivíduos, é necessário apenas um vetor de inteiros ao invés de um vetor de classes. As funções externas necessárias para manipular os atributos dos indivíduos sobre o tipo de dado primitivo são aquelas definidas na seção \ref{sec:modelagembitstring}. Essa funções ou operações, quando na aplicação da técnica \textit{bitstring}, equivalem-se a definição de métodos \textit{get} e \textit{set} na classe que representa o indivíduo, considerando-se o uso do paradigma de programação orientada à objetos.
+Neste trabalho adotou-se a linguagem de programação C e seu tipo primitivo para números inteiros \textit{int}. Assim, esse tipo primitivo é utilizado para armazenar efetivamente os atributos dos indivíduos e funções externas à estrutura do indivíduo são definidas para manipular seus atributos, decorrendo que, para o armazenamento de todos os indivíduos, é necessário apenas um vetor de inteiros ao invés de um vetor de classes. As funções externas necessárias para manipular os atributos dos indivíduos sobre o tipo de dado primitivo são aquelas definidas na seção \ref{sec:modelagembitstring}. Essa funções ou operações, quando na aplicação da técnica \textit{bitstring}, equivalem-se a definição de métodos \textit{get} e \textit{set} na classe que representa o indivíduo, considerando-se o uso do paradigma de programação orientada à objetos.
 
 Os algoritmos 1, 2 e 3 ilustram os pseudo-códigos em alto nível às operações de movimentação, contato e transição de estados dos indivíduos, que foram efetivamente implementados no sistema de simulação. É importante perceber que, os pseudo-códigos apresentados podem ser utilizados tanto para realizar uma implementação convencional, utilizando o paradigma de programação orientada à objetos, quanto para implementar uma versão utilizando a técnica de \textit{bitstring}, pois, quando da definição dos métodos para manipulação dos atributos dos indivíduos, seja ela interna ou externamente à uma classe, os resultados produzidos por essas operações, são equivalentes. 
 
@@ -590,15 +622,15 @@ As Figuras \ref{fig:fluxo_movimentacao}, \ref{fig:fluxo_contato} e \ref{fig:flux
 
 Por muito tempo, o método mais utilizado para o aumento de desempenho em processadores era o aumento da velocidade em que o relógio do processador operava. De fato, muitos dos ganhos de desempenho obtidos durante o desenvolvimento dos processadores foram conseguidos desta forma. Porém, os desenvolvedores de circuitos de processamento foram forçados a procurar alternativas à este método, devido a diversas limitações fundamentais na fabricação de circuitos integrados, como por exemplo, restrições de calor e potência, que estavam se aproximando do limite físico suportado pelos transistores. Assim, a alternativa encontrada foi a de mimetizar o que já ocorria em supercomputadores: extrair desempenho por meio do aumento na quantidade de unidades de processamento por processador, colocando dois, quatro, oito ou mais unidades de processamento em cada processador, movimento que ficou conhecido como a revolução \textit{multicore} \cite{CudaByExample}.
 
-Enquanto os processadores evoluíam por meio do aumento da quantidade de unidades de processamento por processador, as GPUs também passavam por uma revolução. Inicialmente, o objetivo principal do uso de placas gráficas em computadores era a de oferecer ao sistema um \textit{hardware} assistente para processamentos gráficos de imagens. O aumento da demanda das placas gráficas devem-se ao lançamento de jogos eletrônicos, que necessitavam de alto processamento gráfico para garantir fidelidade de imagem. Assim, diversas tecnologias para desenvolvimento de aplicações gráficas foram lançadas, como, por exemplo, as bibliotecas DirectX e OpenGL. Essas APIs eram as únicas formas que os programadores tinham para interagir com as placas gráficas, de forma que, diversos pesquisadores exploravam as APIs gráficas como forma de solucionarem problemas de propósito geral. Embora o desempenho obtido com o uso de APIs gráficas se mostrava interessante e promissor, seu modelo de programação era restritivo e complexo. Com o lançamento de placas gráficas de propósito geral e da biblioteca CUDA, buscava-se incluir componentes especificamente desenvolvidos para a computação em GPU, que poderiam ser facilmente utilizados por programadores para implementar as soluções requeridas. A biblioteca CUDA foi desenvolvida inicialmente para o uso conjunto com a linguagem de programação C, que era utilizada como padrão pela indústria. Atualmente a biblioteca CUDA pode ser utilizada em conjunto com outras linguagens de programação como C++, Fortran, Python e C\#. As principais áreas de conhecimento que atualmente fazem uso da API CUDA são as de processamento de imagens médicas, simulação computacional da dinâmica de fluídos e ciência ambiental, sendo a biblioteca bastante utilizada no meio acadêmico \cite{CudaByExample}. É importante classificar paralelismo, como discutido em \cite{CudaProgramming}: 
+Enquanto os processadores evoluíam por meio do aumento da quantidade de unidades de processamento por processador, as GPUs também passavam por uma revolução. Inicialmente, o objetivo principal do uso de placas gráficas em computadores era a de oferecer ao sistema um \textit{hardware} assistente para processamentos gráficos de imagens. O aumento da demanda das placas gráficas devem-se ao lançamento de jogos eletrônicos, que necessitavam de alto processamento gráfico para garantir fidelidade de imagem. Assim, diversas tecnologias para desenvolvimento de aplicações gráficas foram lançadas, como, por exemplo, as bibliotecas DirectX \cite{DirectX} e OpenGL \cite{OpenGL}. Essas APIs eram as únicas formas que os programadores possuiam para interagir com as placas gráficas, de forma que, diversos pesquisadores exploravam as APIs gráficas como forma de solucionarem problemas de propósito geral. Embora o desempenho obtido com o uso de APIs gráficas se mostrava interessante e promissor, seu modelo de programação era restritivo e complexo. Com o lançamento de placas gráficas de propósito geral e da biblioteca CUDA, buscava-se incluir componentes especificamente desenvolvidos para a computação em GPU, que poderiam ser facilmente utilizados por programadores para implementar as soluções requeridas. A biblioteca CUDA foi desenvolvida inicialmente para o uso conjunto com a linguagem de programação C, que era utilizada como padrão pela indústria. Atualmente a biblioteca CUDA pode ser utilizada em conjunto com outras linguagens de programação como C++, Fortran, Python e C\# \cite{CudaLangs}. As principais áreas de conhecimento que atualmente fazem uso da API CUDA são as de processamento de imagens médicas, simulação computacional da dinâmica de fluídos e ciência ambiental, sendo a biblioteca bastante utilizada no meio acadêmico \cite{CudaByExample}. É importante classificar paralelismo, como discutido em \cite{CudaProgramming}: 
 \begin{itemize}
  \item \textbf{Paralelismo baseado em tarefas:} Está relacionado com a execução de múltiplos processos concorrentemente, que podem não ter relação uns com os outros. Um exemplo clássico de paralelismo baseado em tarefas é um sistema operacional, em que diversos processos estão sendo executados ao mesmo tempo. Cada processo pode ser escalonado para um \textit{core} separado na CPU, por exemplo.
- \item \textbf{Paralelismo baseado em dados:} O foco não está nas tarefas que devem ser executadas, mas sim nos dados que precisam ser transformados. Neste tipo de paralelismo, os dados são divididos, quando possível, em partes de igual tamanho e são escalonados para cada \textit{core} da CPU, onde é aplicada uma mesma operação sobre todos os dados. 
+ \item \textbf{Paralelismo baseado em dados:} O foco não está nas tarefas que devem ser executadas, mas sim nos dados que precisam ser transformados. Neste tipo de paralelismo, os dados são divididos, quando possível, em partes de igual tamanho e são escalonados para cada \textit{core} da CPU, em que é aplicada uma mesma operação sobre todos os dados. 
 \end{itemize}
 
-As GPUs geralmente apresentam uma arquitetura baseada em memória compartilhada, o que significa que todas as \textit{threads} tem acesso a todos os dados de forma igualitária. Por este motivo, o modelo de paralelismo baseado em dados é o modelo efetivamente utilizado em GPUs, com uma abordagem \textit{Single Instruction, Multiple Thread}, SIMT. Neste modelo, o programador define em \textit{kernels} as operações que as \textit{threads} irão executar. Os \textit{kernels} são os métodos ou funções que somente podem ser executadas pela GPU. O \textit{kernel} então lê os dados de forma uniforme, aplicando as operações definidas sobre os dados. 
+As GPUs geralmente apresentam uma arquitetura baseada em memória compartilhada, o que significa que todas as \textit{threads} têm acesso a todos os dados de forma igualitária. Por este motivo, o modelo de paralelismo baseado em dados é o modelo efetivamente utilizado em GPUs, com uma abordagem \textit{Single Instruction, Multiple Thread}, SIMT. Neste modelo, o programador define em \textit{kernels} as operações que são executadas pelas \textit{threads}. Os \textit{kernels} são os métodos ou funções que somente podem ser executadas pela GPU. O \textit{kernel} então lê os dados de forma uniforme, aplicando as operações definidas sobre os dados. 
 
-Como as GPUs apresentam arquitetura baseada em memória compartilhada, para a implementação de aplicações paralelas em CUDA, utiliza-se um padrão baseado em laços de repetição. Neste padrão, cada \textit{thread} indexa um índice de um laço de repetição, que efetivamente indexa uma porção de memória, onde a \textit{thread} executa o \textit{kernel} independentemente. Assim sendo, a execução das iterações de uma laço de repetição são executados paralelamente sobre os dados, observando que esse comportamento somente é possível se não existirem dependências de dados entre as iterações. Desta forma é possível explorar a localidade espacial dos dados, pois \textit{threads} adjacentes irão acessar dados em posições adjacentes na memória, assim como os blocos acessados por cada \textit{thread} estão em posições contíguas na memória. A localidade espacial é considerado um fator de grande importância à obtenção de ganho de desempenho em aplicações executadas em GPU \cite{CudaProgramming}.
+Como as GPUs apresentam arquitetura baseada em memória compartilhada, para a implementação de aplicações paralelas em CUDA, utiliza-se um padrão baseado em laços de repetição. Neste padrão, cada \textit{thread} indexa um índice de um laço de repetição, que efetivamente indexa uma porção de memória, em que a \textit{thread} executa o \textit{kernel} independentemente. Assim sendo, a execução das iterações de uma laço de repetição são executados paralelamente sobre os dados, observando que esse comportamento somente é possível se não existirem dependências de dados entre as iterações. Desta forma é possível explorar a localidade espacial dos dados, pois \textit{threads} adjacentes irão acessar dados em posições adjacentes na memória, assim como os blocos acessados por cada \textit{thread} estão em posições contíguas na memória. A localidade espacial é considerada um fator de grande importância à obtenção de ganho de desempenho em aplicações executadas em GPU \cite{CudaProgramming}.
 
 As unidades de processamento nas GPUs estão organizadas em \textit{grids}, \textit{blocks} e \textit{threads}, sendo um \textit{grid} um conjunto de \textit{blocks} e um \textit{block} um conjunto de \textit{threads}. Devido a esta organização, é possível obter um alto nível de paralelismo de dados, pois os identificadores dos \textit{grids}, \textit{blocks} e \textit{threads} são utilizados para compor um identificador único, que identifica a porção de memória que uma \textit{thread} irá acessar e executar o \textit{kernel} \cite{CudaProgramming}. 
 
@@ -611,6 +643,6 @@ Como exemplo, a Figura \ref{fig:somaVetor} ilustra um trecho de um código-fonte 
   \label{fig:somaVetor}
 \end{figure} 
 
-Para que seja possível a execução dos \textit{kernels} sobre os dados que estão na memória compartilhada da GPU, é necessário realizar a sua cópia, da memória principal do computador para memória compartilhada da GPU. É importante notar que, a GPU não consegue acessar diretamente dados na memória principal do computador, assim como a CPU não consegue acessar diretamente dados da memória da GPU. Essa etapa de cópia de dados é um importante fator limitante no ganho de desempenho em aplicações GPGPU, pois geralmente operações de transferência e cópia de memória entre dispositivos são muito custosas computacionalmente. Assim, é desejável que os programadores que desejam utilizar GPUs para acelerar suas aplicações, projetem suas aplicações de forma a reduzir a quantidade de vezes em que são realizadas as cópias de memória, assim como a quantidade de memória total que precisa ser copiada. Efetivamente, a quantidade de vezes de realização de cópias de memória pode ser reduzido se os dados foram mantidos na GPU pelo máximo de tempo possível, onde a cópia de dados da CPU para a GPU seja realizada uma vez ao início do processamento e a cópia da GPU para CPU seja realizada uma vez ao final do processamento \cite{CudaProgramming}. A redução na quantidade total de memória que precisa ser copiada somente pode ser alcançada se forem reduzidos os tamanhos, em \textit{bytes}, das estruturas que guardam as informações que precisam ser processadas pela GPU. 
+Para que seja possível a execução dos \textit{kernels} sobre os dados que estão na memória compartilhada da GPU, é necessário realizar a sua cópia, da memória principal do computador para memória compartilhada da GPU. É importante notar que, a GPU não consegue acessar diretamente dados na memória principal do computador, assim como a CPU não consegue acessar diretamente dados da memória da GPU. Essa etapa de cópia de dados é um importante fator limitante no ganho de desempenho em aplicações GPGPU, pois geralmente operações de transferência e cópia de memória entre dispositivos são muito custosas computacionalmente. Assim, é desejável que os programadores que desejam utilizar GPUs para acelerar suas aplicações, projetem suas aplicações de forma a reduzir a quantidade de vezes em que são realizadas as cópias de memória, assim como a quantidade de memória total que precisa ser copiada. Efetivamente, a quantidade de vezes de realização de cópias de memória pode ser reduzido se os dados foram mantidos na GPU pelo máximo de tempo possível, em que a cópia de dados da CPU para a GPU seja realizada uma vez ao início do processamento e a cópia da GPU para CPU seja realizada uma vez ao final do processamento \cite{CudaProgramming}. A redução na quantidade total de memória que precisa ser copiada somente pode ser alcançada se forem reduzidos os tamanhos, em \textit{bytes}, das estruturas que guardam as informações que precisam ser processadas pela GPU. 
 
-Neste trabalho, objetiva-se utilizar a técnica de \textit{bitstring} como forma de reduzir a quantidade de \textit{bytes} que precisam ser copiadas entre CPU e GPU. Com a aplicação da técnica, espera-se, empiricamente, diminuir o consumo de memória, para o vetor de agentes, em até $80\%$, observando que, para cada agente, uma implementação convencional utilizaria 5 \textit{bytes} para armazenar os cinco atributos do agente, enquanto que, para o modelo \textit{bitstring} proposto, é necessário somente 1 \textit{byte}.
+Neste trabalho, objetiva-se utilizar a técnica de \textit{bitstring} como forma de reduzir a quantidade de \textit{bytes} que precisam ser copiadas entre CPU e GPU. Com a aplicação da técnica, espera-se, empiricamente, diminuir o consumo de memória, para o vetor de agentes, em até $80\%$, observando que, para cada agente, uma implementação convencional utilizaria 20 \textit{bytes} para armazenar os cinco atributos do agente, enquanto que, para o modelo \textit{bitstring} proposto, são necessários somente 4 \textit{bytes}.
