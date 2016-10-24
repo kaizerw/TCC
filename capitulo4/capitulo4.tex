@@ -106,13 +106,13 @@ Inicialmente, as implementações CPU e GPU apresentavam resultados qualitativamen
 Após a compatibilização das distribuições utilizadas para a geração de números pseudo-aleatórios foram confeccionados gráficos para visualizar os erros relativos entre as implementações realizadas. Os erros relativos entre duas implementações foram calculados para cada população, ciclo a ciclo, utilizando-se as expressões \ref{eq:erro_relativo1} e \ref{eq:erro_relativo2}. Na expressão \ref{eq:erro_relativo1}, $CPU(i)$ e $GPU(i)$ designam as soluções em CPU e GPU, no ciclo $i$, respectivamente. Na expressão \ref{eq:erro_relativo2}, $C(i)$ e $B(i)$ designam as soluções convencionais e \textit{bitstring}, no ciclo $i$, respectivamente.
 
 \begin{equation}
-  E_R^{CPU, GPU} = \frac{|CPU(i) - GPU(i)|}{CPU(i)}
+  E_R^{CPU, GPU} = \left|\frac{CPU(i) - GPU(i)}{CPU(i)}\right|
 \label{eq:erro_relativo1}
 \end{equation}
 
 
 \begin{equation}
-  E_R^{C, B} = \frac{|C(i) - B(i)|}{C(i)}
+  E_R^{C, B} = \left|\frac{C(i) - B(i)}{C(i)}\right|
 \label{eq:erro_relativo2}
 \end{equation}
 
