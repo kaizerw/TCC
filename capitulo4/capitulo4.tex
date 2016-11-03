@@ -110,7 +110,6 @@ Após a compatibilização das distribuições utilizadas para a geração de números p
 \label{eq:erro_relativo1}
 \end{equation}
 
-
 \begin{equation}
   E_R^{C, B} = \left|\frac{C(i) - B(i)}{C(i)}\right|
 \label{eq:erro_relativo2}
@@ -118,7 +117,7 @@ Após a compatibilização das distribuições utilizadas para a geração de números p
 
 A Figura \ref{fig:acuracia_CPU_CPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em CPU, a Figura \ref{fig:acuracia_GPU_GPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em GPU, a Figura \ref{fig:acuracia_CPU_GPU_C} ilustra os erros relativos entre as implementações convencionais em CPU e GPU e a Figura \ref{fig:acuracia_GPU_GPU_B} ilustra os erros relativos entre as implementações \textit{bitstring} em CPU e GPU. As figuras que ilustram os erros relativos entre as implementações realizadas mostram que os resultados obtidos estão adequadamente próximos, independentemente da abordagem utilizada à representação dos indivíduos, convencional ou \textit{bitstring}, e da execução em CPU ou GPU, apresentando erros menores do que $0.588\%$.
 
-Pode-se observar ainda que existem picos para a população de indivíduos suscetíveis próximos ao ciclo $70$ em todos os resultados. Eles acontecem pois as quantidades de indivíduos suscetíveis próximo a este ciclo são muito próximas de zero, o que acarreta em um aumento de sensibilidade no cálculo do erro relativo entre as quantidades. É possível observar, por meio da análise das Figuras \ref{fig:convencional_cpu} a \ref{fig:bitstring_gpu} que, quando as quantidades de uma determinada população se aproximam de zero em um ciclo de tempo, os erros relativos entre suas implementações aumentam aproximadamente neste mesmo ciclo. 
+Pode-se observar ainda que existem diversos picos para as populações de indivíduos em todos os resultados. Eles acontecem pois as quantidades de indivíduos são muito próximas de zero, o que acarreta em um aumento de sensibilidade no cálculo do erro relativo entre as quantidades. É possível observar, por meio da análise das Figuras \ref{fig:convencional_cpu} a \ref{fig:bitstring_gpu} que, quando as quantidades de uma determinada população se aproximam de zero em um ciclo de tempo, os erros relativos entre suas implementações aumentam aproximadamente neste mesmo ciclo. 
 
 \begin{figure}[H]
   \centering
