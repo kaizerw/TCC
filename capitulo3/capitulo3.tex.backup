@@ -92,7 +92,7 @@ Assim sendo, observe que $512_{10} = 2^{9}$, $64_{10} = 2^{6}$ e $4_{10} = 2^{2}
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=1.0\textwidth]{Figuras/Tira.jpg}
-  \caption{{\color{red}Representação \textit{bitstring} do agente $\chi$.}}
+  \caption{Representação \textit{bitstring} do agente $\chi$.}
   \label{fig:modelo_bitstring}
 \end{figure} 
 
@@ -321,11 +321,12 @@ A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuraç
 \begin{equation}
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, X(t + 1) \ll_{circ}(17) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(17) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, \\
-    & 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
-  = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \gg_{arth}(9) \ll_{arth}(9) \, \vee \, \\
-    & 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
-  = & 0 0 0 0 0 0 | 0 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(17) \\
+    & \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \gg_{arth}(9) \\
+    & \ll_{arth}(9) \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
+  = & 0 0 0 0 0 0 | 0 0 0 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 | 0 0 \ll_{arth}(9) \\
+    & \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
   = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 0 0 0 0 0 | 0 0 \, \vee \, 1 1 0 0 0 0 1 1 1 \ll_{circ}(17) \\
   = & 0 1 1 0 0 1 | 0 1 1 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 1 | 1 0 0 0 0 1 | 1 1 \ll_{circ}(17) \\
   = & 1 1 0 1 0 0 | 1 1 0 0 0 0 1 1 1 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \\
@@ -338,11 +339,12 @@ A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuraç
 \begin{equation}
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, Y(t + 1) \ll_{circ}(8) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(8) \gg_{arth}(9) \ll_{arth}(9) \, \vee \, \\
-    & 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
-  = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \gg_{arth}(9) \ll_{arth}(9) \, \vee \, \\
-    & 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
-  = & 0 0 0 0 0 0 | 0 0 0 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(8) \\
+    & \gg_{arth}(9) \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \gg_{arth}(9) \\
+    & \ll_{arth}(9) \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
+  = & 0 0 0 0 0 0 | 0 0 0 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 | 0 0 \ll_{arth}(9) \\
+    & \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
   = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 0 0 0 0 0 0 | 0 0 \, \vee \, 1 1 1 1 0 1 0 0 0 \ll_{circ}(8) \\
   = & 0 0 1 1 1 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 1 | 1 1 1 0 1 0 | 0 0 \ll_{circ}(8) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 1 1 1 1 0 1 0 0 0 | 0 0 1 1 1 0 | 1 0 \\
@@ -355,11 +357,12 @@ A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuraç
 \begin{equation}
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, C(t + 1) \ll_{circ}(2) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(2) \gg_{arth}(6) \ll_{arth}(6) \, \vee \, \\
-    & 1 0 1 0 1 1 \ll_{circ}(2) \\
-  = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \gg_{arth}(6) \ll_{arth}(6) \, \vee \, \\
-    & 1 0 1 0 1 1 \ll_{circ}(2) \\
-  = & 0 0 0 0 0 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(2) \\
+    & \gg_{arth}(6) \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \gg_{arth}(6) \\
+    & \ll_{arth}(6) \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
+  = & 0 0 0 0 0 0 | 1 0 1 1 0 1 0 0 0 | 0 1 0 1 0 1 0 0 0 | 1 1 0 0 1 0 | 1 1 \ll_{arth}(6) \\
+    & \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
   = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 0 0 | 0 0 \, \vee \, 1 0 1 0 1 1 \ll_{circ}(2) \\
   = & 1 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 1 0 1 0 | 1 1 \ll_{circ}(2) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 1 0 1 0 1 1 | 1 0 \\
@@ -372,11 +375,12 @@ A aplicação do operador definido em (\ref{eq:bitstring_set_2}) para a configuraç
 \begin{equation}
   \begin{split}
   \chi(t + 1) = & \chi(t) \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \vee \, Q(t + 1) \ll_{circ}(0) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(0) \gg_{arth}(2) \ll_{arth}(2) \, \vee \, \\
-    & 0 1 \ll_{circ}(0) \\
-  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{arth}(2) \ll_{arth}(2) \, \vee \, \\
-    & 0 1 \ll_{circ}(0) \\
-  = & 0 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{circ}(0) \\
+    & \gg_{arth}(2) \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
+  = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 1 0 \gg_{arth}(2) \\
+    & \ll_{arth}(2) \, \vee \, 0 1 \ll_{circ}(0) \\
+  = & 0 0 1 1 0 1 | 0 0 0 0 1 0 1 0 1 | 0 0 0 1 1 0 0 1 0 | 1 1 0 0 1 1 | 1 0 \ll_{arth}(2) \\
+    & \, \vee \, 0 1 \ll_{circ}(0) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 0 \, \vee \, 0 1 \ll_{circ}(0) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 1 \ll_{circ}(0) \\
   = & 1 1 0 1 0 0 | 0 0 1 0 1 0 1 0 0 | 0 1 1 0 0 1 0 1 1 | 0 0 1 1 1 0 | 0 1 \\
@@ -409,7 +413,7 @@ Os identificadores dos lotes têm variação de $\big(0\big)_{10} = \big(000\ 000\b
 
 Como suporte às operações específicas relacionadas à manipulação de dados georreferenciados relativos à quadra 445 utilizou-se um \textit{software} especificamente desenvolvido para tal função, denominado SIMULA. Ele desempenha as funções de aquisição, tratamento e disponibilização de informações georreferenciadas para o programa que executa as simulações e para um módulo visualizador de saídas, sendo um \textit{software} que integra operações de pré-processamento, como aquisição e tratamento de dados e de pós-processamento, como a visualização de saídas gráficas de arquivos resultantes das simulações executadas. 
 
-Na etapa de aquisição dos dados, o \textit{software} realiza uma consulta em um Sistema Gerenciador de Banco de Dados Objeto Relacional, SGBDOR, utilizando a linguagem de consulta \textit{Structured Query Language}, SQL. Nesta etapa são obtidas informações sobre os pontos georreferenciados que estão nos vértices de cada lote da quadra 445. As informações sobre os vértices são importantes pois definem a geometria do lote, que é a estrutura geométrica elementar à especificação das soluções, sendo utilizados posteriormente, após processamentos, à construção das estruturas matriciais que representam os lotes na simulação. Foi utilizado o SGBDOR PostgreSQL com a adição da extensão PostGIS, que viabiliza o armazenamento e processamento de objetos com informações georreferenciadas em bancos de dados. Por meio da extensão PostGIS, os dados são importados para o banco de dados por meio de um arquivo em formato \textit{shapefile}, que é um formato de arquivos utilizado para o armazenamento de dados geoespaciais. O arquivo \textit{shapefile} foi obtido em parceria com a prefeitura da cidade de Cascavel/PR.
+Na etapa de aquisição dos dados, o \textit{software} realiza uma consulta em um Sistema Gerenciador de Banco de Dados Objeto Relacional, SGBDOR, utilizando a linguagem de consulta \textit{Structured Query Language}, SQL \cite{SQL}. Nesta etapa são obtidas informações sobre os pontos georreferenciados que estão nos vértices de cada lote da quadra 445. As informações sobre os vértices são importantes pois definem a geometria do lote, que é a estrutura geométrica elementar à especificação das soluções, sendo utilizados posteriormente, após processamentos, à construção das estruturas matriciais que representam os lotes na simulação. Foi utilizado o SGBDOR PostgreSQL \cite{Postgres} com a adição da extensão PostGIS \cite{Postgis}, que viabiliza o armazenamento e processamento de objetos com informações georreferenciadas em bancos de dados. Por meio da extensão PostGIS, os dados são importados para o banco de dados por meio de um arquivo em formato \textit{shapefile} \cite{Shapefile}, que é um formato de arquivos utilizado para o armazenamento de dados geoespaciais. O arquivo \textit{shapefile} foi obtido em parceria com a prefeitura da cidade de Cascavel/PR.
 
 Na etapa posterior à aquisição ocorre o tratamento dos dados obtidos, que é necessário para a remoção de informações redundantes que vem do banco de dados, e a adição de informações pertinentes que viabilizem, essencialmente, a aproximação da geometria dos lotes em matrizes bidimensionais. As principais processos executados dentro da etapa de tratamento de dados são:
 \begin{itemize}
@@ -427,7 +431,7 @@ Durante o tratamento dos dados ocorre ainda o cálculo das posições vizinhas entr
 
 Na operação de processamento são executadas efetivamente as simulações. Após a geração de diversos arquivos de configuração, o \textit{software} SIMULA executa o sistema de simulação, que realiza a leitura dos arquivos gerados e executa as simulações solicitadas. Ao final de cada simulação, o sistema de simulação gera arquivos texto de saída, que são utilizados pelo SIMULA para exibição de saídas gráficas na etapa de pós-processamento. É importante notar que, o sistema de simulação é independente ao \textit{software} SIMULA, podendo ser utilizado separadamente, sendo necessário a geração ou cópia manual dos arquivos de entrada e algum meio independente para geração de saídas gráficas. Efetivamente, quando na execução dos experimentos numérico-computacionais, o sistema de simulação é utilizado separadamente ao SIMULA, por questões de simplicidade na execução de uma grande quantidade de simulações com diferentes parâmetros. 
 
-Na operação de pós-processamento, os arquivos saída gerados pelo sistema de simulação são utilizados para a visualização gráfica dos resultados no \textit{software} SIMULA. A Figura \ref{fig:simula1} ilustra a saída espacial obtida por meio da utilização das informações georreferenciadas da quadra 445, em que os indivíduos em azul representam indivíduos em estado suscetível, em amarelo representam indivíduos em estado latente, em vermelho representam indivíduos em estado infectado e em rosa representam indivíduos em estado recuperado. Esta visualização georreferenciada foi concebida e desenvolvida com base em aprimoramentos dos trabalhos realizados em \cite{TCCDaniel}.
+Na operação de pós-processamento, os arquivos de saída gerados pelo sistema de simulação são utilizados para a visualização gráfica dos resultados no \textit{software} SIMULA. A Figura \ref{fig:simula1} ilustra a saída espacial obtida por meio da utilização das informações georreferenciadas da quadra 445, em que os indivíduos em azul representam indivíduos em estado suscetível, em amarelo representam indivíduos em estado latente, em vermelho representam indivíduos em estado infectado e em rosa representam indivíduos em estado recuperado. Esta visualização georreferenciada foi concebida e desenvolvida com base em aprimoramentos dos trabalhos realizados em \cite{TCCDaniel}.
 
 \begin{figure}[!htb]
   \centering
@@ -618,7 +622,7 @@ As Figuras \ref{fig:fluxo_movimentacao}, \ref{fig:fluxo_contato} e \ref{fig:flux
 
 Por muito tempo, o método mais utilizado para o aumento de desempenho em processadores era o aumento da velocidade em que o relógio do processador operava. De fato, muitos dos ganhos de desempenho obtidos durante o desenvolvimento dos processadores foram conseguidos desta forma. Porém, os desenvolvedores de circuitos de processamento foram forçados a procurar alternativas à este método, devido a diversas limitações fundamentais na fabricação de circuitos integrados, como por exemplo, restrições de calor e potência, que estavam se aproximando do limite físico suportado pelos transistores. Assim, a alternativa encontrada foi a de mimetizar o que já ocorria em supercomputadores: extrair desempenho por meio do aumento na quantidade de unidades de processamento por processador, colocando dois, quatro, oito ou mais unidades de processamento em cada processador, movimento que ficou conhecido como a revolução \textit{multicore} \cite{CudaByExample}.
 
-Enquanto os processadores evoluíam por meio do aumento da quantidade de unidades de processamento por processador, as GPUs também passavam por uma revolução. Inicialmente, o objetivo principal do uso de placas gráficas em computadores era a de oferecer ao sistema um \textit{hardware} assistente para processamentos gráficos de imagens. O aumento da demanda das placas gráficas devem-se ao lançamento de jogos eletrônicos, que necessitavam de alto processamento gráfico para garantir fidelidade de imagem. Assim, diversas tecnologias para desenvolvimento de aplicações gráficas foram lançadas, como, por exemplo, as bibliotecas DirectX e OpenGL. Essas APIs eram as únicas formas que os programadores tinham para interagir com as placas gráficas, de forma que, diversos pesquisadores exploravam as APIs gráficas como forma de solucionarem problemas de propósito geral. Embora o desempenho obtido com o uso de APIs gráficas se mostrava interessante e promissor, seu modelo de programação era restritivo e complexo. Com o lançamento de placas gráficas de propósito geral e da biblioteca CUDA, buscava-se incluir componentes especificamente desenvolvidos para a computação em GPU, que poderiam ser facilmente utilizados por programadores para implementar as soluções requeridas. A biblioteca CUDA foi desenvolvida inicialmente para o uso conjunto com a linguagem de programação C, que era utilizada como padrão pela indústria. Atualmente a biblioteca CUDA pode ser utilizada em conjunto com outras linguagens de programação como C++, Fortran, Python e C\#. As principais áreas de conhecimento que atualmente fazem uso da API CUDA são as de processamento de imagens médicas, simulação computacional da dinâmica de fluídos e ciência ambiental, sendo a biblioteca bastante utilizada no meio acadêmico \cite{CudaByExample}. É importante classificar paralelismo, como discutido em \cite{CudaProgramming}: 
+Enquanto os processadores evoluíam por meio do aumento da quantidade de unidades de processamento por processador, as GPUs também passavam por uma revolução. Inicialmente, o objetivo principal do uso de placas gráficas em computadores era a de oferecer ao sistema um \textit{hardware} assistente para processamentos gráficos de imagens. O aumento da demanda das placas gráficas devem-se ao lançamento de jogos eletrônicos, que necessitavam de alto processamento gráfico para garantir fidelidade de imagem. Assim, diversas tecnologias para desenvolvimento de aplicações gráficas foram lançadas, como, por exemplo, as bibliotecas DirectX \cite{DirectX} e OpenGL \cite{OpenGL}. Essas APIs eram as únicas formas que os programadores possuiam para interagir com as placas gráficas, de forma que, diversos pesquisadores exploravam as APIs gráficas como forma de solucionarem problemas de propósito geral. Embora o desempenho obtido com o uso de APIs gráficas se mostrava interessante e promissor, seu modelo de programação era restritivo e complexo. Com o lançamento de placas gráficas de propósito geral e da biblioteca CUDA, buscava-se incluir componentes especificamente desenvolvidos para a computação em GPU, que poderiam ser facilmente utilizados por programadores para implementar as soluções requeridas. A biblioteca CUDA foi desenvolvida inicialmente para o uso conjunto com a linguagem de programação C, que era utilizada como padrão pela indústria. Atualmente a biblioteca CUDA pode ser utilizada em conjunto com outras linguagens de programação como C++, Fortran, Python e C\# \cite{CudaLangs}. As principais áreas de conhecimento que atualmente fazem uso da API CUDA são as de processamento de imagens médicas, simulação computacional da dinâmica de fluídos e ciência ambiental, sendo a biblioteca bastante utilizada no meio acadêmico \cite{CudaByExample}. É importante classificar paralelismo, como discutido em \cite{CudaProgramming}: 
 \begin{itemize}
  \item \textbf{Paralelismo baseado em tarefas:} Está relacionado com a execução de múltiplos processos concorrentemente, que podem não ter relação uns com os outros. Um exemplo clássico de paralelismo baseado em tarefas é um sistema operacional, em que diversos processos estão sendo executados ao mesmo tempo. Cada processo pode ser escalonado para um \textit{core} separado na CPU, por exemplo.
  \item \textbf{Paralelismo baseado em dados:} O foco não está nas tarefas que devem ser executadas, mas sim nos dados que precisam ser transformados. Neste tipo de paralelismo, os dados são divididos, quando possível, em partes de igual tamanho e são escalonados para cada \textit{core} da CPU, em que é aplicada uma mesma operação sobre todos os dados. 

@@ -6,8 +6,9 @@
 \contentsline {table}{\numberline {2.3}{\ignorespaces Tabela verdade para a opera\c c\~ao bin\'aria de disjun\c c\~ao inclusiva.\relax }}{22}
 \contentsline {table}{\numberline {2.4}{\ignorespaces Tabela verdade para a opera\c c\~ao bin\'aria de disjun\c c\~ao exclusiva.\relax }}{22}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {3.1}{\ignorespaces Tabela das vari\'aveis relacionadas aos campos dos agentes.\relax }}{40}
+\contentsline {table}{\numberline {3.1}{\ignorespaces Tabela das vari\'aveis relacionadas aos campos dos agentes.\relax }}{45}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4.1}{\ignorespaces Par\^ametros utilizados nas simula\c c\~oes executadas.\relax }}{57}
-\contentsline {table}{\numberline {4.2}{\ignorespaces Dimens\~oes das matrizes utilizadas para representa\c c\~ao dos lotes.\relax }}{57}
-\contentsline {table}{\numberline {4.3}{\ignorespaces Tempo de execu\c c\~ao e \textit {speedups} obtidos para as diferentes implementa\c c\~oes realizadas.\relax }}{58}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Par\^ametros utilizados nas simula\c c\~oes executadas.\relax }}{58}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Dimens\~oes das matrizes utilizadas para representa\c c\~ao dos lotes.\relax }}{58}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Tempo de execu\c c\~ao e \textit {speedups} obtidos para as diferentes implementa\c c\~oes realizadas.\relax }}{59}
+\addvspace {10\p@ }

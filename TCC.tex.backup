@@ -1,0 +1,193 @@
+% Universidade Estadual do Oeste do Paraná - Unioeste
+% Centro de Ciências Exatas e Tecnológicas
+% Curso de Bacharelado em Informática
+% Arquivo: ModeloTCC.Tex
+% Conteúdo: Arquivo principal para a compilação do TCC
+
+
+\documentclass [12pt, oneside, a4paper, brazil] {book}
+
+% Packages relativos à linguagem de entrada
+
+\usepackage [brazil]{babel}		% nomes e hifenação em português
+
+\usepackage{t1enc}					% Permite digitar os acentos de forma normal
+\usepackage[latin1]{inputenc}
+
+% Packages relativos a fonte do texto final
+\usepackage {times}					 % usar fonte Times (outra fonte)
+\usepackage {latexsym}				% símbolos matemáticos adicionais
+
+% Packages de auxílio à formatação
+\usepackage {alltt}					 % um verbatim melhorado para códigos
+\usepackage {fancyhdr}				% cabeçalhos mais sofisticados
+\usepackage {indentfirst}		  % indentar 1a linha de cada seção
+\usepackage {vmargin}			  % para setar margens mais facilmente
+\usepackage {bbm}
+\usepackage {ams}
+
+% Packages relativos a inclusão de figuras
+\usepackage[]{graphicx}		% Permite o uso de figuras .BMP
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+\usepackage{amssymb}
+\usepackage{amsthm,amsmath}
+\usepackage{clrscode}
+\usepackage[usenames, dvipsnames]{color}
+%\usepackage{fancyref}
+\usepackage{caption}
+%\usepackage{subcaption}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{multicol}
+\usepackage[normal]{subfigure}  % permite utilizar subfiguras
+\usepackage{subfig}
+\usepackage[normalem]{ulem}
+\usepackage{verbatim}
+\usepackage{wrapfig}	 % para permitir o logo da Universidade ao lado do cabeçalho na capa
+\usepackage[portuguese, ruled, linesnumbered]{algorithm2e}
+
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}
+\newcommand{\magenta}[1]{\textcolor{magenta}{#1}}
+\newcommand{\green}[1]{\textcolor{green}{#1}}
+\newcommand{\yellow}[1]{\textcolor{yellow}{#1}}
+
+% Packages relativos às referências bibliográficas
+%\usepackage [square,numbers]{natbib} % referências numeradas
+
+%=======================================================================
+
+% Dimensões a ocupar na página (package vmargin)
+\setpapersize [portrait]{A4}
+\setmarginsrb {30mm} % margem esquerda
+					{35mm} % margem superior com cabeçalho
+					{20mm} % margem direita
+					{20mm} % margem inferior
+					{0mm}	% altura do espaço para cabeçalho
+					{0mm}	% espaço entre fim do cabeçalho e início do
+							% texto
+					{10mm}	 % altura do espaço para rodapé
+					{10mm}	 % espaço entre fim do texto e fim do rodapé
+
+
+%--------------------------------------------------------------
+% Definições para o espaçamento entre linhas. -----------------
+
+\newlength{\defbaselineskip}
+\setlength{\defbaselineskip}{\baselineskip}
+\newcommand{\setlinespacing}[1]%
+			  {\setlength{\baselineskip}{#1 \defbaselineskip}}
+
+% Define espaçamento simples
+\newcommand{\singlespacing}{\setlength{\baselineskip}{\defbaselineskip}}
+
+% Define espaçamento "um e meio"
+\newcommand{\oneandhalfspacing}{\setlength{\baselineskip}
+									{1.5 \defbaselineskip}}
+
+% Define espaçamento duplo
+\newcommand{\doublespacing}{\setlength{\baselineskip}
+									{2.0 \defbaselineskip}}
+
+%------------------------------------------------------------
+% Hifenização das palavras desconhecidas
+% Siga o modelo abaixo para hifenizar as palavras que o latex desconhece:
+
+\hyphenation{a-na-li-sa-dos}
+\hyphenation{con-tex-tu-a-li-za-ção}
+\hyphenation{de-ta-lha-men-to}
+\hyphenation{mi-cros-co-pi-a}
+\hyphenation{mo-de-los}
+\hyphenation{po-pu-la-ção}
+\hyphenation{pro-ble-má-ti-ca}
+\hyphenation{re-co-nhe-ce-dor}
+\hyphenation{trans-cre-ver}
+\hyphenation{geor-re-fe-ren-cia-dos}
+\hyphenation{ma-pea-men-to}
+
+%---------------------------------------------------------------
+% Este espaço entre linhas parece ser o mais apropriado
+\oneandhalfspacing
+
+% Ser indulgente no preenchimento das linhas
+\sloppy
+
+\makeindex
+
+\makeglossary
+
+%============================================================
+\begin {document}
+
+% Numeração em romanos para páginas iniciais (capa, agradecimentos, etc)
+\pagestyle {empty}
+\pagenumbering {roman}
+
+% Páginas iniciais
+\include {iniciais/capa}
+\include {iniciais/rosto}
+\include {iniciais/aprova}
+
+\oneandhalfspacing
+
+\include {iniciais/dedica}
+%\include {iniciais/agradece}
+
+% Passa a numerar embaixo no centro
+\pagestyle{plain}
+\include {iniciais/sumario}
+\include {iniciais/resumo}
+
+%=======================================================================
+
+% Definir um estilo para páginas completas (cabeçalho + rodapé)
+\pagestyle {plain}
+
+% Marca de capítulo do tipo "2. Blábláblá..." no cabeçalho
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ {#1}}{}}
+
+% Para aumentar o tamanho da caixa para o cabeçalho
+\addtolength{\headheight}{\baselineskip}
+
+% Definindo o conteúdo do cabeçalho...
+\fancyhf{}
+\fancyhead[LO,LE]{\nouppercase{\textsf{\leftmark}}}
+\fancyhead[RO,RE]{\thepage}
+
+% Para garantir que a primeira página de cada capítulo...
+\fancypagestyle{plain}{
+\fancyhf{}									% não terá head ou foot
+\renewcommand{\headrulewidth}{0pt}} % nem linhas de cabeçalho
+
+%=======================================================================
+
+% Capítulos são numerados normalmente
+\pagenumbering {arabic}
+
+% Inclusão dos capítulos
+\oneandhalfspacing
+\include {capitulo1/capitulo1}
+\include {capitulo2/capitulo2}
+\include {capitulo3/capitulo3}
+\include {capitulo4/capitulo4}
+
+% Como numerar os apêndices como inteiros
+\appendix
+
+% Inclusão dos apêndices
+\oneandhalfspacing
+
+% incluindo o glossário
+%\include {glossario/glossario}
+\pagebreak
+
+% Referências Bibliográficas
+%\bibliographystyle{abnt-num} % Estilo abnt numérico. Para usar o estilo alfabético use "abnt-alf"
+\bibliographystyle{abnt-alf}
+\pagebreak
+\addcontentsline{toc}{chapter}{Referências Bibliográficas}
+\bibliography{Referencias}
+\end {document}
+
+%% Fim do Documento

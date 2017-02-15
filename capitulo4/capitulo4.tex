@@ -30,7 +30,7 @@ Na Tabela \ref{tab:parametros} são apresentados os parâmetros utilizados na exec
 \label{tab:parametros}
 \end{table} 
 
-A Tabela \ref{tab:dimensoes_matrizes} apresenta as dimensões das matrizes utilizadas no sistema de simulação para aproximar as geometrias dos lotes da quadra 445, ilustrada nas Figuras \ref{fig:q445-0} e \ref{fig:q445-1} da seção \ref{CapMetodologiasComputacionais}. As dimensões apresentadas foram obtidas com auxílio da ferramenta SIMULA, utilizando-se os processos já apresentados e discutidos na seção \ref{sec:SIMULA}.
+A Tabela \ref{tab:dimensoes_matrizes} apresenta as dimensões das matrizes utilizadas no sistema de simulação para aproximar as geometrias dos lotes da quadra 445, ilustrada nas Figuras \ref{fig:q445-0} e \ref{fig:q445-1} da seção \ref{CapMetodologiasComputacionais}. A quadra 445 da cidade de Cascavel/PR foi utilizada como estudo de caso ao problema, servindo como base à definição do ambiente computacional para execução das simulações. As dimensões apresentadas foram obtidas com auxílio da ferramenta SIMULA, utilizando-se os processos já apresentados e discutidos na seção \ref{sec:SIMULA}.
 
 \begin{table}[h!]
 \centering
@@ -75,31 +75,40 @@ Os resultados apresentados foram obtidos por meio da execução de simulações, uti
 
 Pode-se observar que, para a implementação convencional, o tempo de processamento foi reduzido em aproximadamente $9$ vezes. Já para a implementação em \textit{bitstring}, o tempo de processamento foi reduzido em aproximadamente $12$ vezes. É interessante notar que, os tempos de execução e \textit{speedups} têm valores aproximados entre as implementações convencionais e \textit{bitstring}. Portanto, pode-se concluir que, no caso da implementação realizada, não houve redução significativa no tempo de execução somente com a aplicação da técnica de \textit{bitstring}.
 
-As Figuras \ref{fig:convencional_cpu}, \ref{fig:convencional_gpu}, \ref{fig:bitstring_cpu} e \ref{fig:bitstring_gpu} ilustram os resultados obtidos para a dinâmica epidemiológica utilizando os parâmetros apresentados na Tabela \ref{tab:parametros}. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python \cite{Python}. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que os resultados das diferentes implementações apresentadas nas figuras possuem dinâmicas assemelhadas entre si. Em geral, as implementações têm resultados qualitativamente assemelhados, apresentando algumas poucas diferenças quantitativas, discutidas em sequência. 
+A Figura \ref{fig:quantidades} ilustra os resultados obtidos para a dinâmica epidemiológica utilizando os parâmetros apresentados na Tabela \ref{tab:parametros}. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python \cite{Python}. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que os resultados das diferentes implementações apresentadas nas figuras possuem dinâmicas assemelhadas entre si. Em geral, as implementações têm resultados qualitativamente assemelhados, apresentando algumas poucas diferenças quantitativas, discutidas em sequência. 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.85\textwidth]{Figuras/Convencional_CPU.png}
-  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação convencional em CPU.}
-  \label{fig:convencional_cpu}
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=1.0\textwidth]{Figuras/Convencional_CPU.png}
+    \captionsetup{labelformat=empty}
+    \captionof{figure}{(A)}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=1.0\textwidth]{Figuras/Convencional_GPU.png}
+    \captionsetup{labelformat=empty}
+    \captionof{figure}{(B)}
+  \end{minipage}
+  \centering
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=1.0\textwidth]{Figuras/Bitstring_CPU.png}
+    \captionsetup{labelformat=empty}
+    \captionof{figure}{(C)}
+  \end{minipage}%
+  \begin{minipage}{.5\textwidth}
+    \centering
+    \includegraphics[width=1.0\textwidth]{Figuras/Bitstring_GPU.png}
+    \captionsetup{labelformat=empty}
+    \captionof{figure}{(D)}
+  \end{minipage}
+  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação}
+  \label{fig:quantidades}
 \end{figure}
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.85\textwidth]{Figuras/Convencional_GPU.png}
-  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação convencional em GPU.}
-  \label{fig:convencional_gpu}
-  \includegraphics[width=0.85\textwidth]{Figuras/Bitstring_CPU.png}
-  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação \textit{bitstring} em CPU.}
-  \label{fig:bitstring_cpu}
-\end{figure} 
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=0.85\textwidth]{Figuras/Bitstring_GPU.png}
-  \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação para a implementação \textit{bitstring} em GPU.}
-  \label{fig:bitstring_gpu}
-\end{figure} 
+Na Figura \ref{fig:quantidades}, (A) ilustra o gráfico para a implementação convencional em CPU, (B) ilustra o gráfico para a implementação convencional em GPU, (C) ilustra o gráfico para a implementação \textit{bitstring} em CPU e (D) ilustra o gráfico para a implementação \textit{bitstring} em GPU.
 
 Inicialmente, as implementações CPU e GPU apresentavam resultados qualitativamente destoantes. Após a execução de testes verificou-se que esta diferença qualitativa estava relacionada aos mecanismos utilizados para a geração de números pseudo-aleatórios. Para as implementações em GPU, utiliza-se um gerador disponível na biblioteca \textit{Curand} \cite{Curand}, que gera números seguindo uma distribuição uniforme, enquanto que nas implementações em CPU eram utilizados geradores que não garantem tal comportamento, como a função \textit{rand} da biblioteca \textit{stdlib} \cite{Rand}. Para garantir a compatibilidade entre as duas implementações foram adotados nas implementações em CPU geradores de números pseudo-aleatórios que seguem uma distribuição uniforme, que estão disponíveis na biblioteca \textit{random} da linguagem C++ \cite{Random}. 
 
@@ -117,7 +126,7 @@ Após a compatibilização das distribuições utilizadas para a geração de números p
 
 A Figura \ref{fig:acuracia_CPU_CPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em CPU, a Figura \ref{fig:acuracia_GPU_GPU} ilustra os erros relativos entre as implementações convencional e \textit{bitstring} em GPU, a Figura \ref{fig:acuracia_CPU_GPU_C} ilustra os erros relativos entre as implementações convencionais em CPU e GPU e a Figura \ref{fig:acuracia_GPU_GPU_B} ilustra os erros relativos entre as implementações \textit{bitstring} em CPU e GPU. As figuras que ilustram os erros relativos entre as implementações realizadas mostram que os resultados obtidos estão adequadamente próximos, independentemente da abordagem utilizada à representação dos indivíduos, convencional ou \textit{bitstring}, e da execução em CPU ou GPU, apresentando erros menores do que $0.588\%$.
 
-Pode-se observar ainda que existem diversos picos para as populações de indivíduos em todos os resultados. Eles acontecem pois as quantidades de indivíduos são muito próximas de zero, o que acarreta em um aumento de sensibilidade no cálculo do erro relativo entre as quantidades. É possível observar, por meio da análise das Figuras \ref{fig:convencional_cpu} a \ref{fig:bitstring_gpu} que, quando as quantidades de uma determinada população se aproximam de zero em um ciclo de tempo, os erros relativos entre suas implementações aumentam aproximadamente neste mesmo ciclo. 
+Pode-se observar ainda que existem diversos picos para as populações de indivíduos em todos os resultados. Eles acontecem pois as quantidades de indivíduos são muito próximas de zero, o que acarreta em um aumento de sensibilidade no cálculo do erro relativo entre as quantidades. É possível observar, por meio da análise da Figura \ref{fig:quantidades} que, quando as quantidades de uma determinada população se aproximam de zero em um ciclo de tempo, os erros relativos entre suas implementações aumentam aproximadamente neste mesmo ciclo. 
 
 \begin{figure}[H]
   \centering
@@ -235,26 +244,4 @@ As Figuras \ref{fig:espacial_convencional} e \ref{fig:espacial_bitstring} mostra
 \label{fig:espacial_bitstring}
 \end{figure}
 
-\section{Conclusões}
-
-Neste trabalho foi apresentado um modelo computacional multiagente para simular a propagação de hipotéticas doenças baseadas em modelagem compartimental tipo SEIRS. Utilizou-se uma ferramenta computacional especificamente desenvolvida para a geração de um mapeamento georreferenciado da quadra 445 da cidade de Cascavel/PR, que serviu como ambiente para a execução de simulações. Foi proposto um modelo em \textit{bitstring} para os agentes e operações relacionadas, facilitando o posterior emprego da biblioteca CUDA à paralelização do sistema de simulação. Por fim, apresentou-se os resultados obtidos com a execução de testes nas implementações realizadas, comparando-se os resultados obtidos entre as abordagens convencional e \textit{bitstring}, e as execuções sequenciais e paralelas. 
-
-Conclui-se que o modelo multiagente implementado apresenta resultados interessantes, sobretudo sob o ponto de vista espaço-temporal, com dinâmica condizente com o esperado e mostrando a viabilidade da aplicação de modelos compartimentais à simulação de doenças hipotéticas sob áreas geográficas. O comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados, que podem ser observadas nos gráficos \ref{fig:convencional_cpu} a \ref{fig:bitstring_gpu}, também foi de acordo com o esperado, conforme observado em trabalhos correlatos disponíveis na literatura.
-
-O emprego da ferramenta SIMULA à geração do ambiente utilizado na simulação foi importante ao desenvolvimento do trabalho, sobretudo nas etapas de pré e pós-processamento, como na geração de arquivos de entrada para a simulação e visualização dos resultados, especialmente em saídas georreferenciadas. Notou-se que há uma grande dificuldade no tratamento e disponibilização de dados georreferenciados, especialmente por exigirem na maioria das vezes, de algoritmos e tecnologias específicas no seu armazenamento e processamento.
-
-A aplicação da técnica de \textit{bitstring} mostrou-se relevante, auxiliando na paralelização do sistema de simulação e diminuindo a quantidade de dados copiada entre CPU e GPU. Tal metodologia viabiliza ainda uma maneira concisa e uniforme de armazenamento e manipulação dos dados, sendo interessante sua aplicação no desenvolvimento de sistemas que modelem comportamentos individuais. 
-
-Por fim, a aplicação da biblioteca CUDA para a paralelização das implementações realizadas mostrou-se interessante por reduzir expressivamente o tempo de execução das simulações, o que é desejável na execução de simulações com maior porte, com maior quantidade de indivíduos, em ambientes maiores e com modelagens mais complexas às dinâmicas epidemiológicas, que são situações mais próximas da realidade que deseja-se simular. Destaca-se ainda que a implementação de sistemas em GPU, embora facilitada por bibliotecas específicas como o CUDA, ainda apresenta diversas dificuldades e relativa complexidade, sobretudo quanto à adequação dos dados para viabilizar seu processamento em paralelo e transferência para a GPU, que pode demandar um longo período de planejamento e desenvolvimento. Especificamente neste trabalho foi necessária a vetorização de todas as estruturas de dados para viabilizar sua cópia para a GPU. Este processo pode não ser trivial, especialmente se a implementação que deseja-se paralelizar em GPU fizer uso de algoritmos complexos e estruturas de dados dinâmicas, como aquelas disponíveis em linguagens de programação de alto nível, como a biblioteca \textit{Standard Template Library}, STL, do C++ \cite{STL}. Adicionalmente foi necessária a adequação das rotinas paralelizadas, exigindo a eliminação de dependências que inviabilizam o processamento em paralelo, como as temporais, e organização da sequência de processamento dos dados de forma a viabilizar a computação por diferentes \textit{threads}, garantindo a consistência dos dados. 
-
-Sugere-se como trabalhos futuros:
-
-\begin{itemize}
- \item Desenvolvimento de modelos mais sofisticados para propagação de doenças, que incluam o agente vetor, viabilizando modelar comportamentos individuais como a movimentação na busca por acasalamento e alimento. Pode-se ainda modelar a aplicação de controles químicos, biológicos e mecânicos sobre a população de vetores.
- \item Aplicação da metodologia \textit{bitstring} sobre modelagens mais complexas, com agentes que apresentem mais atributos, que necessitem do uso de palavras computacionais com maior quantidade de \textit{bits}.
- \item Definição de um modelo \textit{bistring} \textit{in place}, que realize as operações de configuração de atributos utilizando uma quantidade mínima de variáveis auxiliares, reduzindo o consumo de memória do computador.
- \item Emprego e comparação de diferentes técnicas para paralelização do sistema de simulação, como por exemplo OpenMP, OpenMPI e outras APIs para programação em GPU.
- \item Estudo mais aprofundado sobre os parâmetros utilizados no modelo, sobretudo em suas influências sobre a dinâmica epidemiológica.
- \item Utilização de outros ambientes georreferenciados como base à simulação.
- \item Aprimoramento das estruturas de dados utilizadas, objetivando descartar a necessidade de vetorização. Pode-se estudar como realizar o uso ou mapeamento das estruturas de dados disponíveis na biblioteca STL do C++ com aquelas presentes na biblioteca \textit{Thrust} do CUDA \cite{Thrust}.
-\end{itemize}
+\newpage
