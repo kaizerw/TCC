@@ -253,8 +253,6 @@ Para a implementação de modelos \textit{bitstring} é necessário utilizar uma lin
 
 Neste trabalho de conclusão de curso propõe-se o uso da metodologia de \textit{bitstring} para a modelagem dos atributos dos agentes constituintes da população de indivíduos no sistema multiagente. Por meio das operações citadas anteriormente, são definidos métodos para a captura e configuração dos atributos dos agentes de forma otimizada, utilizando uma linguagem de programação que seja apropriada às operações aqui descritas.
 
-\newpage
-
 \section{\textit{Compute Unified Device Architecture} - CUDA}
 \label{sec:CUDA}
 
@@ -274,6 +272,8 @@ As unidades de processamento nas GPUs estão organizadas em \textit{grids}, \text
 
 Como exemplo, a Figura \ref{fig:somaVetor} ilustra um trecho de um código-fonte em C para um \textit{kernel} CUDA que executa uma soma de vetores. Como um identificador único pode ser calculado para cada \textit{thread}, então cada \textit{thread} usa seu identificador para indexar uma posição dos vetores de entrada e saída, que são designados pelas variáveis \textit{a}, \textit{b} e \textit{c}. O identificador de cada \textit{thread} é identificado no código pela variável \textit{threadID}. Como a quantidade de \textit{threads} disponíveis na placa gráfica pode ser maior do que a quantidade de elementos nos vetores, então é necessário ainda testar se o identificador da \textit{thread} é menor do que a quantidade de elementos dos vetores, que é designado pela variável \textit{n}. Assim, evita-se acesso indevido à posições que memória que não pertencem aos vetores. Note que não existe um laço de repetição que percorre todos os elementos dos vetores. Esse laço é eliminado graças a utilização de paralelismo baseado em dados. 
 
+\newpage
+
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.65\textwidth]{Figuras/somaVetor.png}
@@ -285,7 +285,7 @@ Para que seja possível a execução dos \textit{kernels} sobre os dados que estão 
 
 Neste trabalho, objetiva-se utilizar a técnica de \textit{bitstring} como forma de reduzir a quantidade de \textit{bytes} que precisam ser copiadas entre CPU e GPU. Com a aplicação da técnica, espera-se, empiricamente, diminuir o consumo de memória, para o vetor de agentes, em até $80\%$, observando que, para cada agente, uma implementação convencional utilizaria 20 \textit{bytes} para armazenar os cinco atributos do agente, enquanto que, para o modelo \textit{bitstring} proposto, são necessários somente 4 \textit{bytes}.
 
-\section{Revisão Bibliográfica}
+\section{Trabalhos Relacionados}
 \label{sec:revisao_bibliografica}
 
 Para efeitos de comparação dos resultados obtidos neste trabalho, quando viável, com outros disponíveis na literatura técnica, realizou-se uma revisão bibliográfica em trabalhos que integrem aplicações executadas em arquiteturas de alto desempenho, com modelagem \textit{bitstring} às aplicações em epidemiologia matemática e computacional. Não foram encontrados muitos que contemplem tais aspectos. Alguns dos mais relevantes e compatíveis com o presente trabalho em desenvolvimento são apresentados em sequência.

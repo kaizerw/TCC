@@ -75,7 +75,7 @@ Os resultados apresentados foram obtidos por meio da execução de simulações, uti
 
 Pode-se observar que, para a implementação convencional, o tempo de processamento foi reduzido em aproximadamente $9$ vezes. Já para a implementação em \textit{bitstring}, o tempo de processamento foi reduzido em aproximadamente $12$ vezes. É interessante notar que, os tempos de execução e \textit{speedups} têm valores aproximados entre as implementações convencionais e \textit{bitstring}. Portanto, pode-se concluir que, no caso da implementação realizada, não houve redução significativa no tempo de execução somente com a aplicação da técnica de \textit{bitstring}.
 
-A Figura \ref{fig:quantidades} ilustra os resultados obtidos para a dinâmica epidemiológica utilizando os parâmetros apresentados na Tabela \ref{tab:parametros}. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python \cite{Python}. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação. Pode-se notar ainda que os resultados das diferentes implementações apresentadas nas figuras possuem dinâmicas assemelhadas entre si. Em geral, as implementações têm resultados qualitativamente assemelhados, apresentando algumas poucas diferenças quantitativas, discutidas em sequência. 
+A Figura \ref{fig:quantidades} ilustra os resultados obtidos para a dinâmica epidemiológica utilizando os parâmetros apresentados na Tabela \ref{tab:parametros}. Estes gráficos foram obtidos por meio de pós-processamento, externo ao \textit{software} SIMULA, aplicado aos arquivos de saídas das simulações, utilizando um \textit{script} implementado na linguagem de programação Python \cite{Python}. Com estas saídas é possível observar o comportamento das populações de indivíduos suscetíveis, expostos, infectantes e recuperados durante o tempo de execução da simulação, representados pelas linhas nas cores verde, amarelo, vermelho e azul, respectivamente. Pode-se notar ainda que os resultados das diferentes implementações apresentadas nas figuras possuem dinâmicas assemelhadas entre si. Em geral, as implementações têm resultados qualitativamente assemelhados, apresentando algumas poucas diferenças quantitativas, discutidas em sequência. 
 
 \begin{figure}[H]
   \centering
@@ -83,32 +83,30 @@ A Figura \ref{fig:quantidades} ilustra os resultados obtidos para a dinâmica epi
     \centering
     \includegraphics[width=1.0\textwidth]{Figuras/Convencional_CPU.png}
     \captionsetup{labelformat=empty}
-    \captionof{figure}{(A)}
+    \captionof{figure}{Implementação convencional em CPU}
   \end{minipage}%
   \begin{minipage}{.5\textwidth}
     \centering
     \includegraphics[width=1.0\textwidth]{Figuras/Convencional_GPU.png}
     \captionsetup{labelformat=empty}
-    \captionof{figure}{(B)}
+    \captionof{figure}{Implementação convencional em GPU}
   \end{minipage}
   \centering
   \begin{minipage}{.5\textwidth}
     \centering
     \includegraphics[width=1.0\textwidth]{Figuras/Bitstring_CPU.png}
     \captionsetup{labelformat=empty}
-    \captionof{figure}{(C)}
+    \captionof{figure}{Implementação \textit{bitstring} em CPU}
   \end{minipage}%
   \begin{minipage}{.5\textwidth}
     \centering
     \includegraphics[width=1.0\textwidth]{Figuras/Bitstring_GPU.png}
     \captionsetup{labelformat=empty}
-    \captionof{figure}{(D)}
+    \captionof{figure}{Implementação \textit{bitstring} em GPU}
   \end{minipage}
   \caption{Gráficos das quantidades de indivíduos \textit{versus} tempo de simulação}
   \label{fig:quantidades}
 \end{figure}
-
-Na Figura \ref{fig:quantidades}, (A) ilustra o gráfico para a implementação convencional em CPU, (B) ilustra o gráfico para a implementação convencional em GPU, (C) ilustra o gráfico para a implementação \textit{bitstring} em CPU e (D) ilustra o gráfico para a implementação \textit{bitstring} em GPU.
 
 Inicialmente, as implementações CPU e GPU apresentavam resultados qualitativamente destoantes. Após a execução de testes verificou-se que esta diferença qualitativa estava relacionada aos mecanismos utilizados para a geração de números pseudo-aleatórios. Para as implementações em GPU, utiliza-se um gerador disponível na biblioteca \textit{Curand} \cite{Curand}, que gera números seguindo uma distribuição uniforme, enquanto que nas implementações em CPU eram utilizados geradores que não garantem tal comportamento, como a função \textit{rand} da biblioteca \textit{stdlib} \cite{Rand}. Para garantir a compatibilidade entre as duas implementações foram adotados nas implementações em CPU geradores de números pseudo-aleatórios que seguem uma distribuição uniforme, que estão disponíveis na biblioteca \textit{random} da linguagem C++ \cite{Random}. 
 
@@ -130,28 +128,28 @@ Pode-se observar ainda que existem diversos picos para as populações de indivídu
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/1-erros_relativos_CPU_CPU.png}
+  \includegraphics[width=0.75\textwidth]{Figuras/Acuracia/1-erros_relativos_CPU_CPU.png}
   \caption{Gráficos dos erros relativos entre as implementações convencional e \textit{bitstring} em CPU.}
   \label{fig:acuracia_CPU_CPU}
 \end{figure} 
   
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/2-erros_relativos_GPU_GPU}
+  \includegraphics[width=0.75\textwidth]{Figuras/Acuracia/2-erros_relativos_GPU_GPU}
   \caption{Gráficos dos erros relativos entre as implementações convencional e \textit{bitstring} em GPU.}
   \label{fig:acuracia_GPU_GPU}
 \end{figure} 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png}
+  \includegraphics[width=0.75\textwidth]{Figuras/Acuracia/3-erros_relativos_CPU_GPU_C.png}
   \caption{Gráficos dos erros relativos entre as implementações convencionais em CPU e GPU.}
   \label{fig:acuracia_CPU_GPU_C}
 \end{figure} 
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=0.8\textwidth]{Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png}
+  \includegraphics[width=0.75\textwidth]{Figuras/Acuracia/4-erros_relativos_CPU_GPU_B.png}
   \caption{Gráficos dos erros relativos entre as implementações \textit{bitstring} em CPU e GPU.}
   \label{fig:acuracia_GPU_GPU_B}
 \end{figure} 

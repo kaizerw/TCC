@@ -4,28 +4,28 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Fluxo compartimental no modelo SEIRS.\relax }}{11}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Exemplo de c\'odigo-fonte em C de um \textit {kernel} CUDA\relax }}{26}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Representa\c c\~ao gr\'afica.\relax }}{31}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Aproxima\c c\~ao em matrizes.\relax }}{31}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Representa\c c\~ao indicial e local da vizinhan\c ca de Moore.\relax }}{32}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Representa\c c\~ao \textit {bitstring} do agente $\chi $.\relax }}{35}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espacial na quadra 445 gerada pelo SIMULA\relax }}{49}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Ilustra\c c\~ao do gr\'afico de linha gerado pelo SIMULA\relax }}{50}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espalhamento em um lote\relax }}{51}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Fluxograma da execu\c c\~ao completa do SIMULA.\relax }}{51}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Ilustra\c c\~ao da estrutura matricial empregada para a representa\c c\~ao do mapeamento l\'ogico dos lotes\relax }}{53}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Fluxograma para a opera\c c\~ao de movimenta\c c\~ao dos indiv\IeC {\'\i }duos.\relax }}{56}
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Fluxograma para a opera\c c\~ao de contato entre os indiv\IeC {\'\i }duos.\relax }}{56}
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Fluxograma para a opera\c c\~ao de transi\c c\~ao de estados dos indiv\IeC {\'\i }duos.\relax }}{56}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Representa\c c\~ao gr\'afica.\relax }}{30}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Aproxima\c c\~ao em matrizes.\relax }}{30}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Representa\c c\~ao indicial e local da vizinhan\c ca de Moore.\relax }}{31}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Representa\c c\~ao \textit {bitstring} do agente $\chi $.\relax }}{34}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espacial na quadra 445 gerada pelo SIMULA\relax }}{48}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Ilustra\c c\~ao do gr\'afico de linha gerado pelo SIMULA\relax }}{48}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Ilustra\c c\~ao da sa\IeC {\'\i }da espalhamento em um lote\relax }}{49}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Fluxograma da execu\c c\~ao completa do SIMULA.\relax }}{50}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Ilustra\c c\~ao da estrutura matricial empregada para a representa\c c\~ao do mapeamento l\'ogico dos lotes\relax }}{51}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Fluxograma para a opera\c c\~ao de movimenta\c c\~ao dos indiv\IeC {\'\i }duos.\relax }}{55}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Fluxograma para a opera\c c\~ao de contato entre os indiv\IeC {\'\i }duos.\relax }}{55}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Fluxograma para a opera\c c\~ao de transi\c c\~ao de estados dos indiv\IeC {\'\i }duos.\relax }}{55}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces (A)\relax }}{60}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces (B)\relax }}{60}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces (C)\relax }}{60}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces (D)\relax }}{60}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao\relax }}{60}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencional e \textit {bitstring} em CPU.\relax }}{62}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencional e \textit {bitstring} em GPU.\relax }}{63}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencionais em CPU e GPU.\relax }}{63}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes \textit {bitstring} em CPU e GPU.\relax }}{64}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao convencional.\relax }}{65}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao \textit {bitstring}.\relax }}{66}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Implementa\c c\~ao convencional em CPU\relax }}{59}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Implementa\c c\~ao convencional em GPU\relax }}{59}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Implementa\c c\~ao \textit {bitstring} em CPU\relax }}{59}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Implementa\c c\~ao \textit {bitstring} em GPU\relax }}{59}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Gr\'aficos das quantidades de indiv\IeC {\'\i }duos \textit {versus} tempo de simula\c c\~ao\relax }}{59}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencional e \textit {bitstring} em CPU.\relax }}{61}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencional e \textit {bitstring} em GPU.\relax }}{61}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes convencionais em CPU e GPU.\relax }}{62}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Gr\'aficos dos erros relativos entre as implementa\c c\~oes \textit {bitstring} em CPU e GPU.\relax }}{62}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao convencional.\relax }}{64}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Din\^amica espa\c co-temporal para a implementa\c c\~ao \textit {bitstring}.\relax }}{65}
 \addvspace {10\p@ }

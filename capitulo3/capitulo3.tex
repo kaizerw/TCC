@@ -35,7 +35,7 @@ Como os lotes da quadra 445 são mapeados para estruturas matriciais que viabiliz
 
 \begin{figure}[!htb]
   \centering
-  \includegraphics[width=0.25\textwidth]{Figuras/Vizinhanca_Moore.png}
+  \includegraphics[width=0.3\textwidth]{Figuras/Vizinhanca_Moore.png}
   \caption{Representação indicial e local da vizinhança de Moore.}
   \label{fig:moore}
 \end{figure} 
@@ -431,7 +431,7 @@ Durante o tratamento dos dados ocorre ainda o cálculo das posições vizinhas entr
 
 Na operação de processamento são executadas efetivamente as simulações. Após a geração de diversos arquivos de configuração, o \textit{software} SIMULA executa o sistema de simulação, que realiza a leitura dos arquivos gerados e executa as simulações solicitadas. Ao final de cada simulação, o sistema de simulação gera arquivos texto de saída, que são utilizados pelo SIMULA para exibição de saídas gráficas na etapa de pós-processamento. É importante notar que, o sistema de simulação é independente ao \textit{software} SIMULA, podendo ser utilizado separadamente, sendo necessário a geração ou cópia manual dos arquivos de entrada e algum meio independente para geração de saídas gráficas. Efetivamente, quando na execução dos experimentos numérico-computacionais, o sistema de simulação é utilizado separadamente ao SIMULA, por questões de simplicidade na execução de uma grande quantidade de simulações com diferentes parâmetros. 
 
-Na operação de pós-processamento, os arquivos de saída gerados pelo sistema de simulação são utilizados para a visualização gráfica dos resultados no \textit{software} SIMULA. A Figura \ref{fig:simula1} ilustra a saída espacial obtida por meio da utilização das informações georreferenciadas da quadra 445, em que os indivíduos em azul representam indivíduos em estado suscetível, em amarelo representam indivíduos em estado latente, em vermelho representam indivíduos em estado infectado e em rosa representam indivíduos em estado recuperado. Esta visualização georreferenciada foi concebida e desenvolvida com base em aprimoramentos dos trabalhos realizados em \cite{TCCDaniel}.
+Na operação de pós-processamento, os arquivos de saída gerados pela simulação são utilizados para a visualização gráfica dos resultados no SIMULA. A Figura \ref{fig:simula1} ilustra a saída espacial obtida por meio da utilização das informações georreferenciadas da quadra 445, em que os indivíduos em azul representam indivíduos em estado suscetível, em amarelo representam indivíduos em estado latente, em vermelho representam indivíduos em estado infectado e em rosa representam indivíduos em estado recuperado. Esta visualização georreferenciada foi concebida e desenvolvida com base em aprimoramentos dos trabalhos realizados em \cite{TCCDaniel}.
 
 \begin{figure}[!htb]
   \centering
@@ -442,8 +442,6 @@ Na operação de pós-processamento, os arquivos de saída gerados pelo sistema de s
 
 A Figura \ref{fig:simula2} ilustra outro tipo de saída gráfica gerada pelo \textit{software} SIMULA, os gráficos de curvas, que representam as quantidades de cada tipo de indivíduo durante o tempo de simulação. A linha em verde indica a quantidade de indivíduos em estado suscetível, em amarelo indica a quantidade de indivíduos em estado latente, em vermelho indica a quantidade de indivíduos em estado infectado e em azul indica a quantidade de indivíduos em estado recuperado. 
 
-\newpage
-
 \begin{figure}[!htb]
   \centering
   \includegraphics[width=0.85\textwidth]{Figuras/Simula2.PNG}
@@ -452,8 +450,6 @@ A Figura \ref{fig:simula2} ilustra outro tipo de saída gráfica gerada pelo \text
 \end{figure} 
 
 A Figura \ref{fig:simula3} ilustra um terceiro tipo de saída gráfica gerada pelo \textit{software} SIMULA, as saídas de espalhamento das populações em determinados lotes. Esta saída apresenta a distribuição espacial das diferentes populações nos lotes de acordo com o tempo. Graficamente, é exibida uma matriz com dimensões idênticas à de determinado lote, em que cada posição é exibida de uma cor, dependendo dos estados dos indivíduos que a ocupam. Uma posição em cor verde indica que nesta posição existem somente indivíduos em estado suscetível, em cor amarela indica que existem indivíduos em estado latente e podem ou não existir indivíduos em estado suscetível, em cor vermelha indica que existem indivíduos em estado infectado e podem ou não existirem indivíduos em estado latente e suscetível, em cor azul indica que existem indivíduos em estado recuperado e podem ou não existirem indivíduos em estado infectado, latente e suscetível e em cor branca indica que não existem indivíduos ocupando tal posição. Cada ciclo da simulação gera uma matriz para cada lote, que é utilizado para compor esta saída. 
-
-\newpage
 
 \begin{figure}[!htb]
   \centering
@@ -479,8 +475,6 @@ Na Figura \ref{fig:fluxo_simula} são ilustradas as etapas descritas anteriorment
 Para a implementação do sistema de simulação, mais efetivamente às operações de movimentação, contato e transição de estados dos indivíduos, utilizou-se estruturas de dados puramente vetoriais, ou seja, que são armazenadas em espaços de memória contíguos na memória do computador. A motivação do uso de estruturas vetoriais advém do fato de que reduzem a complexidade estrutural no código-fonte e viabilizam a posterior paralelização em CUDA por facilitar a cópia de dados entre a CPU e a GPU. Estruturas dinâmicas complexas, que suportam quantidades variáveis de elementos e garantem maior flexibilidade ao programador, são de difícil trato às operações de cópia de dados entre dispositivos, pois necessitam de métodos específicos para a serialização e a desserialização de dados, que acarretam em aumento na carga de processamento. A vetorização das estruturas de dados foi possível graças à simplicidade do indivíduo e do ambiente modelado na simulação, em que é possível expressar completamente seu significado por meio de vetores de tipo homogêneo e com quantidade fixa de elementos. 
 
 Quanto à estrutura matricial utilizada à representação dos lotes da quadra 445, todos os lotes representados na simulação armazenam, em cada posição de sua matriz, um vetor contendo os índices de todos os indivíduos que ocupam esta posição. Cada indivíduo tem um índice único, que corresponde à sua posição no vetor que armazena todos os indivíduos. Assim, embora as estruturas dos lotes são referidas como matrizes bidimensionais ou tridimensionais, efetivamente, na implementação realizada, estas estruturas são decompostas em vetores unidimensionais, sendo citadas como matrizes somente com o intuito de facilitar a compreensão em alto nível da estrutura da quadra e de seus lotes, já que o mapeamento geográfico ao lógico assim foi realizado. Os estudos desenvolvidos durante a escrita de \cite{Meditec} serviram como base à definição da estrutura dos lotes da quadra 445, pois o armazenamento dos indivíduos que ocupam cada posição do lote na própria estrutura do lote, é um fator importante na otimização do processamento necessário nas operações de movimentação e de contato entre indivíduos. A Figura \ref{fig:ambiente1} ilustra um exemplo da estrutura aplicada a cada lote modelado neste trabalho, em que as hipotéticas posições do ambiente, mostradas nas cores verde e azul, armazenam vetores com os índices de todos os indivíduos que a ocupam. Os índices desses vetores são utilizados para acessar diretamente os indivíduos no vetor global de agentes.
-
-\newpage
 
 \begin{figure}[!htb]
   \centering
